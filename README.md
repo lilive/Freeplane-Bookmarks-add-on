@@ -1,6 +1,6 @@
 # Bookmarks for Freeplane
 
-[Voir en français](README-fr.MD)
+[Voir en français](README-fr.md)
 
 This simple add-on allows to bookmark some nodes in a Freeplane map, and to easily navigate beetween them.
 
