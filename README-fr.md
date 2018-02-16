@@ -16,3 +16,5 @@ N'hésitez pas à contribuer et à [signaler des erreurs](../../issues).
 
 [Télécharger la dernière release](../../releases) sur son  ordinateur et extraire les fichiers. Parmi les fichiers extraits, ouvrir le fichier nommé "bookmarks.addon.mm" avec Freeplane, et suivez les instructions.
 
+Mais attention tout de même, ce module n'a pas été intensément testé et utilisé pour le moment. Tous les retours sont les bienvenus !
+

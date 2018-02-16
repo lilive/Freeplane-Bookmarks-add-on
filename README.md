@@ -20,3 +20,5 @@ Feel free to contribute or to [notify issues](../../issues).
 # Installation
 
 [Download the latest release](../../releases) to your computer, unzip it. In the extracted files, open the "bookmarks.addon.mm" file with Freeplane and follow the instructions.
+
+But take care, this add-on is still in development ! Any feedbacks appreciated !
