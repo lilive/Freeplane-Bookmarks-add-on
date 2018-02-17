@@ -48,6 +48,15 @@ def restoreFoldState()
     store.putAt( "BmkStt", null )
 }
 
+// Delete all folding state saved data
+def clearFoldState()
+{
+    def keys = store.keySet().collect()
+    keys.each{
+        if( it.startsWith( "BmkStt" ) ) store.putAt( it, null )
+    }
+}
+
 // Return all displayed children (recursively)
 def findDisplayed( node )
 {
@@ -73,6 +82,7 @@ def isBookmarksViewState()
 // Show all bookmarked nodes, and only them
 def enterBookmarksView()
 {
+    clearFoldState()
     storeFoldState()
 
     // Set filter to display only nodes with a bookmark icon.
@@ -106,6 +116,7 @@ def exitBookmarksView()
 {
     map.undoFilter()
     restoreFoldState()
+    clearFoldState()
 
     // But unfold, if needed, all the ancestor of the node
     // selected by the user during the ViewOnlyBookmarks mode

@@ -1,7 +1,7 @@
 <map version="freeplane 1.6.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="Bookmarks" LOCALIZED_STYLE_REF="styles.topic" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1518815710079" LINK="https://github.com/lilive/Freeplane-Bookmarks-add-on" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#000000"><hook NAME="MapStyle" background="#a0a0a0">
-    <properties fit_to_viewport="false;" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff"/>
+<node TEXT="Bookmarks" LOCALIZED_STYLE_REF="styles.topic" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1518867082992" LINK="https://github.com/lilive/Freeplane-Bookmarks-add-on" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#000000"><hook NAME="MapStyle" background="#a0a0a0">
+    <properties show_icon_for_attributes="true" fit_to_viewport="false;" show_note_icons="true" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -86,7 +86,7 @@
 <hook NAME="AutomaticEdgeColor" COUNTER="38" RULE="ON_BRANCH_CREATION"/>
 <edge WIDTH="thin"/>
 <attribute NAME="name" VALUE="bookmarks"/>
-<attribute NAME="version" VALUE="v0.3"/>
+<attribute NAME="version" VALUE="v0.4"/>
 <attribute NAME="author" VALUE="lilive"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="1.6.6"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
