@@ -1,8 +1,8 @@
-﻿# Marque-pages pour Freeplane
+﻿# ![bookmark-img](bookmark.png) Marque-pages pour Freeplane
 
 Ce module complémentaire (add-on) permet de mettre des marque-pages sur des noeuds d'une carte Freeplane, et de passer facilement de l'un à l'autre.
 
-![bookmark-img](zips/icons/bookmark.png) Il ajoute une nouvelle icône à Freeplane, elle est utilisée pour marquer les noeuds.
+Il ajoute une nouvelle icône à Freeplane, elle est utilisée pour marquer les noeuds.
 
 Un nouveau menu "Marque-pages" est créé. On y trouve les possibilités de :
 

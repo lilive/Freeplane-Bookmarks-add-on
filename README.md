@@ -1,10 +1,10 @@
-# Bookmarks for Freeplane
+# ![bookmark-img](bookmark.png) Bookmarks for Freeplane
 
 [Voir en français](README-fr.md)
 
 This simple add-on allows to bookmark some nodes in a Freeplane map, and to easily navigate beetween them.
 
-![bookmark-img](zips/icons/bookmark.png) It add a new icon to Freeplane, which is used to bookmark the nodes.
+It add a new icon to Freeplane, which is used to bookmark the nodes.
 
 
 A new "Bookmarks" menu is available, and allows to :
