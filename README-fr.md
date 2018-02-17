@@ -14,7 +14,18 @@ N'hésitez pas à contribuer et à [signaler des erreurs](../../issues).
 
 # Installation
 
-[Télécharger la dernière release](../../releases) sur son  ordinateur et extraire les fichiers. Parmi les fichiers extraits, ouvrir le fichier nommé "bookmarks.addon.mm" avec Freeplane, et suivez les instructions.
+### Avertissement
 
-Mais attention tout de même, ce module n'a pas été intensément testé et utilisé pour le moment. Tous les retours sont les bienvenus !
+Attention tout de même, ce module n'a pas été intensément testé et utilisé pour le moment. Je l'utilise déjà pour mon usage personnel, mais il y a toujours un risque qu'il puisse endommager une carte (je ne le pense pas en fait, mais il vaut mieux prévenir). Tous les retours sont les bienvenus !
+
+### Méthode 1
+
+- Faire un clic droit sur le fichier `bookmarks.addon.mm` ci-dessus. Choisir "Enregistrer la cible sous...", ou quelque chose d'approchant (selon votre navigateur).
+- Ouvrir le fichier téléchargé avec Freeplane, et suivez les instructions.
+
+### Méthode 2
+
+- [Télécharger la dernière release](../../releases) sur son  ordinateur et extraire les fichiers.
+- Parmi les fichiers extraits, ouvrir le fichier nommé "bookmarks.addon.mm" avec Freeplane, et suivez les instructions.
+
 

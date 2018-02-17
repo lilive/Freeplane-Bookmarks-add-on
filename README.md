@@ -19,6 +19,18 @@ Feel free to contribute or to [notify issues](../../issues).
 
 # Installation
 
-[Download the latest release](../../releases) to your computer, unzip it. In the extracted files, open the "bookmarks.addon.mm" file with Freeplane and follow the instructions.
+### Disclaimer
 
-But take care, this add-on is still in development ! Any feedbacks appreciated !
+For now, this add-on has not been heavily tested. I already use it for myself, and I think it's okay, but I prefer to warn: use it at your own risks. Any feedbacks appreciated !
+
+### Method 1
+
+- Right-click the `bookmarks.addon.mm` file above, and select the "Save content as..." (or similar depending on your browser) entry in the menu.
+- Open this downloaded file with Freeplane and follow the instructions.
+
+### Method 2
+
+- [Download the latest release](../../releases) to your computer, unzip it.
+- In the extracted files, open the "bookmarks.addon.mm" file with Freeplane and follow the instructions.
+
+
