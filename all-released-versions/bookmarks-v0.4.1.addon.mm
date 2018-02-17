@@ -1,7 +1,7 @@
 <map version="freeplane 1.6.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="Bookmarks" LOCALIZED_STYLE_REF="styles.topic" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1518730062619" LINK="http://test" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#000000"><hook NAME="MapStyle" background="#a0a0a0" zoom="0.5">
-    <properties fit_to_viewport="false;" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff"/>
+<node TEXT="Bookmarks" LOCALIZED_STYLE_REF="styles.topic" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1518881322419" LINK="https://github.com/lilive/Freeplane-Bookmarks-add-on" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#000000"><hook NAME="MapStyle" background="#a0a0a0">
+    <properties show_icon_for_attributes="true" fit_to_viewport="false;" show_note_icons="true" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -83,10 +83,10 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="38" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="39" RULE="ON_BRANCH_CREATION"/>
 <edge WIDTH="thin"/>
 <attribute NAME="name" VALUE="bookmarks"/>
-<attribute NAME="version" VALUE="v0.2"/>
+<attribute NAME="version" VALUE="v0.4.1"/>
 <attribute NAME="author" VALUE="lilive"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="1.6.6"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
@@ -127,7 +127,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="description" POSITION="left" ID="ID_166806415" CREATED="1518707376058" MODIFIED="1518730062668">
+<node TEXT="description" POSITION="left" ID="ID_166806415" CREATED="1518707376058" MODIFIED="1518881131106">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -148,9 +148,9 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="Add bookmarks on nodes, and easily navigate beetween them." ID="ID_1183587619" CREATED="1518707454288" MODIFIED="1518712111856"/>
+<node TEXT="Add bookmarks to nodes, and easily navigate beetween them." ID="ID_1183587619" CREATED="1518707454288" MODIFIED="1518815727777"/>
 </node>
-<node TEXT="changes" POSITION="left" ID="ID_1808338119" CREATED="1518707376068" MODIFIED="1518730062669">
+<node TEXT="changes" POSITION="left" ID="ID_1808338119" CREATED="1518707376068" MODIFIED="1518881131108">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -165,8 +165,17 @@
   </body>
 </html>
 </richcontent>
+<node TEXT="v0.3" ID="ID_1947541306" CREATED="1518881580800" MODIFIED="1518881585971">
+<node TEXT="First released version" ID="ID_1150257103" CREATED="1518881587391" MODIFIED="1518881596914"/>
 </node>
-<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_80501004" CREATED="1518707376071" MODIFIED="1518730062671">
+<node TEXT="v0.4" ID="ID_1236674265" CREATED="1518881417536" MODIFIED="1518881420019">
+<node TEXT="Clean the map storage each time ToggleBookmarkSelectionView is used (to avoid increasing size of the file)" ID="ID_955061404" CREATED="1518881423311" MODIFIED="1518881534034"/>
+</node>
+<node TEXT="v0.4.1" ID="ID_1277201401" CREATED="1518881390240" MODIFIED="1518881395099">
+<node TEXT="The bookmark icon is now SVG" ID="ID_1361390652" CREATED="1518881396976" MODIFIED="1518881414405"/>
+</node>
+</node>
+<node TEXT="license" POSITION="left" ID="ID_80501004" CREATED="1518707376071" MODIFIED="1518881131109">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -187,9 +196,9 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="&#xa;This add-on is free software: you can redistribute it and/or modify&#xa;it under the terms of the GNU General Public License as published by&#xa;the Free Software Foundation, either version 2 of the License, or&#xa;(at your option) any later version.&#xa;&#xa;This program is distributed in the hope that it will be useful,&#xa;but WITHOUT ANY WARRANTY; without even the implied warranty of&#xa;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the&#xa;GNU General Public License for more details.&#xa;" ID="ID_1169466095" CREATED="1518707376074" MODIFIED="1518707376074"/>
+<node TEXT="This add-on is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2 of the License.&#xa;&#xa;This program is distributed in the hope that it will be useful,&#xa;but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details." ID="ID_1169466095" CREATED="1518707376074" MODIFIED="1518813393943"/>
 </node>
-<node TEXT="preferences.xml" POSITION="left" ID="ID_293444210" CREATED="1518707376077" MODIFIED="1518730062675">
+<node TEXT="preferences.xml" POSITION="left" ID="ID_293444210" CREATED="1518707376077" MODIFIED="1518881131111">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -208,7 +217,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="default.properties" POSITION="left" ID="ID_1290130454" CREATED="1518707376081" MODIFIED="1518730062677">
+<node TEXT="default.properties" POSITION="left" ID="ID_1290130454" CREATED="1518707376081" MODIFIED="1518881131112">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -224,7 +233,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_1364843549" CREATED="1518707376084" MODIFIED="1518730062679">
+<node TEXT="translations" POSITION="left" ID="ID_1364843549" CREATED="1518707376084" MODIFIED="1518881131113">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -250,28 +259,26 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="en" ID="ID_13651212" CREATED="1518707376086" MODIFIED="1518730193306">
-<attribute_layout NAME_WIDTH="164.99999508261695 pt" VALUE_WIDTH="164.99999508261695 pt"/>
+<node TEXT="en" ID="ID_13651212" CREATED="1518707376086" MODIFIED="1518881262795">
+<attribute_layout NAME_WIDTH="195.74999416619556 pt" VALUE_WIDTH="209.24999376386424 pt"/>
 <attribute NAME="addons.${name}" VALUE="Bookmarks"/>
-<attribute NAME="addon.${name}.JumpToNextBookmark" VALUE="Go to next bookmark"/>
-<attribute NAME="addon.${name}.JumpToPreviousBookmark" VALUE="Go to previous bookmark"/>
-<attribute NAME="addon.${name}.ViewOnlyBookmarks" VALUE="Show all bookmarks"/>
-<attribute NAME="addon.${name}.RestoreViewAfterBookmarkSelection" VALUE="Return to map"/>
 <attribute NAME="addon.${name}.ToggleBookmark" VALUE="Add / Remove a Bookmark"/>
+<attribute NAME="addon.${name}.JumpToPreviousBookmark" VALUE="Go to previous bookmark"/>
+<attribute NAME="addon.${name}.JumpToNextBookmark" VALUE="Go to next bookmark"/>
+<attribute NAME="addon.${name}.ToggleBookmarkSelectionView" VALUE="Display only bookmarks / Return to previous view"/>
 </node>
-<node TEXT="fr" ID="ID_68795515" CREATED="1518707376086" MODIFIED="1518730200447">
-<attribute_layout NAME_WIDTH="164.99999508261695 pt" VALUE_WIDTH="164.99999508261695 pt"/>
+<node TEXT="fr" ID="ID_68795515" CREATED="1518707376086" MODIFIED="1518881268883">
+<attribute_layout NAME_WIDTH="176.24999474734085 pt" VALUE_WIDTH="338.24998991936474 pt"/>
 <attribute NAME="addons.${name}" VALUE="Marque-pages"/>
 <attribute NAME="${name}" VALUE="Marque-pages"/>
 <attribute NAME="addons.${name}.description" VALUE="Mettre des marque-pages sur des noeuds et naviguer facilement de l&apos;un a l&apos;autre."/>
-<attribute NAME="addon.${name}.JumpToNextBookmark" VALUE="Aller au marque-page suivant"/>
-<attribute NAME="addon.${name}.JumpToPreviousBookmark" VALUE="Aller au marque-page precedent"/>
-<attribute NAME="addon.${name}.ViewOnlyBookmarks" VALUE="Afficher tous les marque-pages"/>
-<attribute NAME="addon.${name}.RestoreViewAfterBookmarkSelection" VALUE="Revenir a la carte"/>
 <attribute NAME="addon.${name}.ToggleBookmark" VALUE="Ajouter / Retirer un marque-page"/>
+<attribute NAME="addon.${name}.JumpToPreviousBookmark" VALUE="Aller au marque-page precedent"/>
+<attribute NAME="addon.${name}.JumpToNextBookmark" VALUE="Aller au marque-page suivant"/>
+<attribute NAME="addon.${name}.ToggleBookmarkSelectionView" VALUE="Voir les marque-pages / Revenir a la vue precedente"/>
 </node>
 </node>
-<node TEXT="deinstall" POSITION="left" ID="ID_1462169331" CREATED="1518707376090" MODIFIED="1518730064459">
+<node TEXT="deinstall" POSITION="left" ID="ID_1462169331" CREATED="1518707376090" MODIFIED="1518881281186">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -288,14 +295,13 @@
 </richcontent>
 <attribute_layout NAME_WIDTH="28.499999150633837 pt" VALUE_WIDTH="332.24999009817867 pt"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}.script.xml"/>
-<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/JumpToNextBookmark.groovy"/>
-<attribute NAME="delete" VALUE="${installationbase}/icons/bookmark.png"/>
-<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/JumpToPreviousBookmark.groovy"/>
-<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/RestoreViewAfterBookmarkSelection.groovy"/>
-<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/ViewOnlyBookmarks.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/ToggleBookmark.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/JumpToPreviousBookmark.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/JumpToNextBookmark.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/ToggleBookmarkSelectionView.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/bookmark.svg"/>
 </node>
-<node TEXT="scripts" POSITION="right" ID="ID_1153649867" CREATED="1518707376097" MODIFIED="1518730062687">
+<node TEXT="scripts" POSITION="right" ID="ID_1153649867" CREATED="1518707376097" MODIFIED="1518881131131">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -429,7 +435,7 @@
 <attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
-<node TEXT="// @ExecutionModes({on_single_node=&quot;/main_menu/navigate/mark&quot;})&#xa;&#xa;bookmarkIcon = &quot;bookmark&quot;&#xa;def icons = node.getIcons()&#xa;&#xa;if( icons.contains( bookmarkIcon ) )&#xa;{&#xa;    icons.remove( bookmarkIcon )&#xa;}&#xa;else&#xa;{&#xa;    icons.add( bookmarkIcon )&#xa;}&#xa;" ID="ID_901728839" CREATED="1518730255828" MODIFIED="1518730255833"/>
+<node TEXT="bookmarkIcon = &quot;bookmark&quot;&#xa;def icons = node.getIcons()&#xa;&#xa;if( icons.contains( bookmarkIcon ) )&#xa;{&#xa;    icons.remove( bookmarkIcon )&#xa;}&#xa;else&#xa;{&#xa;    icons.add( bookmarkIcon )&#xa;}&#xa;" ID="ID_1134024048" CREATED="1518881620484" MODIFIED="1518881620489"/>
 </node>
 <node TEXT="JumpToPreviousBookmark.groovy" FOLDED="true" ID="ID_1347963609" CREATED="1518709818338" MODIFIED="1518712222840">
 <attribute_layout NAME_WIDTH="188.99999436736124 pt" VALUE_WIDTH="188.99999436736124 pt"/>
@@ -442,7 +448,7 @@
 <attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
-<node TEXT="// Jump to previous bookmark&#xa;&#xa;bookmarkIcon = &quot;bookmark&quot;&#xa;def start = node&#xa;n = node.getPrevious()&#xa;while(&#xa;    n != null&#xa;    &amp;&amp; n != start&#xa;    &amp;&amp; !n.getIcons().contains( bookmarkIcon )&#xa;)&#xa;{&#xa;    n = n.getPrevious()&#xa;}&#xa;&#xa;if(&#xa;    n != null&#xa;    &amp;&amp; n != start&#xa;    &amp;&amp; n.getIcons().contains( bookmarkIcon )&#xa;)&#xa;{&#xa;    c.select( n  )&#xa;    c.centerOnNode( n )&#xa;}&#xa;else&#xa;{&#xa;    c.setStatusInfo( &quot;standard&quot;, &quot;Pas de marque page pr&#xe9;c&#xe9;dent trouv&#xe9; !&quot; )&#xa;}&#xa;&#xa;" ID="ID_1786497612" CREATED="1518730255835" MODIFIED="1518730255835"/>
+<node TEXT="// Jump to previous bookmark&#xa;&#xa;// Return is a node is bookmarked&#xa;bookmarkIcon = &quot;bookmark&quot;&#xa;def isBookmarked( node )&#xa;{&#xa;    return ( node != null &amp;&amp; node.getIcons().contains( bookmarkIcon ) )&#xa;}&#xa;&#xa;def start = node&#xa;n = node.getPrevious()&#xa;while( n != start &amp;&amp; !isBookmarked( n ) ) n = n.getPrevious()&#xa;&#xa;if( n != start &amp;&amp; isBookmarked( n ) )&#xa;{&#xa;    c.select( n  )&#xa;    c.centerOnNode( n )&#xa;}&#xa;else&#xa;{&#xa;    c.setStatusInfo( &quot;standard&quot;, &quot;Pas de marque page pr&#xe9;c&#xe9;dent trouv&#xe9; !&quot; )&#xa;}&#xa;&#xa;" ID="ID_784562638" CREATED="1518881620490" MODIFIED="1518881620491"/>
 </node>
 <node TEXT="JumpToNextBookmark.groovy" FOLDED="true" ID="ID_158699171" CREATED="1518707711200" MODIFIED="1518712176693">
 <attribute_layout NAME_WIDTH="188.99999436736124 pt" VALUE_WIDTH="188.99999436736124 pt"/>
@@ -455,11 +461,11 @@
 <attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
-<node TEXT="// Jump to next bookmark&#xa;&#xa;bookmarkIcon = &quot;bookmark&quot;&#xa;def start = node&#xa;n = node.getNext()&#xa;while(&#xa;    n != null&#xa;    &amp;&amp; n != start&#xa;    &amp;&amp; !n.getIcons().contains( bookmarkIcon )&#xa;)&#xa;{&#xa;    n = n.getNext()&#xa;}&#xa;&#xa;if(&#xa;    n != null&#xa;    &amp;&amp; n != start&#xa;    &amp;&amp; n.getIcons().contains( bookmarkIcon )&#xa;)&#xa;{&#xa;    c.select( n  )&#xa;    c.centerOnNode( n )&#xa;}&#xa;else&#xa;{&#xa;    c.setStatusInfo( &quot;standard&quot;, &quot;Pas de marque page suivant trouv&#xe9; !&quot; )&#xa;}&#xa;" ID="ID_319679436" CREATED="1518730255836" MODIFIED="1518730255836"/>
+<node TEXT="// Jump to next bookmark&#xa;&#xa;// Return is a node is bookmarked&#xa;bookmarkIcon = &quot;bookmark&quot;&#xa;def isBookmarked( node )&#xa;{&#xa;    return ( node != null &amp;&amp; node.getIcons().contains( bookmarkIcon ) )&#xa;}&#xa;&#xa;def start = node&#xa;n = node.getNext()&#xa;while( n != start &amp;&amp; !isBookmarked( n ) ) n = n.getNext()&#xa;&#xa;if( n != start &amp;&amp; isBookmarked( n ) )&#xa;{&#xa;    c.select( n  )&#xa;    c.centerOnNode( n )&#xa;}&#xa;else&#xa;{&#xa;    c.setStatusInfo( &quot;standard&quot;, &quot;Pas de marque page suivant trouv&#xe9; !&quot; )&#xa;}&#xa;" ID="ID_1393869245" CREATED="1518881620491" MODIFIED="1518881620491"/>
 </node>
-<node TEXT="ViewOnlyBookmarks.groovy" FOLDED="true" ID="ID_1860097785" CREATED="1518729022624" MODIFIED="1518729072712">
-<attribute_layout NAME_WIDTH="188.99999436736124 pt" VALUE_WIDTH="188.99999436736124 pt"/>
-<attribute NAME="menuTitleKey" VALUE="addon.${name}.ViewOnlyBookmarks"/>
+<node TEXT="ToggleBookmarkSelectionView.groovy" FOLDED="true" ID="ID_397345320" CREATED="1518811350572" MODIFIED="1518881244636">
+<attribute_layout NAME_WIDTH="188.99999436736124 pt" VALUE_WIDTH="195.74999416619556 pt"/>
+<attribute NAME="menuTitleKey" VALUE="addon.${name}.ToggleBookmarkSelectionView"/>
 <attribute NAME="menuLocation" VALUE="/menu_bar/${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE=""/>
@@ -468,23 +474,10 @@
 <attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
-<node TEXT="// @ExecutionModes({on_single_node=&quot;/main_menu/navigate/bookmarks&quot;})&#xa;&#xa;// Show all bookmarked nodes, and only them&#xa;&#xa;&#xa;// Save the current folding state of each node in the map&#xa;// This will be used by RestoreViewAfterBookmarkSelection.groovy&#xa;store = node.map.getStorage()&#xa;def storeFoldState( node )&#xa;{&#xa;    store.putAt( &quot;BmkStt_&quot; + node.id, node.isFolded() ? &quot;f&quot; : &quot;c&quot; )&#xa;    node.getChildren().each{ storeFoldState( it ) }&#xa;}&#xa;storeFoldState( node.map.root )&#xa;&#xa;&#xa;// Return is a node is bookmarked&#xa;bookmarkIcon = &quot;bookmark&quot;&#xa;def isBookmarked( node )&#xa;{&#xa;    return ( node != null &amp;&amp; node.getIcons().contains( bookmarkIcon ) )&#xa;}&#xa;&#xa;// Set filter to display only nodes with a bookmark icon.&#xa;// Use filtering, not displaying ancestors nor descendants&#xa;node.map.filter( false, false ){ isBookmarked( it ) }&#xa;&#xa;// Expand all the map to reveal all the bookmarks&#xa;menuUtils.executeMenuItems( [&quot;UnfoldAllAction&quot;] )&#xa;&#xa;// Now select a bookmark node&#xa;def nodeToSelect = null&#xa;if( node.getIcons().contains( bookmarkIcon ) )&#xa;{&#xa;    // If the node selected when this script is invoked is a bookmark, select it again&#xa;    nodeToSelect = node&#xa;}&#xa;else&#xa;{&#xa;    // Else try to select the first bookmark&#xa;    def children = node.map.getRoot().getChildren()&#xa;    if( !children.isEmpty() )&#xa;    {&#xa;        def last = children.last()&#xa;        def n = children.first()&#xa;        while( n != last &amp;&amp; !isBookmarked( n ) ) n = n.getNext()&#xa;        if( isBookmarked( n ) ) nodeToSelect = n&#xa;    }&#xa;}&#xa;if( nodeToSelect != null )&#xa;{&#xa;    c.select( nodeToSelect )&#xa;    c.centerOnNode( nodeToSelect )&#xa;}&#xa;&#xa;" ID="ID_773461140" CREATED="1518730255837" MODIFIED="1518730255837"/>
-</node>
-<node TEXT="RestoreViewAfterBookmarkSelection.groovy" FOLDED="true" ID="ID_1237017842" CREATED="1518729022621" MODIFIED="1518729063948">
-<attribute_layout NAME_WIDTH="188.99999436736124 pt" VALUE_WIDTH="219.74999345093985 pt"/>
-<attribute NAME="menuTitleKey" VALUE="addon.${name}.RestoreViewAfterBookmarkSelection"/>
-<attribute NAME="menuLocation" VALUE="/menu_bar/${name}"/>
-<attribute NAME="executionMode" VALUE="on_single_node"/>
-<attribute NAME="keyboardShortcut" VALUE=""/>
-<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
-<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
-<attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
-<attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
-<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
-<node TEXT="// Restore the folding state and the filtering after a bookmark view&#xa;// This allow the user to return to the previous map state, before&#xa;// it call the bookmark view. See ViewOnlyBookmarks.groovy&#xa;&#xa;&#xa;// Return all displayed children (recursively)&#xa;def findDisplayed( node )&#xa;{&#xa;    if( node.isFolded() ) return []&#xa;    def displayed = []&#xa;    def children = node.getChildren()&#xa;    displayed.addAll( children.findAll{ it.isVisible() } )&#xa;    children.each{ displayed.addAll( findDisplayed( it ) ) }&#xa;    return displayed&#xa;}&#xa;&#xa;// Restore the fold state for each node, previously saved&#xa;store = node.map.getStorage()&#xa;def restoreFoldState( node )&#xa;{&#xa;    def stt = store.getAt( &quot;BmkStt_&quot; + node.id ).toString()&#xa;    store.putAt( &quot;BmkStt_&quot; + node.id, null )&#xa;    if( stt.size() == 1 ) node.setFolded( stt == &quot;f&quot; )&#xa;    node.getChildren().each{ restoreFoldState( it ) }&#xa;}&#xa;&#xa;&#xa;// Check if we are in ViewOnlyBookmarks mode&#xa;// (only the bookmarked node are displayed)&#xa;def root = node.map.root&#xa;def displayed = findDisplayed( root )&#xa;def notBmk = displayed.findAll{ !it.getIcons().contains( &quot;bookmark&quot; ) }&#xa;if( notBmk.isEmpty() )&#xa;{&#xa;    // If yes, return to previous state&#xa;    node.map.undoFilter()&#xa;    restoreFoldState( root )&#xa;&#xa;    // But unfold, if needed, all the ancestor of the node&#xa;    // selected by the user during the ViewOnlyBookmarks mode&#xa;    // This will display the selected choosen bookmarked node&#xa;    n = node&#xa;    while( n != root )&#xa;    {&#xa;        n = n.getParent()&#xa;        n.setFolded( false )&#xa;    }&#xa;&#xa;    // Select this node and center the view&#xa;    c.select( node  )&#xa;    c.centerOnNode( node )&#xa;}&#xa;else&#xa;{&#xa;    c.setStatusInfo( &quot;standard&quot;, &quot;Not in bookmarks view state !&quot; )&#xa;}&#xa;&#xa;" ID="ID_429271172" CREATED="1518730255838" MODIFIED="1518730255838"/>
+<node TEXT="// This script allow to display all the bookmarked nodes, and only them.&#xa;// After that the user can select a bookmarked node, as usual.&#xa;// Then this script allow him to restore the view in the state before,&#xa;// but centered on the selected bookmarked node.&#xa;&#xa;// The script use the map storage to remember the folding state of each&#xa;// node.&#xa;&#xa;map = node.map&#xa;root = map.root&#xa;store = map.getStorage()&#xa;bookmarkIcon = &quot;bookmark&quot;&#xa;&#xa;// Return is a node is bookmarked&#xa;def isBookmarked( node )&#xa;{&#xa;    return ( node != null &amp;&amp; node.getIcons().contains( bookmarkIcon ) )&#xa;}&#xa;&#xa;// Save the current folding state of this node and its children (recursively)&#xa;def storeFoldState( node )&#xa;{&#xa;    store.putAt( &quot;BmkStt_&quot; + node.id, node.isFolded() ? &quot;f&quot; : &quot;c&quot; )&#xa;    node.getChildren().each{ storeFoldState( it ) }&#xa;}&#xa;&#xa;// Save the current folding state of this map&#xa;def storeFoldState()&#xa;{&#xa;    storeFoldState( root )&#xa;    store.putAt( &quot;BmkStt&quot;, &quot;saved&quot; )&#xa;}&#xa;&#xa;// Restore the fold state previously saved for this node its children (recursively)&#xa;def restoreFoldState( node )&#xa;{&#xa;    def stt = store.getAt( &quot;BmkStt_&quot; + node.id ).toString()&#xa;    if( stt ) node.setFolded( stt == &quot;f&quot; )&#xa;    store.putAt( &quot;BmkStt_&quot; + node.id, null )&#xa;    &#xa;    node.getChildren().each{ restoreFoldState( it ) }&#xa;}&#xa;&#xa;// Restore the fold state previously saved for the map, and erase the saved state.&#xa;def restoreFoldState()&#xa;{&#xa;    restoreFoldState( root )&#xa;    store.putAt( &quot;BmkStt&quot;, null )&#xa;}&#xa;&#xa;// Delete all folding state saved data&#xa;def clearFoldState()&#xa;{&#xa;    def keys = store.keySet().collect()&#xa;    keys.each{&#xa;        if( it.startsWith( &quot;BmkStt&quot; ) ) store.putAt( it, null )&#xa;    }&#xa;}&#xa;&#xa;// Return all displayed children (recursively)&#xa;def findDisplayed( node )&#xa;{&#xa;    if( node.isFolded() ) return []&#xa;    def displayed = []&#xa;    def children = node.getChildren()&#xa;    displayed.addAll( children.findAll{ it.isVisible() } )&#xa;    children.each{ displayed.addAll( findDisplayed( it ) ) }&#xa;    return displayed&#xa;}&#xa;&#xa;// Check if we are in bookmarks view mode&#xa;// (only the bookmarked nodes are displayed)&#xa;def isBookmarksViewState()&#xa;{&#xa;    if( store.getAt( &quot;BmkStt&quot; ).toString() != &quot;saved&quot; ) return false&#xa;    &#xa;    def displayed = findDisplayed( root )&#xa;    def notBmk = displayed.findAll{ !it.getIcons().contains( bookmarkIcon ) }&#xa;    return !notBmk&#xa;}&#xa;&#xa;// Show all bookmarked nodes, and only them&#xa;def enterBookmarksView()&#xa;{&#xa;    clearFoldState()&#xa;    storeFoldState()&#xa;&#xa;    // Set filter to display only nodes with a bookmark icon.&#xa;    // Use filtering, not displaying ancestors nor descendants&#xa;    node.map.filter( false, false ){ isBookmarked( it ) }&#xa;&#xa;    // Expand all the map to reveal all the bookmarks&#xa;    root.setFolded( false )&#xa;    root.findAll().each{ it.setFolded( false ) }&#xa;&#xa;    // Now select a bookmark node&#xa;    if( isBookmarked( node ) )&#xa;    {&#xa;        // If the node selected when this script is invoked is a bookmark, select it again&#xa;        c.centerOnNode( node )&#xa;    }&#xa;    else&#xa;    {&#xa;        // Else try to select the first bookmark&#xa;        def nodeToSelect = root.findAll().find{ isBookmarked( it ) }&#xa;        if( nodeToSelect )&#xa;        {&#xa;            c.select( nodeToSelect )&#xa;            c.centerOnNode( nodeToSelect )&#xa;        }&#xa;    }&#xa;}&#xa;&#xa;// Return to previous state&#xa;def exitBookmarksView()&#xa;{&#xa;    map.undoFilter()&#xa;    restoreFoldState()&#xa;    clearFoldState()&#xa;&#xa;    // But unfold, if needed, all the ancestor of the node&#xa;    // selected by the user during the ViewOnlyBookmarks mode&#xa;    // This will display the selected choosen bookmarked node&#xa;    def n = node&#xa;    while( n != root )&#xa;    {&#xa;        n = n.getParent()&#xa;        n.setFolded( false )&#xa;    }&#xa;&#xa;    // Recenter on selected node&#xa;    c.select( node )&#xa;    c.centerOnNode( node )&#xa;}&#xa;&#xa;if( isBookmarksViewState() ) exitBookmarksView()&#xa;else enterBookmarksView()&#xa;" ID="ID_262774008" CREATED="1518881620492" MODIFIED="1518881620492"/>
 </node>
 </node>
-<node TEXT="lib" POSITION="right" ID="ID_888233347" CREATED="1518707376102" MODIFIED="1518730062782">
+<node TEXT="lib" POSITION="right" ID="ID_888233347" CREATED="1518707376102" MODIFIED="1518881131185">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -524,7 +517,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="zips" POSITION="right" ID="ID_1960927192" CREATED="1518707376105" MODIFIED="1518730062786">
+<node TEXT="zips" POSITION="right" ID="ID_1960927192" CREATED="1518707376105" MODIFIED="1518881131188">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -564,10 +557,10 @@
 </html>
 </richcontent>
 <node TEXT="icons" FOLDED="true" ID="ID_1789080137" CREATED="1518707848641" MODIFIED="1518707851682">
-<node TEXT="UEsDBBQACAgIACudREwAAAAAAAAAAAAAAAASAAAAaWNvbnMvYm9va21hcmsucG5nAd4BIf6JUE&#xa;5HDQoaCgAAAA1JSERSAAAAGAAAABgIBgAAAOB3PfgAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIElt&#xa;YWdlUmVhZHlxyWU8AAABgElEQVR42mJkwA+YgJiRgJr/SBgD4NIMEucF4ggg1sKjDmToDSBeC8&#xa;RvgfgfsRZwA/FeIDa3VtLG6/yj966CqHNA7AHEb9B9wojD9eZAfHxDahODtSIBC+5fZQiYXQdi&#xa;+gDxdnRfsODQJw0irBW0cYQsAoDVQIAkNgez4NX9j4DpRAD8Fvz+R2ML/tDagp80toDx+x8a++&#xa;DHXxpbQHkiApc1NAUkWbDizhEwpl4QIYHHX94wVJ9cDsm9EhoMsjwi1PVB7N7JDB9/fXsCxI9A&#xa;bKoGEcjlV949+g5kgkq1AiD7K8w3FFuw7dE5hpnXdoGY04F4A7TE7AOJgeTIAaASMRiUSM+Hdv&#xa;/nZ+MCJdb9QCyHVMNJgcRAciA10ASdAsTMJFmgIyQH0vgQiC3REgQLVOwhVA15FgDxNyCOB2JO&#xa;LOo4oXLf8FlAKA4mAfE6IP6ORe47VK6XnHwAKuVAMTsViL/g0Q+SmwjEhqCyl5SIFgdiRSLDFB&#xa;QKstBqFqPKBAgwAHo8d7kdtUGYAAAAAElFTkSuQmCCUEsHCIhFJEXjAQAA3gEAAFBLAQIUABQA&#xa;CAgIACudREyIRSRF4wEAAN4BAAASAAAAAAAAAAAAAAAAAAAAAABpY29ucy9ib29rbWFyay5wbm&#xa;dQSwUGAAAAAAEAAQBAAAAAIwIAAAAA" ID="ID_1288989665" CREATED="1518730255850" MODIFIED="1518730255879"/>
+<node TEXT="UEsDBBQACAgIAKuCUUwAAAAAAAAAAAAAAAASAAAAaWNvbnMvYm9va21hcmsuc3ZnnZRNb9s4EI&#xa;bPLtD/wDKXLSBS/BJFuXGL2lbSAN42QJsUPQWOzchCWckryXa6v36HlLpNUveweyE9M9TzDjkz&#xa;Pn1z/82hvW3asq4mmFOGka1W9bqsignedXfE4Devnz87fUEIOreVbZZd3YzR23V9a9GFc7u2Cy&#xa;7EE8ooi9DH63OU32/rpkOXbleQiwrR4LzuRcZIU8bQdFe6NWIvESIk8OcfZp++XOao3Rfo8mq6&#xa;uJghTOL4s5zF8fzTPCA45XGcv8cIb7puO47jw+FAD5LWTRGfN8vtply1MRyM/UH4KAYY53Tdrb&#xa;HX8OgHV+UYlesJni3dXzt7AxY8RdVOjrAFY8yzhiPje1dWX48d5FmWxSEKRyeYbe8x+t7vz5+N&#xa;0KFcdxuQZgmVUvngxpbFpgNXKqnWqXftS3uY1v5rxNBwFA1xX5zlrbPkdrn6WjT1roILVPaAjp&#xa;31ipDvuN0uV3aCt41tbbO34Sm2y26DagiUnc+PSoyA9CdnUENjIp4Kj3BEGcqUIlpRmSQL9SNw&#xa;LY2XWjEieMQTInUkNawboVZCRAwscMMaaFJfD9/9jWOvXsAy6nO4K52b4JN8pnl21ifRa0ZZQj&#xa;NlFh4kqPCaegaGF/5387JRUAWHYNwrww24iKDsqdHB8hnAJpI955oKJUB8tHik0uc1OoXK2WUD&#xa;rbQubdWF9oB2upjf8BuMisF9VZUdtMkOXvOjf9oP1VVrod58ggNUJlB0MFKaMWkgIB4GwNApFV&#xa;KkvhCj0Wnb1VuE6ru71kIjwPy13XcH9fJ+sqodjNtJnubzafoquIaqjRlNsj7tXxhUpsocByX5&#xa;dKqegqQ2v0WlTCVHUfOz3LydPkXxVKnjKH6conOZzZ5QhmrEj8vxs2keNi4k1/fQrnF/nPyo1s&#xa;v/30o+9f/UTsdb6WF3K8mnYt6npFnExYor4GXAFwr4aZSBnA4G4P0mzD4z8JrcEaGpEobIhCpH&#xa;Mqq5JlxQY/hgRb218GlKReE/yF8B7gjjycPgAl6rhAgFaFjfaYZ8HuwdvAOMKfyKwib13hOklO&#xa;7R4A9W1Fv+9bIw38aPugct/DIMd1yEFf4uYf8HUEsHCJQQffctAwAAYAYAAFBLAQIUABQACAgI&#xa;AKuCUUyUEH33LQMAAGAGAAASAAAAAAAAAAAAAAAAAAAAAABpY29ucy9ib29rbWFyay5zdmdQSw&#xa;UGAAAAAAEAAQBAAAAAbQMAAAAA" ID="ID_631891068" CREATED="1518881620504" MODIFIED="1518881620534"/>
 </node>
 </node>
-<node TEXT="images" POSITION="right" ID="ID_1792028464" CREATED="1518707376108" MODIFIED="1518730062800">
+<node TEXT="images" POSITION="right" ID="ID_1792028464" CREATED="1518707376108" MODIFIED="1518881131202">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
