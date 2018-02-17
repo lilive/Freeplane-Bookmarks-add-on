@@ -1,7 +1,7 @@
 <map version="freeplane 1.6.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="Bookmarks" LOCALIZED_STYLE_REF="styles.topic" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1518881322419" LINK="https://github.com/lilive/Freeplane-Bookmarks-add-on" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#000000"><hook NAME="MapStyle" background="#a0a0a0">
-    <properties fit_to_viewport="false;" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff"/>
+<node TEXT="Bookmarks" LOCALIZED_STYLE_REF="styles.topic" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1518883140358" LINK="https://github.com/lilive/Freeplane-Bookmarks-add-on" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#000000"><hook NAME="MapStyle" background="#a0a0a0">
+    <properties show_icon_for_attributes="true" fit_to_viewport="false;" show_note_icons="true" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -86,7 +86,7 @@
 <hook NAME="AutomaticEdgeColor" COUNTER="39" RULE="ON_BRANCH_CREATION"/>
 <edge WIDTH="thin"/>
 <attribute NAME="name" VALUE="bookmarks"/>
-<attribute NAME="version" VALUE="v0.4.1"/>
+<attribute NAME="version" VALUE="v0.4.2"/>
 <attribute NAME="author" VALUE="lilive"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="1.6.6"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
@@ -128,7 +128,7 @@
 </html>
 
 </richcontent>
-<node TEXT="description" POSITION="left" ID="ID_166806415" CREATED="1518707376058" MODIFIED="1518881131106">
+<node TEXT="description" POSITION="left" ID="ID_166806415" CREATED="1518707376058" MODIFIED="1518883140371">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -152,7 +152,7 @@
 </richcontent>
 <node TEXT="Add bookmarks to nodes, and easily navigate beetween them." ID="ID_1183587619" CREATED="1518707454288" MODIFIED="1518815727777"/>
 </node>
-<node TEXT="changes" POSITION="left" ID="ID_1808338119" CREATED="1518707376068" MODIFIED="1518881131108">
+<node TEXT="changes" POSITION="left" ID="ID_1808338119" CREATED="1518707376068" MODIFIED="1518883140372">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -177,8 +177,11 @@
 <node TEXT="v0.4.1" ID="ID_1277201401" CREATED="1518881390240" MODIFIED="1518881395099">
 <node TEXT="The bookmark icon is now SVG" ID="ID_1361390652" CREATED="1518881396976" MODIFIED="1518881414405"/>
 </node>
+<node TEXT="v0.4.2" ID="ID_490789856" CREATED="1518883033697" MODIFIED="1518883037789">
+<node TEXT="Sources files cleanup" ID="ID_655524488" CREATED="1518883038976" MODIFIED="1518883131764"/>
 </node>
-<node TEXT="license" POSITION="left" ID="ID_80501004" CREATED="1518707376071" MODIFIED="1518881131109">
+</node>
+<node TEXT="license" POSITION="left" ID="ID_80501004" CREATED="1518707376071" MODIFIED="1518883140373">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -202,7 +205,7 @@
 </richcontent>
 <node TEXT="This add-on is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 2 of the License.&#xa;&#xa;This program is distributed in the hope that it will be useful,&#xa;but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details." ID="ID_1169466095" CREATED="1518707376074" MODIFIED="1518813393943"/>
 </node>
-<node TEXT="preferences.xml" POSITION="left" ID="ID_293444210" CREATED="1518707376077" MODIFIED="1518881131111">
+<node TEXT="preferences.xml" POSITION="left" ID="ID_293444210" CREATED="1518707376077" MODIFIED="1518883140374">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -222,7 +225,7 @@
 
 </richcontent>
 </node>
-<node TEXT="default.properties" POSITION="left" ID="ID_1290130454" CREATED="1518707376081" MODIFIED="1518881131112">
+<node TEXT="default.properties" POSITION="left" ID="ID_1290130454" CREATED="1518707376081" MODIFIED="1518883140376">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -239,7 +242,7 @@
 
 </richcontent>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_1364843549" CREATED="1518707376084" MODIFIED="1518881131113">
+<node TEXT="translations" POSITION="left" ID="ID_1364843549" CREATED="1518707376084" MODIFIED="1518883140377">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -285,7 +288,7 @@
 <attribute NAME="addon.${name}.ToggleBookmarkSelectionView" VALUE="Voir les marque-pages / Revenir a la vue precedente"/>
 </node>
 </node>
-<node TEXT="deinstall" POSITION="left" ID="ID_1462169331" CREATED="1518707376090" MODIFIED="1518881281186">
+<node TEXT="deinstall" POSITION="left" ID="ID_1462169331" CREATED="1518707376090" MODIFIED="1518883140378">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -309,7 +312,7 @@
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/ToggleBookmarkSelectionView.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/bookmark.svg"/>
 </node>
-<node TEXT="scripts" POSITION="right" ID="ID_1153649867" CREATED="1518707376097" MODIFIED="1518881131131">
+<node TEXT="scripts" POSITION="right" ID="ID_1153649867" CREATED="1518707376097" MODIFIED="1518883140382">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -482,7 +485,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 </node>
-<node TEXT="lib" POSITION="right" ID="ID_888233347" CREATED="1518707376102" MODIFIED="1518881131185">
+<node TEXT="lib" POSITION="right" ID="ID_888233347" CREATED="1518707376102" MODIFIED="1518883140424">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -523,7 +526,7 @@
 
 </richcontent>
 </node>
-<node TEXT="zips" POSITION="right" ID="ID_1960927192" CREATED="1518707376105" MODIFIED="1518881131188">
+<node TEXT="zips" POSITION="right" ID="ID_1960927192" CREATED="1518707376105" MODIFIED="1518883140426">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -565,7 +568,7 @@
 </richcontent>
 <node TEXT="icons" ID="ID_1789080137" CREATED="1518707848641" MODIFIED="1518707851682"/>
 </node>
-<node TEXT="images" POSITION="right" ID="ID_1792028464" CREATED="1518707376108" MODIFIED="1518881131202">
+<node TEXT="images" POSITION="right" ID="ID_1792028464" CREATED="1518707376108" MODIFIED="1518883140437">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
