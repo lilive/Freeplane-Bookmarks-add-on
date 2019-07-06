@@ -1,4 +1,4 @@
-# ![bookmark-img](bookmark.png) Marque-pages pour Freeplane
+# ![logo](doc/bookmark.png) Marque-pages pour Freeplane
 
 Ce module complémentaire (add-on) permet de mettre des marque-pages sur des noeuds d'une carte Freeplane, et de passer facilement de l'un à l'autre.
 
@@ -6,6 +6,8 @@ Les marque-pages sont de deux sortes :
 
 - Des **marque-pages standard**, signalés sur la carte par l'icône de marque-page violette.
 - Des **marque-pages nommés** (associés à un raccourci clavier), signalés sur la carte par l'icône de marque-page verte.
+
+![demo](doc/demo.gif)
 
 Ce module crée un nouveau menu nommé "Marque-pages" dans la barre de menu. On y trouve les actions disponibles :
 

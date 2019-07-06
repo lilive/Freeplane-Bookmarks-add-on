@@ -1,4 +1,4 @@
-# ![bookmark-img](bookmark.png) Bookmarks for Freeplane
+# ![logo](doc/bookmark.png) Bookmarks for Freeplane
 
 [Voir en français](README-fr.md)
 
@@ -8,6 +8,8 @@ There are two kinds of bookmarks :
 
 - **Standard bookmarks**, flagged by the purple bookmark icon.
 - **Named bookmarks** (binded to a keyboard shortcut), flagged by the green bookmark icon.
+
+![demo](doc/demo.gif)
 
 This add-on create a new "Bookmarks" entry in the menu bar, which give access to the differents actions :
 
