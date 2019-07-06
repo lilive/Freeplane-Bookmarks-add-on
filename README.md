@@ -2,7 +2,7 @@
 
 [Voir en français](README-fr.md)
 
-You may prefer to use [the beta version](tree/devel) which introduce keyboard shortcuts to chosen bookmarks.
+*NB: You may prefer to use [the beta version](https://github.com/lilive/Freeplane-Bookmarks-add-on/tree/devel) which introduce keyboard shortcuts to chosen bookmarks.*
 
 This simple add-on allows to bookmark some nodes in a Freeplane map, and to easily navigate beetween them.
 

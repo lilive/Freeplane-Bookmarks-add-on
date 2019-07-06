@@ -1,5 +1,7 @@
 ﻿# ![bookmark-img](bookmark.png) Marque-pages pour Freeplane
 
+*NB: Vous pourriez préférer utiliser [la nouvelle version (beta)](https://github.com/lilive/Freeplane-Bookmarks-add-on/tree/devel) qui ajoute la possibilité de raccourcis clavier vers les marque-pages.*
+
 Ce module complémentaire (add-on) permet de mettre des marque-pages sur des noeuds d'une carte Freeplane, et de passer facilement de l'un à l'autre.
 
 Il ajoute une nouvelle icône à Freeplane, elle est utilisée pour marquer les noeuds.
@@ -12,20 +14,13 @@ Un nouveau menu "Marque-pages" est créé. On y trouve les possibilités de :
 
 N'hésitez pas à contribuer et à [signaler des erreurs](../../issues).
 
-# Installation
+## Installation
+
+- Télécharger le fichier *bookmarks.addon.mm* de [la dernière release stable](../../releases).
+- Ouvrir ce fichier avec Freeplane, et suivre les instructions.
 
 ### Avertissement
 
 Attention tout de même, ce module n'a pas été intensément testé et utilisé pour le moment. Je l'utilise déjà pour mon usage personnel, mais il y a toujours un risque qu'il puisse endommager une carte (je ne le pense pas en fait, mais il vaut mieux prévenir). Tous les retours sont les bienvenus !
-
-### Méthode 1
-
-- Faire un clic droit sur le fichier `bookmarks.addon.mm` ci-dessus. Choisir "Enregistrer la cible sous...", ou quelque chose d'approchant (selon votre navigateur).
-- Ouvrir le fichier téléchargé avec Freeplane, et suivez les instructions.
-
-### Méthode 2
-
-- [Télécharger la dernière release](../../releases) sur son  ordinateur et extraire les fichiers.
-- Parmi les fichiers extraits, ouvrir le fichier nommé "bookmarks.addon.mm" avec Freeplane, et suivez les instructions.
 
 
