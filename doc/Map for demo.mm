@@ -2,8 +2,8 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="Map with&#xa;bookmarks" LOCALIZED_STYLE_REF="styles.topic" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1562436272688" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="6.0 pt" SHAPE_VERTICAL_MARGIN="6.0 pt">
 <font BOLD="false"/>
-<hook NAME="MapStyle" background="#e8d0a2">
-    <properties BookmarksKeys="{&quot;105&quot;:&quot;ID_1919280576&quot;,&quot;49&quot;:&quot;ID_1799752744&quot;,&quot;50&quot;:&quot;ID_985565268&quot;,&quot;51&quot;:&quot;ID_1538669026&quot;,&quot;99&quot;:&quot;ID_211397659&quot;}" fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" show_notes_in_map="true" MarksKeys="{&quot;98&quot;:&quot;ID_1799752744&quot;}" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" Marks_stored_node_id="ID_1837714869"/>
+<hook NAME="MapStyle" background="#a2e8af">
+    <properties BookmarksKeys="{}" show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" show_notes_in_map="true" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" MarksKeys="{&quot;98&quot;:&quot;ID_1799752744&quot;}" Marks_stored_node_id="ID_1837714869"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -89,33 +89,24 @@
 </map_styles>
 </hook>
 <hook NAME="AutomaticEdgeColor" COUNTER="115" RULE="ON_BRANCH_CREATION"/>
-<node TEXT="Important" POSITION="right" ID="ID_1919280576" CREATED="1562412295080" MODIFIED="1562437037531">
-<icon BUILTIN="bookmark-named"/>
+<node TEXT="Important" POSITION="right" ID="ID_1919280576" CREATED="1562412295080" MODIFIED="1562450105715">
 <edge COLOR="#353535"/>
 <node TEXT="A node" ID="ID_136301492" CREATED="1562434721160" MODIFIED="1562436091883"/>
 <node TEXT="A node" ID="ID_974459034" CREATED="1562434724200" MODIFIED="1562436094299"/>
-<node TEXT="Something to remember" ID="ID_813094253" CREATED="1562434725720" MODIFIED="1562437017931">
-<icon BUILTIN="bookmark"/>
+<node TEXT="Something to remember" ID="ID_813094253" CREATED="1562434725720" MODIFIED="1562450104005"/>
 </node>
-</node>
-<node TEXT="Chapter 1" POSITION="right" ID="ID_1799752744" CREATED="1562412297415" MODIFIED="1562437039938">
-<icon BUILTIN="bookmark-named"/>
+<node TEXT="Chapter 1" POSITION="right" ID="ID_1799752744" CREATED="1562412297415" MODIFIED="1562450106787">
 <edge COLOR="#353535"/>
 <node TEXT="A node" ID="ID_1481781699" CREATED="1562434819816" MODIFIED="1562436156204"/>
-<node TEXT="Something usefull" ID="ID_1973138183" CREATED="1562434822773" MODIFIED="1562437026365">
-<icon BUILTIN="bookmark"/>
+<node TEXT="Something usefull" ID="ID_1973138183" CREATED="1562434822773" MODIFIED="1562450103015"/>
 </node>
-</node>
-<node TEXT="Chapter 2" POSITION="right" ID="ID_985565268" CREATED="1562436548521" MODIFIED="1562437041740">
-<icon BUILTIN="bookmark-named"/>
+<node TEXT="Chapter 2" POSITION="right" ID="ID_985565268" CREATED="1562436548521" MODIFIED="1562450107667">
 <edge COLOR="#353535"/>
 </node>
-<node TEXT="Chapter 3" POSITION="right" ID="ID_1538669026" CREATED="1562436548521" MODIFIED="1562437043371">
-<icon BUILTIN="bookmark-named"/>
+<node TEXT="Chapter 3" POSITION="right" ID="ID_1538669026" CREATED="1562436548521" MODIFIED="1562450108486">
 <edge COLOR="#353535"/>
 </node>
-<node TEXT="Conclusion" POSITION="right" ID="ID_211397659" CREATED="1562412299591" MODIFIED="1562437045754">
-<icon BUILTIN="bookmark-named"/>
+<node TEXT="Conclusion" POSITION="right" ID="ID_211397659" CREATED="1562412299591" MODIFIED="1562450109287">
 <edge COLOR="#353535"/>
 </node>
 </node>
