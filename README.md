@@ -1,6 +1,8 @@
-# ![bookmark-img](bookmark.png) Bookmarks for Freeplane
+﻿# ![bookmark-img](bookmark.png) Bookmarks for Freeplane
 
-[Voir en fran�ais](README-fr.md)
+[Voir en français](README-fr.md)
+
+You may prefer to use [the beta version](tree/devel) which introduce keyboard shortcuts to chosen bookmarks.
 
 This simple add-on allows to bookmark some nodes in a Freeplane map, and to easily navigate beetween them.
 
@@ -17,20 +19,13 @@ A new "Bookmarks" menu is available, and allows to :
 
 Feel free to contribute or to [notify issues](../../issues).
 
-# Installation
+## Installation
+
+- Download the *bookmarks.addon.mm** file from [the latest stable release](../../releases).
+- Open this file with Freeplane and follow the instructions.
 
 ### Disclaimer
 
 For now, this add-on has not been heavily tested. I already use it for myself, and I think it's okay, but I prefer to warn: use it at your own risks. Any feedbacks appreciated !
-
-### Method 1
-
-- Right-click the `bookmarks.addon.mm` file above, and select the "Save content as..." (or similar depending on your browser) entry in the menu.
-- Open this downloaded file with Freeplane and follow the instructions.
-
-### Method 2
-
-- [Download the latest release](../../releases) to your computer, unzip it.
-- In the extracted files, open the "bookmarks.addon.mm" file with Freeplane and follow the instructions.
 
 
