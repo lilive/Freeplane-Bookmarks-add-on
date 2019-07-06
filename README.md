@@ -24,7 +24,10 @@ Appart form these 3 main actions, it is also possible to create links *to* or *f
   
 Feel free to contribute or to [notify issues](../../issues).
 
-# Installation
+## Installation
+
+- Download the *bookmarks.addon.mm* file from [the latest release](../../releases).
+- Open this file with Freeplane and follow the instructions.
 
 ### Disclaimer
 
@@ -38,15 +41,4 @@ Then, each time a icon is modified by the user, or each time a node is created, 
 - The add-on write the datas about the named bookmarks within the map storage area, which is saved within the map file. In the worse scenario, a bug in the add-on may corrupt the map file.
 
 Again, I've never notice any problem, but feedbacks about these points will be appreciated !
-
-### Method 1
-
-- Right-click the `bookmarks.addon.mm` file above, and select the "Save content as..." (or similar depending on your browser) entry in the menu.
-- Open this downloaded file with Freeplane and follow the instructions.
-
-### Method 2
-
-- [Download the latest release](../../releases) to your computer, unzip it.
-- In the extracted files, open the "bookmarks.addon.mm" file with Freeplane and follow the instructions.
-
 

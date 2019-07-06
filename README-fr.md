@@ -22,7 +22,10 @@ En plus de ces 3 actions principales, il est aussi possible de créer facilement
 
 N'hésitez pas à contribuer et à [signaler des erreurs](../../issues).
 
-# Installation
+## Installation
+
+- Télécharger le fichier *bookmarks.addon.mm* de [la dernière release](../../releases).
+- Ouvrir ce fichier avec Freeplane, et suivre les instructions.
 
 ### Avertissement
 
@@ -36,15 +39,4 @@ Pour cela, un peu de code est exécuté chaque fois que l'icône d'un nœud est 
 - Le module modifie une carte mentale quand on l'utilise, en y ajoutant des icônes, et en stockant dans le fichier de la carte (dans la *map storage area*) les raccourcis claviers associés aux marque-pages nommés. Ces données sont sauvegardées directement dans le fichier de la carte. Au pire, on peut donc envisager le risque qu'un bug dans le module en vienne à corrompre le fichier de la carte.
 
 Je le redis : je n'ai eu aucun problème en un an d'utilisation. Mais tous les retours sur ces points particuliers sont les bienvenus !
-
-### Méthode 1
-
-- Faire un clic droit sur le fichier `bookmarks.addon.mm` ci-dessus. Choisir "Enregistrer la cible sous...", ou quelque chose d'approchant (selon votre navigateur).
-- Ouvrir le fichier téléchargé avec Freeplane, et suivez les instructions.
-
-### Méthode 2
-
-- [Télécharger la dernière release](../../releases) sur son  ordinateur et extraire les fichiers.
-- Parmi les fichiers extraits, ouvrir le fichier nommé "bookmarks.addon.mm" avec Freeplane, et suivez les instructions.
-
 
