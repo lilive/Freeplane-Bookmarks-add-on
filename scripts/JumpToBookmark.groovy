@@ -24,8 +24,8 @@ import javax.swing.UIManager
 import org.freeplane.plugin.script.proxy.Convertible
 
 storageKey = "BookmarksKeys"
-anonymousIcon = "bookmark"
-namedIcon = "bookmark-named"
+anonymousIcon = "bookmarks/Bookmark 1"
+namedIcon = "bookmarks/Bookmark 2"
 map = node.map
 namedBookmarks = []
 anonymousBookmarks = []

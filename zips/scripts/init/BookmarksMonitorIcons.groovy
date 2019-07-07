@@ -13,8 +13,8 @@ import java.util.Enumeration
 
 class ChangeListener implements INodeChangeListener, IMapChangeListener
 {
-	String namedIcon = "bookmark-named"
-	String anonymousIcon = "bookmark"
+	String namedIcon = "bookmarks/Bookmark 2"
+	String anonymousIcon = "bookmarks/Bookmark 1"
 	String storageKey = "BookmarksKeys"
 
 	public void nodeChanged(NodeChangeEvent event)

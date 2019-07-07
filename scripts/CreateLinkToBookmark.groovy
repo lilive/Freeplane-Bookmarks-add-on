@@ -26,8 +26,8 @@ import org.freeplane.features.link.LinkController
 import org.freeplane.features.link.mindmapmode.MLinkController
 
 storageKey = "BookmarksKeys"
-anonymousIcon = "bookmark"
-namedIcon = "bookmark-named"
+anonymousIcon = "bookmarks/Bookmark 1"
+namedIcon = "bookmarks/Bookmark 2"
 map = node.map
 namedBookmarks = []
 anonymousBookmarks = []

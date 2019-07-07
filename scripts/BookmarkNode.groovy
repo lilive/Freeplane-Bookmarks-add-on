@@ -10,8 +10,8 @@ import java.awt.Component
 import java.awt.BorderLayout
 
 storageKey = "BookmarksKeys"
-anonymousIcon = "bookmark"
-namedIcon = "bookmark-named"
+anonymousIcon = "bookmarks/Bookmark 1"
+namedIcon = "bookmarks/Bookmark 2"
 
 def Map loadNamedBookmarks()
 {
