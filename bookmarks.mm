@@ -281,7 +281,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="en" ID="ID_737947027" CREATED="1562410359665" MODIFIED="1562516776028">
+<node TEXT="en" ID="ID_737947027" CREATED="1562410359665" MODIFIED="1562531930667">
 <attribute_layout NAME_WIDTH="170.999994903803 pt" VALUE_WIDTH="320.9999904334548 pt"/>
 <attribute NAME="addons.${name}" VALUE="Bookmarks"/>
 <attribute NAME="addons.${name}.BookmarkNode" VALUE="Add / Remove a bookmark"/>
@@ -290,18 +290,18 @@
 <attribute NAME="addons.${name}.CreateLinkInBookmark" VALUE="Create link in bookmarked node"/>
 <attribute NAME="addons.${name}.CreateLinkToBookmark" VALUE="Create link to bookmarked node"/>
 <attribute NAME="addons.${name}.UpdateMap" VALUE="Update map with bookmarks defined by a previous version of the addon"/>
-<attribute NAME="tools" VALUE="Tools"/>
+<attribute NAME="bookmarksTools" VALUE="Tools"/>
 </node>
-<node TEXT="fr" ID="ID_1748679509" CREATED="1562410359665" MODIFIED="1562516867944">
+<node TEXT="fr" ID="ID_1748679509" CREATED="1562410359665" MODIFIED="1562532392977">
 <attribute_layout NAME_WIDTH="170.24999492615476 pt" VALUE_WIDTH="320.9999904334548 pt"/>
 <attribute NAME="addons.${name}" VALUE="Marque-pages"/>
-<attribute NAME="addons.${name}.BookmarkNode" VALUE="Placer/Supprimer un marque-page"/>
+<attribute NAME="addons.${name}.BookmarkNode" VALUE="Placer / Supprimer un marque-page"/>
 <attribute NAME="addons.${name}.JumpToBookmark" VALUE="Atteindre un marque_page"/>
 <attribute NAME="addons.${name}.ToggleBookmark" VALUE="Basculer un marque-page"/>
 <attribute NAME="addons.${name}.CreateLinkInBookmark" VALUE="Cr\u00E9er un lien dans un marque-page"/>
 <attribute NAME="addons.${name}.CreateLinkToBookmark" VALUE="Cr\u00E9er un lien vers un marque-page"/>
 <attribute NAME="addons.${name}.UpdateMap" VALUE="Mettre \u00E0 jour les marque-pages d&apos;une version ant\u00E9rieure du module"/>
-<attribute NAME="tools" VALUE="Outils"/>
+<attribute NAME="bookmarksTools" VALUE="Outils"/>
 </node>
 </node>
 <node TEXT="deinstall" POSITION="left" ID="ID_1870605844" CREATED="1562410359689" MODIFIED="1562511617974">
@@ -515,10 +515,10 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
-<node TEXT="UpdateMap.groovy" ID="ID_1665379419" CREATED="1562511659226" MODIFIED="1562516491246">
+<node TEXT="UpdateMap.groovy" ID="ID_1665379419" CREATED="1562511659226" MODIFIED="1562531915888">
 <attribute_layout NAME_WIDTH="183.74999452382343 pt" VALUE_WIDTH="239.24999286979457 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.UpdateMap"/>
-<attribute NAME="menuLocation" VALUE="/menu_bar/${name}/tools"/>
+<attribute NAME="menuLocation" VALUE="/menu_bar/${name}/bookmarksTools"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE=""/>
 <attribute NAME="execute_scripts_without_asking" VALUE="true"/>
