@@ -2,7 +2,7 @@
 
 [Voir en français](README-fr.md)
 
-This simple add-on allows to bookmark some nodes in a Freeplane map, and to easily navigate beetween them.
+This add-on allows to bookmark some nodes in a Freeplane map, and to easily navigate beetween them.
 
 There are two kinds of bookmarks :
 
