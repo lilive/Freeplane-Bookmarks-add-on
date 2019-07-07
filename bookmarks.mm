@@ -3,7 +3,7 @@
 <node TEXT="Bookmarks" LOCALIZED_STYLE_REF="styles.topic" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1562511617909" LINK="https://github.com/lilive/Freeplane-Bookmarks-add-on" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#000000" STYLE="rectangle" SHAPE_HORIZONTAL_MARGIN="6.0 pt" SHAPE_VERTICAL_MARGIN="6.0 pt">
 <edge WIDTH="thin"/>
 <hook NAME="MapStyle" background="#c4c4c4">
-    <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" show_notes_in_map="false" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" Marks_stored_node_id="ID_1837714869"/>
+    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" show_notes_in_map="false" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" Marks_stored_node_id="ID_1837714869"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -292,11 +292,11 @@
 <attribute NAME="addons.${name}.UpdateMap" VALUE="Update map with bookmarks defined by a previous version of the addon"/>
 <attribute NAME="bookmarksTools" VALUE="Tools"/>
 </node>
-<node TEXT="fr" ID="ID_1748679509" CREATED="1562410359665" MODIFIED="1562532392977">
+<node TEXT="fr" ID="ID_1748679509" CREATED="1562410359665" MODIFIED="1562532677786">
 <attribute_layout NAME_WIDTH="170.24999492615476 pt" VALUE_WIDTH="320.9999904334548 pt"/>
 <attribute NAME="addons.${name}" VALUE="Marque-pages"/>
 <attribute NAME="addons.${name}.BookmarkNode" VALUE="Placer / Supprimer un marque-page"/>
-<attribute NAME="addons.${name}.JumpToBookmark" VALUE="Atteindre un marque_page"/>
+<attribute NAME="addons.${name}.JumpToBookmark" VALUE="Atteindre un marque-page"/>
 <attribute NAME="addons.${name}.ToggleBookmark" VALUE="Basculer un marque-page"/>
 <attribute NAME="addons.${name}.CreateLinkInBookmark" VALUE="Cr\u00E9er un lien dans un marque-page"/>
 <attribute NAME="addons.${name}.CreateLinkToBookmark" VALUE="Cr\u00E9er un lien vers un marque-page"/>
