@@ -1,6 +1,6 @@
 <map version="freeplane 1.7.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="Bookmarks" LOCALIZED_STYLE_REF="styles.topic" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1562533224772" LINK="https://github.com/lilive/Freeplane-Bookmarks-add-on" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#000000" STYLE="rectangle" SHAPE_HORIZONTAL_MARGIN="6.0 pt" SHAPE_VERTICAL_MARGIN="6.0 pt">
+<node TEXT="Bookmarks" LOCALIZED_STYLE_REF="styles.topic" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1562534279394" LINK="https://github.com/lilive/Freeplane-Bookmarks-add-on" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#000000" STYLE="rectangle" SHAPE_HORIZONTAL_MARGIN="6.0 pt" SHAPE_VERTICAL_MARGIN="6.0 pt">
 <edge WIDTH="thin"/>
 <hook NAME="MapStyle" background="#c4c4c4">
     <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" show_notes_in_map="false" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" Marks_stored_node_id="ID_1837714869"/>
@@ -131,9 +131,8 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
-<node TEXT="description" POSITION="left" ID="ID_1114811084" CREATED="1562410359487" MODIFIED="1562533224804" TEXT_SHORTENED="true">
+<node TEXT="description" POSITION="left" ID="ID_1114811084" CREATED="1562410359487" MODIFIED="1562534279408" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -153,11 +152,10 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="Add bookmarks to nodes, and easily navigate beetween them." ID="ID_1183587619" CREATED="1518707454288" MODIFIED="1518815727777"/>
 </node>
-<node TEXT="changes" POSITION="left" ID="ID_1094494132" CREATED="1562410359592" MODIFIED="1562533224807" TEXT_SHORTENED="true">
+<node TEXT="changes" POSITION="left" ID="ID_1094494132" CREATED="1562410359592" MODIFIED="1562534279409" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -171,7 +169,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="v0.3" ID="ID_1947541306" CREATED="1518881580800" MODIFIED="1518881585971">
 <node TEXT="First released version" ID="ID_1150257103" CREATED="1518881587391" MODIFIED="1518881596914"/>
@@ -192,7 +189,7 @@
 <node TEXT="Rename bookmarks icons" ID="ID_27269396" CREATED="1562499884480" MODIFIED="1562499895702"/>
 </node>
 </node>
-<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_230785910" CREATED="1562410359599" MODIFIED="1562533224809" TEXT_SHORTENED="true">
+<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_230785910" CREATED="1562410359599" MODIFIED="1562534279410" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -212,11 +209,10 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="&#xa;This add-on is free software: you can redistribute it and/or modify&#xa;it under the terms of the GNU General Public License as published by&#xa;the Free Software Foundation, either version 2 of the License, or&#xa;(at your option) any later version.&#xa;&#xa;This program is distributed in the hope that it will be useful,&#xa;but WITHOUT ANY WARRANTY; without even the implied warranty of&#xa;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the&#xa;GNU General Public License for more details.&#xa;" ID="ID_1167386088" CREATED="1562410359607" MODIFIED="1562410359614"/>
 </node>
-<node TEXT="preferences.xml" POSITION="left" ID="ID_1098616655" CREATED="1562410359628" MODIFIED="1562533224813" TEXT_SHORTENED="true">
+<node TEXT="preferences.xml" POSITION="left" ID="ID_1098616655" CREATED="1562410359628" MODIFIED="1562534279413" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -233,10 +229,9 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
-<node TEXT="default.properties" POSITION="left" ID="ID_151630546" CREATED="1562410359652" MODIFIED="1562533224816" TEXT_SHORTENED="true">
+<node TEXT="default.properties" POSITION="left" ID="ID_151630546" CREATED="1562410359652" MODIFIED="1562534279414" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -258,10 +253,9 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_255907585" CREATED="1562410359658" MODIFIED="1562533224820" TEXT_SHORTENED="true">
+<node TEXT="translations" POSITION="left" ID="ID_255907585" CREATED="1562410359658" MODIFIED="1562534279416" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -286,36 +280,37 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
-<node TEXT="en" ID="ID_737947027" CREATED="1562410359665" MODIFIED="1562533430521">
+<node TEXT="en" ID="ID_737947027" CREATED="1562410359665" MODIFIED="1562534645360">
 <attribute_layout NAME_WIDTH="170.999994903803 pt" VALUE_WIDTH="320.9999904334548 pt"/>
 <attribute NAME="addons.${name}" VALUE="Bookmarks"/>
-<attribute NAME="addons.${name}.BookmarkNode" VALUE="Add / Remove a bookmark"/>
-<attribute NAME="addons.${name}.ToggleBookmark" VALUE="Toggle the bookmark"/>
-<attribute NAME="addons.${name}.JumpToBookmark" VALUE="Jump to bookmark"/>
-<attribute NAME="addons.${name}.JumpToPreviousBookmark" VALUE="Jump to previous bookmark"/>
-<attribute NAME="addons.${name}.JumpToNextBookmark" VALUE="Jump to next bookmark"/>
-<attribute NAME="addons.${name}.CreateLinkInBookmark" VALUE="Create link in bookmarked node"/>
-<attribute NAME="addons.${name}.CreateLinkToBookmark" VALUE="Create link to bookmarked node"/>
-<attribute NAME="addons.${name}.UpdateMap" VALUE="Update map with bookmarks defined by a previous version of the addon"/>
-<attribute NAME="bookmarksTools" VALUE="Tools"/>
+<attribute NAME="addons.${name}._10_BookmarkNode" VALUE="Add / Remove a bookmark"/>
+<attribute NAME="addons.${name}._20_ToggleBookmark" VALUE="Toggle the bookmark"/>
+<attribute NAME="addons.${name}._30_JumpToBookmark" VALUE="Jump to bookmark"/>
+<attribute NAME="addons.${name}._35_JumpToPreviousBookmark" VALUE="Jump to previous bookmark"/>
+<attribute NAME="addons.${name}._36_JumpToNextBookmark" VALUE="Jump to next bookmark"/>
+<attribute NAME="addons.${name}._50_CreateLinkInBookmark" VALUE="Create link in bookmarked node"/>
+<attribute NAME="addons.${name}._51_CreateLinkToBookmark" VALUE="Create link to bookmarked node"/>
+<attribute NAME="addons.${name}._90_UpdateMap" VALUE="Update map with bookmarks defined by a previous version of the addon"/>
+<attribute NAME="_50_bookmarksLinks" VALUE="Create links"/>
+<attribute NAME="_90_bookmarksTools" VALUE="Tools"/>
 </node>
-<node TEXT="fr" ID="ID_1748679509" CREATED="1562410359665" MODIFIED="1562533507683">
+<node TEXT="fr" ID="ID_1748679509" CREATED="1562410359665" MODIFIED="1562534640979">
 <attribute_layout NAME_WIDTH="170.24999492615476 pt" VALUE_WIDTH="320.9999904334548 pt"/>
 <attribute NAME="addons.${name}" VALUE="Marque-pages"/>
-<attribute NAME="addons.${name}.BookmarkNode" VALUE="Placer / Supprimer un marque-page"/>
-<attribute NAME="addons.${name}.ToggleBookmark" VALUE="Basculer un marque-page"/>
-<attribute NAME="addons.${name}.JumpToBookmark" VALUE="Atteindre un marque-page"/>
-<attribute NAME="addons.${name}.JumpToPreviousBookmark" VALUE="Atteindre le marque-page pr\u00E9c\u00E9dent"/>
-<attribute NAME="addons.${name}.JumpToNextBookmark" VALUE="Atteindre le marque-page suivant"/>
-<attribute NAME="addons.${name}.CreateLinkInBookmark" VALUE="Cr\u00E9er un lien dans un marque-page"/>
-<attribute NAME="addons.${name}.CreateLinkToBookmark" VALUE="Cr\u00E9er un lien vers un marque-page"/>
-<attribute NAME="addons.${name}.UpdateMap" VALUE="Mettre \u00E0 jour les marque-pages d&apos;une version ant\u00E9rieure du module"/>
-<attribute NAME="bookmarksTools" VALUE="Outils"/>
+<attribute NAME="addons.${name}._10_BookmarkNode" VALUE="Placer / Supprimer un marque-page"/>
+<attribute NAME="addons.${name}._20_ToggleBookmark" VALUE="Basculer un marque-page"/>
+<attribute NAME="addons.${name}._30_JumpToBookmark" VALUE="Atteindre un marque-page"/>
+<attribute NAME="addons.${name}._35_JumpToPreviousBookmark" VALUE="Atteindre le marque-page pr\u00E9c\u00E9dent"/>
+<attribute NAME="addons.${name}._36_JumpToNextBookmark" VALUE="Atteindre le marque-page suivant"/>
+<attribute NAME="addons.${name}._50_CreateLinkInBookmark" VALUE="Cr\u00E9er un lien dans un marque-page"/>
+<attribute NAME="addons.${name}._51_CreateLinkToBookmark" VALUE="Cr\u00E9er un lien vers un marque-page"/>
+<attribute NAME="addons.${name}._90_UpdateMap" VALUE="Mettre \u00E0 jour les marque-pages d&apos;une version ant\u00E9rieure du module"/>
+<attribute NAME="_50_bookmarksLinks" VALUE="Cr\u00E9er des liens"/>
+<attribute NAME="_90_bookmarksTools" VALUE="Outils"/>
 </node>
 </node>
-<node TEXT="deinstall" POSITION="left" ID="ID_1870605844" CREATED="1562410359689" MODIFIED="1562533240244">
+<node TEXT="deinstall" POSITION="left" ID="ID_1870605844" CREATED="1562410359689" MODIFIED="1562534400874">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -329,28 +324,22 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <attribute_layout VALUE_WIDTH="389.9999883770946 pt"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}.script.xml"/>
-<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/BookmarkNode.groovy"/>
-<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/CreateLinkToCurrentNodeInMarkedNode.groovy"/>
-<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/CreateLinkToMarkInCurrentNode.groovy"/>
-<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/JumpToBookmark.groovy"/>
-<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/ToggleBookmark.groovy"/>
-<attribute NAME="delete" VALUE="${installationbase}/scripts/init/BookmarksMonitorIcons.groovy"/>
-<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/CreateLinkInBookmark.groovy"/>
-<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/CreateLinkToBookmark.groovy"/>
-<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/Bookmarks.groovy"/>
-<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/Common.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/bookmarks/Bookmark 1.svg"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/bookmarks/Bookmark 2.svg"/>
-<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/UpdateMapTo_V_0_5_1.groovy"/>
-<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/UpdateMap.groovy"/>
-<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/JumpToNextBookmark.groovy"/>
-<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/JumpToPreviousBookmark.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/scripts/init/BookmarksMonitorIcons.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/_10_BookmarkNode.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/_20_ToggleBookmark.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/_30_JumpToBookmark.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/_35_JumpToPreviousBookmark.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/_36_JumpToNextBookmark.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/_50_CreateLinkInBookmark.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/_51_CreateLinkToBookmark.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/_90_UpdateMap.groovy"/>
 </node>
-<node TEXT="scripts" POSITION="right" ID="ID_1460492722" CREATED="1562410359701" MODIFIED="1562533224835" TEXT_SHORTENED="true">
+<node TEXT="scripts" POSITION="right" ID="ID_1460492722" CREATED="1562410359701" MODIFIED="1562534279424" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -469,11 +458,10 @@
     </p>
   </body>
 </html>
-
 </richcontent>
-<node TEXT="BookmarkNode.groovy" ID="ID_1722187040" CREATED="1562410359729" MODIFIED="1562412132309">
+<node TEXT="_10_BookmarkNode.groovy" ID="ID_1722187040" CREATED="1562410359729" MODIFIED="1562412132309">
 <attribute_layout NAME_WIDTH="172.49999485909953 pt" VALUE_WIDTH="213.7499936297538 pt"/>
-<attribute NAME="menuTitleKey" VALUE="addons.${name}.BookmarkNode"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}._10_BookmarkNode"/>
 <attribute NAME="menuLocation" VALUE="/menu_bar/${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE=""/>
@@ -483,9 +471,9 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
-<node TEXT="ToggleBookmark.groovy" ID="ID_656120992" CREATED="1562410359736" MODIFIED="1562412173032">
+<node TEXT="_20_ToggleBookmark.groovy" ID="ID_656120992" CREATED="1562410359736" MODIFIED="1562412173032">
 <attribute_layout NAME_WIDTH="180.7499946132304 pt" VALUE_WIDTH="231.74999309331199 pt"/>
-<attribute NAME="menuTitleKey" VALUE="addons.${name}.ToggleBookmark"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}._20_ToggleBookmark"/>
 <attribute NAME="menuLocation" VALUE="/menu_bar/${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE=""/>
@@ -495,9 +483,9 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
-<node TEXT="JumpToBookmark.groovy" ID="ID_1077199462" CREATED="1562410359734" MODIFIED="1562412168184">
+<node TEXT="_30_JumpToBookmark.groovy" ID="ID_1077199462" CREATED="1562410359734" MODIFIED="1562412168184">
 <attribute_layout NAME_WIDTH="181.49999459087866 pt" VALUE_WIDTH="230.24999313801547 pt"/>
-<attribute NAME="menuTitleKey" VALUE="addons.${name}.JumpToBookmark"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}._30_JumpToBookmark"/>
 <attribute NAME="menuLocation" VALUE="/menu_bar/${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE=""/>
@@ -507,9 +495,9 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
-<node TEXT="JumpToPreviousBookmark.groovy" ID="ID_549813829" CREATED="1562533224958" MODIFIED="1562533329723">
+<node TEXT="_35_JumpToPreviousBookmark.groovy" ID="ID_549813829" CREATED="1562533224958" MODIFIED="1562533329723">
 <attribute_layout NAME_WIDTH="173.99999481439605 pt" VALUE_WIDTH="231.74999309331199 pt"/>
-<attribute NAME="menuTitleKey" VALUE="addons.${name}.JumpToPreviousBookmark"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}._35_JumpToPreviousBookmark"/>
 <attribute NAME="menuLocation" VALUE="/menu_bar/${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE=""/>
@@ -519,9 +507,9 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
-<node TEXT="JumpToNextBookmark.groovy" ID="ID_486794651" CREATED="1562533224860" MODIFIED="1562533311755">
+<node TEXT="_36_JumpToNextBookmark.groovy" ID="ID_486794651" CREATED="1562533224860" MODIFIED="1562533311755">
 <attribute_layout NAME_WIDTH="180.7499946132304 pt" VALUE_WIDTH="224.99999329447766 pt"/>
-<attribute NAME="menuTitleKey" VALUE="addons.${name}.JumpToNextBookmark"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}._36_JumpToNextBookmark"/>
 <attribute NAME="menuLocation" VALUE="/menu_bar/${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE=""/>
@@ -531,10 +519,10 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
-<node TEXT="CreateLinkInBookmark.groovy" ID="ID_331545763" CREATED="1562412710758" MODIFIED="1562413602937">
+<node TEXT="_50_CreateLinkInBookmark.groovy" ID="ID_331545763" CREATED="1562412710758" MODIFIED="1562534572812">
 <attribute_layout NAME_WIDTH="182.24999456852692 pt" VALUE_WIDTH="241.49999280273937 pt"/>
-<attribute NAME="menuTitleKey" VALUE="addons.${name}.CreateLinkInBookmark"/>
-<attribute NAME="menuLocation" VALUE="/menu_bar/${name}"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}._50_CreateLinkInBookmark"/>
+<attribute NAME="menuLocation" VALUE="/menu_bar/${name}/_50_bookmarksLinks"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE=""/>
 <attribute NAME="execute_scripts_without_asking" VALUE="true"/>
@@ -543,10 +531,10 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
-<node TEXT="CreateLinkToBookmark.groovy" ID="ID_1850367663" CREATED="1562412710763" MODIFIED="1562413615993">
+<node TEXT="_51_CreateLinkToBookmark.groovy" ID="ID_1850367663" CREATED="1562412710763" MODIFIED="1562534568332">
 <attribute_layout NAME_WIDTH="185.9999944567682 pt" VALUE_WIDTH="238.4999928921463 pt"/>
-<attribute NAME="menuTitleKey" VALUE="addons.${name}.CreateLinkToBookmark"/>
-<attribute NAME="menuLocation" VALUE="/menu_bar/${name}"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}._51_CreateLinkToBookmark"/>
+<attribute NAME="menuLocation" VALUE="/menu_bar/${name}/_50_bookmarksLinks"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE=""/>
 <attribute NAME="execute_scripts_without_asking" VALUE="true"/>
@@ -555,10 +543,10 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
-<node TEXT="UpdateMap.groovy" ID="ID_1665379419" CREATED="1562511659226" MODIFIED="1562531915888">
+<node TEXT="_90_UpdateMap.groovy" ID="ID_1665379419" CREATED="1562511659226" MODIFIED="1562531915888">
 <attribute_layout NAME_WIDTH="183.74999452382343 pt" VALUE_WIDTH="239.24999286979457 pt"/>
-<attribute NAME="menuTitleKey" VALUE="addons.${name}.UpdateMap"/>
-<attribute NAME="menuLocation" VALUE="/menu_bar/${name}/bookmarksTools"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}._90_UpdateMap"/>
+<attribute NAME="menuLocation" VALUE="/menu_bar/${name}/_90_bookmarksTools"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE=""/>
 <attribute NAME="execute_scripts_without_asking" VALUE="true"/>
@@ -568,7 +556,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 </node>
-<node TEXT="lib" POSITION="right" ID="ID_1159449610" CREATED="1562410359919" MODIFIED="1562533225095">
+<node TEXT="lib" POSITION="right" ID="ID_1159449610" CREATED="1562410359919" MODIFIED="1562534279487">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -606,10 +594,9 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
-<node TEXT="zips" POSITION="right" ID="ID_435012533" CREATED="1562410359928" MODIFIED="1562533225099">
+<node TEXT="zips" POSITION="right" ID="ID_435012533" CREATED="1562410359928" MODIFIED="1562534279491">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -647,12 +634,11 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="icons" ID="ID_1144883898" CREATED="1562410359939" MODIFIED="1562410359940"/>
 <node TEXT="scripts" ID="ID_87188883" CREATED="1562410359941" MODIFIED="1562410359942"/>
 </node>
-<node TEXT="images" POSITION="right" ID="ID_63266556" CREATED="1562410359950" MODIFIED="1562533225113" TEXT_SHORTENED="true">
+<node TEXT="images" POSITION="right" ID="ID_63266556" CREATED="1562410359950" MODIFIED="1562534279505" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -686,7 +672,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
