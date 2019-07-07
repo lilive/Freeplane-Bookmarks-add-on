@@ -118,18 +118,18 @@ if( isNamedBookmark )
     // Remove the named bookmark and put a regular bookmark instead
     deleteNamedBookmark( node, namedBookmarks )
     createAnonymousBookmark( node )
-    c.statusInfo = 'This node now has a regular bookmark'
+    c.setStatusInfo( 'standard', 'This node now has a regular bookmark', 'button_ok' )
 }
 else if( isAnonymousBookmark )
     {
     // Remove the named bookmark
     deleteAnonymousBookmark( node )
-    c.statusInfo = 'This node has no bookmark anymore'
+    c.setStatusInfo( 'standard', 'This node has no bookmark anymore', 'button_cancel' )
 }
 else
     {
     // Create a regular bookmark
     createAnonymousBookmark( node )
-    c.statusInfo = 'This node now has a regular bookmark'
+    c.setStatusInfo( 'standard', 'This node now has a regular bookmark', 'button_ok' )
 }
 

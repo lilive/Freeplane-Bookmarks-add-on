@@ -24,6 +24,6 @@ if( n != start && isBookmarked( n ) )
 }
 else
 {
-    c.setStatusInfo( "standard", "No previous bookmark !", "warning" )
+    c.setStatusInfo( 'standard', "No previous bookmark !", 'messagebox_warning' )
 }
 

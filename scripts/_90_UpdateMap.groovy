@@ -7,6 +7,7 @@ import groovy.json.JsonSlurper
 storageKey = "BookmarksKeys"
 anonymousIcon = "bookmarks/Bookmark 1"
 namedIcon = "bookmarks/Bookmark 2"
+updated = false
 
 def Map loadOldNamedBookmarks()
 {
@@ -85,21 +86,34 @@ if( oldNamedBookmarks )
             n.icons.add( anonymousIcon )
         }
     }
+
+    updated = true
 }
 
 // Now replace the old bookmarks icons names
 c.findAll().each
 {
     def update = false
-    while( it.icons.remove( "bookmark-named" ) ) update = true
+    while( it.icons.remove( "bookmark-named" ) )
+    {
+        update = true
+        updated = true
+    }
     if( update )
     {
         it.icons.add( namedIcon )
         return
     }
     update = false
-    while( it.icons.remove( "bookmark" ) ) update = true
+    while( it.icons.remove( "bookmark" ) )
+    {
+        update = true
+        updated = true
+    }
     if( update ) it.icons.add( anonymousIcon )
 }
+
+if( updated ) c.setStatusInfo( 'standard', 'Bookmarks updated !', 'button_ok' )
+else c.setStatusInfo( 'standard', 'No update required !', 'button_cancel' )
 
 

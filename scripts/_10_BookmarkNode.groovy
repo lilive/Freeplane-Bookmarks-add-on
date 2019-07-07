@@ -217,13 +217,13 @@ gui.addKeyListener(
                 {
                     deleteNamedBookmark( node, namedBookmarks )
                     gui.dispose()
-                    c.statusInfo = 'This node has no bookmark anymore'
+                    c.setStatusInfo( 'standard', 'This node has no bookmark anymore', 'button_cancel' )
                 }
                 else if( isAnonymousBookmark )
                 {
                     deleteAnonymousBookmark( node )
                     gui.dispose()
-                    c.statusInfo = 'This node has no bookmark anymore'
+                    c.setStatusInfo( 'standard', 'This node has no bookmark anymore', 'button_cancel' )
                 }
             }
             else if( keyCharCode == 32 )
@@ -233,13 +233,13 @@ gui.addKeyListener(
                     deleteNamedBookmark( node, namedBookmarks )
                     createAnonymousBookmark( node )
                     gui.dispose()
-                    c.statusInfo = 'This node now has a regular bookmark'
+                    c.setStatusInfo( 'standard', 'This node now has a regular bookmark', 'button_ok' )
                 }
                 else if( ! isAnonymousBookmark )
                 {
                     createAnonymousBookmark( node )
                     gui.dispose()
-                    c.statusInfo = 'This node now has a regular bookmark'
+                    c.setStatusInfo( 'standard', 'This node now has a regular bookmark', 'button_ok' )
                 }
             }
             else if( keyCharCode > 32 && keyCharCode != 127 && keyCharCode < 256 )
@@ -247,11 +247,11 @@ gui.addKeyListener(
                 if( isAnonymousBookmark ) deleteAnonymousBookmark( node )
                 createNamedBookmark( node, keyCharCode, namedBookmarks )
                 gui.dispose()
-                c.statusInfo = 'This node now has a bookmark named "' + chr + "'"
+                c.setStatusInfo( 'standard', 'This node now has a bookmark named "' + chr + "'", 'button_ok' )
             }
             else if( keyCharCode == 27 )
             {
-                c.statusInfo = 'Bookmark operation aborded'
+                c.setStatusInfo( 'standard', 'Bookmark operation aborded', 'messagebox_warning' )
                 gui.dispose()
             }
         }

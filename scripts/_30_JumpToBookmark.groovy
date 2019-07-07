@@ -120,7 +120,7 @@ def jumpToNodeAfterGuiDispose( target, message )
             {
                 c.select(  target )
                 c.centerOnNode( target )
-                c.statusInfo = message
+                c.setStatusInfo( 'standard', message )
             }
         }
     )
@@ -231,8 +231,8 @@ def JList getNamedBookmarksJList(
                         gui.dispose()
                     }
                     else
-                        {
-                        c.statusInfo = 'There is no node marked with the key ' + chr
+                    {
+                        c.setStatusInfo( 'standard', 'There is no node marked with the key ' + chr, "messagebox_warning" )
                     }
                 }
             }
@@ -502,12 +502,12 @@ def createGui(
         onEscPressID,
         new AbstractAction()
         {
-	    @Override
-	    public void actionPerformed( ActionEvent e )
+            @Override
+            public void actionPerformed( ActionEvent e )
             {
-	        gui.dispose()
-                c.statusInfo = 'Jump to bookmark aborded'
-	    }
+                gui.dispose()
+                c.setStatusInfo( 'standard', 'Jump to bookmark aborded', 'button_cancel' )
+            }
         }
     )
 

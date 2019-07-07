@@ -111,7 +111,7 @@ def addNamedBookmarkIcon( node )
 def createLink( dst, src, message )
 {
     dst.link.node = src
-    c.statusInfo = message
+    c.setStatusInfo( 'standard', message, 'button_ok' )
 }
 
 // Create a list of all the named bookmarks, except the current node if it is one of them
@@ -216,8 +216,8 @@ def JList getNamedBookmarksJList( List bookmarks )
                         gui.dispose()
                     }
                     else
-                        {
-                        c.statusInfo = 'There is no node marked with the key ' + chr
+                    {
+                        c.setStatusInfo( 'standard', 'There is no node marked with the key ' + chr, 'messagebox_warning' )
                     }
                 }
             }
@@ -487,7 +487,7 @@ def createGui(
 	        public void actionPerformed( ActionEvent e )
             {
 	            gui.dispose()
-                c.statusInfo = 'Link creation aborded'
+                c.setStatusInfo( 'standard', 'Link creation aborded', 'messagebox_warning' )
 	        }
         }
     )
