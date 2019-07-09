@@ -29,7 +29,13 @@ Feel free to contribute or to [notify issues](../../issues).
 - Download the *bookmarks.addon.mm* file from [the latest release](../../releases).
 - Open this file with Freeplane and follow the instructions.
 
-### Disclaimer
+## Update
+
+To update the add-on, just install its newer version. No need to uninstall it first.
+
+**Important :** If you have created bookmarks with a version of this add-on prior to v0.5.1, you have to update your maps that contain bookmarks. Use the *"Boomarks>Tools>Update map with bookmarks defined by a previous version of the addon"* feature.
+
+## Disclaimer
 
 I use this addon-on for myself since a year, and I've never got any problems. I think it's ok. Anyway, I prefer to warn and say : use this add-on at your own risks.
 

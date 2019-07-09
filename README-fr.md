@@ -27,7 +27,13 @@ N'hésitez pas à contribuer et à [signaler des erreurs](../../issues).
 - Télécharger le fichier *bookmarks.addon.mm* de [la dernière release](../../releases).
 - Ouvrir ce fichier avec Freeplane, et suivre les instructions.
 
-### Avertissement
+## Mise-à-jour
+
+Pour mettre à jour le module il suffit d'installer la dernière version. Inutile de désinstaller la version précédente.
+
+**Important :** Si vous avez créé des marque-pages avec une version de ce module antérieure à la version v0.5.1, vous devez mettre vos cartes contenant des marque-pages à jour. Pour cela utiliser le menu *"Marque-pages>Outils>Mettre à jour les marque-pages d'une version antérieure du module"*.
+
+## Avertissement
 
 J'utilise ce module pour mon usage personnel depuis un an sans aucun problème, mais je préfère prévenir et déclarer : à utiliser à son propre risque.
 

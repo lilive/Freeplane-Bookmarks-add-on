@@ -3,7 +3,7 @@
 <node TEXT="Bookmarks" LOCALIZED_STYLE_REF="styles.topic" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1562534279394" LINK="https://github.com/lilive/Freeplane-Bookmarks-add-on" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#000000" STYLE="rectangle" SHAPE_HORIZONTAL_MARGIN="6.0 pt" SHAPE_VERTICAL_MARGIN="6.0 pt">
 <edge WIDTH="thin"/>
 <hook NAME="MapStyle" background="#c4c4c4">
-    <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" show_notes_in_map="false" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" Marks_stored_node_id="ID_1837714869"/>
+    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" show_notes_in_map="false" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" Marks_stored_node_id="ID_1837714869"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -132,7 +132,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="description" POSITION="left" ID="ID_1114811084" CREATED="1562410359487" MODIFIED="1562534279408" TEXT_SHORTENED="true">
+<node TEXT="description" POSITION="left" ID="ID_1114811084" CREATED="1562410359487" MODIFIED="1562698000532">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -186,7 +186,7 @@
 <node TEXT="Complete rewrite of the add-on. Introduce named bookmarks." ID="ID_419235170" CREATED="1562409104741" MODIFIED="1562417968655"/>
 </node>
 <node TEXT="v0.5.1" ID="ID_540433193" CREATED="1562499877679" MODIFIED="1562499881604">
-<node TEXT="Rename bookmarks icons" ID="ID_27269396" CREATED="1562499884480" MODIFIED="1562499895702"/>
+<node TEXT="- Renamed bookmarks icons (because of conflict with freeplane builtin bookmark icon)&#xa;- Jump to previous/next bookmark commands&#xa;- Better GUI text&#xa;- GUI translation&#xa;- Command to update bookmarks created with previous versions" ID="ID_27269396" CREATED="1562499884480" MODIFIED="1562698264366"/>
 </node>
 </node>
 <node TEXT="license" FOLDED="true" POSITION="left" ID="ID_230785910" CREATED="1562410359599" MODIFIED="1562534279410" TEXT_SHORTENED="true">
@@ -344,7 +344,7 @@
 <attribute NAME="addons.${name}.T_space_to_link_in_memorized" VALUE="Press &lt;i&gt;Space&lt;/i&gt; to create the link in the memorized node"/>
 <attribute NAME="addons.${name}.T_space_to_link_to_memorized" VALUE="Press &lt;i&gt;Space&lt;/i&gt; to link to memorized node"/>
 <attribute NAME="addons.${name}.T_tab_to_display_NBM" VALUE="Press &lt;i&gt;Tab&lt;/i&gt; to display named bookmarks"/>
-<attribute NAME="addons.${name}.T_tab_to_display_SBM" VALUE="Press &lt;i&gt;Tab&lt;/i&gt; to display standard bookmarks" />
+<attribute NAME="addons.${name}.T_tab_to_display_SBM" VALUE="Press &lt;i&gt;Tab&lt;/i&gt; to display standard bookmarks"/>
 <attribute NAME="addons.${name}.T_tip_create_link_in_NBM" VALUE="To create a link in a bookmarked node either"/>
 <attribute NAME="addons.${name}.T_tip_create_link_in_SBM" VALUE="To create a link in a bookmarked node either"/>
 <attribute NAME="addons.${name}.T_tip_create_link_to_NBM" VALUE="To select the target for the link either"/>
@@ -353,7 +353,7 @@
 <attribute NAME="addons.${name}.T_tip_jump_to_SBM" VALUE="To jump to a bookmark either"/>
 <attribute NAME="addons.${name}.T_to_cancel" VALUE="to cancel"/>
 </node>
-<node TEXT="fr" ID="ID_1748679509" CREATED="1562410359665" MODIFIED="1562628654693">
+<node TEXT="fr" ID="ID_1748679509" CREATED="1562410359665" MODIFIED="1562699268663">
 <attribute_layout NAME_WIDTH="170.24999492615476 pt" VALUE_WIDTH="320.9999904334548 pt"/>
 <attribute NAME="addons.${name}" VALUE="Marque-pages"/>
 <attribute NAME="addons.${name}._10_BookmarkNode" VALUE="Placer / Supprimer un marque-page"/>
@@ -417,10 +417,10 @@
 <attribute NAME="addons.${name}.T_space_to_link_to_memorized" VALUE="Presser &lt;i&gt;Espace&lt;/i&gt; pour lier au noeud m\u00E9moris\u00E9"/>
 <attribute NAME="addons.${name}.T_tab_to_display_NBM" VALUE="Appuyer sur &lt;i&gt;Tab&lt;/i&gt; pour afficher les marque-pages nomm\u00E9s"/>
 <attribute NAME="addons.${name}.T_tab_to_display_SBM" VALUE="Appuyer sur &lt;i&gt;Tab&lt;/i&gt; pour afficher les marque-pages standards"/>
-<attribute NAME="addons.${name}.T_tip_create_link_in_NBM" VALUE="Pour sélectionner le noeud où créer le lien"/>
-<attribute NAME="addons.${name}.T_tip_create_link_in_SBM" VALUE="Pour sélectionner le noeud où créer le lien"/>
-<attribute NAME="addons.${name}.T_tip_create_link_to_NBM" VALUE="Pour sélectionner le marque-page cible du lien"/>
-<attribute NAME="addons.${name}.T_tip_create_link_to_SBM" VALUE="Pour sélectionner le marque-page cible du lien"/>
+<attribute NAME="addons.${name}.T_tip_create_link_in_NBM" VALUE="Pour s\u00E9lectionner le noeud o\u00F9 cr\u00E9er le lien"/>
+<attribute NAME="addons.${name}.T_tip_create_link_in_SBM" VALUE="Pour s\u00E9lectionner le noeud o\u00F9 cr\u00E9er le lien"/>
+<attribute NAME="addons.${name}.T_tip_create_link_to_NBM" VALUE="Pour s\u00E9lectionner le marque-page cible du lien"/>
+<attribute NAME="addons.${name}.T_tip_create_link_to_SBM" VALUE="Pour s\u00E9lectionner le marque-page cible du lien"/>
 <attribute NAME="addons.${name}.T_tip_jump_to_NBM" VALUE="Pour atteindre un marque-page nomm\u00E9"/>
 <attribute NAME="addons.${name}.T_tip_jump_to_SBM" VALUE="Pour atteindre un marque-page"/>
 <attribute NAME="addons.${name}.T_to_cancel" VALUE="pour annuler"/>
