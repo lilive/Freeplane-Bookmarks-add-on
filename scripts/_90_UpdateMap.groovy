@@ -90,6 +90,12 @@ if( oldNamedBookmarks )
     updated = true
 }
 
+def gtt( key )
+{
+    // gt = Get Translated Text
+    return textUtils.getText( 'addons.bookmarks.' + key )
+}
+
 // Now replace the old bookmarks icons names
 c.findAll().each
 {
@@ -113,7 +119,7 @@ c.findAll().each
     if( update ) it.icons.add( anonymousIcon )
 }
 
-if( updated ) c.setStatusInfo( 'standard', "${textUtils.getText( 'addons.bookmarks.T_BMs_updated' )} !", 'button_ok' )
-else c.setStatusInfo( 'standard', "${textUtils.getText( 'addons.bookmarks.T_no_update_required' )} !", 'button_cancel' )
+if( updated ) c.setStatusInfo( 'standard', "${gtt( 'T_BMs_updated' )} !", 'button_ok' )
+else c.setStatusInfo( 'standard', "${gtt( 'T_no_update_required' )} !", 'button_cancel' )
 
 

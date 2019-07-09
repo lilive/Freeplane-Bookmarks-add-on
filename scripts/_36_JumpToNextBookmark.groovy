@@ -3,6 +3,12 @@
 anonymousIcon = "bookmarks/Bookmark 1"
 namedIcon = "bookmarks/Bookmark 2"
 
+def gtt( key )
+{
+    // gt = Get Translated Text
+    return textUtils.getText( 'addons.bookmarks.' + key )
+}
+
 // Return is a node is bookmarked
 def isBookmarked( node )
 {
@@ -24,5 +30,5 @@ if( n != start && isBookmarked( n ) )
 }
 else
 {
-    c.setStatusInfo( 'standard', textUtils.getText( 'addons.bookmarks.T_no_next_BM' ) + " !", 'messagebox_warning' )
+    c.setStatusInfo( 'standard', gtt( 'T_no_next_BM' ) + " !", 'messagebox_warning' )
 }

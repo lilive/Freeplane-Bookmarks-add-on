@@ -95,6 +95,11 @@ def deleteAnonymousBookmark( node )
     node.icons.remove( anonymousIcon )
 }
 
+def gtt( key )
+{
+    // gt = Get Translated Text
+    return textUtils.getText( 'addons.bookmarks.' + key )
+}
 
 namedBookmarks = loadNamedBookmarks()
 
@@ -125,7 +130,7 @@ def gui
 groovy.swing.SwingBuilder.build
 {
     gui = dialog(
-        title: textUtils.getText( 'addons.bookmarks.T_BM_win_title' ),
+        title: gtt( 'T_BM_win_title' ),
         modal: true,
         owner: ui.frame,
         defaultCloseOperation: JFrame.DISPOSE_ON_CLOSE,
@@ -143,83 +148,37 @@ groovy.swing.SwingBuilder.build
             if( isAnonymousBookmark )
             {
                 label(
-                    text: textUtils.getText( 'addons.bookmarks.T_node_already_BM' ),
+                    text: gtt( 'T_node_already_BM' ),
                     foreground: blue,
                     border: emptyBorder( 0, 0, 5, 0 )
                 )
-                label(
-                    '<html><b>'
-                    + textUtils.getText( 'addons.bookmarks.T_kbd_backspace' )
-                    + '</b> : '
-                    + textUtils.getText( 'addons.bookmarks.T_delete_BM' )
-                    + "</html>"
-                )
-                label(
-                    "<html><b>"
-                    + textUtils.getText( 'addons.bookmarks.T_kbd_other' )
-                    + "</b> : "
-                    + textUtils.getText( 'addons.bookmarks.T_replace_by_NBM' )
-                    + "</html>"
-                )
+                label( "<html><b>${ gtt( 'T_kbd_backspace' ) }</b> : ${ gtt( 'T_delete_BM' ) }</html>" )
+                label( "<html><b>${ gtt( 'T_kbd_other' ) }</b> : ${ gtt( 'T_replace_by_NBM' ) }</html>" )
             }
             else if( isNamedBookmark )
             {
                 label(
-                    text: textUtils.getText( 'addons.bookmarks.T_node_already_NBM' ),
+                    text: gtt( 'T_node_already_NBM' ),
                     foreground: blue,
                     border: emptyBorder( 0, 0, 5, 0 )
                 )
-                label(
-                    '<html><b>'
-                    + textUtils.getText( 'addons.bookmarks.T_kbd_backspace' )
-                    + '</b> : '
-                    + textUtils.getText( 'addons.bookmarks.T_delete_BM' )
-                    + "</html>"
-                )
-                label(
-                    "<html><b>"
-                    + textUtils.getText( 'addons.bookmarks.T_kbd_space' )
-                    + "</b> : " + textUtils.getText( 'addons.bookmarks.T_replace_by_SBM' )
-                    + "</html>"
-                )
-                label(
-                    "<html><b>"
-                    + textUtils.getText( 'addons.bookmarks.T_kbd_other' )
-                    + "</b> : "
-                    + textUtils.getText( 'addons.bookmarks.T_change_NBM_name' )
-                    + "</html>"
-                )
+                label( "<html><b>${ gtt( 'T_kbd_backspace' ) }</b> : ${ gtt( 'T_delete_BM' ) }</html>" )
+                label( "<html><b>${ gtt( 'T_kbd_space' ) }</b> : ${ gtt( 'T_replace_by_SBM' ) }</html>" )
+                label( "<html><b>${ gtt( 'T_kbd_other' ) }</b> : ${ gtt( 'T_change_NBM_name' ) }</html>" )
             }
             else
             {
-                label(
-                    "<html><b>"
-                    + textUtils.getText( 'addons.bookmarks.T_kbd_space' ) + "</b> : "
-                    + textUtils.getText( 'addons.bookmarks.T_create_SBM' )
-                    + "</html>"
-                )
-                label(
-                    "<html><b>"
-                    + textUtils.getText( 'addons.bookmarks.T_kbd_other' )
-                    + "</b> : "
-                    + textUtils.getText( 'addons.bookmarks.T_create_NBM' )
-                    + "</html>"
-                )
+                label( "<html><b>${ gtt( 'T_kbd_space' ) }</b> : ${ gtt( 'T_create_SBM' ) }</html>" )
+                label( "<html><b>${ gtt( 'T_kbd_other' ) }</b> : ${ gtt( 'T_create_NBM' ) }</html>" )
             }
-            label(
-                "<html><b>"
-                + textUtils.getText( 'addons.bookmarks.T_kbd_esc' )
-                + "</b> "
-                + textUtils.getText( 'addons.bookmarks.T_to_cancel' )
-                + "</html>"
-            )
+            label( "<html><b>${ gtt( 'T_kbd_esc' ) }</b> ${ gtt( 'T_to_cancel' ) }</html>" )
         }
 
         // Second panel : only if named bookmarks exists
         if( namedBookmarks.size() > 0 )
         {
             panel(
-                border:titledBorder( textUtils.getText( 'addons.bookmarks.T_NBM_are' ) ),
+                border:titledBorder( gtt( 'T_NBM_are' ) ),
                 constraints: BorderLayout.CENTER
             ){
                 boxLayout( axis: BoxLayout.Y_AXIS )
@@ -263,13 +222,13 @@ gui.addKeyListener(
                 {
                     deleteNamedBookmark( node, namedBookmarks )
                     gui.dispose()
-                    c.setStatusInfo( 'standard', textUtils.getText( 'addons.bookmarks.T_node_no_BM_anymore' ), 'button_cancel' )
+                    c.setStatusInfo( 'standard', gtt( 'T_node_no_BM_anymore' ), 'button_cancel' )
                 }
                 else if( isAnonymousBookmark )
                 {
                     deleteAnonymousBookmark( node )
                     gui.dispose()
-                    c.setStatusInfo( 'standard', textUtils.getText( 'addons.bookmarks.T_node_no_BM_anymore' ), 'button_cancel' )
+                    c.setStatusInfo( 'standard', gtt( 'T_node_no_BM_anymore' ), 'button_cancel' )
                 }
             }
             else if( keyCharCode == 32 )
@@ -279,13 +238,13 @@ gui.addKeyListener(
                     deleteNamedBookmark( node, namedBookmarks )
                     createAnonymousBookmark( node )
                     gui.dispose()
-                    c.setStatusInfo( 'standard', textUtils.getText( 'addons.bookmarks.T_node_now_SBM' ), 'button_ok' )
+                    c.setStatusInfo( 'standard', gtt( 'T_node_now_SBM' ), 'button_ok' )
                 }
                 else if( ! isAnonymousBookmark )
                 {
                     createAnonymousBookmark( node )
                     gui.dispose()
-                    c.setStatusInfo( 'standard', textUtils.getText( 'addons.bookmarks.T_node_now_SBM' ), 'button_ok' )
+                    c.setStatusInfo( 'standard', gtt( 'T_node_now_SBM' ), 'button_ok' )
                 }
             }
             else if( keyCharCode > 32 && keyCharCode != 127 && keyCharCode < 256 )
@@ -293,11 +252,11 @@ gui.addKeyListener(
                 if( isAnonymousBookmark ) deleteAnonymousBookmark( node )
                 createNamedBookmark( node, keyCharCode, namedBookmarks )
                 gui.dispose()
-                c.setStatusInfo( 'standard', textUtils.getText( 'addons.bookmarks.T_node_now_NBM' ) + '"' + chr + "'", 'button_ok' )
+                c.setStatusInfo( 'standard', gtt( 'T_node_now_NBM' ) + '"' + chr + "'", 'button_ok' )
             }
             else if( keyCharCode == 27 )
             {
-                c.setStatusInfo( 'standard', textUtils.getText( 'addons.bookmarks.T_BM_operation_aborded' ), 'messagebox_warning' )
+                c.setStatusInfo( 'standard', gtt( 'T_BM_operation_aborded' ), 'messagebox_warning' )
                 gui.dispose()
             }
         }

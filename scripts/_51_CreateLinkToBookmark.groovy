@@ -166,6 +166,12 @@ def List initAnonymousBookmarks( currentNodeId )
     return bookmarks
 }
 
+def gtt( key )
+{
+    // gt = Get Translated Text
+    return textUtils.getText( 'addons.bookmarks.' + key )
+}
+
 def JList getNamedBookmarksJList( List bookmarks )
 {
     if( ! bookmarks ) return null
@@ -201,7 +207,7 @@ def JList getNamedBookmarksJList( List bookmarks )
                         {
                         def bm = bookmarks[ i ]
                         def target = map.node( bm.id )
-                        createLink( node, target, "${textUtils.getText( 'addons.bookmarks.T_created_link_to_NBM' )} \"$bm.name\"" )
+                        createLink( node, target, "${gtt( 'T_created_link_to_NBM' )} \"$bm.name\"" )
                         gui.dispose()
                     }
                 }
@@ -212,12 +218,12 @@ def JList getNamedBookmarksJList( List bookmarks )
                     if( bm )
                         {
                         def target = map.node( bm.id )
-                        createLink( node, target, "${textUtils.getText( 'addons.bookmarks.T_created_link_to_NBM' )} \"${s}\"" )
+                        createLink( node, target, "${gtt( 'T_created_link_to_NBM' )} \"${s}\"" )
                         gui.dispose()
                     }
                     else
                     {
-                        c.setStatusInfo( 'standard', "${textUtils.getText( 'addons.bookmarks.T_no_node_with_key' )} \"${chr}\"", 'messagebox_warning' )
+                        c.setStatusInfo( 'standard', "${gtt( 'T_no_node_with_key' )} \"${chr}\"", 'messagebox_warning' )
                     }
                 }
             }
@@ -234,7 +240,7 @@ def JList getNamedBookmarksJList( List bookmarks )
                     {
                     def bm = bookmarks[ idx ]
                     def target = node.map.node( bm.id )
-                    createLink( node, target, "${textUtils.getText( 'addons.bookmarks.T_created_link_to_NBM' )} \"$bm.name\"" )
+                    createLink( node, target, "${gtt( 'T_created_link_to_NBM' )} \"$bm.name\"" )
                     gui.dispose()
                 }
             }
@@ -268,13 +274,13 @@ def JPanel getNamedBookmarksJPanel(
 
             // Row 0
             label(
-                "${textUtils.getText( 'addons.bookmarks.T_create_link_to' )}.",
+                "${gtt( 'T_create_link_to' )}.",
                 constraints: gbc( gridx:0, gridy:0, anchor:GridBagConstraints.LINE_START )
             )
 
             // Row 1
             label(
-                "${textUtils.getText( 'addons.bookmarks.T_select_BM_to_link_to' )}.",
+                "${gtt( 'T_select_BM_to_link_to' )}.",
                 constraints: gbc( gridx:0, gridy:1, anchor:GridBagConstraints.LINE_START )
             )
             def icon = UIManager.getIcon("OptionPane.questionIcon")
@@ -287,11 +293,11 @@ def JPanel getNamedBookmarksJPanel(
                 icon: icon,
                 toolTipText:
                     """<html>
-                        ${textUtils.getText( 'addons.bookmarks.T_tip_create_link_to_NBM' )}:
+                        ${gtt( 'T_tip_create_link_to_NBM' )}:
                         <ul>
-                            <li>${textUtils.getText( 'addons.bookmarks.T_press_red_key' )}</li>
-                            <li>${textUtils.getText( 'addons.bookmarks.T_click_BM' )}</li>
-                            <li>${textUtils.getText( 'addons.bookmarks.T_arrow_select' )}</li>
+                            <li>${gtt( 'T_press_red_key' )}</li>
+                            <li>${gtt( 'T_click_BM' )}</li>
+                            <li>${gtt( 'T_arrow_select' )}</li>
                         </ul>
                     </html>""",
                 constraints: gbc( gridx:1, gridy:1, anchor:GridBagConstraints.LINE_START, weightx:1, insets:[0,10,0,0] )
@@ -299,7 +305,7 @@ def JPanel getNamedBookmarksJPanel(
 
             // Row 2
             if( showTabTip ) label(
-                "<html>${textUtils.getText( 'addons.bookmarks.T_tab_to_display_SBM' )}.</html>",
+                "<html>${gtt( 'T_tab_to_display_SBM' )}.</html>",
                 constraints: gbc( gridx:0, gridy:2, gridwidth:2, anchor:GridBagConstraints.LINE_START )
             )
 
@@ -344,7 +350,7 @@ def JList getAnonymousBookmarksJList( List bookmarks )
                         {
                         def bm = bookmarks[ idx ]
                         def target = node.map.node( bm.id )
-                        createLink( node, target, textUtils.getText( 'addons.bookmarks.T_created_link_to_SBM' ) )
+                        createLink( node, target, gtt( 'T_created_link_to_SBM' ) )
                         gui.dispose()
                     }
                 }
@@ -362,7 +368,7 @@ def JList getAnonymousBookmarksJList( List bookmarks )
                     {
                     def bm = bookmarks[ idx ]
                     def target = node.map.node( bm.id )
-                    createLink( node, target, textUtils.getText( 'addons.bookmarks.T_created_link_to_SBM' ) )
+                    createLink( node, target, gtt( 'T_created_link_to_SBM' ) )
                     gui.dispose()
                 }
             }
@@ -396,13 +402,13 @@ def JPanel getAnonymousBookmarksJPanel(
 
             // Row 0
             label(
-                "${textUtils.getText( 'addons.bookmarks.T_create_link_in' )}.",
+                "${gtt( 'T_create_link_in' )}.",
                 constraints: gbc( gridx:0, gridy:0, anchor:GridBagConstraints.LINE_START )
             )
             
             // Row 1
             label(
-                "${textUtils.getText( 'addons.bookmarks.T_select_BM_to_link_to' )}.",
+                "${gtt( 'T_select_BM_to_link_to' )}.",
                 constraints: gbc( gridx:0, gridy:1, anchor:GridBagConstraints.LINE_START )
             )
             def icon = UIManager.getIcon("OptionPane.questionIcon")
@@ -415,10 +421,10 @@ def JPanel getAnonymousBookmarksJPanel(
                 icon: icon,
                 toolTipText:
                     """<html>
-                        ${textUtils.getText( 'addons.bookmarks.T_tip_create_link_to_SBM' )}:
+                        ${gtt( 'T_tip_create_link_to_SBM' )}:
                         <ul>
-                            <li>${textUtils.getText( 'addons.bookmarks.T_click_BM' )}</li>
-                            <li>${textUtils.getText( 'addons.bookmarks.T_arrow_select' )}</li>
+                            <li>${gtt( 'T_click_BM' )}</li>
+                            <li>${gtt( 'T_arrow_select' )}</li>
                         </ul>
                     </html>""",
                 constraints: gbc( gridx:1, gridy:1, anchor:GridBagConstraints.LINE_START, weightx:1, insets:[0,10,0,0] )
@@ -426,7 +432,7 @@ def JPanel getAnonymousBookmarksJPanel(
             
             // Row 2
             if( showTabTip ) label(
-                "<html>${textUtils.getText( 'addons.bookmarks.T_tab_to_display_NBM' )}.</html>",
+                "<html>${gtt( 'T_tab_to_display_NBM' )}.</html>",
                 constraints: gbc( gridx:0, gridy:2, gridwidth:2, anchor:GridBagConstraints.LINE_START )
             )
             
@@ -455,7 +461,7 @@ def createGui(
     def gui
     SwingBuilder.build{
         gui = dialog(
-            title: textUtils.getText( 'addons.bookmarks.T_create_link_to_win_title' ),
+            title: gtt( 'T_create_link_to_win_title' ),
             modal:true,
             owner: ui.frame,
             defaultCloseOperation: JFrame.DISPOSE_ON_CLOSE
@@ -482,8 +488,8 @@ def createGui(
                 // Second element of the main panel :
                 vbox( constraints: BorderLayout.PAGE_END)
                 {
-                    if( memorizedNodeID ) label( text: "<html>${textUtils.getText( 'addons.bookmarks.T_space_to_link_to_memorized' )}.</html>" )
-                    label( text: "<html>${textUtils.getText( 'addons.bookmarks.T_press_esc_cancel' )}.</html>" )
+                    if( memorizedNodeID ) label( text: "<html>${gtt( 'T_space_to_link_to_memorized' )}.</html>" )
+                    label( text: "<html>${gtt( 'T_press_esc_cancel' )}.</html>" )
                 }
             }
         }
@@ -501,7 +507,7 @@ def createGui(
 	        public void actionPerformed( ActionEvent e )
             {
 	            gui.dispose()
-                c.setStatusInfo( 'standard', textUtils.getText( 'addons.bookmarks.T_link_aborded' ), 'messagebox_warning' )
+                c.setStatusInfo( 'standard', gtt( 'T_link_aborded' ), 'messagebox_warning' )
 	        }
         }
     )
@@ -586,7 +592,7 @@ isAnonymousBookmark = node.icons.contains( anonymousIcon )
 // Quit the script if there is no bookmarks
 if( ! namedBookmarks && ! anonymousBookmarks )
     {
-    ui.informationMessage( ui.frame, "${textUtils.getText( 'addons.bookmarks.T_no_bookmarks' )} !", "Bookmarks" )
+    ui.informationMessage( ui.frame, "${gtt( 'T_no_bookmarks' )} !", "Bookmarks" )
     return
 }
 

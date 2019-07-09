@@ -88,6 +88,11 @@ def deleteAnonymousBookmark( node )
     node.icons.remove( anonymousIcon )
 }
 
+def gtt( key )
+{
+    // gt = Get Translated Text
+    return textUtils.getText( 'addons.bookmarks.' + key )
+}
 
 namedBookmarks = loadNamedBookmarks()
 
@@ -118,18 +123,18 @@ if( isNamedBookmark )
     // Remove the named bookmark and put a regular bookmark instead
     deleteNamedBookmark( node, namedBookmarks )
     createAnonymousBookmark( node )
-    c.setStatusInfo( 'standard', textUtils.getText( 'addons.bookmarks.T_node_now_SBM' ), 'button_ok' )
+    c.setStatusInfo( 'standard', gtt( 'T_node_now_SBM' ), 'button_ok' )
 }
 else if( isAnonymousBookmark )
     {
     // Remove the named bookmark
     deleteAnonymousBookmark( node )
-    c.setStatusInfo( 'standard', textUtils.getText( 'addons.bookmarks.T_node_no_BM_anymore' ), 'button_cancel' )
+    c.setStatusInfo( 'standard', gtt( 'T_node_no_BM_anymore' ), 'button_cancel' )
 }
 else
     {
     // Create a regular bookmark
     createAnonymousBookmark( node )
-    c.setStatusInfo( 'standard', textUtils.getText( 'addons.bookmarks.T_node_now_SBM' ), 'button_ok' )
+    c.setStatusInfo( 'standard', gtt( 'T_node_now_SBM' ), 'button_ok' )
 }
 
