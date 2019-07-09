@@ -216,7 +216,7 @@ def JList getNamedBookmarksJList(
                         {
                         def bm = bookmarks[ i ]
                         def target = map.node( bm.id )
-                        jumpToNodeAfterGuiDispose( target, "Jumped to bookmark named \"$bm.name\"" )
+                        jumpToNodeAfterGuiDispose( target, "${textUtils.getText( 'addons.bookmarks.T_jumped_to_NBM' )} \"$bm.name\"" )
                         gui.dispose()
                     }
                 }
@@ -227,12 +227,12 @@ def JList getNamedBookmarksJList(
                     if( bm )
                         {
                         def target = map.node( bm.id )
-                        jumpToNodeAfterGuiDispose( target, "Jumped to bookmark named \"${s}\"" )
+                        jumpToNodeAfterGuiDispose( target, "${textUtils.getText( 'addons.bookmarks.T_jumped_to_NBM' )} \"${s}\"" )
                         gui.dispose()
                     }
                     else
                     {
-                        c.setStatusInfo( 'standard', 'There is no node marked with the key ' + chr, "messagebox_warning" )
+                        c.setStatusInfo( 'standard', "${textUtils.getText( 'addons.bookmarks.T_no_node_with_key' )} \"${chr}\"", "messagebox_warning" )
                     }
                 }
             }
@@ -249,7 +249,7 @@ def JList getNamedBookmarksJList(
                     {
                     def bm = bookmarks[ idx ]
                     def target = node.map.node( bm.id )
-                    jumpToNodeAfterGuiDispose( target, "Jump to bookmark named \"$bm.name\"" )
+                    jumpToNodeAfterGuiDispose( target, "${textUtils.getText( 'addons.bookmarks.T_jump_to_NBM' )} \"$bm.name\"" )
                     gui.dispose()
                 }
             }
@@ -282,7 +282,7 @@ def JPanel getNamedBookmarksJPanel(
 
             // Row 0
             label(
-                "Select the named bookmark you want to jump to.",
+                textUtils.getText( 'addons.bookmarks.T_select_NBM_to_jump' ) + ".",
                 constraints: gbc( gridx:0, gridy:0, anchor:GridBagConstraints.LINE_START )
             )
             def icon = UIManager.getIcon("OptionPane.questionIcon")
@@ -295,11 +295,11 @@ def JPanel getNamedBookmarksJPanel(
                 icon: icon,
                 toolTipText:
                     """<html>
-                        To jump to a named bookmark either:
+                        ${ textUtils.getText( 'addons.bookmarks.T_tip_jump_to_NBM' )}:
                         <ul>
-                            <li>Press one of the red keys</li>
-                            <li>Click a bookmark</li>
-                            <li>Select a bookmark with the <i>arrow keys</i> and press <i>Enter</i></li>
+                            <li>${textUtils.getText( 'addons.bookmarks.T_press_red_key' )}</li>
+                            <li>${textUtils.getText( 'addons.bookmarks.T_click_BM' )}</li>
+                            <li>${textUtils.getText( 'addons.bookmarks.T_arrow_select' )}</li>
                         </ul>
                     </html>""",
                 constraints: gbc( gridx:1, gridy:0, anchor:GridBagConstraints.LINE_START, weightx:1, insets:[0,10,0,0] )
@@ -307,7 +307,7 @@ def JPanel getNamedBookmarksJPanel(
 
             // Row 1
             if( showTabTip ) label(
-                "<html>To jump to a standard bookmark press <i>Tab</i>.</html>",
+                "<html>${textUtils.getText( 'addons.bookmarks.T_tab_to_display_SBM' )}.</html>",
                 constraints: gbc( gridx:0, gridy:1, gridwidth:2, anchor:GridBagConstraints.LINE_START )
             )
 
@@ -362,7 +362,7 @@ def JList getAnonymousBookmarksJList(
                         {
                         def bm = bookmarks[ idx ]
                         def target = node.map.node( bm.id )
-                        jumpToNodeAfterGuiDispose( target, "Jump to bookmark" )
+                        jumpToNodeAfterGuiDispose( target, textUtils.getText( 'addons.bookmarks.T_jumped_to_SBM' ) )
                         gui.dispose()
                     }
                 }
@@ -380,7 +380,7 @@ def JList getAnonymousBookmarksJList(
                     {
                     def bm = bookmarks[ idx ]
                     def target = node.map.node( bm.id )
-                    jumpToNodeAfterGuiDispose( target, "Jump to bookmark" )
+                    jumpToNodeAfterGuiDispose( target, textUtils.getText( 'addons.bookmarks.T_jumped_to_SBM' ) )
                     gui.dispose()
                 }
             }
@@ -413,7 +413,7 @@ def JPanel getAnonymousBookmarksJPanel(
             
             // Row 0
             label(
-                "Select the bookmark you want to jump to.",
+                textUtils.getText( 'addons.bookmarks.T_select_BM_to_jump' ) + ".",
                 constraints: gbc( gridx:0, gridy:0, anchor:GridBagConstraints.LINE_START )
             )
             def icon = UIManager.getIcon("OptionPane.questionIcon")
@@ -426,10 +426,10 @@ def JPanel getAnonymousBookmarksJPanel(
                 icon: icon,
                 toolTipText:
                     """<html>
-                        To jump to a bookmark either:
+                        ${textUtils.getText( 'addons.bookmarks.T_tip_jump_to_SBM' )}:
                         <ul>
-                            <li>Click a bookmark</li>
-                            <li>Select a bookmark with the <i>arrow keys</i> and press <i>Enter</i></li>
+                            <li>${textUtils.getText( 'addons.bookmarks.T_click_BM' )}</li>
+                            <li>${textUtils.getText( 'addons.bookmarks.T_arrow_select' )}</li>
                         </ul>
                     </html>""",
                 constraints: gbc( gridx:1, gridy:0, anchor:GridBagConstraints.LINE_START, weightx:1, insets:[0,10,0,0] )
@@ -437,7 +437,7 @@ def JPanel getAnonymousBookmarksJPanel(
             
             // Row 1
             if( showTabTip ) label(
-                "<html>To jump to a named bookmark press <i>Tab</i>.</html>",
+                "<html>${textUtils.getText( 'addons.bookmarks.T_tab_to_display_NBM' )}.</html>",
                 constraints: gbc( gridx:0, gridy:1, gridwidth:2, anchor:GridBagConstraints.LINE_START )
             )
             
@@ -464,7 +464,7 @@ def createGui(
     def gui
     SwingBuilder.build{
         gui = dialog(
-            title: 'Jump to bookmark',
+            title: textUtils.getText( 'addons.bookmarks.T_jump_to_SBM' ),
             modal:true,
             owner: ui.frame,
             defaultCloseOperation: JFrame.DISPOSE_ON_CLOSE
@@ -489,7 +489,7 @@ def createGui(
                 }
 
                 // Second element of the main panel :
-                label( text: "<html>Press <i>Esc</i> to cancel</html>.", constraints: BorderLayout.PAGE_END )
+                label( text: "<html>${textUtils.getText( 'addons.bookmarks.T_press_esc_cancel' )}</html>.", constraints: BorderLayout.PAGE_END )
             }
         }
     }
@@ -506,7 +506,7 @@ def createGui(
             public void actionPerformed( ActionEvent e )
             {
                 gui.dispose()
-                c.setStatusInfo( 'standard', 'Jump to bookmark aborded', 'button_cancel' )
+                c.setStatusInfo( 'standard', textUtils.getText( 'addons.bookmarks.T_jump_aborded' ), 'button_cancel' )
             }
         }
     )
@@ -569,7 +569,7 @@ isAnonymousBookmark = node.icons.contains( anonymousIcon )
 // Quit the script if there is no bookmarks
 if( ! namedBookmarks && ! anonymousBookmarks )
     {
-    ui.informationMessage( ui.frame, "There is no bookmarks !", "Bookmarks" )
+    ui.informationMessage( ui.frame, textUtils.getText( 'addons.bookmarks.T_no_bookmarks' ) + " !", "Bookmarks" )
     return
 }
 

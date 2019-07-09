@@ -24,5 +24,5 @@ if( n != start && isBookmarked( n ) )
 }
 else
 {
-    c.setStatusInfo( 'standard', "No next bookmark !", 'messagebox_warning' )
+    c.setStatusInfo( 'standard', textUtils.getText( 'addons.bookmarks.T_no_next_BM' ) + " !", 'messagebox_warning' )
 }

@@ -3,7 +3,7 @@
 <node TEXT="Bookmarks" LOCALIZED_STYLE_REF="styles.topic" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1562534279394" LINK="https://github.com/lilive/Freeplane-Bookmarks-add-on" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#000000" STYLE="rectangle" SHAPE_HORIZONTAL_MARGIN="6.0 pt" SHAPE_VERTICAL_MARGIN="6.0 pt">
 <edge WIDTH="thin"/>
 <hook NAME="MapStyle" background="#c4c4c4">
-    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" show_notes_in_map="false" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" Marks_stored_node_id="ID_1837714869"/>
+    <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" show_notes_in_map="false" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" Marks_stored_node_id="ID_1837714869"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -281,7 +281,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="en" ID="ID_737947027" CREATED="1562410359665" MODIFIED="1562534645360">
+<node TEXT="en" ID="ID_737947027" CREATED="1562410359665" MODIFIED="1562628654689">
 <attribute_layout NAME_WIDTH="170.999994903803 pt" VALUE_WIDTH="320.9999904334548 pt"/>
 <attribute NAME="addons.${name}" VALUE="Bookmarks"/>
 <attribute NAME="addons.${name}._10_BookmarkNode" VALUE="Add / Remove a bookmark"/>
@@ -294,8 +294,66 @@
 <attribute NAME="addons.${name}._90_UpdateMap" VALUE="Update map with bookmarks defined by a previous version of the addon"/>
 <attribute NAME="_50_bookmarksLinks" VALUE="Create links"/>
 <attribute NAME="_90_bookmarksTools" VALUE="Tools"/>
+<attribute NAME="addons.${name}.T_BM_operation_aborded" VALUE="Bookmark operation aborded"/>
+<attribute NAME="addons.${name}.T_BM_win_title" VALUE="Bookmarks"/>
+<attribute NAME="addons.${name}.T_BMs_updated" VALUE="Bookmarks updated"/>
+<attribute NAME="addons.${name}.T_NBM_are" VALUE="Already named bookmarks are"/>
+<attribute NAME="addons.${name}.T_arrow_select" VALUE="Select a bookmark with the &lt;i&gt;arrow keys&lt;/i&gt; and press &lt;i&gt;Enter&lt;/i&gt;"/>
+<attribute NAME="addons.${name}.T_change_NBM_name" VALUE="Change the name of this bookmark"/>
+<attribute NAME="addons.${name}.T_click_BM" VALUE="Click a bookmark"/>
+<attribute NAME="addons.${name}.T_create_NBM" VALUE="Create a named bookmark"/>
+<attribute NAME="addons.${name}.T_create_SBM" VALUE="Create a regular bookmark"/>
+<attribute NAME="addons.${name}.T_create_link_in_win_title" VALUE="Create a link in..."/>
+<attribute NAME="addons.${name}.T_create_link_in" VALUE="Create a link to the currently selected node"/>
+<attribute NAME="addons.${name}.T_create_link_to" VALUE="Create a link in the currently selected node"/>
+<attribute NAME="addons.${name}.T_create_link_to_win_title" VALUE="Create a link to..."/>
+<attribute NAME="addons.${name}.T_created_link_in_NBM" VALUE="A link to this node has been created in the node bookmarked with the name"/>
+<attribute NAME="addons.${name}.T_created_link_in_SBM" VALUE="A link to this node has been created in the selected bookmarked node"/>
+<attribute NAME="addons.${name}.T_created_link_to_NBM" VALUE="A link has been created to the bookmark named"/>
+<attribute NAME="addons.${name}.T_created_link_to_SBM" VALUE="A link to the selected bookmark has been created"/>
+<attribute NAME="addons.${name}.T_delete_BM" VALUE="Delete this bookmark"/>
+<attribute NAME="addons.${name}.T_jump_aborded" VALUE="Jump to bookmark aborded"/>
+<attribute NAME="addons.${name}.T_jump_to_NBM" VALUE="Jump to bookmark named"/>
+<attribute NAME="addons.${name}.T_jump_to_SBM" VALUE="Jump to bookmark"/>
+<attribute NAME="addons.${name}.T_jumped_to_NBM" VALUE="Jumped to bookmark named"/>
+<attribute NAME="addons.${name}.T_jumped_to_SBM" VALUE="Jumped to standard bookmark"/>
+<attribute NAME="addons.${name}.T_kbd_backspace" VALUE="Backspace"/>
+<attribute NAME="addons.${name}.T_kbd_esc" VALUE="Esc"/>
+<attribute NAME="addons.${name}.T_kbd_other" VALUE="Other key"/>
+<attribute NAME="addons.${name}.T_kbd_space" VALUE="Space"/>
+<attribute NAME="addons.${name}.T_link_aborded" VALUE="Link creation aborded"/>
+<attribute NAME="addons.${name}.T_no_bookmarks" VALUE="There is no bookmarks"/>
+<attribute NAME="addons.${name}.T_no_next_BM" VALUE="No next bookmark"/>
+<attribute NAME="addons.${name}.T_no_node_with_key" VALUE="There is no node marked with the key"/>
+<attribute NAME="addons.${name}.T_no_prev_BM" VALUE="No previous bookmark"/>
+<attribute NAME="addons.${name}.T_no_update_required" VALUE="No update required"/>
+<attribute NAME="addons.${name}.T_node_already_BM" VALUE="This node is already bookmarked."/>
+<attribute NAME="addons.${name}.T_node_already_NBM" VALUE="This node already has a named bookmark."/>
+<attribute NAME="addons.${name}.T_node_no_BM_anymore" VALUE="This node has no bookmark anymore"/>
+<attribute NAME="addons.${name}.T_node_now_NBM" VALUE="This node now has a bookmark named"/>
+<attribute NAME="addons.${name}.T_node_now_SBM" VALUE="This node now has a regular bookmark"/>
+<attribute NAME="addons.${name}.T_press_esc_cancel" VALUE="Press &lt;i&gt;Esc&lt;/i&gt; to cancel"/>
+<attribute NAME="addons.${name}.T_press_red_key" VALUE="Press one of the red keys"/>
+<attribute NAME="addons.${name}.T_replace_by_NBM" VALUE="Create instead a named bookmark"/>
+<attribute NAME="addons.${name}.T_replace_by_SBM" VALUE="Create instead a regular bookmark"/>
+<attribute NAME="addons.${name}.T_select_BM_to_jump" VALUE="Select the bookmark you want to jump to"/>
+<attribute NAME="addons.${name}.T_select_BM_to_link_in" VALUE="Select the node where to create the link"/>
+<attribute NAME="addons.${name}.T_select_BM_to_link_to" VALUE="Select the bookmark you want to link"/>
+<attribute NAME="addons.${name}.T_select_NBM_to_jump" VALUE="Select the named bookmark you want to jump to"/>
+<attribute NAME="addons.${name}.T_select_node_to_link_in" VALUE="Select the node where to create the link"/>
+<attribute NAME="addons.${name}.T_space_to_link_in_memorized" VALUE="Press &lt;i&gt;Space&lt;/i&gt; to create the link in the memorized node"/>
+<attribute NAME="addons.${name}.T_space_to_link_to_memorized" VALUE="Press &lt;i&gt;Space&lt;/i&gt; to link to memorized node"/>
+<attribute NAME="addons.${name}.T_tab_to_display_NBM" VALUE="Press &lt;i&gt;Tab&lt;/i&gt; to display named bookmarks"/>
+<attribute NAME="addons.${name}.T_tab_to_display_SBM" VALUE="Press &lt;i&gt;Tab&lt;/i&gt; to display standard bookmarks" />
+<attribute NAME="addons.${name}.T_tip_create_link_in_NBM" VALUE="To create a link in a bookmarked node either"/>
+<attribute NAME="addons.${name}.T_tip_create_link_in_SBM" VALUE="To create a link in a bookmarked node either"/>
+<attribute NAME="addons.${name}.T_tip_create_link_to_NBM" VALUE="To select the target for the link either"/>
+<attribute NAME="addons.${name}.T_tip_create_link_to_SBM" VALUE="To select the target for the link either"/>
+<attribute NAME="addons.${name}.T_tip_jump_to_NBM" VALUE="To jump to a named bookmark either"/>
+<attribute NAME="addons.${name}.T_tip_jump_to_SBM" VALUE="To jump to a bookmark either"/>
+<attribute NAME="addons.${name}.T_to_cancel" VALUE="to cancel"/>
 </node>
-<node TEXT="fr" ID="ID_1748679509" CREATED="1562410359665" MODIFIED="1562534640979">
+<node TEXT="fr" ID="ID_1748679509" CREATED="1562410359665" MODIFIED="1562628654693">
 <attribute_layout NAME_WIDTH="170.24999492615476 pt" VALUE_WIDTH="320.9999904334548 pt"/>
 <attribute NAME="addons.${name}" VALUE="Marque-pages"/>
 <attribute NAME="addons.${name}._10_BookmarkNode" VALUE="Placer / Supprimer un marque-page"/>
@@ -308,6 +366,64 @@
 <attribute NAME="addons.${name}._90_UpdateMap" VALUE="Mettre \u00E0 jour les marque-pages d&apos;une version ant\u00E9rieure du module"/>
 <attribute NAME="_50_bookmarksLinks" VALUE="Cr\u00E9er des liens"/>
 <attribute NAME="_90_bookmarksTools" VALUE="Outils"/>
+<attribute NAME="addons.${name}.T_BM_operation_aborded" VALUE="Op\u00E9ration abandonn\u00E9e"/>
+<attribute NAME="addons.${name}.T_BM_win_title" VALUE="Marque-pages"/>
+<attribute NAME="addons.${name}.T_BMs_updated" VALUE="Bookmarks updated"/>
+<attribute NAME="addons.${name}.T_NBM_are" VALUE="Les marque-pages nomm\u00E9s sont"/>
+<attribute NAME="addons.${name}.T_arrow_select" VALUE="Choisir un marque-page avec les &lt;i&gt;touches fl\u00E9ch\u00E9es&lt;/i&gt; et appuyer sur &lt;i&gt;Entr\u00E9e&lt;/i&gt;"/>
+<attribute NAME="addons.${name}.T_change_NBM_name" VALUE="Changer le nom de ce marque-page"/>
+<attribute NAME="addons.${name}.T_click_BM" VALUE="Cliquer un marque-page"/>
+<attribute NAME="addons.${name}.T_create_NBM" VALUE="Cr\u00E9er un marque-page nomm\u00E9"/>
+<attribute NAME="addons.${name}.T_create_SBM" VALUE="Cr\u00E9er un marque-page standard"/>
+<attribute NAME="addons.${name}.T_create_link_in_win_title" VALUE="Cr\u00E9er un lien dans..."/>
+<attribute NAME="addons.${name}.T_create_link_in" VALUE="Cr\u00E9ation d&apos;un lien vers le noeud actuellement s\u00E9lectionn\u00E9 sur la carte"/>
+<attribute NAME="addons.${name}.T_create_link_to" VALUE="Cr\u00E9ation d&apos;un lien dans le noeud actuellement s\u00E9lectionn\u00E9 sur la carte"/>
+<attribute NAME="addons.${name}.T_create_link_to_win_title" VALUE="Cr\u00E9er un lien vers..."/>
+<attribute NAME="addons.${name}.T_created_link_in_NBM" VALUE="Un lien vers ce noeud a \u00E9t\u00E9 cr\u00E9\u00E9 dans le noeud contenant le marque-page nomm\u00E9"/>
+<attribute NAME="addons.${name}.T_created_link_in_SBM" VALUE="Un lien vers ce noeud a \u00E9t\u00E9 cr\u00E9\u00E9 dans le noeud contenant le marque-page s\u00E9lectionn\u00E9"/>
+<attribute NAME="addons.${name}.T_created_link_to_NBM" VALUE="Un lien a \u00E9t\u00E9 cr\u00E9\u00E9 vers le marque-page nomm\u00E9"/>
+<attribute NAME="addons.${name}.T_created_link_to_SBM" VALUE="Un lien a \u00E9t\u00E9 cr\u00E9\u00E9 vers le marque-page s\u00E9lectionn\u00E9"/>
+<attribute NAME="addons.${name}.T_delete_BM" VALUE="Effacer ce marque-page"/>
+<attribute NAME="addons.${name}.T_jump_aborded" VALUE="Saut annul\u00E9"/>
+<attribute NAME="addons.${name}.T_jump_to_NBM" VALUE="Atteindre un marque-page nomm\u00E9"/>
+<attribute NAME="addons.${name}.T_jump_to_SBM" VALUE="Atteindre un marque-page"/>
+<attribute NAME="addons.${name}.T_jumped_to_NBM" VALUE="Saut au marque-page nomm\u00E9"/>
+<attribute NAME="addons.${name}.T_jumped_to_SBM" VALUE="Saut au marque-page standard"/>
+<attribute NAME="addons.${name}.T_kbd_backspace" VALUE="Effacement arri\u00E8re"/>
+<attribute NAME="addons.${name}.T_kbd_esc" VALUE="\u00C9chap"/>
+<attribute NAME="addons.${name}.T_kbd_other" VALUE="Autre touche"/>
+<attribute NAME="addons.${name}.T_kbd_space" VALUE="Espace"/>
+<attribute NAME="addons.${name}.T_link_aborded" VALUE="Cr\u00E9ation du lien annul\u00E9e"/>
+<attribute NAME="addons.${name}.T_no_bookmarks" VALUE="Il n&apos;y a pas de marque-page"/>
+<attribute NAME="addons.${name}.T_no_next_BM" VALUE="Pas de marque_page suivant"/>
+<attribute NAME="addons.${name}.T_no_node_with_key" VALUE="Il n&apos;y a pas de marque-page pour la touche"/>
+<attribute NAME="addons.${name}.T_no_prev_BM" VALUE="Pas de marque_page pr\u00E9c\u00E9dent"/>
+<attribute NAME="addons.${name}.T_no_update_required" VALUE="Pas de mise-\u00E0-jour n\u00E9cessaire"/>
+<attribute NAME="addons.${name}.T_node_already_BM" VALUE="Ce noeud a d\u00E9j\u00E0 un marque-page."/>
+<attribute NAME="addons.${name}.T_node_already_NBM" VALUE="Ce noeud a d\u00E9j\u00E0 un marque-page nomm\u00E9."/>
+<attribute NAME="addons.${name}.T_node_no_BM_anymore" VALUE="Ce noeud n&apos;a plus de marque-page"/>
+<attribute NAME="addons.${name}.T_node_now_NBM" VALUE="Ce noeud a maintenant un marque-page nomm\u00E9"/>
+<attribute NAME="addons.${name}.T_node_now_SBM" VALUE="Ce noeud a maintenant un marque-page standard"/>
+<attribute NAME="addons.${name}.T_press_esc_cancel" VALUE="Presser &lt;i&gt;\u00C9chap&lt;/i&gt; pour annuler"/>
+<attribute NAME="addons.${name}.T_press_red_key" VALUE="Presser une des touches affich\u00E9es en rouges"/>
+<attribute NAME="addons.${name}.T_replace_by_NBM" VALUE="Cr\u00E9er un marque-page nomm\u00E9 \u00E0 la place"/>
+<attribute NAME="addons.${name}.T_replace_by_SBM" VALUE="Cr\u00E9er un marque-page standard \u00E0 la place"/>
+<attribute NAME="addons.${name}.T_select_BM_to_jump" VALUE="Choisir le marque-page que vous voulez atteindre"/>
+<attribute NAME="addons.${name}.T_select_BM_to_link_in" VALUE="Choisir le noeud o\u00F9 cr\u00E9er le lien"/>
+<attribute NAME="addons.${name}.T_select_BM_to_link_to" VALUE="Choisir le marque-page vers lequel cr\u00E9er un lien"/>
+<attribute NAME="addons.${name}.T_select_NBM_to_jump" VALUE="Choisir le marque-page nomm\u00E9 que vous voulez atteindre"/>
+<attribute NAME="addons.${name}.T_select_node_to_link_in" VALUE="Choisir le noeud o\u00F9 cr\u00E9er le lien"/>
+<attribute NAME="addons.${name}.T_space_to_link_in_memorized" VALUE="Presser &lt;i&gt;Espace&lt;/i&gt; pour cr\u00E9er un lien \u00E0 ce noeud dans le noeud m\u00E9moris\u00E9"/>
+<attribute NAME="addons.${name}.T_space_to_link_to_memorized" VALUE="Presser &lt;i&gt;Espace&lt;/i&gt; pour lier au noeud m\u00E9moris\u00E9"/>
+<attribute NAME="addons.${name}.T_tab_to_display_NBM" VALUE="Appuyer sur &lt;i&gt;Tab&lt;/i&gt; pour afficher les marque-pages nomm\u00E9s"/>
+<attribute NAME="addons.${name}.T_tab_to_display_SBM" VALUE="Appuyer sur &lt;i&gt;Tab&lt;/i&gt; pour afficher les marque-pages standards"/>
+<attribute NAME="addons.${name}.T_tip_create_link_in_NBM" VALUE="Pour sélectionner le noeud où créer le lien"/>
+<attribute NAME="addons.${name}.T_tip_create_link_in_SBM" VALUE="Pour sélectionner le noeud où créer le lien"/>
+<attribute NAME="addons.${name}.T_tip_create_link_to_NBM" VALUE="Pour sélectionner le marque-page cible du lien"/>
+<attribute NAME="addons.${name}.T_tip_create_link_to_SBM" VALUE="Pour sélectionner le marque-page cible du lien"/>
+<attribute NAME="addons.${name}.T_tip_jump_to_NBM" VALUE="Pour atteindre un marque-page nomm\u00E9"/>
+<attribute NAME="addons.${name}.T_tip_jump_to_SBM" VALUE="Pour atteindre un marque-page"/>
+<attribute NAME="addons.${name}.T_to_cancel" VALUE="pour annuler"/>
 </node>
 </node>
 <node TEXT="deinstall" POSITION="left" ID="ID_1870605844" CREATED="1562410359689" MODIFIED="1562534400874">

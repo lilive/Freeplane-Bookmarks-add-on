@@ -125,7 +125,7 @@ def gui
 groovy.swing.SwingBuilder.build
 {
     gui = dialog(
-        title: 'Bookmarks',
+        title: textUtils.getText( 'addons.bookmarks.T_BM_win_title' ),
         modal: true,
         owner: ui.frame,
         defaultCloseOperation: JFrame.DISPOSE_ON_CLOSE,
@@ -143,37 +143,83 @@ groovy.swing.SwingBuilder.build
             if( isAnonymousBookmark )
             {
                 label(
-                    text: "This node is already bookmarked.",
+                    text: textUtils.getText( 'addons.bookmarks.T_node_already_BM' ),
                     foreground: blue,
                     border: emptyBorder( 0, 0, 5, 0 )
                 )
-                label("<html><b>Backspace</b> : Delete this bookmark</html>")
-                label("<html><b>Other key</b> : Create instead a named bookmark</html>")
+                label(
+                    '<html><b>'
+                    + textUtils.getText( 'addons.bookmarks.T_kbd_backspace' )
+                    + '</b> : '
+                    + textUtils.getText( 'addons.bookmarks.T_delete_BM' )
+                    + "</html>"
+                )
+                label(
+                    "<html><b>"
+                    + textUtils.getText( 'addons.bookmarks.T_kbd_other' )
+                    + "</b> : "
+                    + textUtils.getText( 'addons.bookmarks.T_replace_by_NBM' )
+                    + "</html>"
+                )
             }
             else if( isNamedBookmark )
             {
                 label(
-                    text: "This node already has a named bookmark.",
+                    text: textUtils.getText( 'addons.bookmarks.T_node_already_NBM' ),
                     foreground: blue,
                     border: emptyBorder( 0, 0, 5, 0 )
                 )
-                label("<html><b>Backspace</b> : Delete this bookmark</html>")
-                label("<html><b>Space</b> : Create instead a regular bookmark</html>")
-                label("<html><b>Other key</b> : Change the name of this bookmark")
+                label(
+                    '<html><b>'
+                    + textUtils.getText( 'addons.bookmarks.T_kbd_backspace' )
+                    + '</b> : '
+                    + textUtils.getText( 'addons.bookmarks.T_delete_BM' )
+                    + "</html>"
+                )
+                label(
+                    "<html><b>"
+                    + textUtils.getText( 'addons.bookmarks.T_kbd_space' )
+                    + "</b> : " + textUtils.getText( 'addons.bookmarks.T_replace_by_SBM' )
+                    + "</html>"
+                )
+                label(
+                    "<html><b>"
+                    + textUtils.getText( 'addons.bookmarks.T_kbd_other' )
+                    + "</b> : "
+                    + textUtils.getText( 'addons.bookmarks.T_change_NBM_name' )
+                    + "</html>"
+                )
             }
             else
             {
-                label("<html><b>Space</b> : Create a regular bookmark</html>")
-                label("<html><b>Other key</b> : Create a named bookmark</html>")
+                label(
+                    "<html><b>"
+                    + textUtils.getText( 'addons.bookmarks.T_kbd_space' ) + "</b> : "
+                    + textUtils.getText( 'addons.bookmarks.T_create_SBM' )
+                    + "</html>"
+                )
+                label(
+                    "<html><b>"
+                    + textUtils.getText( 'addons.bookmarks.T_kbd_other' )
+                    + "</b> : "
+                    + textUtils.getText( 'addons.bookmarks.T_create_NBM' )
+                    + "</html>"
+                )
             }
-            label("<html><b>Esc</b> to cancel</html>")
+            label(
+                "<html><b>"
+                + textUtils.getText( 'addons.bookmarks.T_kbd_esc' )
+                + "</b> "
+                + textUtils.getText( 'addons.bookmarks.T_to_cancel' )
+                + "</html>"
+            )
         }
 
         // Second panel : only if named bookmarks exists
         if( namedBookmarks.size() > 0 )
         {
             panel(
-                border:titledBorder( "Already named bookmarks are" ),
+                border:titledBorder( textUtils.getText( 'addons.bookmarks.T_NBM_are' ) ),
                 constraints: BorderLayout.CENTER
             ){
                 boxLayout( axis: BoxLayout.Y_AXIS )
@@ -217,13 +263,13 @@ gui.addKeyListener(
                 {
                     deleteNamedBookmark( node, namedBookmarks )
                     gui.dispose()
-                    c.setStatusInfo( 'standard', 'This node has no bookmark anymore', 'button_cancel' )
+                    c.setStatusInfo( 'standard', textUtils.getText( 'addons.bookmarks.T_node_no_BM_anymore' ), 'button_cancel' )
                 }
                 else if( isAnonymousBookmark )
                 {
                     deleteAnonymousBookmark( node )
                     gui.dispose()
-                    c.setStatusInfo( 'standard', 'This node has no bookmark anymore', 'button_cancel' )
+                    c.setStatusInfo( 'standard', textUtils.getText( 'addons.bookmarks.T_node_no_BM_anymore' ), 'button_cancel' )
                 }
             }
             else if( keyCharCode == 32 )
@@ -233,13 +279,13 @@ gui.addKeyListener(
                     deleteNamedBookmark( node, namedBookmarks )
                     createAnonymousBookmark( node )
                     gui.dispose()
-                    c.setStatusInfo( 'standard', 'This node now has a regular bookmark', 'button_ok' )
+                    c.setStatusInfo( 'standard', textUtils.getText( 'addons.bookmarks.T_node_now_SBM' ), 'button_ok' )
                 }
                 else if( ! isAnonymousBookmark )
                 {
                     createAnonymousBookmark( node )
                     gui.dispose()
-                    c.setStatusInfo( 'standard', 'This node now has a regular bookmark', 'button_ok' )
+                    c.setStatusInfo( 'standard', textUtils.getText( 'addons.bookmarks.T_node_now_SBM' ), 'button_ok' )
                 }
             }
             else if( keyCharCode > 32 && keyCharCode != 127 && keyCharCode < 256 )
@@ -247,11 +293,11 @@ gui.addKeyListener(
                 if( isAnonymousBookmark ) deleteAnonymousBookmark( node )
                 createNamedBookmark( node, keyCharCode, namedBookmarks )
                 gui.dispose()
-                c.setStatusInfo( 'standard', 'This node now has a bookmark named "' + chr + "'", 'button_ok' )
+                c.setStatusInfo( 'standard', textUtils.getText( 'addons.bookmarks.T_node_now_NBM' ) + '"' + chr + "'", 'button_ok' )
             }
             else if( keyCharCode == 27 )
             {
-                c.setStatusInfo( 'standard', 'Bookmark operation aborded', 'messagebox_warning' )
+                c.setStatusInfo( 'standard', textUtils.getText( 'addons.bookmarks.T_BM_operation_aborded' ), 'messagebox_warning' )
                 gui.dispose()
             }
         }

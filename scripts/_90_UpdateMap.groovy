@@ -113,7 +113,7 @@ c.findAll().each
     if( update ) it.icons.add( anonymousIcon )
 }
 
-if( updated ) c.setStatusInfo( 'standard', 'Bookmarks updated !', 'button_ok' )
-else c.setStatusInfo( 'standard', 'No update required !', 'button_cancel' )
+if( updated ) c.setStatusInfo( 'standard', "${textUtils.getText( 'addons.bookmarks.T_BMs_updated' )} !", 'button_ok' )
+else c.setStatusInfo( 'standard', "${textUtils.getText( 'addons.bookmarks.T_no_update_required' )} !", 'button_cancel' )
 
 
