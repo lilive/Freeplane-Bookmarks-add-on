@@ -1,9 +1,9 @@
 <map version="freeplane 1.7.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="Bookmarks" LOCALIZED_STYLE_REF="styles.topic" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1562534279394" LINK="https://github.com/lilive/Freeplane-Bookmarks-add-on" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#000000" STYLE="rectangle" SHAPE_HORIZONTAL_MARGIN="6.0 pt" SHAPE_VERTICAL_MARGIN="6.0 pt">
+<node TEXT="Bookmarks" LOCALIZED_STYLE_REF="styles.topic" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1562709787298" LINK="https://github.com/lilive/Freeplane-Bookmarks-add-on" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#000000" STYLE="rectangle" SHAPE_HORIZONTAL_MARGIN="6.0 pt" SHAPE_VERTICAL_MARGIN="6.0 pt">
 <edge WIDTH="thin"/>
 <hook NAME="MapStyle" background="#c4c4c4">
-    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" show_notes_in_map="false" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" Marks_stored_node_id="ID_1837714869"/>
+    <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" show_notes_in_map="false" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" Marks_stored_node_id="ID_1837714869"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -131,8 +131,9 @@
     </ul>
   </body>
 </html>
+
 </richcontent>
-<node TEXT="description" POSITION="left" ID="ID_1114811084" CREATED="1562410359487" MODIFIED="1562698000532">
+<node TEXT="description" POSITION="left" ID="ID_1114811084" CREATED="1562410359487" MODIFIED="1562709787302">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -152,10 +153,11 @@
     </p>
   </body>
 </html>
+
 </richcontent>
 <node TEXT="Add bookmarks to nodes, and easily navigate beetween them." ID="ID_1183587619" CREATED="1518707454288" MODIFIED="1518815727777"/>
 </node>
-<node TEXT="changes" POSITION="left" ID="ID_1094494132" CREATED="1562410359592" MODIFIED="1562534279409" TEXT_SHORTENED="true">
+<node TEXT="changes" POSITION="left" ID="ID_1094494132" CREATED="1562410359592" MODIFIED="1562709787304" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -169,6 +171,7 @@
     </p>
   </body>
 </html>
+
 </richcontent>
 <node TEXT="v0.3" ID="ID_1947541306" CREATED="1518881580800" MODIFIED="1518881585971">
 <node TEXT="First released version" ID="ID_1150257103" CREATED="1518881587391" MODIFIED="1518881596914"/>
@@ -189,7 +192,7 @@
 <node TEXT="- Renamed bookmarks icons (because of conflict with freeplane builtin bookmark icon)&#xa;- Jump to previous/next bookmark commands&#xa;- Better GUI text&#xa;- GUI translation&#xa;- Command to update bookmarks created with previous versions" ID="ID_27269396" CREATED="1562499884480" MODIFIED="1562698264366"/>
 </node>
 </node>
-<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_230785910" CREATED="1562410359599" MODIFIED="1562534279410" TEXT_SHORTENED="true">
+<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_230785910" CREATED="1562410359599" MODIFIED="1562709787306" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -209,10 +212,11 @@
     </p>
   </body>
 </html>
+
 </richcontent>
 <node TEXT="&#xa;This add-on is free software: you can redistribute it and/or modify&#xa;it under the terms of the GNU General Public License as published by&#xa;the Free Software Foundation, either version 2 of the License, or&#xa;(at your option) any later version.&#xa;&#xa;This program is distributed in the hope that it will be useful,&#xa;but WITHOUT ANY WARRANTY; without even the implied warranty of&#xa;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the&#xa;GNU General Public License for more details.&#xa;" ID="ID_1167386088" CREATED="1562410359607" MODIFIED="1562410359614"/>
 </node>
-<node TEXT="preferences.xml" POSITION="left" ID="ID_1098616655" CREATED="1562410359628" MODIFIED="1562534279413" TEXT_SHORTENED="true">
+<node TEXT="preferences.xml" POSITION="left" ID="ID_1098616655" CREATED="1562410359628" MODIFIED="1562709787308" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -229,9 +233,10 @@
     </p>
   </body>
 </html>
+
 </richcontent>
 </node>
-<node TEXT="default.properties" POSITION="left" ID="ID_151630546" CREATED="1562410359652" MODIFIED="1562534279414" TEXT_SHORTENED="true">
+<node TEXT="default.properties" POSITION="left" ID="ID_151630546" CREATED="1562410359652" MODIFIED="1562709787309" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -253,9 +258,10 @@
     </ul>
   </body>
 </html>
+
 </richcontent>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_255907585" CREATED="1562410359658" MODIFIED="1562534279416" TEXT_SHORTENED="true">
+<node TEXT="translations" POSITION="left" ID="ID_255907585" CREATED="1562410359658" MODIFIED="1562709787311" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -280,8 +286,9 @@
     </ul>
   </body>
 </html>
+
 </richcontent>
-<node TEXT="en" ID="ID_737947027" CREATED="1562410359665" MODIFIED="1562628654689">
+<node TEXT="en" ID="ID_737947027" CREATED="1562410359665" MODIFIED="1562704291625">
 <attribute_layout NAME_WIDTH="170.999994903803 pt" VALUE_WIDTH="320.9999904334548 pt"/>
 <attribute NAME="addons.${name}" VALUE="Bookmarks"/>
 <attribute NAME="addons.${name}._10_BookmarkNode" VALUE="Add / Remove a bookmark"/>
@@ -292,6 +299,8 @@
 <attribute NAME="addons.${name}._50_CreateLinkInBookmark" VALUE="Create link in bookmarked node"/>
 <attribute NAME="addons.${name}._51_CreateLinkToBookmark" VALUE="Create link to bookmarked node"/>
 <attribute NAME="addons.${name}._90_UpdateMap" VALUE="Update map with bookmarks defined by a previous version of the addon"/>
+<attribute NAME="addons.${name}._94_ConvertFPBookmarks" VALUE="Convert all regular FreePlane bookmark icons (star icon) to add-on bookmarks"/>
+<attribute NAME="addons.${name}._95_ConvertBookmarksToFP" VALUE="Convert all bookmarks to regular FreePlane bookmark icons (star icon)"/>
 <attribute NAME="_50_bookmarksLinks" VALUE="Create links"/>
 <attribute NAME="_90_bookmarksTools" VALUE="Tools"/>
 <attribute NAME="addons.${name}.T_BM_operation_aborded" VALUE="Bookmark operation aborded"/>
@@ -303,8 +312,8 @@
 <attribute NAME="addons.${name}.T_click_BM" VALUE="Click a bookmark"/>
 <attribute NAME="addons.${name}.T_create_NBM" VALUE="Create a named bookmark"/>
 <attribute NAME="addons.${name}.T_create_SBM" VALUE="Create a regular bookmark"/>
-<attribute NAME="addons.${name}.T_create_link_in_win_title" VALUE="Create a link in..."/>
 <attribute NAME="addons.${name}.T_create_link_in" VALUE="Create a link to the currently selected node"/>
+<attribute NAME="addons.${name}.T_create_link_in_win_title" VALUE="Create a link in..."/>
 <attribute NAME="addons.${name}.T_create_link_to" VALUE="Create a link in the currently selected node"/>
 <attribute NAME="addons.${name}.T_create_link_to_win_title" VALUE="Create a link to..."/>
 <attribute NAME="addons.${name}.T_created_link_in_NBM" VALUE="A link to this node has been created in the node bookmarked with the name"/>
@@ -312,6 +321,7 @@
 <attribute NAME="addons.${name}.T_created_link_to_NBM" VALUE="A link has been created to the bookmark named"/>
 <attribute NAME="addons.${name}.T_created_link_to_SBM" VALUE="A link to the selected bookmark has been created"/>
 <attribute NAME="addons.${name}.T_delete_BM" VALUE="Delete this bookmark"/>
+<attribute NAME="addons.${name}.T_icons_converted" VALUE="icons converted"/>
 <attribute NAME="addons.${name}.T_jump_aborded" VALUE="Jump to bookmark aborded"/>
 <attribute NAME="addons.${name}.T_jump_to_NBM" VALUE="Jump to bookmark named"/>
 <attribute NAME="addons.${name}.T_jump_to_SBM" VALUE="Jump to bookmark"/>
@@ -323,6 +333,7 @@
 <attribute NAME="addons.${name}.T_kbd_space" VALUE="Space"/>
 <attribute NAME="addons.${name}.T_link_aborded" VALUE="Link creation aborded"/>
 <attribute NAME="addons.${name}.T_no_bookmarks" VALUE="There is no bookmarks"/>
+<attribute NAME="addons.${name}.T_no_conversion_required" VALUE="Nothing to do"/>
 <attribute NAME="addons.${name}.T_no_next_BM" VALUE="No next bookmark"/>
 <attribute NAME="addons.${name}.T_no_node_with_key" VALUE="There is no node marked with the key"/>
 <attribute NAME="addons.${name}.T_no_prev_BM" VALUE="No previous bookmark"/>
@@ -343,6 +354,7 @@
 <attribute NAME="addons.${name}.T_select_node_to_link_in" VALUE="Select the node where to create the link"/>
 <attribute NAME="addons.${name}.T_space_to_link_in_memorized" VALUE="Press &lt;i&gt;Space&lt;/i&gt; to create the link in the memorized node"/>
 <attribute NAME="addons.${name}.T_space_to_link_to_memorized" VALUE="Press &lt;i&gt;Space&lt;/i&gt; to link to memorized node"/>
+<attribute NAME="addons.${name}.T_storage_erased" VALUE="Bookmarks datas erased"/>
 <attribute NAME="addons.${name}.T_tab_to_display_NBM" VALUE="Press &lt;i&gt;Tab&lt;/i&gt; to display named bookmarks"/>
 <attribute NAME="addons.${name}.T_tab_to_display_SBM" VALUE="Press &lt;i&gt;Tab&lt;/i&gt; to display standard bookmarks"/>
 <attribute NAME="addons.${name}.T_tip_create_link_in_NBM" VALUE="To create a link in a bookmarked node either"/>
@@ -352,8 +364,15 @@
 <attribute NAME="addons.${name}.T_tip_jump_to_NBM" VALUE="To jump to a named bookmark either"/>
 <attribute NAME="addons.${name}.T_tip_jump_to_SBM" VALUE="To jump to a bookmark either"/>
 <attribute NAME="addons.${name}.T_to_cancel" VALUE="to cancel"/>
+<attribute NAME="addons.${name}.T_BMs_to_FP_win_title" VALUE="Bookmarks conversion"/>
+<attribute NAME="addons.${name}.T_convert_BM_FP_warning" VALUE="This will convert all bookmarks to FreePlane regular bookmark icons (the star icons).\nThis operation can not be undone. Do you want to proceed ?"/>
+<attribute NAME="addons.${name}.T_op_canceled" VALUE="Operation canceled."/>
+<attribute NAME="addons.${name}.T_FP_to_BM_win_title" VALUE="Convert FreePlane bookmarks"/>
+<attribute NAME="addons.${name}.T_convert_FP_BM_warning" VALUE="This will convert all FreePlane regular bookmark icons (the star icons)\nto bookmarks to be use by this add-on.\nDo you want to proceed ?"/>
+<attribute NAME="addons.${name}.T_BMs_created" VALUE="bookmarks created"/>
+<attribute NAME="addons.${name}.T_no_BMs_created" VALUE="No bookmarks created"/>
 </node>
-<node TEXT="fr" ID="ID_1748679509" CREATED="1562410359665" MODIFIED="1562699268663">
+<node TEXT="fr" ID="ID_1748679509" CREATED="1562410359665" MODIFIED="1562709868636">
 <attribute_layout NAME_WIDTH="170.24999492615476 pt" VALUE_WIDTH="320.9999904334548 pt"/>
 <attribute NAME="addons.${name}" VALUE="Marque-pages"/>
 <attribute NAME="addons.${name}._10_BookmarkNode" VALUE="Placer / Supprimer un marque-page"/>
@@ -364,6 +383,8 @@
 <attribute NAME="addons.${name}._50_CreateLinkInBookmark" VALUE="Cr\u00E9er un lien dans un marque-page"/>
 <attribute NAME="addons.${name}._51_CreateLinkToBookmark" VALUE="Cr\u00E9er un lien vers un marque-page"/>
 <attribute NAME="addons.${name}._90_UpdateMap" VALUE="Mettre \u00E0 jour les marque-pages d&apos;une version ant\u00E9rieure du module"/>
+<attribute NAME="addons.${name}._94_ConvertFPBookmarks" VALUE="Convertir toutes les  ic\u00F4nes de marque-page de FreePlane (\u00E9toile) en marque-pages pour ce module"/>
+<attribute NAME="addons.${name}._95_ConvertBookmarksToFP" VALUE="Convertir tous les marque-pages en ic\u00F4nes de marque-page de FreePlane (\u00E9toile)"/>
 <attribute NAME="_50_bookmarksLinks" VALUE="Cr\u00E9er des liens"/>
 <attribute NAME="_90_bookmarksTools" VALUE="Outils"/>
 <attribute NAME="addons.${name}.T_BM_operation_aborded" VALUE="Op\u00E9ration abandonn\u00E9e"/>
@@ -375,8 +396,8 @@
 <attribute NAME="addons.${name}.T_click_BM" VALUE="Cliquer un marque-page"/>
 <attribute NAME="addons.${name}.T_create_NBM" VALUE="Cr\u00E9er un marque-page nomm\u00E9"/>
 <attribute NAME="addons.${name}.T_create_SBM" VALUE="Cr\u00E9er un marque-page standard"/>
-<attribute NAME="addons.${name}.T_create_link_in_win_title" VALUE="Cr\u00E9er un lien dans..."/>
 <attribute NAME="addons.${name}.T_create_link_in" VALUE="Cr\u00E9ation d&apos;un lien vers le noeud actuellement s\u00E9lectionn\u00E9 sur la carte"/>
+<attribute NAME="addons.${name}.T_create_link_in_win_title" VALUE="Cr\u00E9er un lien dans..."/>
 <attribute NAME="addons.${name}.T_create_link_to" VALUE="Cr\u00E9ation d&apos;un lien dans le noeud actuellement s\u00E9lectionn\u00E9 sur la carte"/>
 <attribute NAME="addons.${name}.T_create_link_to_win_title" VALUE="Cr\u00E9er un lien vers..."/>
 <attribute NAME="addons.${name}.T_created_link_in_NBM" VALUE="Un lien vers ce noeud a \u00E9t\u00E9 cr\u00E9\u00E9 dans le noeud contenant le marque-page nomm\u00E9"/>
@@ -384,6 +405,7 @@
 <attribute NAME="addons.${name}.T_created_link_to_NBM" VALUE="Un lien a \u00E9t\u00E9 cr\u00E9\u00E9 vers le marque-page nomm\u00E9"/>
 <attribute NAME="addons.${name}.T_created_link_to_SBM" VALUE="Un lien a \u00E9t\u00E9 cr\u00E9\u00E9 vers le marque-page s\u00E9lectionn\u00E9"/>
 <attribute NAME="addons.${name}.T_delete_BM" VALUE="Effacer ce marque-page"/>
+<attribute NAME="addons.${name}.T_icons_converted" VALUE="ic\u00F4nes converties"/>
 <attribute NAME="addons.${name}.T_jump_aborded" VALUE="Saut annul\u00E9"/>
 <attribute NAME="addons.${name}.T_jump_to_NBM" VALUE="Atteindre un marque-page nomm\u00E9"/>
 <attribute NAME="addons.${name}.T_jump_to_SBM" VALUE="Atteindre un marque-page"/>
@@ -395,9 +417,10 @@
 <attribute NAME="addons.${name}.T_kbd_space" VALUE="Espace"/>
 <attribute NAME="addons.${name}.T_link_aborded" VALUE="Cr\u00E9ation du lien annul\u00E9e"/>
 <attribute NAME="addons.${name}.T_no_bookmarks" VALUE="Il n&apos;y a pas de marque-page"/>
-<attribute NAME="addons.${name}.T_no_next_BM" VALUE="Pas de marque_page suivant"/>
+<attribute NAME="addons.${name}.T_no_conversion_required" VALUE="Il n&apos;y a rien \u00E0 faire"/>
+<attribute NAME="addons.${name}.T_no_next_BM" VALUE="Pas de marque-page suivant"/>
 <attribute NAME="addons.${name}.T_no_node_with_key" VALUE="Il n&apos;y a pas de marque-page pour la touche"/>
-<attribute NAME="addons.${name}.T_no_prev_BM" VALUE="Pas de marque_page pr\u00E9c\u00E9dent"/>
+<attribute NAME="addons.${name}.T_no_prev_BM" VALUE="Pas de marque-page pr\u00E9c\u00E9dent"/>
 <attribute NAME="addons.${name}.T_no_update_required" VALUE="Pas de mise-\u00E0-jour n\u00E9cessaire"/>
 <attribute NAME="addons.${name}.T_node_already_BM" VALUE="Ce noeud a d\u00E9j\u00E0 un marque-page."/>
 <attribute NAME="addons.${name}.T_node_already_NBM" VALUE="Ce noeud a d\u00E9j\u00E0 un marque-page nomm\u00E9."/>
@@ -415,6 +438,7 @@
 <attribute NAME="addons.${name}.T_select_node_to_link_in" VALUE="Choisir le noeud o\u00F9 cr\u00E9er le lien"/>
 <attribute NAME="addons.${name}.T_space_to_link_in_memorized" VALUE="Presser &lt;i&gt;Espace&lt;/i&gt; pour cr\u00E9er un lien \u00E0 ce noeud dans le noeud m\u00E9moris\u00E9"/>
 <attribute NAME="addons.${name}.T_space_to_link_to_memorized" VALUE="Presser &lt;i&gt;Espace&lt;/i&gt; pour lier au noeud m\u00E9moris\u00E9"/>
+<attribute NAME="addons.${name}.T_storage_erased" VALUE="Donn\u00E9es des marque-pages effac\u00E9es"/>
 <attribute NAME="addons.${name}.T_tab_to_display_NBM" VALUE="Appuyer sur &lt;i&gt;Tab&lt;/i&gt; pour afficher les marque-pages nomm\u00E9s"/>
 <attribute NAME="addons.${name}.T_tab_to_display_SBM" VALUE="Appuyer sur &lt;i&gt;Tab&lt;/i&gt; pour afficher les marque-pages standards"/>
 <attribute NAME="addons.${name}.T_tip_create_link_in_NBM" VALUE="Pour s\u00E9lectionner le noeud o\u00F9 cr\u00E9er le lien"/>
@@ -424,9 +448,16 @@
 <attribute NAME="addons.${name}.T_tip_jump_to_NBM" VALUE="Pour atteindre un marque-page nomm\u00E9"/>
 <attribute NAME="addons.${name}.T_tip_jump_to_SBM" VALUE="Pour atteindre un marque-page"/>
 <attribute NAME="addons.${name}.T_to_cancel" VALUE="pour annuler"/>
+<attribute NAME="addons.${name}.T_BMs_to_FP_win_title" VALUE="Conversion des marque-pages"/>
+<attribute NAME="addons.${name}.T_convert_BM_FP_warning" VALUE="Ceci va convertir tous les marque-pages en ic\u00F4ne de marque-page de FreePlane (celui en forme d&apos;\u00E9toile).\nCette op\u00E9ration est irr\u00E9versible. Voulez-vous continuer ?"/>
+<attribute NAME="addons.${name}.T_op_canceled" VALUE="Op\u00E9ration annul\u00E9e."/>
+<attribute NAME="addons.${name}.T_FP_to_BM_win_title" VALUE="Conversion des marque-pages de FreePlane"/>
+<attribute NAME="addons.${name}.T_convert_FP_BM_warning" VALUE="Ceci va convertir toutes les ic\u00F4nes de marque-page de FreePlane (les ic\u00F4nes en forme d&apos;\u00E9toile)\nen marque-pages utilisables par ce module.\nVoulez-vous continuer ?"/>
+<attribute NAME="addons.${name}.T_BMs_created" VALUE="marque-pages cr\u00E9\u00E9s"/>
+<attribute NAME="addons.${name}.T_no_BMs_created" VALUE="Pas de marque-pages cr\u00E9\u00E9s"/>
 </node>
 </node>
-<node TEXT="deinstall" POSITION="left" ID="ID_1870605844" CREATED="1562410359689" MODIFIED="1562534400874">
+<node TEXT="deinstall" POSITION="left" ID="ID_1870605844" CREATED="1562410359689" MODIFIED="1562709826075">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -440,6 +471,7 @@
     </p>
   </body>
 </html>
+
 </richcontent>
 <attribute_layout VALUE_WIDTH="389.9999883770946 pt"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}.script.xml"/>
@@ -454,8 +486,10 @@
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/_50_CreateLinkInBookmark.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/_51_CreateLinkToBookmark.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/_90_UpdateMap.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/_95_ConvertBookmarksToFP.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/_94_ConvertFPBookmarks.groovy"/>
 </node>
-<node TEXT="scripts" POSITION="right" ID="ID_1460492722" CREATED="1562410359701" MODIFIED="1562534279424" TEXT_SHORTENED="true">
+<node TEXT="scripts" POSITION="right" ID="ID_1460492722" CREATED="1562410359701" MODIFIED="1562709787319" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -574,6 +608,7 @@
     </p>
   </body>
 </html>
+
 </richcontent>
 <node TEXT="_10_BookmarkNode.groovy" ID="ID_1722187040" CREATED="1562410359729" MODIFIED="1562412132309">
 <attribute_layout NAME_WIDTH="172.49999485909953 pt" VALUE_WIDTH="213.7499936297538 pt"/>
@@ -671,8 +706,32 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
+<node TEXT="_95_ConvertBookmarksToFP.groovy" ID="ID_1843539639" CREATED="1562704008478" MODIFIED="1562704073643">
+<attribute_layout NAME_WIDTH="186.74999443441646 pt" VALUE_WIDTH="249.7499925568702 pt"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}._95_ConvertBookmarksToFP"/>
+<attribute NAME="menuLocation" VALUE="/menu_bar/${name}/_90_bookmarksTools"/>
+<attribute NAME="executionMode" VALUE="on_single_node"/>
+<attribute NAME="keyboardShortcut" VALUE=""/>
+<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
+<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
-<node TEXT="lib" POSITION="right" ID="ID_1159449610" CREATED="1562410359919" MODIFIED="1562534279487">
+<node TEXT="_94_ConvertFPBookmarks.groovy" ID="ID_53787803" CREATED="1562709820879" MODIFIED="1562709852096">
+<attribute_layout NAME_WIDTH="185.24999447911995 pt" VALUE_WIDTH="247.49999262392544 pt"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}._94_ConvertFPBookmarks"/>
+<attribute NAME="menuLocation" VALUE="/menu_bar/${name}/_90_bookmarksTools"/>
+<attribute NAME="executionMode" VALUE="on_single_node"/>
+<attribute NAME="keyboardShortcut" VALUE=""/>
+<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
+<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
+</node>
+</node>
+<node TEXT="lib" POSITION="right" ID="ID_1159449610" CREATED="1562410359919" MODIFIED="1562709820974">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -710,9 +769,10 @@
     </p>
   </body>
 </html>
+
 </richcontent>
 </node>
-<node TEXT="zips" POSITION="right" ID="ID_435012533" CREATED="1562410359928" MODIFIED="1562534279491">
+<node TEXT="zips" POSITION="right" ID="ID_435012533" CREATED="1562410359928" MODIFIED="1562709820981">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -750,11 +810,12 @@
     </p>
   </body>
 </html>
+
 </richcontent>
 <node TEXT="icons" ID="ID_1144883898" CREATED="1562410359939" MODIFIED="1562410359940"/>
 <node TEXT="scripts" ID="ID_87188883" CREATED="1562410359941" MODIFIED="1562410359942"/>
 </node>
-<node TEXT="images" POSITION="right" ID="ID_63266556" CREATED="1562410359950" MODIFIED="1562534279505" TEXT_SHORTENED="true">
+<node TEXT="images" POSITION="right" ID="ID_63266556" CREATED="1562410359950" MODIFIED="1562709820995" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -788,6 +849,7 @@
     </p>
   </body>
 </html>
+
 </richcontent>
 </node>
 </node>
