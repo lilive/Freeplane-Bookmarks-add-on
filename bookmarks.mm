@@ -388,7 +388,7 @@
 <attribute NAME="addons.${name}._36_JumpToNextBookmark" VALUE="Atteindre le marque-page suivant"/>
 <attribute NAME="addons.${name}._50_CreateLinkInBookmark" VALUE="Cr\u00E9er un lien dans un marque-page"/>
 <attribute NAME="addons.${name}._51_CreateLinkToBookmark" VALUE="Cr\u00E9er un lien vers un marque-page"/>
-<attribute NAME="addons.${name}._95_FixOldVersionNamedBookmarks" VALUE="R\u00E9cup\u00E8re les marque-pages nomm\u00E9s d&apos;un version ant\u00E9rieure du module"/>
+<attribute NAME="addons.${name}._95_FixOldVersionNamedBookmarks" VALUE="R\u00E9cup\u00E8re les marque-pages nomm\u00E9s d&apos;une version ant\u00E9rieure du module"/>
 <attribute NAME="addons.${name}._90_ConvertFPBookmarks" VALUE="Convertir toutes les  ic\u00F4nes de marque-page de FreePlane (\u00E9toile) en marque-pages pour ce module"/>
 <attribute NAME="addons.${name}._91_ConvertBookmarksToFP" VALUE="Convertir tous les marque-pages en ic\u00F4nes de marque-page de FreePlane (\u00E9toile)"/>
 <attribute NAME="_50_bookmarksLinks" VALUE="Cr\u00E9er des liens"/>
