@@ -19,6 +19,9 @@ storageKey = "BookmarksKeys"
 namedIcon = "bookmarks/Bookmark 2"
 anonymousIcon = "bookmarks/Bookmark 1"
 
+globalKey = "Bookmarks"
+monitorKey = "monitorMap"
+
 numFixedBookmarks = 0
 numAnonymizedBookmarks = 0
 
@@ -35,24 +38,66 @@ def messageBox( message, icon )
     ui.informationMessage( ui.frame, message, winTitle, icon )
 }
 
+def pauseMonitor()
+{
+    // Pause the add-on node changes monitoring feature
+    
+    // Read the datas from the map storage
+    def varsString = new Convertible( '{}' )
+    def stored = node.map.storage.getAt( globalKey )
+    if( stored ) varsString = stored;
+
+    // Convert these datas to an HashMap
+    def vars = new JsonSlurper().parseText( varsString.getText() ) as Map
+
+    // Set monitoring var to disable
+    vars[ monitorKey ] = false
+    
+    // Save the vars in map local storage
+    def builder = new JsonBuilder()
+    builder( vars )
+    node.map.storage.putAt( globalKey, builder.toString() )
+}
+
+def resumeMonitor()
+{
+    // Resume the add-on node changes monitoring feature
+    
+    // Read the datas from the map storage
+    def varsString = new Convertible( '{}' )
+    def stored = node.map.storage.getAt( globalKey )
+    if( stored ) varsString = stored;
+
+    // Convert these datas to an HashMap
+    def vars = new JsonSlurper().parseText( varsString.getText() ) as Map
+
+    // Set monitoring var to enabled
+    vars[ monitorKey ] = true
+    
+    // Save the vars in map local storage
+    def builder = new JsonBuilder()
+    builder( vars )
+    node.map.storage.putAt( globalKey, builder.toString() )
+}
+
 def Map loadOldNamedBookmarks()
 {
     // Load the named bookmarks stored in the "MarksKeys" entry in map local storage
     def marksString = new Convertible( '{}' )
     def stored = node.map.storage.getAt( oldStorageKey )
     if( stored ) marksString = stored;
-    def namedBookmarks = new JsonSlurper().parseText( marksString.getText() )
+    def namedBookmarks = new JsonSlurper().parseText( marksString.getText() ) as Map
 
     // Discard nodes that do not exist anymore, and nodes that haven't got the
     // old bookmark icon
-    namedBookmarks.each
+    namedBookmarks.removeAll
     {
         key, id ->
         def n = map.node( id )
-        if( ! n || ! n.icons.contains( oldNamedIcon ) ) namedBookmarks.remove( key )
+        return ( n == null || ! n.icons.contains( oldNamedIcon ) ) 
     }
     
-    return namedBookmarks as Map
+    return namedBookmarks
 }
 
 def Map loadNamedBookmarks()
@@ -104,22 +149,36 @@ if( cancel != 0 )
     return
 }
 
+println 1
+
+pauseMonitor()
+
 // Get the actual version bookmarks
 namedBookmarks = loadNamedBookmarks()
+println 'namedBookmarks  ' + namedBookmarks
 
 // Look for named bookmarks in the local map storage, to find them as defined
 // by previous version of the addon
 oldNamedBookmarks = loadOldNamedBookmarks()
 numFixedBookmarks = oldNamedBookmarks.size
 
+println "oldNamedBookmarks " + oldNamedBookmarks
+
+println 2
+
 // Move old bookmarks to new bookmarks
 if( numFixedBookmarks )
 {
     // Delete them from the local storage
     deleteOldNamedBookmarksDatas()
+
+    println "oldNamedBookmarks " + oldNamedBookmarks
+    println 'namedBookmarks  ' + namedBookmarks
     
     // Merge the two
     ( namedBookmarks, conflicts ) = mergeNamedBookmarks( oldNamedBookmarks, namedBookmarks )
+
+    println 'namedBookmarks  ' + namedBookmarks
     
     // Save them with the new settings
     saveNamedBookmarks( namedBookmarks )
@@ -139,6 +198,8 @@ if( numFixedBookmarks )
     }
 }
 
+println 3
+
 // Now replace the icons
 c.findAll().each
 {
@@ -153,6 +214,11 @@ c.findAll().each
         }
     }
 }
+
+println 4
+
+resumeMonitor()
+println 5
 
 def message = ''
 def icon = JOptionPane.INFORMATION_MESSAGE
