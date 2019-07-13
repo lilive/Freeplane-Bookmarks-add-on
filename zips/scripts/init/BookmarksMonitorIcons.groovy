@@ -10,12 +10,16 @@ import org.freeplane.plugin.script.proxy.Convertible
 import org.freeplane.plugin.script.proxy.ScriptUtils
 import java.lang.StringBuilder
 import java.util.Enumeration
+import java.util.Map
+import groovy.json.JsonSlurper
 
 class ChangeListener implements INodeChangeListener, IMapChangeListener
 {
 	String namedIcon = "bookmarks/Bookmark 2"
 	String anonymousIcon = "bookmarks/Bookmark 1"
 	String storageKey = "BookmarksKeys"
+	String globalKey = "Bookmarks"
+	String monitorKey = "monitorMap"
 
 	public void nodeChanged(NodeChangeEvent event)
 	{
@@ -37,7 +41,7 @@ class ChangeListener implements INodeChangeListener, IMapChangeListener
 			// An icon has been deleted
 			if( event.oldValue ){
 				String oldIcon = event.oldValue.name
-				if( oldIcon == namedIcon ){
+				if( oldIcon == namedIcon && isMonitingActive() ){
 					// Prevent named bookmark icon to be removed from named bookmarked nodes,
 					// and be sure it is at the first position
 					if( isNodeHasNamedBookmark( node ) ) putUniqueIconAsFirstIcon( node, namedIcon )
@@ -48,7 +52,7 @@ class ChangeListener implements INodeChangeListener, IMapChangeListener
 			if( event.newValue ){
 
                 String newIcon = event.newValue.name
-                if( newIcon == namedIcon ){
+                if( newIcon == namedIcon && isMonitingActive() ){
 					// If this is a named bookmark icon
 
 					// Be sure a named bookmark icon is at the first position ...
@@ -56,7 +60,7 @@ class ChangeListener implements INodeChangeListener, IMapChangeListener
 					// ... and that a named bookmark icon is added only to named bookmarked nodes
 					else removeIcon( node, namedIcon )
 
-				} else if( newIcon == anonymousIcon ){
+				} else if( newIcon == anonymousIcon && isMonitingActive() ){
 					// If this is a regular bookmark icon
 
 					if( isNodeHasNamedBookmark( node ) ){
@@ -80,6 +84,8 @@ class ChangeListener implements INodeChangeListener, IMapChangeListener
 		// But only one node can be named-bookmarked with a single keyboard key,
         // so we must remove the named-bookmark icon from the copy.
 
+        if( ! isMonitingActive() ) return
+        
 		IconStore iconStore = IconStoreFactory.ICON_STORE
 		MindIcon icon = iconStore.getMindIcon( namedIcon )
 
@@ -184,6 +190,23 @@ class ChangeListener implements INodeChangeListener, IMapChangeListener
 			purgeBranchFromBadNamedIcons( children.nextElement(), icon, named )
 		}
 	}
+
+    private Boolean isMonitingActive()
+    {
+		// Read the datas from the map storage
+        def map = ScriptUtils.node().map
+        def varsString = new Convertible( '{}' )
+        def stored = node.map.storage.getAt( globalKey )
+
+        // If no datas here return true
+        if( stored == null ) return true
+        // Else convert them to an HashMap
+        varsString = stored;
+        def vars = new JsonSlurper().parseText( varsString.getText() ) as Map
+
+        // Return monitoring value
+        return vars[ monitorKey] == true
+    }
 
 }
 
