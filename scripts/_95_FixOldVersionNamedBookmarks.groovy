@@ -149,22 +149,15 @@ if( cancel != 0 )
     return
 }
 
-println 1
-
 pauseMonitor()
 
 // Get the actual version bookmarks
 namedBookmarks = loadNamedBookmarks()
-println 'namedBookmarks  ' + namedBookmarks
 
 // Look for named bookmarks in the local map storage, to find them as defined
 // by previous version of the addon
 oldNamedBookmarks = loadOldNamedBookmarks()
-numFixedBookmarks = oldNamedBookmarks.size
-
-println "oldNamedBookmarks " + oldNamedBookmarks
-
-println 2
+numFixedBookmarks = oldNamedBookmarks.size()
 
 // Move old bookmarks to new bookmarks
 if( numFixedBookmarks )
@@ -172,14 +165,9 @@ if( numFixedBookmarks )
     // Delete them from the local storage
     deleteOldNamedBookmarksDatas()
 
-    println "oldNamedBookmarks " + oldNamedBookmarks
-    println 'namedBookmarks  ' + namedBookmarks
-    
     // Merge the two
     ( namedBookmarks, conflicts ) = mergeNamedBookmarks( oldNamedBookmarks, namedBookmarks )
 
-    println 'namedBookmarks  ' + namedBookmarks
-    
     // Save them with the new settings
     saveNamedBookmarks( namedBookmarks )
     
@@ -198,8 +186,6 @@ if( numFixedBookmarks )
     }
 }
 
-println 3
-
 // Now replace the icons
 c.findAll().each
 {
@@ -215,10 +201,7 @@ c.findAll().each
     }
 }
 
-println 4
-
 resumeMonitor()
-println 5
 
 def message = ''
 def icon = JOptionPane.INFORMATION_MESSAGE
