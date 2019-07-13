@@ -195,14 +195,12 @@ class ChangeListener implements INodeChangeListener, IMapChangeListener
     {
 		// Read the datas from the map storage
         def map = ScriptUtils.node().map
-        def varsString = new Convertible( '{}' )
-        def stored = node.map.storage.getAt( globalKey )
+        def stored = map.storage.getAt( globalKey )
 
         // If no datas here return true
         if( stored == null ) return true
         // Else convert them to an HashMap
-        varsString = stored;
-        def vars = new JsonSlurper().parseText( varsString.getText() ) as Map
+        def vars = new JsonSlurper().parseText( stored.getText() ) as Map
 
         // Return monitoring value
         return vars[ monitorKey] == true
