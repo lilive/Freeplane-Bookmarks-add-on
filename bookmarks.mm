@@ -3,7 +3,7 @@
 <node TEXT="Bookmarks" LOCALIZED_STYLE_REF="styles.topic" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1563126431524" LINK="https://github.com/lilive/Freeplane-Bookmarks-add-on" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#000000" STYLE="rectangle" SHAPE_HORIZONTAL_MARGIN="6.0 pt" SHAPE_VERTICAL_MARGIN="6.0 pt">
 <edge WIDTH="thin"/>
 <hook NAME="MapStyle" background="#c4c4c4">
-    <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" show_notes_in_map="false" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" Marks_stored_node_id="ID_1837714869"/>
+    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" show_notes_in_map="false" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" Marks_stored_node_id="ID_1837714869"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -131,7 +131,6 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="description" POSITION="left" ID="ID_1114811084" CREATED="1562410359487" MODIFIED="1563126431576">
 <edge COLOR="#353535"/>
@@ -153,7 +152,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="Add bookmarks to nodes, and easily navigate beetween them." ID="ID_1183587619" CREATED="1518707454288" MODIFIED="1518815727777"/>
 </node>
@@ -171,7 +169,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="v0.3" ID="ID_1947541306" CREATED="1518881580800" MODIFIED="1518881585971">
 <node TEXT="First released version" ID="ID_1150257103" CREATED="1518881587391" MODIFIED="1518881596914"/>
@@ -189,7 +186,7 @@
 <node TEXT="Complete rewrite of the add-on. Introduce named bookmarks." ID="ID_419235170" CREATED="1562409104741" MODIFIED="1562417968655"/>
 </node>
 <node TEXT="v0.5.1" ID="ID_540433193" CREATED="1562499877679" MODIFIED="1562499881604">
-<node TEXT="- Renamed bookmarks icons (because of conflict with freeplane builtin bookmark icon)&#xa;- Jump to previous/next bookmark commands&#xa;- Better GUI text&#xa;- GUI translation&#xa;- Command to update bookmarks created with previous versions" ID="ID_27269396" CREATED="1562499884480" MODIFIED="1562698264366"/>
+<node TEXT="- Renamed bookmarks icons (because of conflict with freeplane builtin bookmark icon)&#xa;- Jump to previous/next bookmark commands&#xa;- Better GUI text&#xa;- GUI translation&#xa;- Command to update bookmarks created with previous versions&#xa;- Commands to convert between the add-on bookmarks and the Freeplane builtin bookmark icon&#xa;- The code shared by the differents scripts is now in a library" ID="ID_27269396" CREATED="1562499884480" MODIFIED="1563127766424"/>
 </node>
 </node>
 <node TEXT="license" FOLDED="true" POSITION="left" ID="ID_230785910" CREATED="1562410359599" MODIFIED="1563126431583" TEXT_SHORTENED="true">
@@ -212,7 +209,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="&#xa;This add-on is free software: you can redistribute it and/or modify&#xa;it under the terms of the GNU General Public License as published by&#xa;the Free Software Foundation, either version 2 of the License, or&#xa;(at your option) any later version.&#xa;&#xa;This program is distributed in the hope that it will be useful,&#xa;but WITHOUT ANY WARRANTY; without even the implied warranty of&#xa;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the&#xa;GNU General Public License for more details.&#xa;" ID="ID_1167386088" CREATED="1562410359607" MODIFIED="1562410359614"/>
 </node>
@@ -233,7 +229,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="default.properties" POSITION="left" ID="ID_151630546" CREATED="1562410359652" MODIFIED="1563126431591" TEXT_SHORTENED="true">
@@ -258,7 +253,6 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="translations" POSITION="left" ID="ID_255907585" CREATED="1562410359658" MODIFIED="1563126431594" TEXT_SHORTENED="true">
@@ -286,7 +280,6 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="en" ID="ID_737947027" CREATED="1562410359665" MODIFIED="1563020698222">
 <attribute_layout NAME_WIDTH="170.999994903803 pt" VALUE_WIDTH="320.9999904334548 pt"/>
@@ -483,7 +476,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <attribute_layout VALUE_WIDTH="389.9999883770946 pt"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}.script.xml"/>
@@ -621,7 +613,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="_10_BookmarkNode.groovy" ID="ID_1722187040" CREATED="1562410359729" MODIFIED="1562412132309">
 <attribute_layout NAME_WIDTH="172.49999485909953 pt" VALUE_WIDTH="213.7499936297538 pt"/>
@@ -782,7 +773,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="zips" POSITION="right" ID="ID_435012533" CREATED="1562410359928" MODIFIED="1563126431692">
@@ -823,7 +813,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="icons" ID="ID_1144883898" CREATED="1562410359939" MODIFIED="1562410359940"/>
 <node TEXT="scripts" ID="ID_87188883" CREATED="1562410359941" MODIFIED="1562410359942"/>
@@ -863,7 +852,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
