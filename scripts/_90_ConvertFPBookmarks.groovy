@@ -1,45 +1,42 @@
 // Convert all builtin freeplane icon "Excellent" to standard bookmarks
 
 import javax.swing.JOptionPane
+import bookmarks.Bookmarks as BM
 
-anonymousIcon = "bookmarks/Bookmark 1"
-
-winTitle = gtt( 'T_FP_to_BM_win_title' )
-
-def gtt( key )
-{
-    // gt = Get Translated Text
-    return textUtils.getText( 'addons.bookmarks.' + key )
-}
+winTitle = BM.gtt( 'T_FP_to_BM_win_title' )
 
 def messageBox( message, icon )
 {
     ui.informationMessage( ui.frame, message, winTitle, icon )
 }
 
+// Ask for confirmation
 def cancel = ui.showConfirmDialog(
     node.delegate,
-    gtt( 'T_convert_FP_BM_warning' ),
+    BM.gtt( 'T_convert_FP_BM_warning' ),
     winTitle, JOptionPane.WARNING_MESSAGE
 )
 if( cancel != 0 )
 {
-    messageBox( gtt( "T_op_canceled" ), JOptionPane.WARNING_MESSAGE )
+    messageBox( BM.gtt( "T_op_canceled" ), JOptionPane.WARNING_MESSAGE )
     return
 }
 
+// Convert the icons
 def numBookmarksCreated = 0
 c.findAll().each
 {
-    if( it.icons.contains( "bookmark" ) )
+    n ->
+    if( n.icons.contains( "bookmark" ) )
     {
         numBookmarksCreated ++;
-        while( it.icons.remove( "bookmark" ) ){}
-        it.icons.add( anonymousIcon )
+        while( n.icons.remove( "bookmark" ) ){}
+        BM.createAnonymousBookmark( n )
     }
 }
 
-if( numBookmarksCreated > 0 ) messageBox( "${numBookmarksCreated} ${gtt( 'T_BMs_created' )} !", JOptionPane.INFORMATION_MESSAGE )
-else messageBox( "${gtt( 'T_no_BMs_created' )} !", JOptionPane.ERROR_MESSAGE )
+// Display result
+if( numBookmarksCreated > 0 ) messageBox( "${numBookmarksCreated} ${BM.gtt( 'T_BMs_created' )} !", JOptionPane.INFORMATION_MESSAGE )
+else messageBox( "${BM.gtt( 'T_no_BMs_created' )} !", JOptionPane.ERROR_MESSAGE )
 
 

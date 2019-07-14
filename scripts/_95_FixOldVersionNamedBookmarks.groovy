@@ -11,73 +11,19 @@ import org.freeplane.plugin.script.proxy.Convertible
 import groovy.json.JsonBuilder
 import groovy.json.JsonSlurper
 import javax.swing.JOptionPane
+import bookmarks.Bookmarks as BM
 
 oldStorageKey = "MarksKeys"
 oldNamedIcon = "bookmark-named"
 
-storageKey = "BookmarksKeys"
-namedIcon = "bookmarks/Bookmark 2"
-anonymousIcon = "bookmarks/Bookmark 1"
+def numFixedBookmarks = 0
+def numAnonymizedBookmarks = 0
 
-globalKey = "Bookmarks"
-monitorKey = "monitorMap"
-
-numFixedBookmarks = 0
-numAnonymizedBookmarks = 0
-
-winTitle = gtt( 'T_convert_v050_NMBs_win_title' )
-
-def gtt( key )
-{
-    // gt = Get Translated Text
-    return textUtils.getText( 'addons.bookmarks.' + key )
-}
+winTitle = BM.gtt( 'T_convert_v050_NMBs_win_title' )
 
 def messageBox( message, icon )
 {
     ui.informationMessage( ui.frame, message, winTitle, icon )
-}
-
-def pauseMonitor()
-{
-    // Pause the add-on node changes monitoring feature
-    
-    // Read the datas from the map storage
-    def varsString = new Convertible( '{}' )
-    def stored = node.map.storage.getAt( globalKey )
-    if( stored ) varsString = stored;
-
-    // Convert these datas to an HashMap
-    def vars = new JsonSlurper().parseText( varsString.getText() ) as Map
-
-    // Set monitoring var to disable
-    vars[ monitorKey ] = false
-    
-    // Save the vars in map local storage
-    def builder = new JsonBuilder()
-    builder( vars )
-    node.map.storage.putAt( globalKey, builder.toString() )
-}
-
-def resumeMonitor()
-{
-    // Resume the add-on node changes monitoring feature
-    
-    // Read the datas from the map storage
-    def varsString = new Convertible( '{}' )
-    def stored = node.map.storage.getAt( globalKey )
-    if( stored ) varsString = stored;
-
-    // Convert these datas to an HashMap
-    def vars = new JsonSlurper().parseText( varsString.getText() ) as Map
-
-    // Set monitoring var to enabled
-    vars[ monitorKey ] = true
-    
-    // Save the vars in map local storage
-    def builder = new JsonBuilder()
-    builder( vars )
-    node.map.storage.putAt( globalKey, builder.toString() )
 }
 
 def Map loadOldNamedBookmarks()
@@ -96,18 +42,10 @@ def Map loadOldNamedBookmarks()
         def n = map.node( id )
         return ( n == null || ! n.icons.contains( oldNamedIcon ) ) 
     }
+
+    namedBookmarks = namedBookmarks.sort()
     
     return namedBookmarks
-}
-
-def Map loadNamedBookmarks()
-{
-    // Load the named bookmarks stored in the storageKey entry in map local storage
-    def marksString = new Convertible( '{}' )
-    def stored = node.map.storage.getAt( storageKey )
-    if( stored ) marksString = stored;
-    def namedBookmarks = new JsonSlurper().parseText( marksString.getText() )
-    return namedBookmarks as Map
 }
 
 def deleteOldNamedBookmarksDatas()
@@ -127,36 +65,30 @@ def mergeNamedBookmarks( oldBookmarks, uptodateBookmarks )
         if( uptodateBookmarks.containsKey( key ) && uptodateBookmarks[ key ] != id ) conflicts[ key ] = uptodateBookmarks[ key ]
         uptodateBookmarks[ key ] = id;
     }
+    uptodateBookmarks = uptodateBookmarks.sort()
     return [ uptodateBookmarks, conflicts ]
-}
-
-def saveNamedBookmarks( namedBookmarks )
-{
-    // Save the named bookmarks to the storageKey entry in map local storage
-    def builder = new JsonBuilder()
-    builder( namedBookmarks )
-    node.map.storage.putAt( storageKey, builder.toString() )
 }
 
 def cancel = ui.showConfirmDialog(
     node.delegate,
-    gtt( 'T_convert_v050_NBMs_warning' ),
+    BM.gtt( 'T_convert_v050_NBMs_warning' ),
     winTitle, JOptionPane.WARNING_MESSAGE
 )
 if( cancel != 0 )
 {
-    messageBox( gtt( "T_op_canceled" ), JOptionPane.WARNING_MESSAGE )
+    messageBox( BM.gtt( "T_op_canceled" ), JOptionPane.WARNING_MESSAGE )
     return
 }
 
-pauseMonitor()
+// Suspend the monitoring to be able to manipulate bookmarks
+BM.pauseMonitor( node.map )
 
 // Get the actual version bookmarks
-namedBookmarks = loadNamedBookmarks()
+def namedBookmarks = BM.loadNamedBookmarks( node.map )
 
 // Look for named bookmarks in the local map storage, to find them as defined
 // by previous version of the addon
-oldNamedBookmarks = loadOldNamedBookmarks()
+def oldNamedBookmarks = loadOldNamedBookmarks()
 numFixedBookmarks = oldNamedBookmarks.size()
 
 // Move old bookmarks to new bookmarks
@@ -169,7 +101,7 @@ if( numFixedBookmarks )
     ( namedBookmarks, conflicts ) = mergeNamedBookmarks( oldNamedBookmarks, namedBookmarks )
 
     // Save them with the new settings
-    saveNamedBookmarks( namedBookmarks )
+    BM.saveNamedBookmarks( namedBookmarks, node.map )
     
     // If an actual bookmark as the same key than an old one,
     // convert this bookmark to anonymous bookmark
@@ -179,8 +111,8 @@ if( numFixedBookmarks )
         def n = map.node( id )
         if( n )
         {
-            n.icons.remove( namedIcon )
-            n.icons.add( anonymousIcon )
+            n.icons.remove( BM.namedIcon )
+            BM.createAnonymousBookmark( n )
             numAnonymizedBookmarks++;
         }
     }
@@ -189,31 +121,33 @@ if( numFixedBookmarks )
 // Now replace the icons
 c.findAll().each
 {
+    n ->
     def update = false
-    while( it.icons.remove( oldNamedIcon ) ) update = true
+    while( n.icons.remove( oldNamedIcon ) ) update = true
     if( update )
     {
-        if( namedBookmarks.containsValue( it.id ) )
+        if( BM.hasBookmarkName( n, namedBookmarks ) )
         {
-            it.icons.add( namedIcon )
+            n.icons.add( BM.namedIcon )
             numFixedBookmarks++;
         }
     }
 }
 
-resumeMonitor()
+BM.resumeMonitor( node.map )
 
+// display result
 def message = ''
 def icon = JOptionPane.INFORMATION_MESSAGE
 if( numFixedBookmarks )
 {
-    message = "${numFixedBookmarks} ${gtt( 'T_v050_NBMs_converted')}"
-    if( numAnonymizedBookmarks ) message += "\n${gtt( 'T_and' )} ${numAnonymizedBookmarks} ${gtt( 'T_NBMs_anonymized')}."
+    message = "${numFixedBookmarks} ${BM.gtt( 'T_v050_NBMs_converted')}"
+    if( numAnonymizedBookmarks ) message += "\n${BM.gtt( 'T_and' )} ${numAnonymizedBookmarks} ${BM.gtt( 'T_NBMs_anonymized')}."
     else message += "."
 }
 else
 {
-    message = "${gtt( 'T_no_v050_NBMs_converted' ) } !"
+    message = "${BM.gtt( 'T_no_v050_NBMs_converted' ) } !"
     icon = JOptionPane.ERROR_MESSAGE
 }
 

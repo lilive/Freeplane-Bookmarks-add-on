@@ -1,5 +1,5 @@
-import groovy.json.JsonBuilder
-import groovy.json.JsonSlurper
+// Jump to a bookmark
+
 import groovy.swing.SwingBuilder
 import java.awt.BorderLayout
 import java.awt.Color
@@ -21,89 +21,10 @@ import javax.swing.JPanel
 import javax.swing.KeyStroke
 import javax.swing.SwingConstants
 import javax.swing.UIManager
-import org.freeplane.plugin.script.proxy.Convertible
+import bookmarks.Bookmarks as BM
 
-storageKey = "BookmarksKeys"
-anonymousIcon = "bookmarks/Bookmark 1"
-namedIcon = "bookmarks/Bookmark 2"
 map = node.map
-namedBookmarks = []
-anonymousBookmarks = []
-
 gui = null
-
-def Map loadNamedBookmarks()
-{
-    // Create a HashMap where :
-    // - the keys are the keyboard keys assigned to a bookmarked node;
-    // - the values are the id of the corresponding bookmarked node.
-    // This HashMap is read from the freeplane map storage area.
-
-    // Read the datas from the map storage
-    def marksString = new Convertible( '{}' )
-    def stored = node.map.storage.getAt( storageKey )
-    if( stored ) marksString = stored;
-
-    // Convert these datas to an HashMap
-    def namedBookmarksMap = new JsonSlurper().parseText( marksString.getText() )
-
-    return namedBookmarksMap as Map
-}
-
-def saveNamedBookmarks( Map namedBookmarksMap )
-{
-    // Store the HashMap namedBookmarks in the freeplane map storage area.
-
-    def builder = new JsonBuilder()
-    builder( namedBookmarksMap )
-    node.map.storage.putAt( storageKey, builder.toString() )
-}
-
-def populateAnonymousBookmarksList( node, List bookmarks )
-{
-    if( node.icons.contains( anonymousIcon ) ){
-        def text = node.text
-        if( text.length() > 30 ) text = text[0..27] + "..."
-        bookmarks << [ "id": node.id, "text": text ]
-    }
-    node.children.each{ populateAnonymousBookmarksList( it, bookmarks ) }
-}
-
-def putIconAtFirstPosition( node, icon )
-{
-    // Add an icon at the first position for this node
-    // Ensure this icon is unique
-
-    def icons = node.icons
-    
-    // Do nothing else if there is already this icon as fisrt icon
-    def num = icons.iterator().count( icon )
-    if( num == 1 && icons.first == icon ) return
-
-    def oldIcons = icons.iterator().toList()
-
-    // Remove all the same icons if necessary
-    if( num > 0 ) oldIcons.removeAll{ it == icon }
-
-    def newIcons = [ icon ]
-    newIcons.addAll( oldIcons )
-    icons.clear()
-    icons.addAll( newIcons )
-}
-
-def addNamedBookmarkIcon( node )
-{
-    // Add the named bookmark icon to this node, if needed.
-    // Remove anonymous bookmarks icons.
-    // Ensure the icon is the first icon of the node
-
-    def icons = node.getIcons()
-
-    // Remove anonymous bookmarks icons
-    while( icons.contains( anonymousIcon ) ) icons.remove( anonymousIcon )
-
-    putIconAtFirstPosition( node, namedIcon )
-}
 
 // Jump to a node after the gui close
 def jumpToNodeAfterGuiDispose( target, message )
@@ -126,59 +47,6 @@ def jumpToNodeAfterGuiDispose( target, message )
     )
 }
 
-// Create a list of all the named bookmarks
-def List initNamedBookmarks()
-{
-    // Create a HashMap for the named bookmarks
-    def bmksMap = loadNamedBookmarks()
-
-    // Make sure namedBookmarks is up-to-date
-    def change = false
-    bmksMap.removeAll
-    {
-        // Remove from the map all the node that don't exist
-        // and add icon for each bookmarked node
-        key, id ->
-        def n = map.node( id )
-        def missing = n == null
-        if( ! missing ) addNamedBookmarkIcon( n )
-        else {
-            change = true
-        }
-        missing
-    }
-    if( change ) saveNamedBookmarks( bmksMap )
-
-    // Refactor the map to make a list, better suited for the rest of the script
-    def bmksList = bmksMap.collect{
-        key, id ->
-        def target = map.node( id )
-        def text = target.text
-        if( text.length() > 30 ) text = text[0..27] + "..."
-        [
-            "id": id,
-            "name": String.valueOf( (char) Integer.parseInt( key ) ),
-            "text": text
-        ]
-    }
-    
-    return bmksList
-}
-
-// Create a list of all the anonymous bookmarks
-def List initAnonymousBookmarks()
-{
-    def bookmarks = []
-    populateAnonymousBookmarksList( map.root, bookmarks )
-    return bookmarks
-}
-
-def gtt( key )
-{
-    // gt = Get Translated Text
-    return textUtils.getText( 'addons.bookmarks.' + key )
-}
-
 def JList getNamedBookmarksJList(
     List bookmarks,         // List of the bookmarks
     String currentNodeId
@@ -189,7 +57,8 @@ def JList getNamedBookmarksJList(
     JList component
     SwingBuilder.build{
         component = list(
-            items: bookmarks.collect{
+            items: bookmarks.collect
+            {
                 // Display for each bookmark the name of the bookmark,
                 // followed by the text of the node
                 if( it.id != currentNodeId ) "<html><font color='red'><b><i>$it.name</i></b></font> : $it.text</html>"
@@ -216,29 +85,31 @@ def JList getNamedBookmarksJList(
                 int code = e.getKeyCode()
                 char chr = e.getKeyChar()
                 int idx = (int) chr
-                if( code == KeyEvent.VK_ENTER ){
+                if( code == KeyEvent.VK_ENTER )
+                {
                     int i = component.getSelectedIndex()
                     if( i >= 0 )
-                        {
+                    {
                         def bm = bookmarks[ i ]
                         def target = map.node( bm.id )
-                        jumpToNodeAfterGuiDispose( target, "${gtt( 'T_jumped_to_NBM' )} \"$bm.name\"" )
+                        jumpToNodeAfterGuiDispose( target, "${BM.gtt( 'T_jumped_to_NBM' )} \"$bm.name\"" )
                         gui.dispose()
                     }
                 }
-                else if( idx > 32 && idx != 127 && idx < 256 ){
+                else if( idx > 32 && idx != 127 && idx < 256 )
+                {
                     // Try to jump to the corresponding node id
                     String s = String.valueOf( chr )
                     def bm = bookmarks.find{ it.name == s }
                     if( bm )
-                        {
+                    {
                         def target = map.node( bm.id )
-                        jumpToNodeAfterGuiDispose( target, "${gtt( 'T_jumped_to_NBM' )} \"${s}\"" )
+                        jumpToNodeAfterGuiDispose( target, "${BM.gtt( 'T_jumped_to_NBM' )} \"${s}\"" )
                         gui.dispose()
                     }
                     else
                     {
-                        c.setStatusInfo( 'standard', "${gtt( 'T_no_node_with_key' )} \"${chr}\"", "messagebox_warning" )
+                        c.setStatusInfo( 'standard', "${BM.gtt( 'T_no_node_with_key' )} \"${chr}\"", "messagebox_warning" )
                     }
                 }
             }
@@ -252,10 +123,10 @@ def JList getNamedBookmarksJList(
             {
                 int idx = component.getSelectedIndex()
                 if( idx >= 0 )
-                    {
+                {
                     def bm = bookmarks[ idx ]
                     def target = node.map.node( bm.id )
-                    jumpToNodeAfterGuiDispose( target, "${gtt( 'T_jump_to_NBM' )} \"$bm.name\"" )
+                    jumpToNodeAfterGuiDispose( target, "${BM.gtt( 'T_jump_to_NBM' )} \"$bm.name\"" )
                     gui.dispose()
                 }
             }
@@ -288,7 +159,7 @@ def JPanel getNamedBookmarksJPanel(
 
             // Row 0
             label(
-                gtt( 'T_select_NBM_to_jump' ) + ".",
+                "${BM.gtt( 'T_select_NBM_to_jump' )}.",
                 constraints: gbc( gridx:0, gridy:0, anchor:GridBagConstraints.LINE_START )
             )
             def icon = UIManager.getIcon("OptionPane.questionIcon")
@@ -301,11 +172,11 @@ def JPanel getNamedBookmarksJPanel(
                 icon: icon,
                 toolTipText:
                     """<html>
-                        ${ gtt( 'T_tip_jump_to_NBM' )}:
+                        ${ BM.gtt( 'T_tip_jump_to_NBM' )}:
                         <ul>
-                            <li>${gtt( 'T_press_red_key' )}</li>
-                            <li>${gtt( 'T_click_BM' )}</li>
-                            <li>${gtt( 'T_arrow_select' )}</li>
+                            <li>${BM.gtt( 'T_press_red_key' )}</li>
+                            <li>${BM.gtt( 'T_click_BM' )}</li>
+                            <li>${BM.gtt( 'T_arrow_select' )}</li>
                         </ul>
                     </html>""",
                 constraints: gbc( gridx:1, gridy:0, anchor:GridBagConstraints.LINE_START, weightx:1, insets:[0,10,0,0] )
@@ -313,7 +184,7 @@ def JPanel getNamedBookmarksJPanel(
 
             // Row 1
             if( showTabTip ) label(
-                "<html>${gtt( 'T_tab_to_display_SBM' )}.</html>",
+                "<html>${BM.gtt( 'T_tab_to_display_SBM' )}.</html>",
                 constraints: gbc( gridx:0, gridy:1, gridwidth:2, anchor:GridBagConstraints.LINE_START )
             )
 
@@ -362,13 +233,14 @@ def JList getAnonymousBookmarksJList(
             @Override public void keyReleased(KeyEvent e)
             {
                 int code = e.getKeyCode()
-                if( code == KeyEvent.VK_ENTER ){
+                if( code == KeyEvent.VK_ENTER )
+                {
                     int idx = component.getSelectedIndex()
                     if( idx >= 0 )
-                        {
+                    {
                         def bm = bookmarks[ idx ]
                         def target = node.map.node( bm.id )
-                        jumpToNodeAfterGuiDispose( target, gtt( 'T_jumped_to_SBM' ) )
+                        jumpToNodeAfterGuiDispose( target, BM.gtt( 'T_jumped_to_SBM' ) )
                         gui.dispose()
                     }
                 }
@@ -383,10 +255,10 @@ def JList getAnonymousBookmarksJList(
             {
                 int idx = component.getSelectedIndex()
                 if( idx >= 0 )
-                    {
+                {
                     def bm = bookmarks[ idx ]
                     def target = node.map.node( bm.id )
-                    jumpToNodeAfterGuiDispose( target, gtt( 'T_jumped_to_SBM' ) )
+                    jumpToNodeAfterGuiDispose( target, BM.gtt( 'T_jumped_to_SBM' ) )
                     gui.dispose()
                 }
             }
@@ -419,7 +291,7 @@ def JPanel getAnonymousBookmarksJPanel(
             
             // Row 0
             label(
-                gtt( 'T_select_BM_to_jump' ) + ".",
+                "${BM.gtt( 'T_select_BM_to_jump' )}.",
                 constraints: gbc( gridx:0, gridy:0, anchor:GridBagConstraints.LINE_START )
             )
             def icon = UIManager.getIcon("OptionPane.questionIcon")
@@ -432,10 +304,10 @@ def JPanel getAnonymousBookmarksJPanel(
                 icon: icon,
                 toolTipText:
                     """<html>
-                        ${gtt( 'T_tip_jump_to_SBM' )}:
+                        ${BM.gtt( 'T_tip_jump_to_SBM' )}:
                         <ul>
-                            <li>${gtt( 'T_click_BM' )}</li>
-                            <li>${gtt( 'T_arrow_select' )}</li>
+                            <li>${BM.gtt( 'T_click_BM' )}</li>
+                            <li>${BM.gtt( 'T_arrow_select' )}</li>
                         </ul>
                     </html>""",
                 constraints: gbc( gridx:1, gridy:0, anchor:GridBagConstraints.LINE_START, weightx:1, insets:[0,10,0,0] )
@@ -443,7 +315,7 @@ def JPanel getAnonymousBookmarksJPanel(
             
             // Row 1
             if( showTabTip ) label(
-                "<html>${gtt( 'T_tab_to_display_NBM' )}.</html>",
+                "<html>${BM.gtt( 'T_tab_to_display_NBM' )}.</html>",
                 constraints: gbc( gridx:0, gridy:1, gridwidth:2, anchor:GridBagConstraints.LINE_START )
             )
             
@@ -470,7 +342,7 @@ def createGui(
     def gui
     SwingBuilder.build{
         gui = dialog(
-            title: gtt( 'T_jump_to_SBM' ),
+            title: BM.gtt( 'T_jump_to_SBM' ),
             modal:true,
             owner: ui.frame,
             defaultCloseOperation: JFrame.DISPOSE_ON_CLOSE
@@ -495,12 +367,12 @@ def createGui(
                 }
 
                 // Second element of the main panel :
-                label( text: "<html>${gtt( 'T_press_esc_cancel' )}</html>.", constraints: BorderLayout.PAGE_END )
+                label( text: "<html>${BM.gtt( 'T_press_esc_cancel' )}</html>.", constraints: BorderLayout.PAGE_END )
             }
         }
     }
 
-    // Set est Esc ket to close the script
+    // Set Esc key to close the script
     def onEscPressID = "onEscPress"
     def inputMap = gui.getRootPane().getInputMap( JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT )
     inputMap.put( KeyStroke.getKeyStroke( KeyEvent.VK_ESCAPE, 0 ), onEscPressID )
@@ -512,25 +384,25 @@ def createGui(
             public void actionPerformed( ActionEvent e )
             {
                 gui.dispose()
-                c.setStatusInfo( 'standard', gtt( 'T_jump_aborded' ), 'button_cancel' )
+                c.setStatusInfo( 'standard', BM.gtt( 'T_jump_aborded' ), 'button_cancel' )
             }
         }
     )
 
     if( namedJList )
-        {
+    {
         if( anonymPanel ) anonymPanel.visible = false
         namedJList.requestFocus()
     }
     else if( anonymJList )
-        {
+    {
         if( namedPanel ) namedPanel.visible = false
         anonymJList.requestFocus()
     }
     
     // Set the Tab key to switch between the 2 bookmarks types
     if( namedPanel && namedJList && anonymPanel && anonymJList )
-        {
+    {
         namedJList.setFocusTraversalKeysEnabled( false )
         anonymJList.setFocusTraversalKeysEnabled( false )
         def onTabPressID = "onTabPress"
@@ -542,13 +414,13 @@ def createGui(
                 public void actionPerformed( ActionEvent e )
                 {
                     if( namedPanel.visible )
-                        {
+                    {
                         namedPanel.visible = false
                         anonymPanel.visible = true
                         anonymJList.requestFocus()
                     }
                     else
-                        {
+                    {
                         namedPanel.visible = true
                         anonymPanel.visible = false
                         namedJList.requestFocus()
@@ -564,18 +436,13 @@ def createGui(
 }
 
 // Find all the bookmarks
-namedBookmarks = initNamedBookmarks()
-anonymousBookmarks = initAnonymousBookmarks()
-
-// Detect if the current node has a named bookmark
-isNamedBookmark = namedBookmarks.any{ it[ "id" ] == node.id }
-// Detect if the current node has a anonymous bookmark
-isAnonymousBookmark = node.icons.contains( anonymousIcon )
+def namedBookmarks = BM.getAllNameBookmarkedNodes( map )
+def anonymousBookmarks = BM.getAllAnonymousBookmarkedNodes( map )
 
 // Quit the script if there is no bookmarks
 if( ! namedBookmarks && ! anonymousBookmarks )
-    {
-    ui.informationMessage( ui.frame, gtt( 'T_no_bookmarks' ) + " !", "Bookmarks" )
+{
+    ui.informationMessage( ui.frame, BM.gtt( 'T_no_bookmarks' ) + " !", BM.gtt( 'T_BM_win_title' ) )
     return
 }
 

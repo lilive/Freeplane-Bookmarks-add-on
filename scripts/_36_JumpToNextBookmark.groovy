@@ -1,34 +1,19 @@
 // Jump to next bookmark
 
-anonymousIcon = "bookmarks/Bookmark 1"
-namedIcon = "bookmarks/Bookmark 2"
+import bookmarks.Bookmarks as BM
 
-def gtt( key )
-{
-    // gt = Get Translated Text
-    return textUtils.getText( 'addons.bookmarks.' + key )
-}
-
-// Return is a node is bookmarked
-def isBookmarked( node )
-{
-    if( node == null ) return false
-    return (
-        node.icons.contains( anonymousIcon )
-        || node.icons.contains( namedIcon )
-    )
-}
+def namedBookmarks = BM.loadNamedBookmarks( node.map )
 
 def start = node
 n = node.getNext()
-while( n != start && !isBookmarked( n ) ) n = n.getNext()
+while( n != start && ! BM.isBookmarked( n, namedBookmarks ) ) n = n.getNext()
 
-if( n != start && isBookmarked( n ) )
+if( n != start && BM.isBookmarked( n, namedBookmarks ) )
 {
     c.select( n  )
     c.centerOnNode( n )
 }
 else
 {
-    c.setStatusInfo( 'standard', gtt( 'T_no_next_BM' ) + " !", 'messagebox_warning' )
+    c.setStatusInfo( 'standard', BM.gtt( 'T_no_next_BM' ) + " !", 'messagebox_warning' )
 }
