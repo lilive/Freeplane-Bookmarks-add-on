@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Bookmarks add-on for Freeplane - Help</title>
+    <link rel="stylesheet" type="text/css" href="knacss.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h1>How to use the bookmarks add-on for Freeplane<img class="icon-svg" src="images/Bookmark 1.svg" height="20px"></h1>
+      <section>
+        <h2>Summary</h2>
+        <ul>
+          <li><a href="#shortcuts">Define keyboard shortcuts</a></li>
+          <li><a href="#bm-types">2 types of bookmarks</a></li>
+          <li><a href="#create">Create a bookmark</a></li>
+          <li><a href="#jump">Jump to a bookmark</a></li>
+          <li><a href="#remove">Remove a bookmark</a></li>
+          <li><a href="#links">Make links</a></li>
+          <li><a href="#tools">Other tools</a>
+            <ul>
+              <li><a href="#convert">Convert bookmarks</a></li>
+              <li><a href="#update">Update bookmarks</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2><a id="shortcuts"></a>Define keyboard shortcuts</h2>
+        <p>The add-on doesn't define keyboard shortcuts by default (because they may overwrite your own custom shortcuts). But I recommend to bind some handy keyboards shortcuts to the add-on menu entries. This will make the add-on really convenient to use, because it was mainly designed to provide a fast map navigation with the keyboard.</p>
+        <p>For example, here's my own shortcuts:</p>
+        <p>Main commands</p>
+        <ul>
+          <li>Add / Remove a bookmark: <span class="shortcut">Ctrl-Maj-B</span></li>
+          <li>Toggle the bookmark: <span class="shortcut">Ctrl-Maj-T</span></li>
+          <li>Jump to bookmark: <span class="shortcut">Ctrl-Maj-J</span></li>
+        </ul>
+        <p>Other commands</p>
+        <ul>
+          <li>Jump to previous bookmark: <span class="shortcut">Ctrl-Maj-Up</span></li>
+          <li>Jump to next bookmark: <span class="shortcut">Ctrl-Maj-Down</span></li>
+          <li>Links &gt; Create link in bookmarked node: <span class="shortcut">Ctrl-Maj-I</span> ("I" for "<strong>I</strong>n the selected node")</li>
+          <li>Links &gt; Create link to bookmarked node: <span class="shortcut">Ctrl-Maj-O</span> ("O" for "<strong>O</strong>ut", opposite than the previous one)</li>
+        </ul>
+        <p>To define a keyboard shortcut in Freeplane, maintain the <span class="shortcut">Ctrl</span> key pressed and click a menu entry.</p>
+      </section>
+      <section>
+        <h2><a id="bm-types"></a>2 types of bookmarks</h2>
+        <p>The add-on let you create 2 types of bookmarks:</p>
+        <ul>
+          <li><img class="icon-svg" src="images/Bookmark 1.svg" height="20px"><strong>Standard bookmarks</strong>. A node with this kind of bookmark is a node with the purple icon. It is not different than any other node with an icon. The add-on use this icon to detect it.</li>
+          <li><img class="icon-svg" src="images/Bookmark 2.svg" height="20px"><strong>Named bookmarks</strong>. A node with this kind of bookmark is a node with the green icon, and a "name". This name is in fact a single letter, digit, or any single key from the keyboard. This name allow quick access to the bookmark. Such a bookmark can be use, for example, to mark the most important nodes in the map.</li>
+        </ul>
+        <p><img src="images/some-bookmarks.gif"></p>
+      </section>
+      <section>
+        <h2><a id="create"></a>Create a bookmark</h2>
+        <p>To create a bookmark in a node, select the node then use <span class="command">Add / Remove a bookmark</span></p>
+        <p>This open a dialog which show you the existing named bookmarks</p>
+        <ul>
+          <li>Press <span class="shortcut">space</span> to create a standard bookmark</li>
+          <li>Type any other key on the keyboard to create a named bookmark</li>
+        </ul>
+        <p><img src="images/create-1.gif"></p>
+        <p>If you create a bookmark with a name that is already used elsewhere, the actual bookmark with this name is erased.<br>Example with the letter <span class="shortcut">A</span>:</p>
+        <p><img src="images/create-reuse.gif"></p>
+        <p>Another way to create a standard bookmark is to use <span class="command">Toggle the bookmark</span>.</p>
+        <p><img src="images/create-toogle.gif"></p>
+      </section>
+      <section>
+        <h2><a id="jump"></a>Jump to a bookmark</h2>
+        <p>To jump to a bookmark, use <span class="command">Jump to bookmark</span></p>
+        <p>This open a dialog that let you pick the desired bookmark. You can select the bookmark with the keyboard or the mouse. Use the key <span class="shortcut">Tab</span> to switch between standard bookmarks and named bookmarks.</p>
+        <p><img src="images/jump-1.gif"></p>
+        <p>You can jump to the previous/next bookmark with the commands <span class="command">Jump to previous bookmark</span> and <span class="command">Jump to next bookmark</span>:</p>
+        <p><img src="images/jump-2.gif"></p>
+      </section>
+      <section>
+        <h2><a id="remove"></a>Remove a bookmark</h2>
+        <p>To remove a bookmark, select its node, choose <span class="command">Add / Remove a bookmark</span> and press the <span class="shortcut">Backspace</span> key:</p>
+        <p><img src="images/remove-1.gif"></p>
+        <p>You can also use <span class="command">Toggle the bookmark</span>:</p>
+        <p><img src="images/remove-2.gif"></p>
+      </section>
+      <section>
+        <h2><a id="links"></a>Make links</h2>
+        <p>In the selected node, you can create a regular Freeplane link that <strong>target any bookmarked node</strong>.</p>
+        <p>Select the node where you want to create the link and use <span class="command">Links &gt; Create link to bookmarked node</span>. Then select the bookmark target of the link.</p>
+        <p>For example, I want to create in a node a link to the node "Chapter 2":</p>
+        <p><img src="images/link-to-1.gif"></p>
+        <p>Tip: you can use the same command to create a link to the node memorized with the Freeplane command <span class="command">Edit &gt; Link &gt; Set link anchor</span> (<span class="shortcut">Ctrl-M</span> for me). In this case, press the <span class="shortcut">Space</span> key instead of picking a bookmark.</p>
+        <p>For exemple, I want to create in a node a link to the node "Conclusion":</p>
+        <p><img src="images/link-to-2.gif"></p>
+        <p>You may also want to create a link in a bookmarked node that <strong>target the selected node</strong>.</p>
+        <p>In this case use <span class="command">Links &gt; Create link in bookmarked node</span>, then select the bookmarked node where to create the link.</p>
+        <p>For example, I want to create in the node "Chapter 2" a link to another node:</p>
+        <p><img src="images/link-in.gif"></p>
+        <p>Tip: again, you can create the link into the node memorized with the Freeplane command <span class="command">Edit &gt; Link &gt; Set link anchor</span> by pressing the <span class="shortcut">Space</span> key.</p>
+      </section>
+      <section>
+        <h2><a id="tools"></a>Other tools</h2>
+        <section class="section2">
+          <h3><a id="convert"></a>Convert bookmarks to or from Freeplane builtin bookmark icons</h3>
+          <p><img class="icon-svg" src="images/fp-bookmark.svg" height="20px">For non users of this add-on, Freeplane features an icon that could be use as a bookmark icon. The add-on doesn't make use of it, but it is possible to bookmark all the nodes that contain it. Use the <span class="command">Tools &gt; Convert all regular FreePlane bookmark icons (star icon) to add-on bookmarks</span> command to replace this icon by the add-on standard bookmark icon.</p>
+          <p><img src="images/convert.gif"></p>
+          <p>You can do the inverse operation with the <span class="command">Tools &gt; Convert all bookmarks to regular FreePlane bookmark icons (star icon)</span> command. This could be useful if someday you want to stop using this add-on and want to keep your bookmarks. Of course, you have to use this command before deinstall the add-on. Take care, this operation is not reversible and delete the bookmarks names.</p>
+        </section>
+        <section class="section2">
+          <h3><a id="update"></a>Update bookmarks from a previous version of the add-on</h3>
+          <p>If after an update of this add-on you've got an incorrect behavior, consider to use the command <span class="command">Tools &gt; Fix named bookmarks created by an old version of the add-on</span>. But don't worry to much: at the moment, the only persons who need this command are the persons who used the version 0.5.0-beta.</p>
+        </section>
+      </section>
+    </div>
+  </body>
+
+</html>

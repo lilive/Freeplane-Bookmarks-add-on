@@ -1,9 +1,9 @@
 <map version="freeplane 1.7.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="Bookmarks" LOCALIZED_STYLE_REF="styles.topic" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1563126431524" LINK="https://github.com/lilive/Freeplane-Bookmarks-add-on" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#000000" STYLE="rectangle" SHAPE_HORIZONTAL_MARGIN="6.0 pt" SHAPE_VERTICAL_MARGIN="6.0 pt">
+<node TEXT="Bookmarks" LOCALIZED_STYLE_REF="styles.topic" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1563156429289" LINK="https://github.com/lilive/Freeplane-Bookmarks-add-on" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#000000" STYLE="rectangle" SHAPE_HORIZONTAL_MARGIN="6.0 pt" SHAPE_VERTICAL_MARGIN="6.0 pt">
 <edge WIDTH="thin"/>
 <hook NAME="MapStyle" background="#c4c4c4">
-    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" show_notes_in_map="false" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" Marks_stored_node_id="ID_1837714869"/>
+    <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" show_notes_in_map="false" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" Marks_stored_node_id="ID_1837714869"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -132,7 +132,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="description" POSITION="left" ID="ID_1114811084" CREATED="1562410359487" MODIFIED="1563126431576">
+<node TEXT="description" POSITION="left" ID="ID_1114811084" CREATED="1562410359487" MODIFIED="1563156429307">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -155,7 +155,7 @@
 </richcontent>
 <node TEXT="Add bookmarks to nodes, and easily navigate beetween them." ID="ID_1183587619" CREATED="1518707454288" MODIFIED="1518815727777"/>
 </node>
-<node TEXT="changes" POSITION="left" ID="ID_1094494132" CREATED="1562410359592" MODIFIED="1563126431580" TEXT_SHORTENED="true">
+<node TEXT="changes" POSITION="left" ID="ID_1094494132" CREATED="1562410359592" MODIFIED="1563156429309" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -186,10 +186,10 @@
 <node TEXT="Complete rewrite of the add-on. Introduce named bookmarks." ID="ID_419235170" CREATED="1562409104741" MODIFIED="1562417968655"/>
 </node>
 <node TEXT="v0.5.1" ID="ID_540433193" CREATED="1562499877679" MODIFIED="1562499881604">
-<node TEXT="- Renamed bookmarks icons (because of conflict with freeplane builtin bookmark icon)&#xa;- Jump to previous/next bookmark commands&#xa;- Better GUI text&#xa;- GUI translation&#xa;- Command to update bookmarks created with previous versions&#xa;- Commands to convert between the add-on bookmarks and the Freeplane builtin bookmark icon&#xa;- The code shared by the differents scripts is now in a library" ID="ID_27269396" CREATED="1562499884480" MODIFIED="1563127766424"/>
+<node TEXT="- Renamed bookmarks icons (because of conflict with freeplane builtin bookmark icon)&#xa;- Jump to previous/next bookmark commands&#xa;- Better GUI text&#xa;- GUI translation&#xa;- Command to update bookmarks created with previous versions&#xa;- Commands to convert between the add-on bookmarks and the Freeplane builtin bookmark icon&#xa;- Help file and help command&#xa;- The code shared by the differents scripts is now in a library" ID="ID_27269396" CREATED="1562499884480" MODIFIED="1563158178199"/>
 </node>
 </node>
-<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_230785910" CREATED="1562410359599" MODIFIED="1563126431583" TEXT_SHORTENED="true">
+<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_230785910" CREATED="1562410359599" MODIFIED="1563156429310" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -212,7 +212,7 @@
 </richcontent>
 <node TEXT="&#xa;This add-on is free software: you can redistribute it and/or modify&#xa;it under the terms of the GNU General Public License as published by&#xa;the Free Software Foundation, either version 2 of the License, or&#xa;(at your option) any later version.&#xa;&#xa;This program is distributed in the hope that it will be useful,&#xa;but WITHOUT ANY WARRANTY; without even the implied warranty of&#xa;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the&#xa;GNU General Public License for more details.&#xa;" ID="ID_1167386088" CREATED="1562410359607" MODIFIED="1562410359614"/>
 </node>
-<node TEXT="preferences.xml" POSITION="left" ID="ID_1098616655" CREATED="1562410359628" MODIFIED="1563126431588" TEXT_SHORTENED="true">
+<node TEXT="preferences.xml" POSITION="left" ID="ID_1098616655" CREATED="1562410359628" MODIFIED="1563156429312" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -231,7 +231,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="default.properties" POSITION="left" ID="ID_151630546" CREATED="1562410359652" MODIFIED="1563126431591" TEXT_SHORTENED="true">
+<node TEXT="default.properties" POSITION="left" ID="ID_151630546" CREATED="1562410359652" MODIFIED="1563156429314" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -255,7 +255,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_255907585" CREATED="1562410359658" MODIFIED="1563126431594" TEXT_SHORTENED="true">
+<node TEXT="translations" POSITION="left" ID="ID_255907585" CREATED="1562410359658" MODIFIED="1563156429315" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -281,7 +281,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="en" ID="ID_737947027" CREATED="1562410359665" MODIFIED="1563020698222">
+<node TEXT="en" ID="ID_737947027" CREATED="1562410359665" MODIFIED="1563156556672">
 <attribute_layout NAME_WIDTH="170.999994903803 pt" VALUE_WIDTH="320.9999904334548 pt"/>
 <attribute NAME="addons.${name}" VALUE="Bookmarks"/>
 <attribute NAME="addons.${name}._10_BookmarkNode" VALUE="Add / Remove a bookmark"/>
@@ -294,6 +294,7 @@
 <attribute NAME="addons.${name}._95_FixOldVersionNamedBookmarks" VALUE="Fix named bookmarks created by an old version of the add-on"/>
 <attribute NAME="addons.${name}._90_ConvertFPBookmarks" VALUE="Convert all regular FreePlane bookmark icons (star icon) to add-on bookmarks"/>
 <attribute NAME="addons.${name}._91_ConvertBookmarksToFP" VALUE="Convert all bookmarks to regular FreePlane bookmark icons (star icon)"/>
+<attribute NAME="addons.${name}._99_Help" VALUE="Help"/>
 <attribute NAME="_50_bookmarksLinks" VALUE="Create links"/>
 <attribute NAME="_90_bookmarksTools" VALUE="Tools"/>
 <attribute NAME="addons.${name}.T_BM_operation_aborded" VALUE="Bookmark operation aborded"/>
@@ -370,8 +371,11 @@
 <attribute NAME="addons.${name}.T_and" VALUE="and"/>
 <attribute NAME="addons.${name}.T_NBMs_anonymized" VALUE="actual named bookmarks have been converted to standard bookmarks\nbecause their key is used by a converted bookmark"/>
 <attribute NAME="addons.${name}.T_no_v050_NBMs_converted" VALUE="This map doesn&apos;t contain v0.5.0 named bookmarks"/>
+<attribute NAME="addons.${name}.T_help_win_title" VALUE="Help"/>
+<attribute NAME="addons.${name}.T_help_desktop_error" VALUE="Can&apos;t init a java browsing operation !"/>
+<attribute NAME="addons.${name}.T_help_browse_error" VALUE="Error opening the file"/>
 </node>
-<node TEXT="fr" ID="ID_1748679509" CREATED="1562410359665" MODIFIED="1563115716091">
+<node TEXT="fr" ID="ID_1748679509" CREATED="1562410359665" MODIFIED="1563156581262">
 <attribute_layout NAME_WIDTH="170.24999492615476 pt" VALUE_WIDTH="320.9999904334548 pt"/>
 <attribute NAME="addons.${name}" VALUE="Marque-pages"/>
 <attribute NAME="addons.${name}._10_BookmarkNode" VALUE="Placer / Supprimer un marque-page"/>
@@ -384,6 +388,7 @@
 <attribute NAME="addons.${name}._95_FixOldVersionNamedBookmarks" VALUE="R\u00E9cup\u00E8re les marque-pages nomm\u00E9s d&apos;une version ant\u00E9rieure du module"/>
 <attribute NAME="addons.${name}._90_ConvertFPBookmarks" VALUE="Convertir toutes les ic\u00F4nes de marque-page de FreePlane (\u00E9toile) en marque-pages pour ce module"/>
 <attribute NAME="addons.${name}._91_ConvertBookmarksToFP" VALUE="Convertir tous les marque-pages en ic\u00F4nes de marque-page de FreePlane (\u00E9toile)"/>
+<attribute NAME="addons.${name}._99_Help" VALUE="Aide"/>
 <attribute NAME="_50_bookmarksLinks" VALUE="Cr\u00E9er des liens"/>
 <attribute NAME="_90_bookmarksTools" VALUE="Outils"/>
 <attribute NAME="addons.${name}.T_BM_operation_aborded" VALUE="Op\u00E9ration abandonn\u00E9e"/>
@@ -460,9 +465,12 @@
 <attribute NAME="addons.${name}.T_and" VALUE="et"/>
 <attribute NAME="addons.${name}.T_NBMs_anonymized" VALUE="marques-pages actuels ont \u00E9t\u00E9 transform\u00E9s en marques-pages standard\ncar ils avaient le m\u00EAme nom qu&apos;un marque-page mis \u00E0 jour"/>
 <attribute NAME="addons.${name}.T_no_v050_NBMs_converted" VALUE="Cette carte ne contient pas de marques-pages nomm\u00E9s de la version v0.5.0"/>
+<attribute NAME="addons.${name}.T_help_win_title" VALUE="Aide"/>
+<attribute NAME="addons.${name}.T_help_desktop_error" VALUE="Erreur d&apos;initialisation de la fonction java de navigation !"/>
+<attribute NAME="addons.${name}.T_help_browse_error" VALUE="Erreur lors de l&apos;ouverture du fichier"/>
 </node>
 </node>
-<node TEXT="deinstall" POSITION="left" ID="ID_1870605844" CREATED="1562410359689" MODIFIED="1563126448690">
+<node TEXT="deinstall" POSITION="left" ID="ID_1870605844" CREATED="1562410359689" MODIFIED="1563156446085">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -493,8 +501,28 @@
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/_91_ConvertBookmarksToFP.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/_90_ConvertFPBookmarks.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/lib/bookmarks/Bookmarks.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/_99_Help.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/help_en.html"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/Bookmark 1.svg"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/Bookmark 2.svg"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/convert.gif"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/create-1.gif"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/create-reuse.gif"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/create-toogle.gif"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/fp-bookmark.svg"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/jump-1.gif"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/jump-2.gif"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/link-in.gif"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/link-to-1.gif"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/link-to-2.gif"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/remove-1.gif"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/remove-2.gif"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/some-bookmarks.gif"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/some-bookmarks.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/knacss.css"/>
+<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/style.css"/>
 </node>
-<node TEXT="scripts" POSITION="right" ID="ID_1460492722" CREATED="1562410359701" MODIFIED="1563126431608" TEXT_SHORTENED="true">
+<node TEXT="scripts" POSITION="right" ID="ID_1460492722" CREATED="1562410359701" MODIFIED="1563156429325" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -734,8 +762,20 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
+<node TEXT="_99_Help.groovy" ID="ID_1087410808" CREATED="1563156429344" MODIFIED="1563157289487">
+<attribute_layout NAME_WIDTH="182.99999454617517 pt" VALUE_WIDTH="257.99999231100105 pt"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}._99_Help"/>
+<attribute NAME="menuLocation" VALUE="/menu_bar/${name}"/>
+<attribute NAME="executionMode" VALUE="on_single_node"/>
+<attribute NAME="keyboardShortcut" VALUE=""/>
+<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
+<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_exec_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
-<node TEXT="lib" POSITION="right" ID="ID_1159449610" CREATED="1562410359919" MODIFIED="1563126431681">
+</node>
+<node TEXT="lib" POSITION="right" ID="ID_1159449610" CREATED="1562410359919" MODIFIED="1563156429508">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -775,7 +815,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="zips" POSITION="right" ID="ID_435012533" CREATED="1562410359928" MODIFIED="1563126431692">
+<node TEXT="zips" POSITION="right" ID="ID_435012533" CREATED="1562410359928" MODIFIED="1563156429511">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -817,8 +857,9 @@
 <node TEXT="icons" ID="ID_1144883898" CREATED="1562410359939" MODIFIED="1562410359940"/>
 <node TEXT="scripts" ID="ID_87188883" CREATED="1562410359941" MODIFIED="1562410359942"/>
 <node TEXT="lib" ID="ID_540678797" CREATED="1563126431698" MODIFIED="1563126431707"/>
+<node TEXT="doc" ID="ID_964875318" CREATED="1563156429515" MODIFIED="1563156429517"/>
 </node>
-<node TEXT="images" POSITION="right" ID="ID_63266556" CREATED="1562410359950" MODIFIED="1563126431733" TEXT_SHORTENED="true">
+<node TEXT="images" POSITION="right" ID="ID_63266556" CREATED="1562410359950" MODIFIED="1563156429537" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 

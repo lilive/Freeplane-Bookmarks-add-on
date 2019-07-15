@@ -1,0 +1,40 @@
+body {
+    padding: 2em 1em;
+}
+
+.wrapper {
+    max-width: 60em;
+    margin: 0 auto;
+}
+
+section {
+    margin: 2em 0 7em;
+}
+.section2 {
+    margin-top: 0;
+    margin-bottom: 3em;
+}
+
+.icon-svg {
+    float: left;
+    height: 2em;
+    width: auto;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+h1 .icon-svg {
+    float: none;
+}
+
+.shortcut {
+    border: 1px dashed #aaa;
+    border-radius: 0.2em;
+    padding: 0.1em;
+    font-size: 80%;
+}
+
+.command {
+    font-style: italic;
+    font-weight: bold;
+    color: #005942;
+}
