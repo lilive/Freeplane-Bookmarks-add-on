@@ -1,3 +1,5 @@
 *.bak
 *.backup
 bookmarks-v*.addon.mm
+bookmarks*Copie*.mm
+.#*
