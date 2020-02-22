@@ -26,6 +26,11 @@ h1 .icon-svg {
     float: none;
 }
 
+.lang img {
+    height: 2em;
+    width: auto;
+}
+
 .shortcut {
     border: 1px dashed #aaa;
     border-radius: 0.2em;
