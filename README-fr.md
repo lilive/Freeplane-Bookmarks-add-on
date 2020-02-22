@@ -1,4 +1,4 @@
-# ![logo](doc/bookmark.png) Marque-pages pour Freeplane
+# ![logo](doc/images/bookmark.png) Marque-pages pour Freeplane
 
 *NB: Vous pourriez préférer utiliser [la nouvelle version (beta)](https://github.com/lilive/Freeplane-Bookmarks-add-on/tree/devel) qui ajoute la possibilité de raccourcis clavier vers les marque-pages.*
 
@@ -9,7 +9,7 @@ Les marque-pages sont de deux sortes :
 - Des **marque-pages standard**, signalés sur la carte par l'icône de marque-page violette.
 - Des **marque-pages nommés** (associés à un raccourci clavier), signalés sur la carte par l'icône de marque-page verte.
 
-![demo](doc/demo.gif)
+![demo](doc/images/demo.gif)
 
 Ce module crée un nouveau menu nommé "Marque-pages" dans la barre de menu. On y trouve les actions disponibles :
 
