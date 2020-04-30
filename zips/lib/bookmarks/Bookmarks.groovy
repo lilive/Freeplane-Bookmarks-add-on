@@ -1,6 +1,11 @@
 package bookmarks
 
 import java.util.Map as JMap
+import java.awt.Graphics2D
+import java.awt.Image
+import java.awt.image.BufferedImage
+import javax.swing.UIManager
+import javax.swing.ImageIcon
 import groovy.json.JsonBuilder
 import groovy.json.JsonSlurper
 import org.freeplane.plugin.script.proxy.ScriptUtils
@@ -282,4 +287,21 @@ class Bookmarks
         storage.putAt( globalKey, builder.toString() )
     }
 
+    static ImageIcon getQuestionMarkIcon()
+    {
+        // Get a small question mark icon from the theme.
+        // We can't simply call icon.getImage().getScaledInstance() because some themes (ie Nimbus)
+        // do not return a suitable icon.getImage(). That's why we paint the icon.
+        def srcIcon = UIManager.getIcon("OptionPane.questionIcon")
+        int w = srcIcon.getIconWidth()
+        int h = srcIcon.getIconHeight()
+        BufferedImage bufferedImage = new BufferedImage( w, h, BufferedImage.TYPE_INT_ARGB )
+        Graphics2D g = bufferedImage.createGraphics()
+        srcIcon.paintIcon( null, g, 0, 0 );
+        g.dispose()
+        h = h / w * 16
+        w = 16
+        def icon = new ImageIcon( bufferedImage.getScaledInstance( w, h, Image.SCALE_SMOOTH ) )
+    }
+    
 }

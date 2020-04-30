@@ -6,13 +6,11 @@ import java.awt.Color
 import java.awt.Component
 import java.awt.FlowLayout
 import java.awt.GridBagConstraints
-import java.awt.Image
 import java.awt.KeyboardFocusManager
 import java.awt.event.*
 import javax.swing.AbstractAction
 import javax.swing.ActionMap
 import javax.swing.BoxLayout
-import javax.swing.ImageIcon
 import javax.swing.InputMap
 import javax.swing.JComponent
 import javax.swing.JFrame
@@ -20,11 +18,11 @@ import javax.swing.JList
 import javax.swing.JPanel
 import javax.swing.KeyStroke
 import javax.swing.SwingConstants
-import javax.swing.UIManager
 import bookmarks.Bookmarks as BM
 
 map = node.map
 gui = null
+swing = new SwingBuilder()
 
 // Jump to a node after the gui close
 def jumpToNodeAfterGuiDispose( target, message )
@@ -55,7 +53,7 @@ def JList getNamedBookmarksJList(
 
     // Create the component
     JList component
-    SwingBuilder.build{
+    swing.build{
         component = list(
             items: bookmarks.collect
             {
@@ -146,8 +144,8 @@ def JPanel getNamedBookmarksJPanel(
     
     // List all the named bookmarks
     JPanel jPane
-    SwingBuilder.build{
-        jPane = panel(
+    swing.build{
+        jPane = swing.panel(
             border: emptyBorder( [0,0,10,0] )
         )
         {
@@ -162,14 +160,8 @@ def JPanel getNamedBookmarksJPanel(
                 "${BM.gtt( 'T_select_NBM_to_jump' )}.",
                 constraints: gbc( gridx:0, gridy:0, anchor:GridBagConstraints.LINE_START )
             )
-            def icon = UIManager.getIcon("OptionPane.questionIcon")
-            Image img = icon.getImage()
-            int w = icon.getIconWidth() / 2
-            int h = icon.getIconHeight() / 2
-            def newimg = img.getScaledInstance( w, h, Image.SCALE_SMOOTH )
-            icon = new ImageIcon( newimg )
             label(
-                icon: icon,
+                icon: BM.getQuestionMarkIcon(),
                 toolTipText:
                     """<html>
                         ${ BM.gtt( 'T_tip_jump_to_NBM' )}:
@@ -210,7 +202,7 @@ def JList getAnonymousBookmarksJList(
 
     // Create the component
     JList component
-    SwingBuilder.build{
+    swing.build{
         component = list(
             items: bookmarks.collect{
                 if( currentNodeId == it.id ) "<html><b>$it.text</b></html>"
@@ -278,8 +270,8 @@ def JPanel getAnonymousBookmarksJPanel(
     
     // List all the named bookmarks
     JPanel jPane
-    SwingBuilder.build{
-        jPane = panel(
+    swing.build{
+        jPane = swing.panel(
             border: emptyBorder( [0,0,10,0] )
         )
         {
@@ -294,14 +286,8 @@ def JPanel getAnonymousBookmarksJPanel(
                 "${BM.gtt( 'T_select_BM_to_jump' )}.",
                 constraints: gbc( gridx:0, gridy:0, anchor:GridBagConstraints.LINE_START )
             )
-            def icon = UIManager.getIcon("OptionPane.questionIcon")
-            Image img = icon.getImage()
-            int w = icon.getIconWidth() / 2
-            int h = icon.getIconHeight() / 2
-            def newimg = img.getScaledInstance( w, h, Image.SCALE_SMOOTH )
-            icon = new ImageIcon( newimg )
             label(
-                icon: icon,
+                icon: BM.getQuestionMarkIcon(),
                 toolTipText:
                     """<html>
                         ${BM.gtt( 'T_tip_jump_to_SBM' )}:
@@ -340,7 +326,7 @@ def createGui(
 )
 {
     def gui
-    SwingBuilder.build{
+    swing.build{
         gui = dialog(
             title: BM.gtt( 'T_jump_to_SBM' ),
             modal:true,
