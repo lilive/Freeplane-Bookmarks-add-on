@@ -104,7 +104,7 @@ class ChangeListener implements INodeChangeListener, IMapChangeListener
 		String mapStorage = ""
 		def stored = map.storage.getAt( storageKey )
 		if( stored ) mapStorage = stored.getString();
-		return mapStorage.contains( '"' + node.id + '"' )
+		return mapStorage.contains( '"' + node.getID() + '"' )
 	}
 
 	// Add an icon at the first position for this node
@@ -180,7 +180,7 @@ class ChangeListener implements INodeChangeListener, IMapChangeListener
 	// which are not referenced as bookmarked nodes
 	private void purgeBranchFromBadNamedIcons( NodeModel node, MindIcon icon, StringBuilder named )
 	{
-		boolean isNamed = named.indexOf( '"' + node.id + '"' ) >= 0
+		boolean isNamed = named.indexOf( '"' + node.getID() + '"' ) >= 0
 		if( ! isNamed ){
 			// Remove the icon and fire the event (to refresh the view)
 			removeIcon( node, icon, true )
