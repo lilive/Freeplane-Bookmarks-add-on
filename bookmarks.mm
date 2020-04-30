@@ -1,9 +1,9 @@
-<map version="freeplane 1.7.0">
+<map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="Bookmarks" LOCALIZED_STYLE_REF="styles.topic" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1563212182356" LINK="https://github.com/lilive/Freeplane-Bookmarks-add-on" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#000000" STYLE="rectangle" SHAPE_HORIZONTAL_MARGIN="6.0 pt" SHAPE_VERTICAL_MARGIN="6.0 pt">
+<node TEXT="Bookmarks" LOCALIZED_STYLE_REF="styles.topic" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1588283130851" LINK="https://github.com/lilive/Freeplane-Bookmarks-add-on" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#000000" STYLE="rectangle" SHAPE_HORIZONTAL_MARGIN="6.0 pt" SHAPE_VERTICAL_MARGIN="6.0 pt">
 <edge WIDTH="thin"/>
 <hook NAME="MapStyle" background="#c4c4c4">
-    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" show_notes_in_map="false" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" Marks_stored_node_id="ID_1837714869"/>
+    <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" show_notes_in_map="false" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" Marks_stored_node_id="ID_1837714869"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -91,9 +91,9 @@
 <hook NAME="AutomaticEdgeColor" COUNTER="117" RULE="ON_BRANCH_CREATION"/>
 <attribute_layout NAME_WIDTH="92.9999972283841 pt" VALUE_WIDTH="197.24999412149208 pt"/>
 <attribute NAME="name" VALUE="bookmarks"/>
-<attribute NAME="version" VALUE="v0.5.1"/>
+<attribute NAME="version" VALUE="v0.6.0-beta"/>
 <attribute NAME="author" VALUE="lilive"/>
-<attribute NAME="freeplaneVersionFrom" VALUE="1.7.5"/>
+<attribute NAME="freeplaneVersionFrom" VALUE="1.8.2"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
 <attribute NAME="updateUrl" VALUE=""/>
 <richcontent TYPE="NOTE">
@@ -131,9 +131,8 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
-<node TEXT="description" POSITION="left" ID="ID_1114811084" CREATED="1562410359487" MODIFIED="1563212182380">
+<node TEXT="description" POSITION="left" ID="ID_1114811084" CREATED="1562410359487" MODIFIED="1588282936402">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -146,18 +145,17 @@
       Description would be awkward to edit as an attribute.
     </p>
     <p>
-      So you have to put the add-on description as a child of the <i>'description'</i>&#160;node.
+      So you have to put the add-on description as a child of the <i>'description'</i>&nbsp;node.
     </p>
     <p>
       To translate the description you have to define a translation for the key 'addons.${name}.description'.
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="Add bookmarks to nodes, and easily navigate beetween them." ID="ID_1183587619" CREATED="1518707454288" MODIFIED="1518815727777"/>
 </node>
-<node TEXT="changes" POSITION="left" ID="ID_1094494132" CREATED="1562410359592" MODIFIED="1563212182382" TEXT_SHORTENED="true">
+<node TEXT="changes" POSITION="left" ID="ID_1094494132" CREATED="1562410359592" MODIFIED="1588282936404" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -171,7 +169,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="v0.3" ID="ID_1947541306" CREATED="1518881580800" MODIFIED="1518881585971">
 <node TEXT="First released version" ID="ID_1150257103" CREATED="1518881587391" MODIFIED="1518881596914"/>
@@ -189,10 +186,62 @@
 <node TEXT="Complete rewrite of the add-on. Introduce named bookmarks." ID="ID_419235170" CREATED="1562409104741" MODIFIED="1562417968655"/>
 </node>
 <node TEXT="v0.5.1" ID="ID_540433193" CREATED="1562499877679" MODIFIED="1562499881604">
-<node TEXT="- Renamed bookmarks icons (because of conflict with freeplane builtin bookmark icon)&#xa;- Jump to previous/next bookmark commands&#xa;- Better GUI text&#xa;- GUI translation&#xa;- Command to update bookmarks created with previous versions&#xa;- Commands to convert between the add-on bookmarks and the Freeplane builtin bookmark icon&#xa;- Help file and help command&#xa;- The code shared by the differents scripts is now in a library" ID="ID_27269396" CREATED="1562499884480" MODIFIED="1563158178199"/>
+<node ID="ID_27269396" CREATED="1562499884480" MODIFIED="1582406349921"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      New features:
+    </p>
+    <p>
+      - Jump to previous/next bookmark commands<br/>
+    </p>
+    <p>
+      - GUI translation
+    </p>
+    <p>
+      - Help manual
+    </p>
+    <p>
+      - Commands to convert between the add-on bookmarks and the Freeplane builtin bookmark icon
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Improvements:
+    </p>
+    <p>
+      - Better GUI texts
+    </p>
+    <p>
+      - The code shared by the differents scripts is now in a library
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Fixes:
+    </p>
+    <p>
+      - Renamed bookmarks icons (because of conflict with freeplane builtin bookmark icon)
+    </p>
+    <p>
+      - Command to update bookmarks created with previous versions
+    </p>
+  </body>
+</html>
+</richcontent>
 </node>
 </node>
-<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_230785910" CREATED="1562410359599" MODIFIED="1563212182384" TEXT_SHORTENED="true">
+<node TEXT="v0.6.0-beta" ID="ID_579994357" CREATED="1588282031647" MODIFIED="1588283142546">
+<node TEXT="New features:&#xa;- Illustrated help manual. Select &quot;help&quot; in the addon menu.&#xa;&#xa;Fixes:&#xa;- Some bugs with latest Freeplane versions. Now compatible with FP 1.8.2" ID="ID_1167110921" CREATED="1588282817968" MODIFIED="1588282865109"/>
+</node>
+</node>
+<node TEXT="license" POSITION="left" ID="ID_230785910" CREATED="1562410359599" MODIFIED="1588282936406" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -208,15 +257,14 @@
       
     </p>
     <p>
-      The License text has to be entered as a child of the <i>'license'</i>&#160;node, either as plain text or as HTML.
+      The License text has to be entered as a child of the <i>'license'</i>&nbsp;node, either as plain text or as HTML.
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="&#xa;This add-on is free software: you can redistribute it and/or modify&#xa;it under the terms of the GNU General Public License as published by&#xa;the Free Software Foundation, either version 2 of the License, or&#xa;(at your option) any later version.&#xa;&#xa;This program is distributed in the hope that it will be useful,&#xa;but WITHOUT ANY WARRANTY; without even the implied warranty of&#xa;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the&#xa;GNU General Public License for more details.&#xa;" ID="ID_1167386088" CREATED="1562410359607" MODIFIED="1562410359614"/>
 </node>
-<node TEXT="preferences.xml" POSITION="left" ID="ID_1098616655" CREATED="1562410359628" MODIFIED="1563212182386" TEXT_SHORTENED="true">
+<node TEXT="preferences.xml" POSITION="left" ID="ID_1098616655" CREATED="1562410359628" MODIFIED="1588282936413" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -229,14 +277,13 @@
       <font color="#000000" face="SansSerif, sans-serif">The child node contains the add-on configuration as an extension to mindmapmodemenu.xml (in Tools-&gt;Preferences-&gt;Add-ons). </font>
     </p>
     <p>
-      <font color="#000000" face="SansSerif, sans-serif">Every property in the configuration should receive a default value in <i>default.properties</i>&#160;node.</font>
+      <font color="#000000" face="SansSerif, sans-serif">Every property in the configuration should receive a default value in <i>default.properties</i>&nbsp;node.</font>
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
-<node TEXT="default.properties" POSITION="left" ID="ID_151630546" CREATED="1562410359652" MODIFIED="1563212182387" TEXT_SHORTENED="true">
+<node TEXT="default.properties" POSITION="left" ID="ID_151630546" CREATED="1562410359652" MODIFIED="1588282936416" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -258,10 +305,9 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_255907585" CREATED="1562410359658" MODIFIED="1563212182390" TEXT_SHORTENED="true">
+<node TEXT="translations" POSITION="left" ID="ID_255907585" CREATED="1562410359658" MODIFIED="1588282936419" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -286,7 +332,6 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="en" ID="ID_737947027" CREATED="1562410359665" MODIFIED="1563156556672">
 <attribute_layout NAME_WIDTH="170.999994903803 pt" VALUE_WIDTH="320.9999904334548 pt"/>
@@ -477,7 +522,7 @@
 <attribute NAME="addons.${name}.T_help_browse_error" VALUE="Erreur lors de l&apos;ouverture du fichier"/>
 </node>
 </node>
-<node TEXT="deinstall" POSITION="left" ID="ID_1870605844" CREATED="1562410359689" MODIFIED="1563212182402">
+<node TEXT="deinstall" POSITION="left" ID="ID_1870605844" CREATED="1562410359689" MODIFIED="1588282936420">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -491,7 +536,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <attribute_layout VALUE_WIDTH="389.9999883770946 pt"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}.script.xml"/>
@@ -512,43 +556,10 @@
 <attribute NAME="delete" VALUE="${installationbase}/lib/bookmarks/Bookmarks.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/help_en.html"/>
 <attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/help_fr.html"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/Bookmark 1.svg"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/Bookmark 2.svg"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/en/convert.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/en/create-1.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/en/create-dialog.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/en/create-reuse.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/en/create-toogle.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/en/jump-1.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/en/jump-2.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/en/jump-dialog.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/en/link-in.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/en/link-to-1.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/en/link-to-2.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/en/remove-1.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/en/remove-2.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/en/some-bookmarks.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/english_flag.png"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/fp-bookmark.svg"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/fr/convert.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/fr/create-1.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/fr/create-dialog.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/fr/create-reuse.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/fr/create-toogle.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/fr/jump-1.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/fr/jump-2.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/fr/jump-dialog.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/fr/link-in.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/fr/link-to-1.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/fr/link-to-2.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/fr/remove-1.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/fr/remove-2.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/fr/some-bookmarks.gif"/>
-<attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/images/french_flag.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/knacss.css"/>
 <attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/style.css"/>
 </node>
-<node TEXT="scripts" POSITION="right" ID="ID_1460492722" CREATED="1562410359701" MODIFIED="1563212182412" TEXT_SHORTENED="true">
+<node TEXT="scripts" POSITION="right" ID="ID_1460492722" CREATED="1562410359701" MODIFIED="1588282936425" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -567,13 +578,13 @@
       * menuLocation: &lt;locationkey&gt;
     </p>
     <p>
-      &#160;&#160;&#160;- Defines the menu location, defaults a sub menu 'main_menu_scripting/addons.${name}'.
+      &nbsp;&nbsp;&nbsp;- Defines the menu location, defaults a sub menu 'main_menu_scripting/addons.${name}'.
     </p>
     <p>
-      &#160;&#160;&#160;-&#160;Use developer tool menuItemInfo to inspect menu location keys.
+      &nbsp;&nbsp;&nbsp;-&nbsp;Use developer tool menuItemInfo to inspect menu location keys.
     </p>
     <p>
-      &#160;&#160;&#160;- This attribute is mandatory
+      &nbsp;&nbsp;&nbsp;- This attribute is mandatory
     </p>
     <p>
       
@@ -582,10 +593,10 @@
       * menuTitleKey: &lt;key&gt;
     </p>
     <p>
-      &#160;&#160;&#160;- The menu item title will be looked up under the translation key &lt;key&gt; - don't forget to define its translation.
+      &nbsp;&nbsp;&nbsp;- The menu item title will be looked up under the translation key &lt;key&gt; - don't forget to define its translation.
     </p>
     <p>
-      &#160;&#160;&#160;- This attribute is mandatory
+      &nbsp;&nbsp;&nbsp;- This attribute is mandatory
     </p>
     <p>
       
@@ -594,22 +605,22 @@
       * executionMode: &lt;mode&gt;
     </p>
     <p>
-      &#160;&#160;&#160;- The execution mode as described in the Freeplane wiki (http://freeplane.sourceforge.net/wiki/index.php/Scripting)
+      &nbsp;&nbsp;&nbsp;- The execution mode as described in the Freeplane wiki (http://freeplane.sourceforge.net/wiki/index.php/Scripting)
     </p>
     <p>
-      &#160;&#160;&#160;- ON_SINGLE_NODE: Execute the script once. The <i>node</i>&#160;variable is set to the selected node.
+      &nbsp;&nbsp;&nbsp;- ON_SINGLE_NODE: Execute the script once. The <i>node</i>&nbsp;variable is set to the selected node.
     </p>
     <p>
-      &#160;&#160;&#160;- ON_SELECTED_NODE: Execute the script n times for n selected nodes, once for each node.
+      &nbsp;&nbsp;&nbsp;- ON_SELECTED_NODE: Execute the script n times for n selected nodes, once for each node.
     </p>
     <p>
-      &#160;&#160;&#160;- ON_SELECTED_NODE_RECURSIVELY: Execute the script on every selected node and recursively on all of its children.
+      &nbsp;&nbsp;&nbsp;- ON_SELECTED_NODE_RECURSIVELY: Execute the script on every selected node and recursively on all of its children.
     </p>
     <p>
-      &#160;&#160;&#160;- In doubt use ON_SINGLE_NODE.
+      &nbsp;&nbsp;&nbsp;- In doubt use ON_SINGLE_NODE.
     </p>
     <p>
-      &#160;&#160;&#160;- This attribute is mandatory
+      &nbsp;&nbsp;&nbsp;- This attribute is mandatory
     </p>
     <p>
       
@@ -618,56 +629,55 @@
       * keyboardShortcut: &lt;shortcut&gt;
     </p>
     <p>
-      &#160;&#160;&#160;- Optional: keyboard combination / accelerator for this script, e.g. control alt I
+      &nbsp;&nbsp;&nbsp;- Optional: keyboard combination / accelerator for this script, e.g. control alt I
     </p>
     <p>
-      &#160;&#160;&#160;- Use lowercase letters for modifiers and uppercase for letters. Use no + signs.
+      &nbsp;&nbsp;&nbsp;- Use lowercase letters for modifiers and uppercase for letters. Use no + signs.
     </p>
     <p>
-      &#160;&#160;&#160;- The available key names are listed at http://download.oracle.com/javase/1.4.2/docs/api/java/awt/event/KeyEvent.html#VK_0
+      &nbsp;&nbsp;&nbsp;- The available key names are listed at http://download.oracle.com/javase/1.4.2/docs/api/java/awt/event/KeyEvent.html#VK_0
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;In the list only entries with a 'VK_' prefix count. Omit the prefix in the shortcut definition.
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In the list only entries with a 'VK_' prefix count. Omit the prefix in the shortcut definition.
     </p>
     <p>
       
     </p>
     <p>
-      * Permissions&#160;that the script(s) require, each either false or true:
+      * Permissions&nbsp;that the script(s) require, each either false or true:
     </p>
     <p>
-      &#160;&#160;&#160;- execute_scripts_without_asking
+      &nbsp;&nbsp;&nbsp;- execute_scripts_without_asking
     </p>
     <p>
-      &#160;&#160;&#160;- execute_scripts_without_file_restriction: permission to read files
+      &nbsp;&nbsp;&nbsp;- execute_scripts_without_file_restriction: permission to read files
     </p>
     <p>
-      &#160;&#160;&#160;- execute_scripts_without_write_restriction: permission to create/change/delete files
+      &nbsp;&nbsp;&nbsp;- execute_scripts_without_write_restriction: permission to create/change/delete files
     </p>
     <p>
-      &#160;&#160;&#160;- execute_scripts_without_exec_restriction: permission to execute other programs
+      &nbsp;&nbsp;&nbsp;- execute_scripts_without_exec_restriction: permission to execute other programs
     </p>
     <p>
-      &#160;&#160;&#160;- execute_scripts_without_network_restriction: permission to access the network
+      &nbsp;&nbsp;&nbsp;- execute_scripts_without_network_restriction: permission to access the network
     </p>
     <p>
-      &#160;&#160;Notes:
+      &nbsp;&nbsp;Notes:
     </p>
     <p>
-      &#160;&#160;- The set of permissions is fixed.
+      &nbsp;&nbsp;- The set of permissions is fixed.
     </p>
     <p>
-      &#160;&#160;- Don't change the attribute names, don't omit one.
+      &nbsp;&nbsp;- Don't change the attribute names, don't omit one.
     </p>
     <p>
-      &#160;&#160;- Set the values either to true or to false
+      &nbsp;&nbsp;- Set the values either to true or to false
     </p>
     <p>
-      &#160;&#160;- In any case set execute_scripts_without_asking to true unless you want to annoy users.
+      &nbsp;&nbsp;- In any case set execute_scripts_without_asking to true unless you want to annoy users.
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="_10_BookmarkNode.groovy" ID="ID_1722187040" CREATED="1562410359729" MODIFIED="1562412132309">
 <attribute_layout NAME_WIDTH="172.49999485909953 pt" VALUE_WIDTH="213.7499936297538 pt"/>
@@ -802,7 +812,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 </node>
-<node TEXT="lib" POSITION="right" ID="ID_1159449610" CREATED="1562410359919" MODIFIED="1563212182454">
+<node TEXT="lib" POSITION="right" ID="ID_1159449610" CREATED="1562410359919" MODIFIED="1588282936463">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -818,32 +828,31 @@
       
     </p>
     <p>
-      &#160;- The immediate child nodes contain the name of the file, e.g. 'mysql-connector-java-5.1.25.jar'). Put the file into a 'lib' subdirectory of the add-on base directory.
+      &nbsp;- The immediate child nodes contain the name of the file, e.g. 'mysql-connector-java-5.1.25.jar'). Put the file into a 'lib' subdirectory of the add-on base directory.
     </p>
     <p>
       
     </p>
     <p>
-      &#160;- The child nodes of these nodes contain the actual files.
+      &nbsp;- The child nodes of these nodes contain the actual files.
     </p>
     <p>
       
     </p>
     <p>
-      &#160;- Any lib file will be extracted in &lt;installationbase&gt;/&lt;addonname&gt;/lib.
+      &nbsp;- Any lib file will be extracted in &lt;installationbase&gt;/&lt;addonname&gt;/lib.
     </p>
     <p>
       
     </p>
     <p>
-      &#160;- The files will be processed in the sequence as seen in the map.
+      &nbsp;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
-<node TEXT="zips" POSITION="right" ID="ID_435012533" CREATED="1562410359928" MODIFIED="1563212182458">
+<node TEXT="zips" POSITION="right" ID="ID_435012533" CREATED="1562410359928" MODIFIED="1588282936466">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -859,36 +868,35 @@
       
     </p>
     <p>
-      &#160;- The immediate child nodes contain a description of the zip. The devtools script releaseAddOn.groovy allows automatic zip creation if the name of this node matches a directory in the current directory.
+      &nbsp;- The immediate child nodes contain a description of the zip. The devtools script releaseAddOn.groovy allows automatic zip creation if the name of this node matches a directory in the current directory.
     </p>
     <p>
       
     </p>
     <p>
-      &#160;- The child nodes of these nodes contain the actual zip files.
+      &nbsp;- The child nodes of these nodes contain the actual zip files.
     </p>
     <p>
       
     </p>
     <p>
-      &#160;- Any zip file will be extracted in the &lt;installationbase&gt;. Currently, &lt;installationbase&gt; is always Freeplane's &lt;userhome&gt;, e.g. ~/.freeplane/1.3.
+      &nbsp;- Any zip file will be extracted in the &lt;installationbase&gt;. Currently, &lt;installationbase&gt; is always Freeplane's &lt;userhome&gt;, e.g. ~/.freeplane/1.3.
     </p>
     <p>
       
     </p>
     <p>
-      &#160;- The files will be processed in the sequence as seen in the map.
+      &nbsp;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="icons" ID="ID_1144883898" CREATED="1562410359939" MODIFIED="1562410359940"/>
 <node TEXT="scripts" ID="ID_87188883" CREATED="1562410359941" MODIFIED="1562410359942"/>
 <node TEXT="lib" ID="ID_540678797" CREATED="1563126431698" MODIFIED="1563126431707"/>
 <node TEXT="doc" ID="ID_964875318" CREATED="1563156429515" MODIFIED="1563156429517"/>
 </node>
-<node TEXT="images" POSITION="right" ID="ID_63266556" CREATED="1562410359950" MODIFIED="1563212182482" TEXT_SHORTENED="true">
+<node TEXT="images" POSITION="right" ID="ID_63266556" CREATED="1562410359950" MODIFIED="1588282936483" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -901,7 +909,7 @@
       An add-on may define any number of images as child nodes of the images node. The actual image data has to be placed as base64 encoded binary data into the text of a subnode.
     </p>
     <p>
-      The images are saved to the <i>${installationbase}/resources/images</i>&#160;directory.
+      The images are saved to the <i>${installationbase}/resources/images</i>&nbsp;directory.
     </p>
     <p>
       
@@ -918,11 +926,10 @@
       </li>
     </ul>
     <p>
-      Images can be added automatically by releaseAddOn.groovy or must be uploaded into the map via the script <i>Tools-&gt;Scripts-&gt;Insert Binary</i>&#160;since they have to be (base64) encoded as simple strings.
+      Images can be added automatically by releaseAddOn.groovy or must be uploaded into the map via the script <i>Tools-&gt;Scripts-&gt;Insert Binary</i>&nbsp;since they have to be (base64) encoded as simple strings.
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
