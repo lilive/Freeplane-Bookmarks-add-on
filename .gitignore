@@ -2,5 +2,7 @@
 *.backup
 bookmarks-v*.addon.mm
 bookmarks*Copie*.mm
+build
+.gradle
 .#*
 Thumbs.db

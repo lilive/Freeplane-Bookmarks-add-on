@@ -26,7 +26,7 @@ class Bookmarks
 
     static void test()
     {
-        ScriptUtils.c().statusInfo = 'Test !'
+        ScriptUtils.c().statusInfo = 'Test successful !'
     }
 
     // gtt = Get Translated Text
