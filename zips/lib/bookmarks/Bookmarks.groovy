@@ -131,6 +131,13 @@ class Bookmarks
         return isAnonymousBookmarked( node ) || isNamedBookmarked( node, namedBookmarks )
     }
 
+    static String getNodeShortPlainText( Node node )
+    {
+        def text = node.plainText
+        if( text.length() > 30 ) text = text[0..27] + " ..."
+        return text
+    }
+    
     // Create an anonymous bookmark for this node.
     static void createAnonymousBookmark( Node node )
     {
@@ -207,8 +214,7 @@ class Bookmarks
             if( isAnonymousBookmarked( n ) )
             {
                 if( excludeIds && excludeIds.contains( n.id ) ) return
-                def text = n.text
-                if( text.length() > 30 ) text = text[0..27] + "..."
+                def text = getNodeShortPlainText( n )
                 bookmarks << [ "id": n.id, "text": text ]
             }
         }
@@ -219,7 +225,7 @@ class Bookmarks
     // Each element of this list is a map [ id, name, text ] where:
     // - id is the node id,
     // - name is the bookmark key (string)
-    // - text is the node text, possibly truncated.
+    // - text is the node text, possibly truncated, without html format.
     // It is possible to exclude some node from this list.
     static List getAllNameBookmarkedNodes( FPMap map, List excludeIds = null )
     {
@@ -235,12 +241,10 @@ class Bookmarks
         {
             key, id ->
             def node = map.node( id )
-            def text = node.text
-            if( text.length() > 30 ) text = text[0..27] + "..."
             return [
                 "id": id,
                 "name": String.valueOf( (char) Integer.parseInt( key ) ),
-                "text": text
+                "text": getNodeShortPlainText( node )
             ]
         }
 

@@ -1,6 +1,6 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="Bookmarks" LOCALIZED_STYLE_REF="styles.topic" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1588283130851" LINK="https://github.com/lilive/Freeplane-Bookmarks-add-on" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#000000" STYLE="rectangle" SHAPE_HORIZONTAL_MARGIN="6.0 pt" SHAPE_VERTICAL_MARGIN="6.0 pt">
+<node TEXT="Bookmarks" LOCALIZED_STYLE_REF="styles.topic" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1588325033113" LINK="https://github.com/lilive/Freeplane-Bookmarks-add-on" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#000000" STYLE="rectangle" SHAPE_HORIZONTAL_MARGIN="6.0 pt" SHAPE_VERTICAL_MARGIN="6.0 pt">
 <edge WIDTH="thin"/>
 <hook NAME="MapStyle" background="#c4c4c4">
     <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" show_notes_in_map="false" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" Marks_stored_node_id="ID_1837714869"/>
@@ -9,7 +9,7 @@
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
-<stylenode LOCALIZED_TEXT="default" ICON_SIZE="14.0 pt" MAX_WIDTH="600.0 px" COLOR="#000000" BACKGROUND_COLOR="#dddad7" BACKGROUND_ALPHA="0" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="4.0 pt" BORDER_WIDTH="0.0 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#808080" BORDER_COLOR_ALPHA="0">
+<stylenode LOCALIZED_TEXT="default" ICON_SIZE="14.0 pt" MAX_WIDTH="600.0 px" COLOR="#000000" BACKGROUND_COLOR="#ffffff" BACKGROUND_ALPHA="115" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="4.0 pt" BORDER_WIDTH="0.0 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#808080" BORDER_COLOR_ALPHA="0">
 <font NAME="Candara" SIZE="14"/>
 <edge STYLE="horizontal" COLOR="#818181" WIDTH="thin"/>
 </stylenode>
@@ -88,10 +88,10 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="117" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="118" RULE="ON_BRANCH_CREATION"/>
 <attribute_layout NAME_WIDTH="92.9999972283841 pt" VALUE_WIDTH="197.24999412149208 pt"/>
 <attribute NAME="name" VALUE="bookmarks"/>
-<attribute NAME="version" VALUE="v0.6.0-beta"/>
+<attribute NAME="version" VALUE="v0.6.0-beta-2"/>
 <attribute NAME="author" VALUE="lilive"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="1.8.2"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
@@ -240,8 +240,11 @@
 <node TEXT="v0.6.0-beta" ID="ID_579994357" CREATED="1588282031647" MODIFIED="1588283142546">
 <node TEXT="New features:&#xa;- Illustrated help manual. Select &quot;help&quot; in the addon menu.&#xa;&#xa;Fixes:&#xa;- Some bugs with latest Freeplane versions. Now compatible with FP 1.8.2" ID="ID_1167110921" CREATED="1588282817968" MODIFIED="1588282865109"/>
 </node>
+<node TEXT="v0.6.0-beta-2" ID="ID_1334843413" CREATED="1588324649051" MODIFIED="1588324663216">
+<node TEXT="Fixes:&#xa;- Nodes containing html formated text are now correctly displayed in the addon dialogs" ID="ID_1074863526" CREATED="1588324664811" MODIFIED="1588324734128"/>
 </node>
-<node TEXT="license" POSITION="left" ID="ID_230785910" CREATED="1562410359599" MODIFIED="1588282936406" TEXT_SHORTENED="true">
+</node>
+<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_230785910" CREATED="1562410359599" MODIFIED="1588282936406" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -307,7 +310,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_255907585" CREATED="1562410359658" MODIFIED="1588282936419" TEXT_SHORTENED="true">
+<node TEXT="translations" FOLDED="true" POSITION="left" ID="ID_255907585" CREATED="1562410359658" MODIFIED="1588282936419" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -522,7 +525,7 @@
 <attribute NAME="addons.${name}.T_help_browse_error" VALUE="Erreur lors de l&apos;ouverture du fichier"/>
 </node>
 </node>
-<node TEXT="deinstall" POSITION="left" ID="ID_1870605844" CREATED="1562410359689" MODIFIED="1588282936420">
+<node TEXT="deinstall" POSITION="left" ID="ID_1870605844" CREATED="1562410359689" MODIFIED="1588318238950" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -559,7 +562,15 @@
 <attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/knacss.css"/>
 <attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/style.css"/>
 </node>
-<node TEXT="scripts" POSITION="right" ID="ID_1460492722" CREATED="1562410359701" MODIFIED="1588282936425" TEXT_SHORTENED="true">
+<node TEXT="todo" POSITION="left" ID="ID_1154873722" CREATED="1588318256389" MODIFIED="1588318258506">
+<edge COLOR="#353535"/>
+<node TEXT="Allow to add and remove named bookmarks directly with icon manipulation" ID="ID_1371599619" CREATED="1588318261350" MODIFIED="1588318313142"/>
+<node TEXT="Add option to warn when deleting a named bookmark" ID="ID_171335078" CREATED="1588320890760" MODIFIED="1588320927498"/>
+<node TEXT="Add a warning on creation of a named bookmark with an already used name" ID="ID_1297583591" CREATED="1588318314918" MODIFIED="1588318372329"/>
+<node TEXT="Allow to sort the named bookmarks list by name" ID="ID_1956637301" CREATED="1588318377445" MODIFIED="1588318421802"/>
+<node TEXT="Allow to display anonymous bookmarks first when dialogs open, or remember the last state, or select the state according to the currently selected node" ID="ID_1394483907" CREATED="1588323384234" MODIFIED="1588323482977"/>
+</node>
+<node TEXT="scripts" FOLDED="true" POSITION="right" ID="ID_1460492722" CREATED="1562410359701" MODIFIED="1588282936425" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 

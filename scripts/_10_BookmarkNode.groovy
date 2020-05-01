@@ -80,13 +80,11 @@ groovy.swing.SwingBuilder.build
                     // Display a line of text with the associated key
                     // and the 30 first caracters of the node
                     def target = map.node( id )
-                    def text = target.text
-                    if( text.length() > 30 ) text = text[0..27] + "..."
-                    text =
+                    def text =
                         "<html><font color='red'><b>" +
                         String.valueOf( (char) Integer.parseInt( key ) ) +
                         "</b></font> : " +
-                        text +
+                        BM.getNodeShortPlainText( target ) +
                         "</html>"
                     if( id == node.id ) label( text: text, foreground: blue )
                     else label( text )
