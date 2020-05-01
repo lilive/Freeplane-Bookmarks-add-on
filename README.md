@@ -1,6 +1,6 @@
 # ![logo](doc/images/bookmark.png) Bookmarks for Freeplane
 
-[Voir en français](README-fr.md)
+[Voir en français](README-fr.md) ![french flag](doc/images/french_flag_small.png)
 
 This add-on allows to bookmark some nodes in a Freeplane map, and to easily navigate beetween them.
 
@@ -20,9 +20,15 @@ This add-on create a new "Bookmarks" entry in the menu bar, which give access to
   - delete a standard bookmark
   - create a standard bookmark
 
-Appart form these 3 main actions, it is also possible to create links *to* or *from* the bookmarked nodes.
+Apart form these 3 main actions, it is also possible to create links *to* or *from* the bookmarked nodes.
   
-Feel free to contribute or to [notify issues](../../issues).
+## Feedback and contributions
+
+Any feedback will be very appreciated and will help to improve this add-on :smile:
+- You can post messages on [the dedicated discussion](https://sourceforge.net/p/freeplane/discussion/758437/thread/ec280c4e/) in the Freeplane forum.
+- You can also submit issues or make feature requests [here](../../issues).
+
+Pull requests are also very welcome. The code is documented. Do not hesitate to ask for any guidance, if needed.
 
 ## Installation
 
@@ -37,7 +43,7 @@ To update the add-on, just install its newer version. No need to uninstall it fi
 
 ## Disclaimer
 
-I use this addon-on for myself since a year, and I've never got any problems. I think it's ok. Anyway, I prefer to warn and say : use this add-on at your own risks.
+I use this addon-on for myself since a year on a daily basis, and I've never got any problems. I think it's ok. Anyway, I prefer to warn and say : use this add-on at your own risks.
 
 If you want more informations consider these 2 points :
 

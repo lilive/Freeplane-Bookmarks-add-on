@@ -1,8 +1,8 @@
 # ![logo](doc/images/bookmark.png) Marque-pages pour Freeplane
 
-*NB: Vous pourriez préférer utiliser [la nouvelle version (beta)](https://github.com/lilive/Freeplane-Bookmarks-add-on/tree/devel) qui ajoute la possibilité de raccourcis clavier vers les marque-pages.*
+[Read in english](README.md) ![langage flag](doc/images/english_flag_small.png)
 
-Ce module complémentaire (add-on) permet de mettre des marque-pages sur des noeuds d'une carte Freeplane, et de passer facilement de l'un à l'autre.
+Ce module complémentaire (add-on) permet de mettre des marque-pages sur des nœuds d'une carte Freeplane, et de passer facilement de l'un à l'autre.
 
 Les marque-pages sont de deux sortes :
 
@@ -22,7 +22,13 @@ Ce module crée un nouveau menu nommé "Marque-pages" dans la barre de menu. On 
   
 En plus de ces 3 actions principales, il est aussi possible de créer facilement des liens vers ou dans les nœuds marqués.
 
-N'hésitez pas à contribuer et à [signaler des erreurs](../../issues).
+## Retours et contributions
+
+Tout commentaire sur ce module est grandement encouragé :smile:. Vos retours d'expérience, idées et avis permettent d'améliorer ce module.
+- Vous pouvez écrire vos commentaires dans [la discussion dédiée](https://sourceforge.net/p/freeplane/discussion/758437/thread/ec280c4e/) sur le forum de Freeplane.
+- Vous pouvez aussi [soumettre ici](../../issues) des rapports de boggue ou des suggestions d'amélioration.
+
+De même, toute proposition d'amélioration du code et toute pull request est la très bienvenue. Le code du module est documenté, mais n'hésitez pas à me demander des précisions si besoin.
 
 ## Installation
 
@@ -37,7 +43,7 @@ Pour mettre à jour le module il suffit d'installer la dernière version. Inutil
 
 ## Avertissement
 
-J'utilise ce module pour mon usage personnel depuis un an sans aucun problème, mais je préfère prévenir et déclarer : à utiliser à son propre risque.
+J'utilise quotidiennement ce module pour mon usage personnel depuis un an sans aucun problème, mais je préfère prévenir et déclarer : à utiliser à ses propres risques.
 
 Pourquoi cette précaution ? Pour ces deux choses détaillées ci-dessous :
 
