@@ -54,3 +54,15 @@ Pour cela, un peu de code est exécuté chaque fois que l'icône d'un nœud est 
 
 Je le redis : je n'ai eu aucun problème en un an d'utilisation. Mais tous les retours sur ces points particuliers sont les bienvenus !
 
+## Compilation
+
+Pour créer vous-même le fichier d'installatation du module `bookmarks.addon.mm`, vous devez commencer par créer la bibliothèque java associée :
+
+- Installer Freeplane (bien sûr !)
+- Installer gradle
+- Télécharger les sources
+- Modifier le fichier `build.gradle` pour adapter les chemins dans `repositories.dirs[]` à votre installation de Freeplane
+- Ouvrir une invite de commande dans le dossier contenant les sources
+- `gradle build` va créer le fichier `lib/bookmarks.jar`
+
+Ceci fait vous pouvez ouvrir `bookmarks.mm` dans Freeplane, puis créer le module avec [Outils > Developer Tools > Package add-on for publication](https://freeplane.sourceforge.io/wiki/index.php/Add-ons_(Develop)). Vous obtiendrez alors le fichier `bookmarks-vx.x.x.addon.mm` qui installe le module quand il est ouvert avec Freeplane.

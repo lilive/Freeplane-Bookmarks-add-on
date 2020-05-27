@@ -54,3 +54,15 @@ Then, each time a icon is modified by the user, or each time a node is created, 
 
 Again, I've never notice any problem, but feedbacks about these points will be appreciated !
 
+## Build
+
+If you want to build the add-on installation file `bookmarks.addon.mm` yourself, you have to build the library before to package the addon.
+
+- Install Freeplane (of course !)
+- Download the source
+- Install gradle
+- Open `build.gradle` with a text editor and modify the paths in `repositories.dirs[]` to point to your Freeplane installation
+- Get a command prompt at the root of the sources folder
+- `gradle build` will create the file lib/bookmarks.jar
+
+Now you can open `bookmarks.mm` with Freeplane and package the addon with [Tools > Developer Tools > Package add-on for publication](https://freeplane.sourceforge.io/wiki/index.php/Add-ons_(Develop)). This will create the file `bookmarks-vx.x.x.addon.mm`. Open this file with Freeplane install the add-on.
