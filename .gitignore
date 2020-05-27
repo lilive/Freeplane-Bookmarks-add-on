@@ -3,6 +3,7 @@
 bookmarks-v*.addon.mm
 bookmarks*Copie*.mm
 build
+lib/bookmarks.jar
 .gradle
 .#*
 Thumbs.db
