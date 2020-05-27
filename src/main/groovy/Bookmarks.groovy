@@ -1,18 +1,20 @@
 package bookmarks
 
-import java.util.Map as JMap
+import groovy.json.JsonBuilder
+import groovy.json.JsonSlurper
 import java.awt.Graphics2D
 import java.awt.Image
 import java.awt.image.BufferedImage
-import javax.swing.UIManager
+import java.util.Map as JMap
+import javax.swing.Icon
 import javax.swing.ImageIcon
-import groovy.json.JsonBuilder
-import groovy.json.JsonSlurper
-import org.freeplane.plugin.script.proxy.ScriptUtils
-import org.freeplane.plugin.script.proxy.Convertible
-import org.freeplane.api.Map as FPMap
+import javax.swing.UIManager
+import org.freeplane.api.MindMap as MindMap
 import org.freeplane.api.Node
+import org.freeplane.api.Properties
 import org.freeplane.core.util.TextUtils
+import org.freeplane.plugin.script.proxy.Convertible
+import org.freeplane.plugin.script.proxy.ScriptUtils
 
 class Bookmarks
 { 
@@ -39,10 +41,10 @@ class Bookmarks
     // - the keys are the keyboard keys assigned to a bookmarked node;
     // - the values are the id of the corresponding bookmarked node.
     // This java.util.Map is read from the freeplane map storage area.
-    static JMap loadNamedBookmarks( FPMap map )
+    static JMap loadNamedBookmarks( MindMap map )
     {
         // Read the datas from the map storage
-        def stored = map.storage.getAt( storageKey )
+        Convertible stored = map.storage.getAt( storageKey )
         
         // Convert these datas to an java.util.Map
         if( stored ) return new JsonSlurper().parseText( stored.getText() ) as JMap
@@ -50,18 +52,18 @@ class Bookmarks
     }
 
     // Store the java.util.Map namedBookmarks in the freeplane map storage area.
-    static void saveNamedBookmarks( JMap namedBookmarks, FPMap map )
+    static void saveNamedBookmarks( JMap namedBookmarks, MindMap map )
     {
-        def builder = new JsonBuilder()
+        JsonBuilder builder = new JsonBuilder()
         builder( namedBookmarks )
         map.storage.putAt( storageKey, builder.toString() )
     }
 
     // Erase the stored named bookmarks.
     // Return true is something change.
-    static Boolean eraseNamedBookmarksStorage( FPMap map )
+    static Boolean eraseNamedBookmarksStorage( MindMap map )
     {
-        def storage = map.storage.getAt( storageKey )
+        Convertible storage = map.storage.getAt( storageKey )
         if( storage != null )
         { 
             map.storage.putAt( storageKey, null )
@@ -75,9 +77,10 @@ class Bookmarks
     
     // Remove in namedBookmarks all the node that don't exist,
     // and add the named bookmark icon to each referenced node that miss it.
-    static JMap fixNamedBookmarksInconsistency( JMap namedBookmarks, FPMap map )
+    // Return the currated bookmarks map.
+    static JMap fixNamedBookmarksInconsistency( JMap namedBookmarks, MindMap map )
     {
-        def changed = namedBookmarks.removeAll
+        Boolean changed = namedBookmarks.removeAll
         {
             key, id ->
             return ( map.node( id ) == null )
@@ -87,7 +90,7 @@ class Bookmarks
         namedBookmarks.each
         {
             key, id ->
-            def n = map.node( id )
+            Node n = map.node( id )
             if( ! Bookmarks.hasNamedBookmarkIcon( n ) ) n.icons.add( Bookmarks.namedIcon )
         }
         
@@ -133,7 +136,7 @@ class Bookmarks
 
     static String getNodeShortPlainText( Node node )
     {
-        def text = node.plainText
+        String text = node.plainText
         if( text.length() > 30 ) text = text[0..27] + " ..."
         return text
     }
@@ -162,7 +165,7 @@ class Bookmarks
         // If another node has this named bookmark, remove it
         if( namedBookmarks.containsKey( s ) )
         {
-            def n = node.map.node( namedBookmarks[ s ] )
+            Node n = node.map.node( namedBookmarks[ s ] )
             if( n && n != node ) deleteNamedBookmark( n, namedBookmarks )
         }
     
@@ -205,16 +208,16 @@ class Bookmarks
     // - id is the node id,
     // - text is the node text, possibly truncated.
     // It is possible to exclude some node from this list.
-    static List getAllAnonymousBookmarkedNodes( FPMap map, List excludeIds = null )
+    static List getAllAnonymousBookmarkedNodes( MindMap map, List excludeIds = null )
     {
-        def bookmarks = []
+        List bookmarks = []
         map.root.findAll().each
         {
             n ->
             if( isAnonymousBookmarked( n ) )
             {
                 if( excludeIds && excludeIds.contains( n.id ) ) return
-                def text = getNodeShortPlainText( n )
+                String text = getNodeShortPlainText( n )
                 bookmarks << [ "id": n.id, "text": text ]
             }
         }
@@ -227,9 +230,9 @@ class Bookmarks
     // - name is the bookmark key (string)
     // - text is the node text, possibly truncated, without html format.
     // It is possible to exclude some node from this list.
-    static List getAllNameBookmarkedNodes( FPMap map, List excludeIds = null )
+    static List getAllNameBookmarkedNodes( MindMap map, List excludeIds = null )
     {
-        def bmksMap = loadNamedBookmarks( map )
+        JMap bmksMap = loadNamedBookmarks( map )
         bmksMap = fixNamedBookmarksInconsistency( bmksMap, map )
 
         if( excludeIds )
@@ -237,10 +240,10 @@ class Bookmarks
             bmksMap.removeAll{ key, id -> excludeIds.contains( id ) }
         }
     
-        def bmksList = bmksMap.collect
+        List bmksList = bmksMap.collect
         {
             key, id ->
-            def node = map.node( id )
+            Node node = map.node( id )
             return [
                 "id": id,
                 "name": String.valueOf( (char) Integer.parseInt( key ) ),
@@ -252,13 +255,13 @@ class Bookmarks
     }
     
     // Pause the add-on node changes monitoring feature
-    static void pauseMonitor( FPMap map )
+    static void pauseMonitor( MindMap map )
     {
-        def vars = [:]
-        def storage = map.storage
+        JMap vars = [:]
+        Properties storage = map.storage
         
         // Read the datas from the map storage
-        def stored = storage.getAt( globalKey )
+        Convertible stored = storage.getAt( globalKey )
         // Convert these datas to an java.util.Map
         if( stored ) vars = new JsonSlurper().parseText( stored.getText() ) as JMap
 
@@ -266,27 +269,27 @@ class Bookmarks
         vars[ monitorKey ] = false
         
         // Save the vars in map local storage
-        def builder = new JsonBuilder()
+        JsonBuilder builder = new JsonBuilder()
         builder( vars )
         storage.putAt( globalKey, builder.toString() )
     }
 
     // Resume the add-on node changes monitoring feature
-    static void resumeMonitor( FPMap map )
+    static void resumeMonitor( MindMap map )
     {
-        def storage = map.storage
+        Properties storage = map.storage
         
         // Read the datas from the map storage
-        def stored = storage.getAt( globalKey )
+        Convertible stored = storage.getAt( globalKey )
         if( ! stored ) return
         // Convert these datas to an java.util.Map
-        def vars = new JsonSlurper().parseText( stored.getText() ) as JMap
+        JMap vars = new JsonSlurper().parseText( stored.getText() ) as JMap
 
         // Set monitoring var to disable
         vars[ monitorKey ] = true
         
         // Save the vars in map local storage
-        def builder = new JsonBuilder()
+        JsonBuilder builder = new JsonBuilder()
         builder( vars )
         storage.putAt( globalKey, builder.toString() )
     }
@@ -296,7 +299,7 @@ class Bookmarks
         // Get a small question mark icon from the theme.
         // We can't simply call icon.getImage().getScaledInstance() because some themes (ie Nimbus)
         // do not return a suitable icon.getImage(). That's why we paint the icon.
-        def srcIcon = UIManager.getIcon("OptionPane.questionIcon")
+        Icon srcIcon = UIManager.getIcon("OptionPane.questionIcon")
         int w = srcIcon.getIconWidth()
         int h = srcIcon.getIconHeight()
         BufferedImage bufferedImage = new BufferedImage( w, h, BufferedImage.TYPE_INT_ARGB )
@@ -305,7 +308,8 @@ class Bookmarks
         g.dispose()
         h = h / w * 16
         w = 16
-        def icon = new ImageIcon( bufferedImage.getScaledInstance( w, h, Image.SCALE_SMOOTH ) )
+        ImageIcon icon = new ImageIcon( bufferedImage.getScaledInstance( w, h, Image.SCALE_SMOOTH ) )
+        return icon
     }
     
 }
