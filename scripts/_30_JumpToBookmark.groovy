@@ -1,9 +1,11 @@
 // Jump to a bookmark
 
+import lilive.bookmarks.Bookmarks
+import lilive.bookmarks.JumpGUI
+
 // Clean the bookmarks if needed
-import lilive.bookmarks.Bookmarks as BM
-def namedBookmarks = BM.loadNamedBookmarks( node.map )
-namedBookmarks = BM.fixNamedBookmarksInconsistency( namedBookmarks, node.map )
+def namedBookmarks = Bookmarks.loadNamedBookmarks( node.map )
+namedBookmarks = Bookmarks.fixNamedBookmarksInconsistency( namedBookmarks, node.map )
 
 // Display the jump window
-bookmarks.JumpGUI.show( node )
+JumpGUI.show( node )
