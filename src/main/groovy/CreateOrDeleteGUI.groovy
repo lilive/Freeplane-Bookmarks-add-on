@@ -1,6 +1,6 @@
-package bookmarks
+package lilive.bookmarks
 
-import bookmarks.Bookmarks as BM
+import lilive.bookmarks.Bookmarks as BM
 import groovy.swing.SwingBuilder
 import java.awt.BorderLayout
 import java.awt.Color

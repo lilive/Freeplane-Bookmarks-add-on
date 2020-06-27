@@ -2,7 +2,7 @@
 
 import java.awt.Desktop;
 import javax.swing.JOptionPane
-import bookmarks.Bookmarks as BM
+import lilive.bookmarks.Bookmarks as BM
 
 winTitle = BM.gtt( 'T_help_win_title' )
 

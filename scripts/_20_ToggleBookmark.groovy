@@ -1,6 +1,6 @@
 // Switch between named bookmark / anonymous bookmark / no bookmark for this node
 
-import bookmarks.Bookmarks as BM
+import lilive.bookmarks.Bookmarks as BM
 
 def namedBookmarks = BM.loadNamedBookmarks( node.map )
 namedBookmarks = BM.fixNamedBookmarksInconsistency( namedBookmarks, node.map )

@@ -1,4 +1,4 @@
-package bookmarks
+package lilive.bookmarks
 
 import groovy.json.JsonBuilder
 import groovy.json.JsonSlurper

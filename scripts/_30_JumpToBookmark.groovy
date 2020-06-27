@@ -1,7 +1,7 @@
 // Jump to a bookmark
 
 // Clean the bookmarks if needed
-import bookmarks.Bookmarks as BM
+import lilive.bookmarks.Bookmarks as BM
 def namedBookmarks = BM.loadNamedBookmarks( node.map )
 namedBookmarks = BM.fixNamedBookmarksInconsistency( namedBookmarks, node.map )
 
