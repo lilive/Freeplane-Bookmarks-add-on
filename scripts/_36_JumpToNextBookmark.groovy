@@ -1,6 +1,6 @@
 // Jump to next bookmark
 
-import bookmarks.Bookmarks as BM
+import lilive.bookmarks.Bookmarks as BM
 
 def namedBookmarks = BM.loadNamedBookmarks( node.map )
 

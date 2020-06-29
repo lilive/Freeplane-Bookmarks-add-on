@@ -16,10 +16,11 @@ repositories {
 }
 
 dependencies {
-    compile name: 'freeplanelauncher'
-    compile name: 'freeplaneviewer'
+    compile group: 'org.freeplane.core', name: 'freeplanelauncher'
+    compile group: 'org.freeplane.core', name: 'freeplaneviewer'
+    compile group: 'org.freeplane.core', name: 'freeplaneeditor', version:"+"
 	compile group: 'org.freeplane.script', name: 'plugin', version: '+'
-	compile ('org.codehaus.groovy:groovy-all:2.5.4') {
+	compile ('org.codehaus.groovy:groovy-all:3.0.1') {
         exclude group:'org.codehaus.groovy', module:'groovy-test'
         exclude group:'org.codehaus.groovy', module:'groovy-test-junit5'
         exclude group:'org.codehaus.groovy', module:'groovy-testng'

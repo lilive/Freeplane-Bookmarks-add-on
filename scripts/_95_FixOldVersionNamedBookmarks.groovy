@@ -11,7 +11,7 @@ import org.freeplane.plugin.script.proxy.Convertible
 import groovy.json.JsonBuilder
 import groovy.json.JsonSlurper
 import javax.swing.JOptionPane
-import bookmarks.Bookmarks as BM
+import lilive.bookmarks.Bookmarks as BM
 
 oldStorageKey = "MarksKeys"
 oldNamedIcon = "bookmark-named"

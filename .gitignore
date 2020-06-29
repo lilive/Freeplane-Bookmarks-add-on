@@ -1,9 +1,12 @@
 *.bak
 *.backup
-bookmarks-v*.addon.mm
-bookmarks*Copie*.mm
-.#*
-Thumbs.db
-.gradle
+bookmarks.addon.mm
 build
 lib
+.gradle
+.#*
+versions
+Thumbs.db
+display-downloads.bat
+emacs-edition-macros.el
+Notes developpement.org

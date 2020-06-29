@@ -1,7 +1,7 @@
 // Convert all bookmarks to buitin freeplane icon "Excellent"
 
 import javax.swing.JOptionPane
-import bookmarks.Bookmarks as BM
+import lilive.bookmarks.Bookmarks as BM
 
 winTitle = BM.gtt( 'T_BMs_to_FP_win_title' )
 
