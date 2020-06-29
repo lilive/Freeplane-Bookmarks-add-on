@@ -1,11 +1,11 @@
 *.bak
 *.backup
-bookmarks-v*.addon.mm
-bookmarks*Copie*.mm
+bookmarks.addon.mm
 build
-lib/bookmarks.jar
+lib
 .gradle
 .#*
+versions
 Thumbs.db
 display-downloads.bat
 emacs-edition-macros.el
