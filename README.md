@@ -43,7 +43,7 @@ To update the add-on, just install its newer version. No need to uninstall it fi
 
 ## Disclaimer
 
-I use this addon-on for myself since a year on a daily basis, and I've never got any problems. The 29 june 2020 the add-on has been downloaded 60 times (all versions together) and no one has reported problems. I think it's ok, but still I prefer to warn: use this add-on at your own risks.
+I use this addon-on for myself since a year on a daily basis, and I've never got any problems. Up to the 29 June 2020, the add-on has been downloaded 60 times (all versions together) and no one has reported problems. I think it's ok, but still I prefer to warn: use this add-on at your own risks.
 
 If you want more informations consider these 2 points :
 
