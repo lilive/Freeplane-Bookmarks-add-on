@@ -32,7 +32,7 @@ De même, toute proposition d'amélioration du code et toute pull request est la
 
 ## Installation
 
-- Télécharger le fichier *bookmarks.addon.mm* de [la dernière release](../../releases).
+- Télécharger le fichier *bookmarks-vX.X.X.addon.mm* de [la dernière release](../../releases).
 - Ouvrir ce fichier avec Freeplane, et suivre les instructions.
 
 ## Mise-à-jour
@@ -56,7 +56,7 @@ Je le redis : je n'ai eu aucun problème en un an d'utilisation. Mais tous les r
 
 ## Compilation
 
-Pour créer vous-même le fichier d'installatation du module `bookmarks.addon.mm`, vous devez commencer par créer la bibliothèque java associée :
+Pour créer vous-même le fichier d'installatation du module `bookmarks-vX.X.X.addon.mm`, vous devez commencer par créer la bibliothèque java associée :
 
 - Installer Freeplane (bien sûr !)
 - Installer gradle

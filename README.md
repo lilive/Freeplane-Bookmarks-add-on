@@ -32,7 +32,7 @@ Pull requests are also very welcome. The code is documented. Do not hesitate to 
 
 ## Installation
 
-- Download the *bookmarks.addon.mm* file from [the latest release](../../releases).
+- Download the *bookmarks-vX.X.X.addon.mm* file from [the latest release](../../releases).
 - Open this file with Freeplane and follow the instructions.
 
 ## Update
@@ -56,7 +56,7 @@ Again, I've never notice any problem, but feedbacks about these points will be a
 
 ## Build
 
-If you want to build the add-on installation file `bookmarks.addon.mm` yourself, you have to build the library before to package the addon.
+If you want to build the add-on installation file `bookmarks-vX.X.X.addon.mm` yourself, you have to build the library before to package the addon.
 
 - Install Freeplane (of course !)
 - Download the source
