@@ -43,7 +43,7 @@ Pour mettre à jour le module il suffit d'installer la dernière version. Inutil
 
 ## Avertissement
 
-J'utilise quotidiennement ce module pour mon usage personnel depuis un an sans aucun problème, mais je préfère prévenir et déclarer : à utiliser à ses propres risques.
+J'utilise quotidiennement ce module pour mon usage personnel depuis un an sans aucun problème. Au 29 juin 2020 il a été téléchargé 60 fois, toutes versions confondues, et personne n'a rapporté de problème de disfonctionnement. Mais je préfère quand même prévenir et déclarer : à utiliser à ses propres risques.
 
 Pourquoi cette précaution ? Pour ces deux choses détaillées ci-dessous :
 
