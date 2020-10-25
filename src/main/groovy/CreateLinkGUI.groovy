@@ -465,7 +465,7 @@ public class CreateLinkGUI
 	                @Override
 	                public void actionPerformed( ActionEvent e )
                     {
-                        String item = mode = Mode.IN ? 'MakeLinkFromAnchorAction' : 'MakeLinkToAnchorAction'
+                        String item = mode == Mode.IN ? 'MakeLinkFromAnchorAction' : 'MakeLinkToAnchorAction'
 	                    MenuUtils.executeMenuItems( [ item ] )
                         gui.dispose()
 	                }
