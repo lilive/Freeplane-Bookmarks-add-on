@@ -246,20 +246,50 @@ public class JumpGUI
     ){
         if( ! bookmarks ) return null
 
-        // Create the component
-        SwingList component
-        swing.build{
-            component = list(
-                items: bookmarks.collect{
-                    if( node.id == it.id ) "<html><b>$it.text</b></html>"
-                    else it.text
-                },
-                visibleRowCount: Integer.min( 20, bookmarks.size() )
-            )
+        ArrayList< String > labels = [] // Label for each row
+        ArrayList< String > ids = []    // Node id for each row
+        // Create labels and ids
+        bookmarks.each{
+            bm ->
+            
+            String label
+            // Bold for the currently selected node
+            if( node.id == bm.id ) label = "<html><b>$bm.text</b></html>"
+            else label = bm.text
+
+            // Do we have clones ?
+            Node n = map.node( bm.id )
+            List clones = n.getNodesSharingContent()
+            if( clones ){
+                // Does any other clone already inserted in the list ?
+                List i = ids.intersect( clones.collect{ it.id } )
+                if( i ){
+                    // Mark this node as a clone in the list
+                    List indices = i.collect{ id1 -> ids.findIndexOf( id2 -> id1 == id2 ) }
+                    int index = indices.max()
+                    labels.addAll( index + 1, [ "         [clone] ${bm.text}" ] )
+                    ids.addAll( index + 1, [ bm.id ] )
+                }
+                else {
+                    // Insert in the list the text of this first clone
+                    labels << label
+                    ids << bm.id
+                }
+            } else {
+                // Insert the text of this node in the list
+                labels << label
+                ids << bm.id
+            }
         }
+        
+        // Create the component
+        SwingList component = swing.list(
+            items: labels,
+            visibleRowCount: Integer.min( 20, labels.size() )
+        )
 
         // Initialize the component state
-        int selectedIdx = bookmarks.findIndexOf{ it.id == node.id }
+        int selectedIdx = ids.findIndexOf{ it == node.id }
         if( selectedIdx < 0 ) selectedIdx = 0
         component.setSelectedIndex( selectedIdx )
         component.ensureIndexIsVisible( selectedIdx )
@@ -276,8 +306,7 @@ public class JumpGUI
                         int idx = component.getSelectedIndex()
                         if( idx >= 0 )
                         {
-                            JMap bm = bookmarks[ idx ]
-                            Node target = map.node( bm.id )
+                            Node target = map.node( ids[ idx ] )
                             jumpToNodeAfterGuiDispose( target, BM.gtt( 'T_jumped_to_SBM' ) )
                             gui.dispose()
                         }
@@ -294,8 +323,7 @@ public class JumpGUI
                     int idx = component.getSelectedIndex()
                     if( idx >= 0 )
                     {
-                        JMap bm = bookmarks[ idx ]
-                        Node target = map.node( bm.id )
+                        Node target = map.node( ids[ idx ] )
                         jumpToNodeAfterGuiDispose( target, BM.gtt( 'T_jumped_to_SBM' ) )
                         gui.dispose()
                     }
