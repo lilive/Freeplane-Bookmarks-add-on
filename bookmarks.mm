@@ -1,10 +1,10 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="Bookmarks" LOCALIZED_STYLE_REF="styles.topic" FOLDED="false" ID="ID_1723255651" LINK="https://github.com/lilive/Freeplane-Bookmarks-add-on" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#000000" BACKGROUND_COLOR="#97c7dc" STYLE="rectangle" SHAPE_HORIZONTAL_MARGIN="6.0 pt" SHAPE_VERTICAL_MARGIN="6.0 pt">
+<node TEXT="Bookmarks" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1723255651" LINK="https://github.com/lilive/Freeplane-Bookmarks-add-on" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#000000" BACKGROUND_COLOR="#97c7dc" STYLE="rectangle" SHAPE_HORIZONTAL_MARGIN="6.0 pt" SHAPE_VERTICAL_MARGIN="6.0 pt" TEXT_SHORTENED="true">
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <edge WIDTH="thin"/>
 <hook NAME="MapStyle" background="#c4c4c4">
-    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" show_notes_in_map="false" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" Marks_stored_node_id="ID_1837714869"/>
+    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" show_notes_in_map="true" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" Marks_stored_node_id="ID_1837714869"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -89,12 +89,12 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="118" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="119" RULE="ON_BRANCH_CREATION"/>
 <attribute_layout NAME_WIDTH="92.9999972283841 pt" VALUE_WIDTH="197.24999412149208 pt"/>
 <attribute NAME="name" VALUE="bookmarks"/>
-<attribute NAME="version" VALUE="v0.7.0"/>
+<attribute NAME="version" VALUE="v0.7.1"/>
 <attribute NAME="author" VALUE="lilive"/>
-<attribute NAME="freeplaneVersionFrom" VALUE="1.8.5"/>
+<attribute NAME="freeplaneVersionFrom" VALUE="1.8.8"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
 <attribute NAME="updateUrl" VALUE="https://raw.githubusercontent.com/lilive/Freeplane-Bookmarks-add-on/master/version.properties"/>
 <richcontent TYPE="NOTE">
@@ -133,7 +133,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="description" POSITION="left" ID="ID_1114811084">
+<node TEXT="description" POSITION="left" ID="ID_1114811084" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -154,6 +154,7 @@
   </body>
 </html>
 </richcontent>
+<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 <node TEXT="Add bookmarks to nodes, and easily navigate beetween them." ID="ID_1183587619"/>
 </node>
 <node TEXT="changes" POSITION="left" ID="ID_1094494132" TEXT_SHORTENED="true">
@@ -171,22 +172,24 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="v0.3" FOLDED="true" ID="ID_1947541306">
+<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
+<node TEXT="v0.3" ID="ID_1947541306">
 <node TEXT="First released version" ID="ID_1150257103"/>
 </node>
-<node TEXT="v0.4" FOLDED="true" ID="ID_1236674265">
+<node TEXT="v0.4" ID="ID_1236674265">
 <node TEXT="Clean the map storage each time ToggleBookmarkSelectionView is used (to avoid increasing size of the file)" ID="ID_955061404"/>
 </node>
-<node TEXT="v0.4.1" FOLDED="true" ID="ID_1277201401">
+<node TEXT="v0.4.1" ID="ID_1277201401">
 <node TEXT="The bookmark icon is now SVG" ID="ID_1361390652"/>
 </node>
-<node TEXT="v0.4.2" FOLDED="true" ID="ID_490789856">
+<node TEXT="v0.4.2" ID="ID_490789856">
 <node TEXT="Sources files cleanup" ID="ID_655524488"/>
 </node>
-<node TEXT="v0.5.0" FOLDED="true" ID="ID_116400648">
+<node TEXT="v0.5.0" ID="ID_116400648">
 <node TEXT="Complete rewrite of the add-on. Introduce named bookmarks." ID="ID_419235170"/>
 </node>
-<node TEXT="v0.5.1" FOLDED="true" ID="ID_540433193">
+<node TEXT="v0.5.1" ID="ID_540433193">
+<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 <node ID="ID_27269396"><richcontent TYPE="NODE">
 
 <html>
@@ -238,13 +241,15 @@
 </richcontent>
 </node>
 </node>
-<node TEXT="v0.6.0-beta" FOLDED="true" ID="ID_579994357">
+<node TEXT="v0.6.0-beta" ID="ID_579994357">
 <node TEXT="New features:&#xa;- Illustrated help manual. Select &quot;help&quot; in the addon menu.&#xa;&#xa;Fixes:&#xa;- Some bugs with latest Freeplane versions. Now compatible with FP 1.8.2" ID="ID_1167110921"/>
 </node>
-<node TEXT="v0.6.0-beta-2" FOLDED="true" ID="ID_1334843413">
+<node TEXT="v0.6.0-beta-2" ID="ID_1334843413">
+<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 <node TEXT="Fixes:&#xa;- Nodes containing html formated text are now correctly displayed in the addon dialogs" ID="ID_1074863526"/>
 </node>
 <node TEXT="v0.6.0" ID="ID_129619401">
+<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 <node TEXT="- No new features or bug fixes.&#xa;- Slightly improved performances (some shared code is compiled in a shared library)&#xa;- Check for Freeplane 1.8.5 compatibility." ID="ID_31943471"/>
 </node>
 <node TEXT="v0.7.0" ID="ID_1315603248">
@@ -255,7 +260,7 @@
 </node>
 <node TEXT="v0.7.1" ID="ID_718977192">
 <attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
-<node TEXT="Fix error when creating link to (or from) the link anchor" ID="ID_608036080">
+<node TEXT="Features:&#xa;- New option to hide clones in the &quot;jump to bookmark&quot; list, in the Freeplane preferences window&#xa;&#xa;Fixes:&#xa;- Fix error when creating link to (or from) the link anchor" ID="ID_608036080">
 <attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 </node>
 </node>
@@ -281,6 +286,7 @@
   </body>
 </html>
 </richcontent>
+<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 <node TEXT="&#xa;This add-on is free software: you can redistribute it and/or modify&#xa;it under the terms of the GNU General Public License as published by&#xa;the Free Software Foundation, either version 2 of the License, or&#xa;(at your option) any later version.&#xa;&#xa;This program is distributed in the hope that it will be useful,&#xa;but WITHOUT ANY WARRANTY; without even the implied warranty of&#xa;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the&#xa;GNU General Public License for more details.&#xa;" ID="ID_1167386088">
 <attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 </node>
@@ -304,6 +310,9 @@
 </html>
 </richcontent>
 <attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
+<node TEXT="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xa;&lt;preferences_structure&gt;&#xa;         &lt;tabbed_pane&gt;&#xa;                  &lt;tab name=&quot;plugins&quot;&gt;&#xa;                           &lt;separator name=&quot;addon_bookmarks&quot;&gt;&#xa;                                    &lt;boolean name=&quot;addon_bookmarks_hide_clones&quot; /&gt;&#xa;                           &lt;/separator&gt;&#xa;                  &lt;/tab&gt;&#xa;         &lt;/tabbed_pane&gt;&#xa;&lt;/preferences_structure&gt;" ID="ID_1515193619" MAX_WIDTH="600.0 px" MIN_WIDTH="600.0 px">
+<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
+</node>
 </node>
 <node TEXT="default.properties" POSITION="left" ID="ID_151630546" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
@@ -328,7 +337,8 @@
   </body>
 </html>
 </richcontent>
-<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
+<attribute_layout NAME_WIDTH="147.749995596707 pt" VALUE_WIDTH="120.0 pt"/>
+<attribute NAME="addon_bookmarks_hide_clones" VALUE="false"/>
 </node>
 <node TEXT="translations" POSITION="left" ID="ID_255907585" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
@@ -357,7 +367,7 @@
 </html>
 </richcontent>
 <attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
-<node TEXT="en" ID="ID_737947027">
+<node TEXT="en" ID="ID_737947027" TEXT_SHORTENED="true">
 <attribute_layout NAME_WIDTH="170.999994903803 pt" VALUE_WIDTH="320.9999904334548 pt"/>
 <attribute NAME="addons.${name}" VALUE="Bookmarks"/>
 <attribute NAME="addons.${name}._10_BookmarkNode" VALUE="Add / Remove a bookmark"/>
@@ -433,6 +443,8 @@
 <attribute NAME="addons.${name}.T_tip_create_link_to_SBM" VALUE="To select the target for the link either"/>
 <attribute NAME="addons.${name}.T_tip_jump_to_NBM" VALUE="To jump to a named bookmark either"/>
 <attribute NAME="addons.${name}.T_tip_jump_to_SBM" VALUE="To jump to a bookmark either"/>
+<attribute NAME="addons.${name}.T_tip_jump_to_SBM_hide_clones" VALUE="To hide the clones in the bookmarks list,&lt;br&gt;use the Freeplane preferences window."/>
+<attribute NAME="addons.${name}.T_tip_jump_to_SBM_show_clones" VALUE="To see the clones in the bookmarks list,&lt;br&gt;use the Freeplane preferences window."/>
 <attribute NAME="addons.${name}.T_to_cancel" VALUE="to cancel"/>
 <attribute NAME="addons.${name}.T_BMs_to_FP_win_title" VALUE="Bookmarks conversion"/>
 <attribute NAME="addons.${name}.T_convert_BM_FP_warning" VALUE="This will convert all bookmarks to FreePlane regular bookmark icons (the star icons).\nThe bookmarks names will be lost.\nThis operation can not be undone. Do you want to proceed ?"/>
@@ -450,8 +462,10 @@
 <attribute NAME="addons.${name}.T_help_win_title" VALUE="Help"/>
 <attribute NAME="addons.${name}.T_help_desktop_error" VALUE="Can&apos;t init a java browsing operation !"/>
 <attribute NAME="addons.${name}.T_help_browse_error" VALUE="Error opening the file"/>
+<attribute NAME="OptionPanel.separator.addon_${name}" VALUE="Bookmarks"/>
+<attribute NAME="OptionPanel.addon_${name}_hide_clones" VALUE="Hide nodes clones in &quot;jump to bookmark&quot; list"/>
 </node>
-<node TEXT="fr" ID="ID_1748679509">
+<node TEXT="fr" ID="ID_1748679509" TEXT_SHORTENED="true">
 <attribute_layout NAME_WIDTH="170.24999492615476 pt" VALUE_WIDTH="320.9999904334548 pt"/>
 <attribute NAME="addons.${name}" VALUE="Marque-pages"/>
 <attribute NAME="addons.${name}._10_BookmarkNode" VALUE="Placer / Supprimer un marque-page"/>
@@ -527,6 +541,8 @@
 <attribute NAME="addons.${name}.T_tip_create_link_to_SBM" VALUE="Pour s\u00E9lectionner le marque-page cible du lien"/>
 <attribute NAME="addons.${name}.T_tip_jump_to_NBM" VALUE="Pour atteindre un marque-page nomm\u00E9"/>
 <attribute NAME="addons.${name}.T_tip_jump_to_SBM" VALUE="Pour atteindre un marque-page"/>
+<attribute NAME="addons.${name}.T_tip_jump_to_SBM_hide_clones" VALUE="Une option dans les pr\u00E9f\u00E9rences de Freeplane&lt;br&gt;permet de cacher les clones dans la liste des marque-pages."/>
+<attribute NAME="addons.${name}.T_tip_jump_to_SBM_show_clones" VALUE="Une option dans les pr\u00E9f\u00E9rences de Freeplane&lt;br&gt;permet d&apos;afficher les clones dans la liste des marque-pages."/>
 <attribute NAME="addons.${name}.T_to_cancel" VALUE="pour annuler"/>
 <attribute NAME="addons.${name}.T_BMs_to_FP_win_title" VALUE="Conversion des marque-pages"/>
 <attribute NAME="addons.${name}.T_convert_BM_FP_warning" VALUE="Ceci va convertir tous les marque-pages en ic\u00F4ne de marque-page de FreePlane (celui en forme d&apos;\u00E9toile).\nLes noms des marque-pages seront perdus.\nCette op\u00E9ration est irr\u00E9versible. Voulez-vous continuer ?"/>
@@ -544,9 +560,11 @@
 <attribute NAME="addons.${name}.T_help_win_title" VALUE="Aide"/>
 <attribute NAME="addons.${name}.T_help_desktop_error" VALUE="Erreur d&apos;initialisation de la fonction java de navigation !"/>
 <attribute NAME="addons.${name}.T_help_browse_error" VALUE="Erreur lors de l&apos;ouverture du fichier"/>
+<attribute NAME="OptionPanel.separator.addon_${name}" VALUE="Marque-pages"/>
+<attribute NAME="OptionPanel.addon_${name}_hide_clones" VALUE="Cacher les clones dans la liste des marques-pages \u00E0 atteindre"/>
 </node>
 </node>
-<node TEXT="deinstall" POSITION="left" ID="ID_1870605844">
+<node TEXT="deinstall" POSITION="left" ID="ID_1870605844" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -593,7 +611,7 @@
 <node TEXT="Allow to sort the named bookmarks list by name" ID="ID_1956637301"/>
 <node TEXT="Allow to display anonymous bookmarks first when dialogs open, or remember the last state, or select the state according to the currently selected node" ID="ID_1394483907"/>
 </node>
-<node TEXT="scripts" FOLDED="true" POSITION="right" ID="ID_1460492722" TEXT_SHORTENED="true">
+<node TEXT="scripts" POSITION="right" ID="ID_1460492722" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -846,7 +864,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 </node>
-<node TEXT="lib" POSITION="right" ID="ID_1159449610">
+<node TEXT="lib" POSITION="right" ID="ID_1159449610" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -885,9 +903,10 @@
   </body>
 </html>
 </richcontent>
+<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 <node TEXT="bookmarks.jar" ID="ID_1816680134"/>
 </node>
-<node TEXT="zips" POSITION="right" ID="ID_435012533">
+<node TEXT="zips" POSITION="right" ID="ID_435012533" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -926,6 +945,7 @@
   </body>
 </html>
 </richcontent>
+<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 <node TEXT="icons" ID="ID_1144883898"/>
 <node TEXT="scripts" ID="ID_87188883"/>
 <node TEXT="doc" ID="ID_964875318"/>
@@ -965,6 +985,7 @@
   </body>
 </html>
 </richcontent>
+<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 </node>
 </node>
 </map>

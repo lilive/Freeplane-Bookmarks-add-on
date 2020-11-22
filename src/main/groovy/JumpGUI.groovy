@@ -20,6 +20,7 @@ import org.freeplane.core.ui.components.UITools as ui
 import org.freeplane.plugin.script.proxy.Proxy.Controller as ProxyController
 import org.freeplane.plugin.script.proxy.Proxy.Node as ProxyNode
 import org.freeplane.plugin.script.proxy.ScriptUtils
+import org.freeplane.plugin.script.FreeplaneScriptBaseClass
 
 
 /**
@@ -30,7 +31,7 @@ public class JumpGUI
     static private Object gui
 
     // Build and display the window
-    static public void show( ProxyNode node )
+    static public void show( ProxyNode node, FreeplaneScriptBaseClass.ConfigProperties config )
     {
         MindMap map = node.map
         gui = null
@@ -50,7 +51,8 @@ public class JumpGUI
         // Create the gui
         gui = createWindow(
             swing, node, map,
-            namedBookmarks, anonymousBookmarks
+            namedBookmarks, anonymousBookmarks,
+            ! config.getBooleanProperty("addon_bookmarks_hide_clones")
         )
         
         // Center the gui over the freeplane window
@@ -242,7 +244,8 @@ public class JumpGUI
     static private SwingList getAnonymousBookmarksSwingList(
         SwingBuilder swing,
         ProxyNode node, MindMap map,
-        List bookmarks // List of the bookmarks
+        List bookmarks,    // List of the bookmarks
+        boolean showClones // Do we display the clones ?
     ){
         if( ! bookmarks ) return null
 
@@ -264,11 +267,15 @@ public class JumpGUI
                 // Does any other clone already inserted in the list ?
                 List i = ids.intersect( clones.collect{ it.id } )
                 if( i ){
-                    // Mark this node as a clone in the list
-                    List indices = i.collect{ id1 -> ids.findIndexOf( id2 -> id1 == id2 ) }
-                    int index = indices.max()
-                    labels.addAll( index + 1, [ "         [clone] ${bm.text}" ] )
-                    ids.addAll( index + 1, [ bm.id ] )
+                    // There is at least one clone in the list
+                    // Do we need to insert this one ?
+                    if( showClones ){
+                        // Mark this node as a clone in the list
+                        List indices = i.collect{ id1 -> ids.findIndexOf( id2 -> id1 == id2 ) }
+                        int index = indices.max()
+                        labels.addAll( index + 1, [ "         [clone] ${bm.text}" ] )
+                        ids.addAll( index + 1, [ bm.id ] )
+                    }
                 }
                 else {
                     // Insert in the list the text of this first clone
@@ -339,7 +346,8 @@ public class JumpGUI
         SwingBuilder swing,
         List bookmarks,                 // List of the bookmarks
         SwingList bookmarksSwingList,   // Component that display this list
-        boolean showTabTip              // Do we need to add a comment about the Tab key ?
+        boolean showTabTip,             // Do we need to add a comment about the Tab key ?
+        boolean showClones              // Do we display the clones ?
     ){
         if( ! bookmarks ) return null
         
@@ -354,13 +362,17 @@ public class JumpGUI
                 // This gridbag will contains 4 items
                 // Row 0 : A label and a question mark label with a tooltip
                 // Row 1 : A label
-                // Row 2 : The kist of the named bookmarks
+                // Row 2 : The list of the bookmarks
+                // Row 3 : A tip about the clones
                 
                 // Row 0
                 label(
                     "${BM.gtt( 'T_select_BM_to_jump' )}.",
                     constraints: gbc( gridx:0, gridy:0, anchor:GridBagConstraints.LINE_START )
                 )
+                String clonesTip
+                if( showClones ) clonesTip = BM.gtt( 'T_tip_jump_to_SBM_hide_clones' )
+                else clonesTip = BM.gtt( 'T_tip_jump_to_SBM_show_clones' )
                 label(
                     icon: BM.getQuestionMarkIcon(),
                     toolTipText:
@@ -370,6 +382,7 @@ public class JumpGUI
                             <li>${BM.gtt( 'T_click_BM' )}</li>
                             <li>${BM.gtt( 'T_arrow_select' )}</li>
                         </ul>
+                        ${clonesTip}
                     </html>""",
                     constraints: gbc( gridx:1, gridy:0, anchor:GridBagConstraints.LINE_START, weightx:1, insets:[0,10,0,0] )
                 )
@@ -503,7 +516,8 @@ public class JumpGUI
     static private Object createWindow( 
         SwingBuilder swing,
         ProxyNode node, MindMap map,
-        List namedBookmarks, List anonymousBookmarks
+        List namedBookmarks, List anonymousBookmarks,
+        boolean showClones
     )
     {
         SwingList namedBookmarksSwingList = getNamedBookmarksSwingList(
@@ -513,10 +527,10 @@ public class JumpGUI
             swing, namedBookmarks, namedBookmarksSwingList, (boolean)anonymousBookmarks
         )
         SwingList anonymousBookmarksSwingList = getAnonymousBookmarksSwingList(
-            swing, node, map, anonymousBookmarks
+            swing, node, map, anonymousBookmarks, showClones
         )
         JPanel anonymousBookmarksJPanel = getAnonymousBookmarksJPanel(
-            swing, anonymousBookmarks, anonymousBookmarksSwingList, (boolean)namedBookmarks
+            swing, anonymousBookmarks, anonymousBookmarksSwingList, (boolean)namedBookmarks, showClones
         )
         Object gui = createGui(
             swing,
