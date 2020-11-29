@@ -9,4 +9,5 @@ versions
 Thumbs.db
 display-downloads.bat
 emacs-edition-macros.el
+emacs-edition-functions.el
 Notes developpement.org
