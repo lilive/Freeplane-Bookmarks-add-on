@@ -23,8 +23,6 @@ class Bookmarks
     final static String anonymousIcon = "bookmarks/Bookmark 1"
     final static String namedIcon = "bookmarks/Bookmark 2"
 
-    final static String globalKey = "Bookmarks"
-
     // gtt = Get Translated Text
     static String gtt( String key )
     {

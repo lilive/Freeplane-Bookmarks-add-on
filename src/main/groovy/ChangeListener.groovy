@@ -16,11 +16,6 @@ import org.freeplane.features.map.MapController
 
 public class ChangeListener implements INodeChangeListener, IMapChangeListener
 {
-	String namedIcon = "bookmarks/Bookmark 2"
-	String anonymousIcon = "bookmarks/Bookmark 1"
-	String storageKey = "BookmarksKeys"
-	String globalKey = "Bookmarks"
-
 	public void nodeChanged(NodeChangeEvent event)
 	{
 		// When an icon is added or removed form a node, we must take
@@ -42,10 +37,10 @@ public class ChangeListener implements INodeChangeListener, IMapChangeListener
 			if( event.oldValue ){
 
 				String oldIcon = event.oldValue.name
-				if( oldIcon == namedIcon ){
+				if( oldIcon == Bookmarks.namedIcon ){
 					// Prevent named bookmark icon to be removed from named bookmarked nodes,
 					// and be sure it is at the first position
-					if( isNodeHasNamedBookmark( node ) ) putUniqueIconAsFirstIcon( node, namedIcon )
+					if( isNodeHasNamedBookmark( node ) ) putUniqueIconAsFirstIcon( node, Bookmarks.namedIcon )
 				}
 			}
 
@@ -53,25 +48,25 @@ public class ChangeListener implements INodeChangeListener, IMapChangeListener
 			if( event.newValue ){
 
                 String newIcon = event.newValue.name
-                if( newIcon == namedIcon ){
+                if( newIcon == Bookmarks.namedIcon ){
 					// If this is a named bookmark icon
 
 					// Be sure a named bookmark icon is at the first position ...
-					if( isNodeHasNamedBookmark( node ) ) putUniqueIconAsFirstIcon( node, namedIcon )
+					if( isNodeHasNamedBookmark( node ) ) putUniqueIconAsFirstIcon( node, Bookmarks.namedIcon )
 					// ... and that a named bookmark icon is added only to named bookmarked nodes
-					else removeIcon( node, namedIcon )
+					else removeIcon( node, Bookmarks.namedIcon )
 
-				} else if( newIcon == anonymousIcon ){
+				} else if( newIcon == Bookmarks.anonymousIcon ){
 					// If this is a regular bookmark icon
 
 					if( isNodeHasNamedBookmark( node ) ){
 						// Prevent regular bookmark icon to be placed on named bookmarked nodes
-						removeIcon( node, anonymousIcon )
+						removeIcon( node, Bookmarks.anonymousIcon )
 						// Be sure the named bookmark icon is present at the first position
-						putUniqueIconAsFirstIcon( node, namedIcon )
+						putUniqueIconAsFirstIcon( node, Bookmarks.namedIcon )
 					} else {
 						// Be sure the bookmark icon is present at the first position, and unique
-						putUniqueIconAsFirstIcon( node, anonymousIcon )
+						putUniqueIconAsFirstIcon( node, Bookmarks.anonymousIcon )
 					}
 				}
 			}
@@ -86,11 +81,11 @@ public class ChangeListener implements INodeChangeListener, IMapChangeListener
         // so we must remove the named-bookmark icon from the copy.
 
 		IconStore iconStore = IconStoreFactory.ICON_STORE
-		MindIcon icon = iconStore.getMindIcon( namedIcon )
+		MindIcon icon = iconStore.getMindIcon( Bookmarks.namedIcon )
 
 		def map = ScriptUtils.node().map
 		StringBuilder named = new StringBuilder()
-		def stored = map.storage.getAt( storageKey )
+		def stored = map.storage.getAt( Bookmarks.storageKey )
 		if( stored ) named = new StringBuilder( stored.getString() )
 
 		purgeBranchFromBadNamedIcons( child, icon, named )
@@ -101,7 +96,7 @@ public class ChangeListener implements INodeChangeListener, IMapChangeListener
 	{
 		def map = ScriptUtils.node().map
 		String mapStorage = ""
-		def stored = map.storage.getAt( storageKey )
+		def stored = map.storage.getAt( Bookmarks.storageKey )
 		if( stored ) mapStorage = stored.getString();
 		return mapStorage.contains( '"' + node.getID() + '"' )
 	}
