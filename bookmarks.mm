@@ -370,14 +370,14 @@
 <node TEXT="en" ID="ID_737947027">
 <attribute_layout NAME_WIDTH="170.999994903803 pt" VALUE_WIDTH="320.9999904334548 pt"/>
 <attribute NAME="addons.${name}" VALUE="Bookmarks"/>
-<attribute NAME="addons.${name}._10_BookmarkNode" VALUE="Add / Remove a bookmark"/>
+<attribute NAME="addons.${name}._10_BookmarkNode" VALUE="Add / Remove a bookmark ..."/>
 <attribute NAME="addons.${name}._20_ToggleBookmark" VALUE="Toggle the bookmark"/>
-<attribute NAME="addons.${name}._25_DeleteSubTreeBookmarks" VALUE="Remove all bookmarks in subtree"/>
-<attribute NAME="addons.${name}._30_JumpToBookmark" VALUE="Jump to bookmark"/>
+<attribute NAME="addons.${name}._25_DeleteSubTreeBookmarks" VALUE="Remove all bookmarks in subtree ..."/>
+<attribute NAME="addons.${name}._30_JumpToBookmark" VALUE="Jump to bookmark ..."/>
 <attribute NAME="addons.${name}._35_JumpToPreviousBookmark" VALUE="Jump to previous bookmark"/>
 <attribute NAME="addons.${name}._36_JumpToNextBookmark" VALUE="Jump to next bookmark"/>
-<attribute NAME="addons.${name}._50_CreateLinkInBookmark" VALUE="Create link in bookmarked node"/>
-<attribute NAME="addons.${name}._51_CreateLinkToBookmark" VALUE="Create link to bookmarked node"/>
+<attribute NAME="addons.${name}._50_CreateLinkInBookmark" VALUE="Create link in bookmarked node ..."/>
+<attribute NAME="addons.${name}._51_CreateLinkToBookmark" VALUE="Create link to bookmarked node ..."/>
 <attribute NAME="addons.${name}._95_FixOldVersionNamedBookmarks" VALUE="Fix named bookmarks created by an old version of the add-on"/>
 <attribute NAME="addons.${name}._90_ConvertFPBookmarks" VALUE="Convert all regular FreePlane bookmark icons (star icon) to add-on bookmarks"/>
 <attribute NAME="addons.${name}._91_ConvertBookmarksToFP" VALUE="Convert all bookmarks to regular FreePlane bookmark icons (star icon)"/>
@@ -470,14 +470,14 @@
 <node TEXT="fr" ID="ID_1748679509">
 <attribute_layout NAME_WIDTH="170.24999492615476 pt" VALUE_WIDTH="320.9999904334548 pt"/>
 <attribute NAME="addons.${name}" VALUE="Marque-pages"/>
-<attribute NAME="addons.${name}._10_BookmarkNode" VALUE="Placer / Supprimer un marque-page"/>
+<attribute NAME="addons.${name}._10_BookmarkNode" VALUE="Placer / Supprimer un marque-page ..."/>
 <attribute NAME="addons.${name}._20_ToggleBookmark" VALUE="Basculer un marque-page"/>
-<attribute NAME="addons.${name}._25_DeleteSubTreeBookmarks" VALUE="Supprimer tous les marque-pages de la branche"/>
-<attribute NAME="addons.${name}._30_JumpToBookmark" VALUE="Atteindre un marque-page"/>
+<attribute NAME="addons.${name}._25_DeleteSubTreeBookmarks" VALUE="Supprimer tous les marque-pages de la branche ..."/>
+<attribute NAME="addons.${name}._30_JumpToBookmark" VALUE="Atteindre un marque-page ..."/>
 <attribute NAME="addons.${name}._35_JumpToPreviousBookmark" VALUE="Atteindre le marque-page pr\u00E9c\u00E9dent"/>
 <attribute NAME="addons.${name}._36_JumpToNextBookmark" VALUE="Atteindre le marque-page suivant"/>
-<attribute NAME="addons.${name}._50_CreateLinkInBookmark" VALUE="Cr\u00E9er un lien dans un marque-page"/>
-<attribute NAME="addons.${name}._51_CreateLinkToBookmark" VALUE="Cr\u00E9er un lien vers un marque-page"/>
+<attribute NAME="addons.${name}._50_CreateLinkInBookmark" VALUE="Cr\u00E9er un lien dans un marque-page ..."/>
+<attribute NAME="addons.${name}._51_CreateLinkToBookmark" VALUE="Cr\u00E9er un lien vers un marque-page ..."/>
 <attribute NAME="addons.${name}._95_FixOldVersionNamedBookmarks" VALUE="R\u00E9cup\u00E9rer les marque-pages nomm\u00E9s d&apos;une version ant\u00E9rieure du module"/>
 <attribute NAME="addons.${name}._90_ConvertFPBookmarks" VALUE="Convertir toutes les ic\u00F4nes de marque-page de FreePlane (\u00E9toile) en marque-pages pour ce module"/>
 <attribute NAME="addons.${name}._91_ConvertBookmarksToFP" VALUE="Convertir tous les marque-pages en ic\u00F4nes de marque-page de FreePlane (\u00E9toile)"/>
