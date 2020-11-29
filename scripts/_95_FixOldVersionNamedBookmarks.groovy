@@ -81,7 +81,7 @@ if( cancel != 0 )
 }
 
 // Suspend the monitoring to be able to manipulate bookmarks
-BM.pauseMonitor( node.map )
+BM.pauseMonitor()
 
 // Get the actual version bookmarks
 def namedBookmarks = BM.loadNamedBookmarks( node.map )
@@ -134,7 +134,7 @@ c.findAll().each
     }
 }
 
-BM.resumeMonitor( node.map )
+BM.resumeMonitor()
 
 // display result
 def message = ''

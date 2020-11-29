@@ -255,43 +255,15 @@ class Bookmarks
     }
     
     // Pause the add-on node changes monitoring feature
-    static void pauseMonitor( MindMap map )
+    static void pauseMonitor()
     {
-        JMap vars = [:]
-        Properties storage = map.storage
-        
-        // Read the datas from the map storage
-        Convertible stored = storage.getAt( globalKey )
-        // Convert these datas to an java.util.Map
-        if( stored ) vars = new JsonSlurper().parseText( stored.getText() ) as JMap
-
-        // Set monitoring var to disable
-        vars[ monitorKey ] = false
-        
-        // Save the vars in map local storage
-        JsonBuilder builder = new JsonBuilder()
-        builder( vars )
-        storage.putAt( globalKey, builder.toString() )
+        ChangeListener.pauseMonitor()
     }
 
     // Resume the add-on node changes monitoring feature
-    static void resumeMonitor( MindMap map )
+    static void resumeMonitor()
     {
-        Properties storage = map.storage
-        
-        // Read the datas from the map storage
-        Convertible stored = storage.getAt( globalKey )
-        if( ! stored ) return
-        // Convert these datas to an java.util.Map
-        JMap vars = new JsonSlurper().parseText( stored.getText() ) as JMap
-
-        // Set monitoring var to disable
-        vars[ monitorKey ] = true
-        
-        // Save the vars in map local storage
-        JsonBuilder builder = new JsonBuilder()
-        builder( vars )
-        storage.putAt( globalKey, builder.toString() )
+        ChangeListener.resumeMonitor()
     }
 
     static ImageIcon getQuestionMarkIcon()
