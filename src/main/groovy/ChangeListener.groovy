@@ -12,6 +12,7 @@ import org.freeplane.plugin.script.proxy.Convertible
 import org.freeplane.plugin.script.proxy.ScriptUtils
 import java.lang.StringBuilder
 import java.util.Enumeration
+import org.freeplane.features.map.MapController
 
 public class ChangeListener implements INodeChangeListener, IMapChangeListener
 {
@@ -19,12 +20,6 @@ public class ChangeListener implements INodeChangeListener, IMapChangeListener
 	String anonymousIcon = "bookmarks/Bookmark 1"
 	String storageKey = "BookmarksKeys"
 	String globalKey = "Bookmarks"
-	static boolean isMonitoring = true
-
-    public ChangeListener()
-    {
-        isMonitoring = true
-    }
 
 	public void nodeChanged(NodeChangeEvent event)
 	{
@@ -45,8 +40,9 @@ public class ChangeListener implements INodeChangeListener, IMapChangeListener
 
 			// An icon has been deleted
 			if( event.oldValue ){
+
 				String oldIcon = event.oldValue.name
-				if( oldIcon == namedIcon && isMonitoring ){
+				if( oldIcon == namedIcon ){
 					// Prevent named bookmark icon to be removed from named bookmarked nodes,
 					// and be sure it is at the first position
 					if( isNodeHasNamedBookmark( node ) ) putUniqueIconAsFirstIcon( node, namedIcon )
@@ -57,7 +53,7 @@ public class ChangeListener implements INodeChangeListener, IMapChangeListener
 			if( event.newValue ){
 
                 String newIcon = event.newValue.name
-                if( newIcon == namedIcon && isMonitoring ){
+                if( newIcon == namedIcon ){
 					// If this is a named bookmark icon
 
 					// Be sure a named bookmark icon is at the first position ...
@@ -65,7 +61,7 @@ public class ChangeListener implements INodeChangeListener, IMapChangeListener
 					// ... and that a named bookmark icon is added only to named bookmarked nodes
 					else removeIcon( node, namedIcon )
 
-				} else if( newIcon == anonymousIcon && isMonitoring ){
+				} else if( newIcon == anonymousIcon ){
 					// If this is a regular bookmark icon
 
 					if( isNodeHasNamedBookmark( node ) ){
@@ -89,8 +85,6 @@ public class ChangeListener implements INodeChangeListener, IMapChangeListener
 		// But only one node can be named-bookmarked with a single keyboard key,
         // so we must remove the named-bookmark icon from the copy.
 
-        if( ! isMonitoring ) return
-        
 		IconStore iconStore = IconStoreFactory.ICON_STORE
 		MindIcon icon = iconStore.getMindIcon( namedIcon )
 
@@ -196,14 +190,27 @@ public class ChangeListener implements INodeChangeListener, IMapChangeListener
 		}
 	}
 
-    static void pauseMonitor()
+    // Put this listener on node change events and map change events
+    static public void startMonitor()
     {
-        isMonitoring = false
+        MapController mapController = Controller.currentModeController.mapController
+        boolean started = mapController.nodeChangeListeners.any{ it.class.name == ChangeListener.class.name }
+        if( started ) return
+        ChangeListener listener = new ChangeListener()
+        mapController.addNodeChangeListener( listener )
+        mapController.addMapChangeListener( listener )
     }
 
-    static void resumeMonitor()
+    // Remove listener on node change events and map change events
+    static public void stopMonitor()
     {
-        isMonitoring = true
+        MapController mapController = Controller.currentModeController.mapController
+        mapController.nodeChangeListeners
+            .findAll{ it.class.name == ChangeListener.class.name }
+            .each { mapController.removeNodeChangeListener(it) }
+        mapController.mapChangeListeners
+            .findAll{ it.class.name == ChangeListener.class.name }
+            .each { mapController.removeMapChangeListener(it) }
     }
 }
 

@@ -80,9 +80,6 @@ if( cancel != 0 )
     return
 }
 
-// Suspend the monitoring to be able to manipulate bookmarks
-BM.pauseMonitor()
-
 // Get the actual version bookmarks
 def namedBookmarks = BM.loadNamedBookmarks( node.map )
 
@@ -133,8 +130,6 @@ c.findAll().each
         }
     }
 }
-
-BM.resumeMonitor()
 
 // display result
 def message = ''

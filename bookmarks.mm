@@ -4,7 +4,7 @@
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <edge WIDTH="thin"/>
 <hook NAME="MapStyle" background="#c4c4c4">
-    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" show_notes_in_map="true" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" Marks_stored_node_id="ID_1837714869"/>
+    <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" show_notes_in_map="true" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" Marks_stored_node_id="ID_1837714869"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -89,7 +89,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="119" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="120" RULE="ON_BRANCH_CREATION"/>
 <attribute_layout NAME_WIDTH="92.9999972283841 pt" VALUE_WIDTH="197.24999412149208 pt"/>
 <attribute NAME="name" VALUE="bookmarks"/>
 <attribute NAME="version" VALUE="v0.7.1"/>
@@ -133,7 +133,7 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="description" POSITION="left" ID="ID_1114811084" TEXT_SHORTENED="true">
+<node TEXT="description" POSITION="left" ID="ID_1114811084" TEXT_SHORTENED="true" MIN_WIDTH="220.0 px">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -157,7 +157,7 @@
 <attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 <node TEXT="Add bookmarks to nodes, and easily navigate beetween them." ID="ID_1183587619"/>
 </node>
-<node TEXT="changes" POSITION="left" ID="ID_1094494132" TEXT_SHORTENED="true">
+<node TEXT="changes" POSITION="left" ID="ID_1094494132" TEXT_SHORTENED="true" MIN_WIDTH="220.0 px">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -173,22 +173,22 @@
 </html>
 </richcontent>
 <attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
-<node TEXT="v0.3" ID="ID_1947541306">
+<node TEXT="v0.3" ID="ID_1947541306" MIN_WIDTH="140.0 px">
 <node TEXT="First released version" ID="ID_1150257103"/>
 </node>
-<node TEXT="v0.4" ID="ID_1236674265">
+<node TEXT="v0.4" ID="ID_1236674265" MIN_WIDTH="140.0 px">
 <node TEXT="Clean the map storage each time ToggleBookmarkSelectionView is used (to avoid increasing size of the file)" ID="ID_955061404"/>
 </node>
-<node TEXT="v0.4.1" ID="ID_1277201401">
+<node TEXT="v0.4.1" ID="ID_1277201401" MIN_WIDTH="140.0 px">
 <node TEXT="The bookmark icon is now SVG" ID="ID_1361390652"/>
 </node>
-<node TEXT="v0.4.2" ID="ID_490789856">
+<node TEXT="v0.4.2" ID="ID_490789856" MIN_WIDTH="140.0 px">
 <node TEXT="Sources files cleanup" ID="ID_655524488"/>
 </node>
-<node TEXT="v0.5.0" ID="ID_116400648">
+<node TEXT="v0.5.0" ID="ID_116400648" MIN_WIDTH="140.0 px">
 <node TEXT="Complete rewrite of the add-on. Introduce named bookmarks." ID="ID_419235170"/>
 </node>
-<node TEXT="v0.5.1" ID="ID_540433193">
+<node TEXT="v0.5.1" ID="ID_540433193" MIN_WIDTH="140.0 px">
 <attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 <node ID="ID_27269396"><richcontent TYPE="NODE">
 
@@ -241,31 +241,31 @@
 </richcontent>
 </node>
 </node>
-<node TEXT="v0.6.0-beta" ID="ID_579994357">
+<node TEXT="v0.6.0-beta" ID="ID_579994357" MIN_WIDTH="140.0 px">
 <node TEXT="New features:&#xa;- Illustrated help manual. Select &quot;help&quot; in the addon menu.&#xa;&#xa;Fixes:&#xa;- Some bugs with latest Freeplane versions. Now compatible with FP 1.8.2" ID="ID_1167110921"/>
 </node>
-<node TEXT="v0.6.0-beta-2" ID="ID_1334843413">
+<node TEXT="v0.6.0-beta-2" ID="ID_1334843413" MIN_WIDTH="140.0 px">
 <attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 <node TEXT="Fixes:&#xa;- Nodes containing html formated text are now correctly displayed in the addon dialogs" ID="ID_1074863526"/>
 </node>
-<node TEXT="v0.6.0" ID="ID_129619401">
+<node TEXT="v0.6.0" ID="ID_129619401" MIN_WIDTH="140.0 px">
 <attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 <node TEXT="- No new features or bug fixes.&#xa;- Slightly improved performances (some shared code is compiled in a shared library)&#xa;- Check for Freeplane 1.8.5 compatibility." ID="ID_31943471"/>
 </node>
-<node TEXT="v0.7.0" ID="ID_1315603248">
+<node TEXT="v0.7.0" ID="ID_1315603248" MIN_WIDTH="140.0 px">
 <attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 <node TEXT="- Faster first start in a Freeplane session (the main part of the code is now in a precompiled library)&#xa;- Update to groovy 3&#xa;- Freeplane can now warn for add-on update" ID="ID_789775232">
 <attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 </node>
 </node>
-<node TEXT="v0.7.1" ID="ID_718977192">
+<node TEXT="v0.7.1" ID="ID_718977192" MIN_WIDTH="140.0 px">
 <attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 <node TEXT="Features:&#xa;- New option to hide clones in the &quot;jump to bookmark&quot; list, in the Freeplane preferences window&#xa;&#xa;Fixes:&#xa;- Fix error when creating link to (or from) the link anchor" ID="ID_608036080">
 <attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 </node>
 </node>
 </node>
-<node TEXT="license" POSITION="left" ID="ID_230785910" TEXT_SHORTENED="true">
+<node TEXT="license" POSITION="left" ID="ID_230785910" TEXT_SHORTENED="true" MIN_WIDTH="220.0 px">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -291,7 +291,7 @@
 <attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 </node>
 </node>
-<node TEXT="preferences.xml" POSITION="left" ID="ID_1098616655" TEXT_SHORTENED="true">
+<node TEXT="preferences.xml" POSITION="left" ID="ID_1098616655" TEXT_SHORTENED="true" MIN_WIDTH="220.0 px">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -314,7 +314,7 @@
 <attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 </node>
 </node>
-<node TEXT="default.properties" POSITION="left" ID="ID_151630546" TEXT_SHORTENED="true">
+<node TEXT="default.properties" POSITION="left" ID="ID_151630546" TEXT_SHORTENED="true" MIN_WIDTH="220.0 px">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -340,7 +340,7 @@
 <attribute_layout NAME_WIDTH="147.749995596707 pt" VALUE_WIDTH="120.0 pt"/>
 <attribute NAME="addon_bookmarks_hide_clones" VALUE="false"/>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_255907585" TEXT_SHORTENED="true">
+<node TEXT="translations" POSITION="left" ID="ID_255907585" TEXT_SHORTENED="true" MIN_WIDTH="220.0 px">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -367,11 +367,12 @@
 </html>
 </richcontent>
 <attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
-<node TEXT="en" ID="ID_737947027" TEXT_SHORTENED="true">
+<node TEXT="en" ID="ID_737947027">
 <attribute_layout NAME_WIDTH="170.999994903803 pt" VALUE_WIDTH="320.9999904334548 pt"/>
 <attribute NAME="addons.${name}" VALUE="Bookmarks"/>
 <attribute NAME="addons.${name}._10_BookmarkNode" VALUE="Add / Remove a bookmark"/>
 <attribute NAME="addons.${name}._20_ToggleBookmark" VALUE="Toggle the bookmark"/>
+<attribute NAME="addons.${name}._25_DeleteSubTreeBookmarks" VALUE="Remove all bookmarks in subtree"/>
 <attribute NAME="addons.${name}._30_JumpToBookmark" VALUE="Jump to bookmark"/>
 <attribute NAME="addons.${name}._35_JumpToPreviousBookmark" VALUE="Jump to previous bookmark"/>
 <attribute NAME="addons.${name}._36_JumpToNextBookmark" VALUE="Jump to next bookmark"/>
@@ -385,6 +386,7 @@
 <attribute NAME="_90_bookmarksTools" VALUE="Tools"/>
 <attribute NAME="addons.${name}.T_BM_operation_aborded" VALUE="Bookmark operation aborded"/>
 <attribute NAME="addons.${name}.T_BM_win_title" VALUE="Bookmarks"/>
+<attribute NAME="addons.${name}.T_BMs_deleted" VALUE="bookmarks deleted"/>
 <attribute NAME="addons.${name}.T_BMs_updated" VALUE="Bookmarks updated"/>
 <attribute NAME="addons.${name}.T_NBM_are" VALUE="Already named bookmarks are"/>
 <attribute NAME="addons.${name}.T_arrow_select" VALUE="Select a bookmark with the &lt;i&gt;arrow keys&lt;/i&gt; and press &lt;i&gt;Enter&lt;/i&gt;"/>
@@ -465,11 +467,12 @@
 <attribute NAME="OptionPanel.separator.addon_${name}" VALUE="Bookmarks"/>
 <attribute NAME="OptionPanel.addon_${name}_hide_clones" VALUE="Hide nodes clones in &quot;jump to bookmark&quot; list"/>
 </node>
-<node TEXT="fr" ID="ID_1748679509" TEXT_SHORTENED="true">
+<node TEXT="fr" ID="ID_1748679509">
 <attribute_layout NAME_WIDTH="170.24999492615476 pt" VALUE_WIDTH="320.9999904334548 pt"/>
 <attribute NAME="addons.${name}" VALUE="Marque-pages"/>
 <attribute NAME="addons.${name}._10_BookmarkNode" VALUE="Placer / Supprimer un marque-page"/>
 <attribute NAME="addons.${name}._20_ToggleBookmark" VALUE="Basculer un marque-page"/>
+<attribute NAME="addons.${name}._25_DeleteSubTreeBookmarks" VALUE="Supprimer tous les marque-pages de la branche"/>
 <attribute NAME="addons.${name}._30_JumpToBookmark" VALUE="Atteindre un marque-page"/>
 <attribute NAME="addons.${name}._35_JumpToPreviousBookmark" VALUE="Atteindre le marque-page pr\u00E9c\u00E9dent"/>
 <attribute NAME="addons.${name}._36_JumpToNextBookmark" VALUE="Atteindre le marque-page suivant"/>
@@ -483,6 +486,7 @@
 <attribute NAME="_90_bookmarksTools" VALUE="Outils"/>
 <attribute NAME="addons.${name}.T_BM_operation_aborded" VALUE="Op\u00E9ration abandonn\u00E9e"/>
 <attribute NAME="addons.${name}.T_BM_win_title" VALUE="Marque-pages"/>
+<attribute NAME="addons.${name}.T_BMs_deleted" VALUE="marque-pages effac\uFFFDs"/>
 <attribute NAME="addons.${name}.T_BMs_updated" VALUE="Bookmarks updated"/>
 <attribute NAME="addons.${name}.T_NBM_are" VALUE="Les marque-pages nomm\u00E9s sont"/>
 <attribute NAME="addons.${name}.T_arrow_select" VALUE="Choisir un marque-page avec les &lt;i&gt;touches fl\u00E9ch\u00E9es&lt;/i&gt; et appuyer sur &lt;i&gt;Entr\u00E9e&lt;/i&gt;"/>
@@ -564,7 +568,7 @@
 <attribute NAME="OptionPanel.addon_${name}_hide_clones" VALUE="Cacher les clones dans la liste des marques-pages \u00E0 atteindre"/>
 </node>
 </node>
-<node TEXT="deinstall" POSITION="left" ID="ID_1870605844" TEXT_SHORTENED="true">
+<node TEXT="deinstall" POSITION="left" ID="ID_1870605844" TEXT_SHORTENED="true" MIN_WIDTH="220.0 px">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -602,16 +606,35 @@
 <attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/style.css"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/bookmarks.jar"/>
 </node>
-<node TEXT="todo" POSITION="left" ID="ID_1154873722">
+<node TEXT="todo" POSITION="left" ID="ID_1154873722" MIN_WIDTH="220.0 px">
 <edge COLOR="#353535"/>
 <attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
-<node TEXT="Allow to add and remove named bookmarks directly with icon manipulation" ID="ID_1371599619"/>
-<node TEXT="Add option to warn when deleting a named bookmark" ID="ID_171335078"/>
-<node TEXT="Add a warning on creation of a named bookmark with an already used name" ID="ID_1297583591"/>
-<node TEXT="Allow to sort the named bookmarks list by name" ID="ID_1956637301"/>
-<node TEXT="Allow to display anonymous bookmarks first when dialogs open, or remember the last state, or select the state according to the currently selected node" ID="ID_1394483907"/>
+<node TEXT="Top priority" ID="ID_261668443" MIN_WIDTH="140.0 px">
+<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
+<node TEXT="Remove JMap return from functions that modify namedBookmarks" ID="ID_1110823597">
+<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 </node>
-<node TEXT="scripts" POSITION="right" ID="ID_1460492722" TEXT_SHORTENED="true">
+</node>
+<node TEXT="Other priority" ID="ID_52857435" MIN_WIDTH="140.0 px">
+<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
+<node TEXT="Allow to add and remove named bookmarks directly with icon manipulation" ID="ID_1371599619">
+<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
+</node>
+<node TEXT="Add option to warn when deleting a named bookmark" ID="ID_171335078">
+<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
+</node>
+<node TEXT="Add a warning on creation of a named bookmark with an already used name" ID="ID_1297583591">
+<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
+</node>
+<node TEXT="Allow to sort the named bookmarks list by name" ID="ID_1956637301">
+<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
+</node>
+<node TEXT="Allow to display anonymous bookmarks first when dialogs open, or remember the last state, or select the state according to the currently selected node" ID="ID_1394483907">
+<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
+</node>
+</node>
+</node>
+<node TEXT="scripts" POSITION="right" ID="ID_1460492722" MIN_WIDTH="220.0 px" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -731,6 +754,7 @@
   </body>
 </html>
 </richcontent>
+<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 <node TEXT="_10_BookmarkNode.groovy" ID="ID_1722187040">
 <attribute_layout NAME_WIDTH="172.49999485909953 pt" VALUE_WIDTH="213.7499936297538 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}._10_BookmarkNode"/>
@@ -746,6 +770,18 @@
 <node TEXT="_20_ToggleBookmark.groovy" ID="ID_656120992">
 <attribute_layout NAME_WIDTH="180.7499946132304 pt" VALUE_WIDTH="231.74999309331199 pt"/>
 <attribute NAME="menuTitleKey" VALUE="addons.${name}._20_ToggleBookmark"/>
+<attribute NAME="menuLocation" VALUE="/menu_bar/${name}"/>
+<attribute NAME="executionMode" VALUE="on_single_node"/>
+<attribute NAME="keyboardShortcut" VALUE=""/>
+<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
+<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
+</node>
+<node TEXT="_25_DeleteSubTreeBookmarks.groovy" ID="ID_1462727533">
+<attribute_layout NAME_WIDTH="180.7499946132304 pt" VALUE_WIDTH="231.74999309331199 pt"/>
+<attribute NAME="menuTitleKey" VALUE="addons.${name}._25_DeleteSubTreeBookmarks"/>
 <attribute NAME="menuLocation" VALUE="/menu_bar/${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE=""/>
@@ -864,7 +900,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 </node>
-<node TEXT="lib" POSITION="right" ID="ID_1159449610" TEXT_SHORTENED="true">
+<node TEXT="lib" POSITION="right" ID="ID_1159449610" MIN_WIDTH="220.0 px" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -906,7 +942,7 @@
 <attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 <node TEXT="bookmarks.jar" ID="ID_1816680134"/>
 </node>
-<node TEXT="zips" POSITION="right" ID="ID_435012533" TEXT_SHORTENED="true">
+<node TEXT="zips" POSITION="right" ID="ID_435012533" MIN_WIDTH="220.0 px" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -950,7 +986,7 @@
 <node TEXT="scripts" ID="ID_87188883"/>
 <node TEXT="doc" ID="ID_964875318"/>
 </node>
-<node TEXT="images" POSITION="right" ID="ID_63266556" TEXT_SHORTENED="true">
+<node TEXT="images" POSITION="right" ID="ID_63266556" MIN_WIDTH="220.0 px" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
