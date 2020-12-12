@@ -25,7 +25,7 @@ if( cancel != 0 )
 // Clear the records for the named bookmarks
 def storageErased = BM.eraseNamedBookmarksStorage( node.map )
 
-// Convert thie icons
+// Convert these icons
 def numIconsConverted = 0
 c.findAll().each
 {

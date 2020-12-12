@@ -4,7 +4,7 @@
 // - have an icon named "bookmark-named"
 // - are stored within the local map storage at key "MarksKeys"
 
-// If an bookmark with the same name as an actual named bookmark is found in
+// If a bookmark with the same name as an actual named bookmark is found in
 // the old bookmarks, the actual one is converted to standard bookmark
 
 import org.freeplane.plugin.script.proxy.Convertible
