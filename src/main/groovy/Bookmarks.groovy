@@ -180,10 +180,8 @@ class Bookmarks
     // Delete an existing named bookmark
     static JMap deleteNamedBookmark( Node node, JMap namedBookmarks )
     {
-        print "deleteNamedBookmark"
         if( namedBookmarks.containsValue( node.id ) )
         {
-            print "map"
             // Clear the map
             namedBookmarks.removeAll{ key, value -> value == node.id }
 
@@ -192,19 +190,14 @@ class Bookmarks
         }
 
         // Remove the icon
-        print "icon"
-        int i = 10
-        while( node.icons.remove( namedIcon )  && i-- > 0){}
+        while( node.icons.remove( namedIcon ) ){}
 
-        print "done"
         return namedBookmarks
     }
 
     // Delete any bookmark in this node
     static JMap deleteBookmark( Node node, JMap namedBookmarks )
     {
-        // print "deleteBookmark"
-        // print "isMonitoring ${isMonitoring}"
         if( isAnonymousBookmarked( node ) ) deleteAnonymousBookmark( node )
         if( isNamedBookmarked( node, namedBookmarks ) ) namedBookmarks = deleteNamedBookmark( node, namedBookmarks )
         return namedBookmarks
@@ -213,8 +206,6 @@ class Bookmarks
     // Delete all bookmarks in a node and its descendants
     static void deleteSubTreeBookmarks( Node node )
     {
-        print "--------------------------------------------------------------------------------"
-        print "deleteSubTreeBookmarks"
         JMap namedBookmarks = loadNamedBookmarks( node.map )
         namedBookmarks = fixNamedBookmarksInconsistency( namedBookmarks, node.map )
         int size = namedBookmarks.size()
@@ -228,11 +219,8 @@ class Bookmarks
         if( ! nodes ) return namedBookmarks
         nodes.each{
             node ->
-            print "entering ${node.text}"
-            // print "delete bm"
             namedBookmarks = deleteBookmark( node, namedBookmarks )
             if( recursive ){
-                // print "-> children"
                 namedBookmarks = deleteBookmarks( node.children, namedBookmarks, true )
             }
         }
