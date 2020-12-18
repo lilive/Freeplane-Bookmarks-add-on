@@ -4,7 +4,7 @@
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <edge WIDTH="thin"/>
 <hook NAME="MapStyle" background="#c4c4c4">
-    <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" show_notes_in_map="true" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" Marks_stored_node_id="ID_1837714869"/>
+    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" show_notes_in_map="true" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" Marks_stored_node_id="ID_1837714869"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -242,6 +242,7 @@
 </node>
 </node>
 <node TEXT="v0.6.0-beta" ID="ID_579994357" MIN_WIDTH="140.0 px">
+<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 <node TEXT="New features:&#xa;- Illustrated help manual. Select &quot;help&quot; in the addon menu.&#xa;&#xa;Fixes:&#xa;- Some bugs with latest Freeplane versions. Now compatible with FP 1.8.2" ID="ID_1167110921"/>
 </node>
 <node TEXT="v0.6.0-beta-2" ID="ID_1334843413" MIN_WIDTH="140.0 px">
@@ -260,7 +261,34 @@
 </node>
 <node TEXT="v0.7.1" ID="ID_718977192" MIN_WIDTH="140.0 px">
 <attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
-<node TEXT="Features:&#xa;- New option to hide clones in the &quot;jump to bookmark&quot; list, in the Freeplane preferences window&#xa;&#xa;Fixes:&#xa;- Fix error when creating link to (or from) the link anchor" ID="ID_608036080">
+<node ID="ID_608036080"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Features:
+    </p>
+    <p>
+      - New option to hide clones in the &quot;jump to bookmark&quot; list, in the Freeplane preferences window (<a href="https://github.com/lilive/Freeplane-Bookmarks-add-on/issues/3">ref</a>)
+    </p>
+    <p>
+      - New command to delete all bookmarks in a branch (<a href="https://sourceforge.net/p/freeplane/discussion/758437/thread/ec280c4e/?page=1&amp;limit=25#b789">ref</a>)
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Fixes:
+    </p>
+    <p>
+      - Fix error when creating link to (or from) the link anchor
+    </p>
+  </body>
+</html>
+</richcontent>
 <attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 </node>
 </node>
@@ -464,6 +492,16 @@
 <attribute NAME="addons.${name}.T_help_win_title" VALUE="Help"/>
 <attribute NAME="addons.${name}.T_help_desktop_error" VALUE="Can&apos;t init a java browsing operation !"/>
 <attribute NAME="addons.${name}.T_help_browse_error" VALUE="Error opening the file"/>
+<attribute NAME="addons.${name}.T_clear_branch_win_title" VALUE="Delete branch bookmarks"/>
+<attribute NAME="addons.${name}.T_clear_branch_message" VALUE="Delete all bookmarks in this node and its descendants:"/>
+<attribute NAME="addons.${name}.T_clear_branch_all_BMS" VALUE="Delete all bookmarks"/>
+<attribute NAME="addons.${name}.T_clear_branch_only_SBMs" VALUE="Delete only standard bookmarks"/>
+<attribute NAME="addons.${name}.T_clear_branch_only_NBMs" VALUE="Delete only named bookmarks"/>
+<attribute NAME="addons.${name}.T_clear_branch_cancel" VALUE="Cancel"/>
+<attribute NAME="addons.${name}.T_clear_branch_all_BMs_deleted" VALUE="All bookmarks deleted in this branch."/>
+<attribute NAME="addons.${name}.T_clear_branch_only_SBMs_deleted" VALUE="All standard bookmarks deleted in this branch."/>
+<attribute NAME="addons.${name}.T_clear_branch_only_NBMs_deleted" VALUE="All named bookmarks deleted in this branch."/>
+<attribute NAME="addons.${name}.T_clear_branch_canceled" VALUE="No bookmarks deleted."/>
 <attribute NAME="OptionPanel.separator.addon_${name}" VALUE="Bookmarks"/>
 <attribute NAME="OptionPanel.addon_${name}_hide_clones" VALUE="Hide nodes clones in &quot;jump to bookmark&quot; list"/>
 </node>
@@ -564,6 +602,16 @@
 <attribute NAME="addons.${name}.T_help_win_title" VALUE="Aide"/>
 <attribute NAME="addons.${name}.T_help_desktop_error" VALUE="Erreur d&apos;initialisation de la fonction java de navigation !"/>
 <attribute NAME="addons.${name}.T_help_browse_error" VALUE="Erreur lors de l&apos;ouverture du fichier"/>
+<attribute NAME="addons.${name}.T_clear_branch_win_title" VALUE="Effacer les marque-pages de la branche"/>
+<attribute NAME="addons.${name}.T_clear_branch_message" VALUE="Effacer tous les marque-pages de ce n\u0153ud et de ses descendants :"/>
+<attribute NAME="addons.${name}.T_clear_branch_all_BMS" VALUE="Effacer tous les marque-pages"/>
+<attribute NAME="addons.${name}.T_clear_branch_only_SBMs" VALUE="Effacer seulement les marque-pages standards"/>
+<attribute NAME="addons.${name}.T_clear_branch_only_NBMs" VALUE="Effacer seulement les marque-pages nomm\u00E9s"/>
+<attribute NAME="addons.${name}.T_clear_branch_cancel" VALUE="Annuler"/>
+<attribute NAME="addons.${name}.T_clear_branch_all_BMs_deleted" VALUE="Tous les marque-pages ont \u00E9t\u00E9 effac\u00E9s dans cette branche."/>
+<attribute NAME="addons.${name}.T_clear_branch_only_SBMs_deleted" VALUE="Tous les marque-pages standards ont \u00E9t\u00E9 effac\u00E9s dans cette branche."/>
+<attribute NAME="addons.${name}.T_clear_branch_only_NBMs_deleted" VALUE="Tous les marque-pages nomm\u00E9s ont \u00E9t\u00E9 effac\u00E9s dans cette branche."/>
+<attribute NAME="addons.${name}.T_clear_branch_canceled" VALUE="Aucun marque-page n&apos;a \u00E9t\u00E9 effac\u00E9."/>
 <attribute NAME="OptionPanel.separator.addon_${name}" VALUE="Marque-pages"/>
 <attribute NAME="OptionPanel.addon_${name}_hide_clones" VALUE="Cacher les clones dans la liste des marques-pages \u00E0 atteindre"/>
 </node>
@@ -605,34 +653,6 @@
 <attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/knacss.css"/>
 <attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/style.css"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/bookmarks.jar"/>
-</node>
-<node TEXT="todo" POSITION="left" ID="ID_1154873722" MIN_WIDTH="220.0 px">
-<edge COLOR="#353535"/>
-<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
-<node TEXT="Top priority" ID="ID_261668443" MIN_WIDTH="140.0 px">
-<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
-<node TEXT="Remove JMap return from functions that modify namedBookmarks" ID="ID_1110823597">
-<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
-</node>
-</node>
-<node TEXT="Other priority" ID="ID_52857435" MIN_WIDTH="140.0 px">
-<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
-<node TEXT="Allow to add and remove named bookmarks directly with icon manipulation" ID="ID_1371599619">
-<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
-</node>
-<node TEXT="Add option to warn when deleting a named bookmark" ID="ID_171335078">
-<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
-</node>
-<node TEXT="Add a warning on creation of a named bookmark with an already used name" ID="ID_1297583591">
-<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
-</node>
-<node TEXT="Allow to sort the named bookmarks list by name" ID="ID_1956637301">
-<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
-</node>
-<node TEXT="Allow to display anonymous bookmarks first when dialogs open, or remember the last state, or select the state according to the currently selected node" ID="ID_1394483907">
-<attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
-</node>
-</node>
 </node>
 <node TEXT="scripts" POSITION="right" ID="ID_1460492722" MIN_WIDTH="220.0 px" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>

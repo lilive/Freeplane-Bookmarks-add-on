@@ -203,25 +203,45 @@ class Bookmarks
         return namedBookmarks
     }
 
-    // Delete all bookmarks in a node and its descendants
-    static void deleteSubTreeBookmarks( Node node )
+    /**
+     * Delete all bookmarks in a node and its descendants
+     *
+     * @param node The root of the target subtree
+     * @param anonymous Delete anonymous bookmarks
+     * @param named Delete named bookmarks
+     */
+    static void deleteSubTreeBookmarks( Node node, boolean anonymous = true, boolean named = true )
     {
+        if( ! anonymous && ! named ) return
         JMap namedBookmarks = loadNamedBookmarks( node.map )
         namedBookmarks = fixNamedBookmarksInconsistency( namedBookmarks, node.map )
         int size = namedBookmarks.size()
-        namedBookmarks = deleteBookmarks( [node], namedBookmarks, true )
+        namedBookmarks = deleteBookmarks( [node], namedBookmarks, true, anonymous, named )
     }
 
-    // Delete any bookmarks in this list of nodes
-    // Can delete all bookmarks in descendants nodes in recursive mode
-    private static JMap deleteBookmarks( ArrayList< Node > nodes, JMap namedBookmarks, Boolean recursive = false )
-    {
+    /**
+     * Delete any bookmarks in this list of nodes.
+     * Can delete all bookmarks in descendants nodes in recursive mode.
+     *
+     * @param nodes The nodes where to delete the bookmarks
+     * @param namedBookmarks
+     * @param recursive Also delete the bookmarks in the nodes children
+     * @param anonymous Delete anonymous bookmarks
+     * @param named Delete named bookmarks
+     */
+    private static JMap deleteBookmarks(
+        ArrayList< Node > nodes,
+        JMap namedBookmarks,
+        Boolean recursive = false,
+        boolean anonymous = true, boolean named = true
+    ){
         if( ! nodes ) return namedBookmarks
         nodes.each{
             node ->
-            namedBookmarks = deleteBookmark( node, namedBookmarks )
+            if( anonymous ) deleteAnonymousBookmark( node )
+            if( named ) deleteNamedBookmark( node, namedBookmarks )
             if( recursive ){
-                namedBookmarks = deleteBookmarks( node.children, namedBookmarks, true )
+                namedBookmarks = deleteBookmarks( node.children, namedBookmarks, true, anonymous, named )
             }
         }
         return namedBookmarks
