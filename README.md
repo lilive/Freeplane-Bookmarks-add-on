@@ -32,6 +32,7 @@ Pull requests are also very welcome. The code is documented. Do not hesitate to 
 
 ## Installation
 
+- First, open the Freeplane preferences window (menu `Tools > Preferences`). Go to the tab `Plugins`, section `Scripting`, and set "script execution enabled" to "Yes".
 - Download the *bookmarks-vX.X.X.addon.mm* file from [the latest release](../../releases).
 - Open this file with Freeplane and follow the instructions.
 
@@ -53,6 +54,35 @@ Then, each time a icon is modified by the user, or each time a node is created, 
 - The add-on write the datas about the named bookmarks within the map storage area, which is saved within the map file. In the worse scenario, a bug in the add-on may corrupt the map file.
 
 Again, I've never notice any problem, but feedbacks about these points will be appreciated !
+
+## TODO - Ideas
+
+*Legend:  
+`[ ]` = To do  
+`[?]` = To do, but is it a good idea ?  
+`[n]` = (n is a number) To do, lower number means higher priority*  
+
+---
+
+`[1]` [Add to context menu](https://sourceforge.net/p/freeplane/discussion/758437/thread/ec280c4e/?page=1&limit=25#5f30)
+
+`[?]` Implement temporary bookmarks (vanish when map is closed)
+`[?]` A "jump to link anchor" feature
+`[?]` Move/Copy nodes to bookmark (or link anchor)
+`[?]` Global bookmarks (can be used to reach closed maps)
+`[?]` Move menu into Navigation menu
+`[?]` Search bookmark by node text
+
+`[2]` Allow to sort the named bookmarks list by name
+`[2]` Allow to display anonymous bookmarks first when dialogs open, or remember the last state, or select the state according to the currently selected node
+`[2]` Add an icon to the menu and the package
+
+`[3]` Continue to reduce duplicated code
+`[3]` Remove JMap return from functions that modify namedBookmarks
+
+`[ ]` Allow to add and remove named bookmarks directly with icon manipulation
+`[ ]` Add option to warn when deleting a named bookmark
+`[ ]` Add a warning on creation of a named bookmark with an already used name
 
 ## Build
 

@@ -32,6 +32,7 @@ De même, toute proposition d'amélioration du code et toute pull request est la
 
 ## Installation
 
+- Commencer par ouvrir les préférences de Freeplane (menu `Outils > Préférences`). À l'onglet `Formules & scripts`, section `Scripts`, sélectionner `Oui` pour la ligne `Autoriser l'exécution des scripts`.
 - Télécharger le fichier *bookmarks-vX.X.X.addon.mm* de [la dernière release](../../releases).
 - Ouvrir ce fichier avec Freeplane, et suivre les instructions.
 
@@ -53,6 +54,10 @@ Pour cela, un peu de code est exécuté chaque fois que l'icône d'un nœud est 
 - Le module modifie une carte mentale quand on l'utilise, en y ajoutant des icônes, et en stockant dans le fichier de la carte (dans la *map storage area*) les raccourcis claviers associés aux marque-pages nommés. Ces données sont sauvegardées directement dans le fichier de la carte. Au pire, on peut donc envisager le risque qu'un bug dans le module en vienne à corrompre le fichier de la carte.
 
 Je le redis : je n'ai eu aucun problème en un an d'utilisation. Mais tous les retours sur ces points particuliers sont les bienvenus !
+
+## Encore à faire - Idées de développement
+
+Voir [le readme en anglais](README.md)
 
 ## Compilation
 
