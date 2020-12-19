@@ -71,7 +71,8 @@ Again, I've never notice any problem, but feedbacks about these points will be a
 `[?]` Move/Copy nodes to bookmark (or link anchor)
 `[?]` Global bookmarks (can be used to reach closed maps)
 `[?]` Move menu into Navigation menu
-`[?]` Search bookmark by node text
+`[?]` Search bookmark by name
+`[?]` Bookmark name edition
 
 `[2]` Allow to sort the named bookmarks list by name
 `[2]` Allow to display anonymous bookmarks first when dialogs open, or remember the last state, or select the state according to the currently selected node

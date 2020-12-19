@@ -4,7 +4,7 @@
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <edge WIDTH="thin"/>
 <hook NAME="MapStyle" background="#c4c4c4">
-    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" show_notes_in_map="true" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" Marks_stored_node_id="ID_1837714869"/>
+    <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" show_notes_in_map="true" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" Marks_stored_node_id="ID_1837714869"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -342,7 +342,7 @@
 <attribute_layout NAME_WIDTH="80.0 pt" VALUE_WIDTH="120.0 pt"/>
 </node>
 </node>
-<node TEXT="default.properties" POSITION="left" ID="ID_151630546" TEXT_SHORTENED="true" MIN_WIDTH="220.0 px">
+<node TEXT="default.properties" POSITION="left" ID="ID_151630546" MIN_WIDTH="220.0 px" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -368,7 +368,7 @@
 <attribute_layout NAME_WIDTH="147.749995596707 pt" VALUE_WIDTH="120.0 pt"/>
 <attribute NAME="addon_bookmarks_hide_clones" VALUE="false"/>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_255907585" TEXT_SHORTENED="true" MIN_WIDTH="220.0 px">
+<node TEXT="translations" POSITION="left" ID="ID_255907585" MIN_WIDTH="220.0 px" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -616,7 +616,7 @@
 <attribute NAME="OptionPanel.addon_${name}_hide_clones" VALUE="Cacher les clones dans la liste des marques-pages \u00E0 atteindre"/>
 </node>
 </node>
-<node TEXT="deinstall" POSITION="left" ID="ID_1870605844" TEXT_SHORTENED="true" MIN_WIDTH="220.0 px">
+<node TEXT="deinstall" POSITION="left" ID="ID_1870605844" MIN_WIDTH="220.0 px" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE">
 
@@ -638,6 +638,7 @@
 <attribute NAME="delete" VALUE="${installationbase}/scripts/init/BookmarksMonitorIcons.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/_10_BookmarkNode.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/_20_ToggleBookmark.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/_25_DeleteSubTreeBookmarks.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/_30_JumpToBookmark.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/_35_JumpToPreviousBookmark.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/_36_JumpToNextBookmark.groovy"/>
