@@ -44,7 +44,7 @@ public class JumpGUI
         // Quit the script if there is no bookmarks
         if( ! namedBookmarks && ! anonymousBookmarks )
         {
-            ui.informationMessage( ui.frame, BM.gtt( 'T_no_bookmarks' ) + " !", BM.gtt( 'T_BM_win_title' ) )
+            ui.informationMessage( ui.currentFrame, BM.gtt( 'T_no_bookmarks' ) + " !", BM.gtt( 'T_BM_win_title' ) )
             return
         }
 
@@ -57,7 +57,7 @@ public class JumpGUI
         
         // Center the gui over the freeplane window
         gui.pack()
-        gui.setLocationRelativeTo( ui.frame )
+        gui.setLocationRelativeTo( ui.currentFrame )
         gui.visible = true
     }
 
@@ -421,7 +421,7 @@ public class JumpGUI
             gui = dialog(
                 title: BM.gtt( 'T_jump_to_SBM' ),
                 modal:true,
-                owner: ui.frame,
+                owner: ui.currentFrame,
                 defaultCloseOperation: JFrame.DISPOSE_ON_CLOSE
             ){
                 borderLayout()
@@ -503,7 +503,7 @@ public class JumpGUI
                             namedSwingList.requestFocus()
                         }                
                         gui.pack()
-                        gui.setLocationRelativeTo( ui.frame )
+                        gui.setLocationRelativeTo( ui.currentFrame )
                     }
                 }
             )

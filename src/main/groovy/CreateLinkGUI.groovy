@@ -48,7 +48,7 @@ public class CreateLinkGUI
         // Quit the script if there is no bookmarks
         if( ! namedBookmarks && ! anonymousBookmarks )
             {
-            ui.informationMessage( ui.frame, "${BM.gtt( 'T_no_bookmarks' )} !", BM.gtt( 'T_BM_win_title' ) )
+            ui.informationMessage( ui.currentFrame, "${BM.gtt( 'T_no_bookmarks' )} !", BM.gtt( 'T_BM_win_title' ) )
             return
         }
 
@@ -61,7 +61,7 @@ public class CreateLinkGUI
 
         // Center the gui over the freeplane window
         gui.pack()
-        gui.setLocationRelativeTo( ui.frame )
+        gui.setLocationRelativeTo( ui.currentFrame )
         gui.visible = true
     }
 
@@ -402,7 +402,7 @@ public class CreateLinkGUI
             gui = dialog(
                 title: BM.gtt(t1),
                 modal:true,
-                owner: ui.frame,
+                owner: ui.currentFrame,
                 defaultCloseOperation: JFrame.DISPOSE_ON_CLOSE
             ){
                 borderLayout()
@@ -512,7 +512,7 @@ public class CreateLinkGUI
                             namedSwingList.requestFocus()
                         }                
                         gui.pack()
-                        gui.setLocationRelativeTo( ui.frame )
+                        gui.setLocationRelativeTo( ui.currentFrame )
                     }
                 }
             )

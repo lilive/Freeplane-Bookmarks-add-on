@@ -31,7 +31,7 @@ public class CreateOrDeleteGUI
         addKeyListener( gui, node, isAnonymousBookmark, isNamedBookmark, namedBookmarks )
 
         // Center the GUI over the freeplane window
-        gui.setLocationRelativeTo( UITools.frame )
+        gui.setLocationRelativeTo( UITools.currentFrame )
         gui.visible = true
     }
 
@@ -49,7 +49,7 @@ public class CreateOrDeleteGUI
             gui = dialog(
                 title: BM.gtt( 'T_BM_win_title' ),
                 modal: true,
-                owner: UITools.frame,
+                owner: UITools.currentFrame,
                 defaultCloseOperation: JFrame.DISPOSE_ON_CLOSE,
                 pack: true
             ){
