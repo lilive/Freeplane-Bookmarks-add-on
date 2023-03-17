@@ -147,13 +147,19 @@ public class CreateOrDeleteGUI
                         {
                             namedBookmarks = BM.deleteNamedBookmark( node, namedBookmarks )
                             gui.dispose()
-                            c.setStatusInfo( 'standard', BM.gtt( 'T_node_no_BM_anymore' ), 'button_cancel' )
+                            Utils.setStatusInfo(
+                                BM.gtt( 'T_node_no_BM_anymore' ),
+                                'button_cancel'
+                            )
                         }
                         else if( isAnonymousBookmark )
                         {
                             BM.deleteAnonymousBookmark( node )
                             gui.dispose()
-                            c.setStatusInfo( 'standard', BM.gtt( 'T_node_no_BM_anymore' ), 'button_cancel' )
+                            Utils.setStatusInfo(
+                                BM.gtt( 'T_node_no_BM_anymore' ),
+                                'button_cancel'
+                            )
                         }
                     }
                     else if( keyCharCode == 32 )
@@ -163,13 +169,19 @@ public class CreateOrDeleteGUI
                             namedBookmarks = BM.deleteNamedBookmark( node, namedBookmarks )
                             namedBookmarks = BM.createAnonymousBookmark( node )
                             gui.dispose()
-                            c.setStatusInfo( 'standard', BM.gtt( 'T_node_now_SBM' ), 'button_ok' )
+                            Utils.setStatusInfo(
+                                BM.gtt( 'T_node_now_SBM' ),
+                                'button_ok'
+                            )
                         }
                         else if( ! isAnonymousBookmark )
                         {
                             BM.createAnonymousBookmark( node )
                             gui.dispose()
-                            c.setStatusInfo( 'standard', BM.gtt( 'T_node_now_SBM' ), 'button_ok' )
+                            Utils.setStatusInfo(
+                                BM.gtt( 'T_node_now_SBM' ),
+                                'button_ok'
+                            )
                         }
                     }
                     else if( keyCharCode > 32 && keyCharCode != 127 && keyCharCode < 256 )
@@ -177,11 +189,17 @@ public class CreateOrDeleteGUI
                         if( isAnonymousBookmark ) BM.deleteAnonymousBookmark( node )
                         namedBookmarks = BM.createNamedBookmark( node, keyCharCode, namedBookmarks )
                         gui.dispose()
-                        c.setStatusInfo( 'standard', BM.gtt( 'T_node_now_NBM' ) + '"' + chr + "'", 'button_ok' )
+                        Utils.setStatusInfo(
+                            BM.gtt( 'T_node_now_NBM' ) + ' "' + chr + "'",
+                            'button_ok'
+                        )
                     }
                     else if( keyCharCode == 27 )
                     {
-                        c.setStatusInfo( 'standard', BM.gtt( 'T_BM_operation_aborded' ), 'messagebox_warning' )
+                        Utils.setStatusInfo(
+                            BM.gtt( 'T_BM_operation_aborded' ),
+                            'messagebox_warning'
+                        )
                         gui.dispose()
                     }
                 }

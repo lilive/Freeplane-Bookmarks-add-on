@@ -79,7 +79,7 @@ public class JumpGUI
                 {
                     c.select( target )
                     c.centerOnNode( target )
-                    c.setStatusInfo( 'standard', message )
+                    Utils.setStatusInfo( message )
                 }
             }
         )
@@ -151,7 +151,10 @@ public class JumpGUI
                         }
                         else
                         {
-                            c.setStatusInfo( 'standard', "${BM.gtt( 'T_no_node_with_key' )} \"${chr}\"", "messagebox_warning" )
+                            Utils.setStatusInfo(
+                                "${BM.gtt( 'T_no_node_with_key' )} \"${chr}\"",
+                                "messagebox_warning"
+                            )
                         }
                     }
                 }
@@ -461,7 +464,10 @@ public class JumpGUI
                 public void actionPerformed( ActionEvent e )
                 {
                     gui.dispose()
-                    c.setStatusInfo( 'standard', BM.gtt( 'T_jump_aborded' ), 'button_cancel' )
+                    Utils.setStatusInfo(
+                        BM.gtt( 'T_jump_aborded' ),
+                        'button_cancel'
+                    )
                 }
             }
         )

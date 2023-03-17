@@ -66,12 +66,16 @@ public class CreateLinkGUI
     }
 
     // Create a link to another node in a node
-    static private void createLink( ProxyNode n1, ProxyNode n2, String message, Mode mode )
+    static private void createLink(
+        ProxyNode n1,
+        ProxyNode n2,
+        String message,
+        Mode mode
+    )
     {
         if( mode == Mode.IN ) n2.link.node = n1
         else n1.link.node = n2
-        ProxyController c = ScriptUtils.c() 
-        c.setStatusInfo( 'standard', message, 'button_ok' )
+        Utils.setStatusInfo( message, 'button_ok' )
     }
 
     // Build a GUI list component that display the named bookmarks and
@@ -146,7 +150,10 @@ public class CreateLinkGUI
                         }
                         else
                             {
-                            c.setStatusInfo( 'standard', "${BM.gtt( 'T_no_node_with_key' )} \"${chr}\"", "messagebox_warning" )
+                            Utils.setStatusInfo(
+                                "${BM.gtt( 'T_no_node_with_key' )} \"${chr}\"",
+                                "messagebox_warning"
+                            )
                         }
                     }
                 }
@@ -436,7 +443,9 @@ public class CreateLinkGUI
 
         // Set Esc key to close the script
         String onEscPressID = "onEscPress"
-        InputMap inputMap = gui.getRootPane().getInputMap( JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT )
+        InputMap inputMap = gui
+            .getRootPane()
+            .getInputMap( JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT )
         inputMap.put( KeyStroke.getKeyStroke( KeyEvent.VK_ESCAPE, 0 ), onEscPressID )
         gui.getRootPane().getActionMap().put(
             onEscPressID,
@@ -446,8 +455,10 @@ public class CreateLinkGUI
                 public void actionPerformed( ActionEvent e )
                 {
 	                gui.dispose()
-                    ProxyController c = ScriptUtils.c()
-                    c.setStatusInfo( 'standard', BM.gtt( 'T_link_aborded' ), 'button_cancel' )
+                    Utils.setStatusInfo(
+                        BM.gtt( 'T_link_aborded' ),
+                        'button_cancel'
+                    )
 	            }
             }
         )

@@ -15,5 +15,8 @@ if( n != start && BM.isBookmarked( n, namedBookmarks ) )
 }
 else
 {
-    c.setStatusInfo( 'standard', BM.gtt( 'T_no_next_BM' ) + " !", 'messagebox_warning' )
+    Utils.setStatusInfo(
+        BM.gtt( 'T_no_next_BM' ) + " !",
+        'messagebox_warning'
+    )
 }
