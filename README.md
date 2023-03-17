@@ -65,7 +65,9 @@ Again, I've never notice any problem, but feedback about these points will be ap
 ---
 
 `[1]` Update the documentation about "remove all bookmarks in subtree"
+`[1]` Improve help text about show/hide clones in help tooltip.
 `[1]` [Add to context menu](https://sourceforge.net/p/freeplane/discussion/758437/thread/ec280c4e/?page=1&limit=25#5f30)
+`[2]` May it be possible to display only the bookmarks, and restore the previous state afterward ? 
 `[?]` Make it compatible with aliases (define bookmarks as aliases, allow multi-characters names)
 `[?]` Handle bookmarks appearance with conditional styles
 `[?]` Implement temporary bookmarks (vanish when map is closed)
