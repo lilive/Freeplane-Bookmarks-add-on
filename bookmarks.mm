@@ -92,13 +92,13 @@
 </map_styles>
 </hook>
 <hook NAME="AutomaticEdgeColor" COUNTER="120" RULE="ON_BRANCH_CREATION"/>
-<attribute_layout NAME_WIDTH="93 pt" VALUE_WIDTH="197.24999 pt"/>
+<attribute_layout NAME_WIDTH="93 pt" VALUE_WIDTH="261.60001 pt"/>
 <attribute NAME="name" VALUE="bookmarks"/>
 <attribute NAME="version" VALUE="v0.7.3"/>
 <attribute NAME="author" VALUE="lilive"/>
 <attribute NAME="freeplaneVersionFrom" VALUE="1.10.6"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
-<attribute NAME="updateUrl" VALUE="https://raw.githubusercontent.com/lilive/Freeplane-Bookmarks-add-on/master/version.properties"/>
+<attribute NAME="updateUrl" VALUE="https://github.com/lilive/Freeplane-Bookmarks-add-on/raw/master/version.properties"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
   <head>
@@ -132,7 +132,8 @@
       </li>
     </ul>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node TEXT="description" POSITION="left" ID="ID_1114811084" TEXT_SHORTENED="true" MIN_WIDTH="220 px">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -151,7 +152,8 @@
       To translate the description you have to define a translation for the key 'addons.${name}.description'.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
 <node TEXT="Add bookmarks to nodes, and easily navigate beetween them." ID="ID_1183587619"/>
 </node>
@@ -167,7 +169,8 @@
       Change log of this add-on: append one node for each noteworthy version and put the details for each version into a child node.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
 <node TEXT="v0.3" ID="ID_1947541306" MIN_WIDTH="140 px">
 <node TEXT="First released version" ID="ID_1150257103"/>
@@ -313,6 +316,9 @@
       - Icons and screenshots in the addons management windows
     </p>
     <p>
+      - Icons in the addon menu
+    </p>
+    <p>
       
     </p>
     <p>
@@ -323,7 +329,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
 </node>
@@ -347,7 +352,8 @@
       The License text has to be entered as a child of the <i>'license'</i>&nbsp;node, either as plain text or as HTML.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
 <node TEXT="&#xa;This add-on is free software: you can redistribute it and/or modify&#xa;it under the terms of the GNU General Public License as published by&#xa;the Free Software Foundation, either version 2 of the License, or&#xa;(at your option) any later version.&#xa;&#xa;This program is distributed in the hope that it will be useful,&#xa;but WITHOUT ANY WARRANTY; without even the implied warranty of&#xa;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the&#xa;GNU General Public License for more details.&#xa;" ID="ID_1167386088">
 <attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
@@ -368,13 +374,14 @@
       <font color="#000000" face="SansSerif, sans-serif">Every property in the configuration should receive a default value in <i>default.properties</i>&nbsp;node.</font>
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
 <node TEXT="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xa;&lt;preferences_structure&gt;&#xa;         &lt;tabbed_pane&gt;&#xa;                  &lt;tab name=&quot;plugins&quot;&gt;&#xa;                           &lt;separator name=&quot;addon_bookmarks&quot;&gt;&#xa;                                    &lt;boolean name=&quot;addon_bookmarks_hide_clones&quot; /&gt;&#xa;                           &lt;/separator&gt;&#xa;                  &lt;/tab&gt;&#xa;         &lt;/tabbed_pane&gt;&#xa;&lt;/preferences_structure&gt;" ID="ID_1515193619" MAX_WIDTH="600 px" MIN_WIDTH="600 px">
 <attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
 </node>
 </node>
-<node TEXT="default.properties" POSITION="left" ID="ID_151630546" MIN_WIDTH="220 px" TEXT_SHORTENED="true">
+<node TEXT="default.properties" POSITION="left" ID="ID_151630546" MAX_WIDTH="720 px" MIN_WIDTH="720 px" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -394,9 +401,12 @@
       </li>
     </ul>
   </body>
-</html></richcontent>
-<attribute_layout NAME_WIDTH="147.75 pt" VALUE_WIDTH="120 pt"/>
+</html>
+</richcontent>
+<attribute_layout NAME_WIDTH="247.80001 pt" VALUE_WIDTH="208.8 pt"/>
 <attribute NAME="addon_bookmarks_hide_clones" VALUE="false"/>
+<attribute NAME="addons.${name}._10_BookmarkNode_on_single_node.icon" VALUE="/images/bookmarks-add-or-remove-icon.svg"/>
+<attribute NAME="addons.${name}._30_JumpToBookmark_on_single_node.icon" VALUE="/images/bookmarks-jump-icon.svg"/>
 </node>
 <node TEXT="translations" POSITION="left" ID="ID_255907585" MIN_WIDTH="220 px" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
@@ -421,7 +431,8 @@
       </li>
     </ul>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
 <node TEXT="en" ID="ID_737947027">
 <attribute_layout NAME_WIDTH="170.99999 pt" VALUE_WIDTH="320.99999 pt"/>
@@ -656,7 +667,8 @@
       List of files and/or directories to remove on uninstall
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="389.99999 pt"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}.script.xml"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/bookmarks/Bookmark 1.svg"/>
@@ -683,6 +695,9 @@
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/bookmarks.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/bookmarks-screenshot-1.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/resources/images/bookmarks-icon.svg"/>
+<attribute NAME="delete" VALUE="${installationbase}/resources/images/bookmarks-add-or-remove-icon.svg"/>
+<attribute NAME="delete" VALUE="${installationbase}/resources/images/bookmarks-jump-icon.svg"/>
+<attribute NAME="delete" VALUE="${installationbase}/resources/images/bookmarks.svg"/>
 </node>
 <node TEXT="scripts" POSITION="right" ID="ID_1460492722" MIN_WIDTH="220 px" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
@@ -801,7 +816,8 @@
       &nbsp;&nbsp;- In any case set execute_scripts_without_asking to true unless you want to annoy users.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
 <node TEXT="_10_BookmarkNode.groovy" ID="ID_1722187040">
 <attribute_layout NAME_WIDTH="172.49999 pt" VALUE_WIDTH="213.74999 pt"/>
@@ -984,7 +1000,8 @@
       &nbsp;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
 <node TEXT="bookmarks.jar" ID="ID_1816680134"/>
 </node>
@@ -1024,7 +1041,8 @@
       &nbsp;- The files will be processed in the sequence as seen in the map.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
 <node TEXT="icons" ID="ID_1144883898"/>
 <node TEXT="scripts" ID="ID_87188883"/>
@@ -1062,8 +1080,12 @@
       Images can be added automatically by releaseAddOn.groovy or must be uploaded into the map via the script <i>Tools-&gt;Scripts-&gt;Insert Binary</i>&nbsp;since they have to be (base64) encoded as simple strings.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
+<node TEXT="bookmarks.svg" ID="ID_394708321">
+<attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
+</node>
 <node TEXT="bookmarks.png" ID="ID_531499288">
 <attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
 </node>
@@ -1071,6 +1093,12 @@
 <attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
 </node>
 <node TEXT="bookmarks-icon.svg" ID="ID_207976452">
+<attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
+</node>
+<node TEXT="bookmarks-add-or-remove-icon.svg" ID="ID_1445651040">
+<attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
+</node>
+<node TEXT="bookmarks-jump-icon.svg" ID="ID_518763965">
 <attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
 </node>
 </node>
