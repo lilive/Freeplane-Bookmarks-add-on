@@ -1,17 +1,17 @@
-<map version="freeplane 1.9.0">
-<!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="Bookmarks" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1723255651" LINK="https://github.com/lilive/Freeplane-Bookmarks-add-on" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#000000" BACKGROUND_COLOR="#97c7dc" STYLE="rectangle" SHAPE_HORIZONTAL_MARGIN="6 pt" SHAPE_VERTICAL_MARGIN="6 pt" TEXT_SHORTENED="true">
+<map version="freeplane 1.9.13">
+<!--To view this file, download free mind mapping software Freeplane from https://www.freeplane.org -->
+<node TEXT="Bookmarks" LOCALIZED_STYLE_REF="styles.topic" ID="ID_1723255651" LINK="https://github.com/lilive/Freeplane-Bookmarks-add-on" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#000000" BACKGROUND_COLOR="#97c7dc" STYLE="rectangle" SHAPE_HORIZONTAL_MARGIN="6 pt" SHAPE_VERTICAL_MARGIN="6 pt">
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <edge WIDTH="thin"/>
 <hook NAME="MapStyle" background="#c4c4c4">
-    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" show_notes_in_map="true" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" Marks_stored_node_id="ID_1837714869"/>
+    <properties show_icon_for_attributes="true" edgeColorConfiguration="#353535ff,#353535ff,#353535ff,#353535ff,#353535ff" show_notes_in_map="true" Marks_stored_node_id="ID_1837714869" MarksKeys="{&quot;108&quot;:&quot;ID_303460997&quot;,&quot;99&quot;:&quot;ID_1257390437&quot;,&quot;111&quot;:&quot;ID_185824507&quot;}" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24 pt">
 <font SIZE="24"/>
 <stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="default" ID="ID_1510029719" ICON_SIZE="14 pt" MAX_WIDTH="600 px" COLOR="#000000" BACKGROUND_COLOR="#ffffff" BACKGROUND_ALPHA="115" STYLE="bubble" SHAPE_HORIZONTAL_MARGIN="4 pt" BORDER_WIDTH="0 px" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#808080" BORDER_COLOR_ALPHA="0">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="100" DASH="" FONT_SIZE="9" FONT_FAMILY="Raleway" DESTINATION="ID_1510029719" STARTARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="100" DASH="" FONT_SIZE="9" FONT_FAMILY="Raleway" DESTINATION="ID_1510029719" STARTARROW="DEFAULT" ENDARROW="NONE"/>
 <font NAME="Candara" SIZE="14"/>
 <edge STYLE="horizontal" COLOR="#818181" WIDTH="thin"/>
 </stylenode>
@@ -24,7 +24,7 @@
 <edge STYLE="hide_edge"/>
 <cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
 </stylenode>
-<stylenode LOCALIZED_TEXT="defaultstyle.selection" BACKGROUND_COLOR="#ffffe6" STYLE="bubble" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#4a75dd"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.selection" BACKGROUND_COLOR="#ffffe6" BORDER_COLOR_LIKE_EDGE="false" BORDER_COLOR="#4a75dd"/>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right" STYLE="bubble">
 <stylenode LOCALIZED_TEXT="styles.topic" STYLE="oval" SHAPE_HORIZONTAL_MARGIN="6 pt" SHAPE_VERTICAL_MARGIN="6 pt" UNIFORM_SHAPE="true" BORDER_WIDTH="4 px" BORDER_DASH="DASHES">
@@ -94,9 +94,9 @@
 <hook NAME="AutomaticEdgeColor" COUNTER="120" RULE="ON_BRANCH_CREATION"/>
 <attribute_layout NAME_WIDTH="93 pt" VALUE_WIDTH="197.24999 pt"/>
 <attribute NAME="name" VALUE="bookmarks"/>
-<attribute NAME="version" VALUE="v0.7.2"/>
+<attribute NAME="version" VALUE="v0.7.3"/>
 <attribute NAME="author" VALUE="lilive"/>
-<attribute NAME="freeplaneVersionFrom" VALUE="1.8.8"/>
+<attribute NAME="freeplaneVersionFrom" VALUE="1.10.6"/>
 <attribute NAME="freeplaneVersionTo" VALUE=""/>
 <attribute NAME="updateUrl" VALUE="https://raw.githubusercontent.com/lilive/Freeplane-Bookmarks-add-on/master/version.properties"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
@@ -291,6 +291,40 @@
 <node TEXT="v0.7.2" ID="ID_653665394" MIN_WIDTH="140 px">
 <attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
 <node TEXT="Fix:&#xa;- When using multiple Freeplane windows, dialog boxes now open above the active one" ID="ID_1043186691">
+<attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
+</node>
+</node>
+<node TEXT="v0.7.3" ID="ID_1181985237" MIN_WIDTH="140 px">
+<attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
+<node ID="ID_937195068"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      New features:
+    </p>
+    <p>
+      - Use an icon instead of the blue color to improve readability with dark themes
+    </p>
+    <p>
+      - Icons and screenshots in the addons management windows
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Fix:
+    </p>
+    <p>
+      - In the status line, do not scramble icons between the regular Freeplane messages and the addon messages (<a href="https://github.com/lilive/Freeplane-Bookmarks-add-on/issues/7">ref</a>)
+    </p>
+  </body>
+</html>
+
+</richcontent>
 <attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
 </node>
 </node>
@@ -646,6 +680,9 @@
 <attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/knacss.css"/>
 <attribute NAME="delete" VALUE="${installationbase}/doc/bookmarks/style.css"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/lib/bookmarks.jar"/>
+<attribute NAME="delete" VALUE="${installationbase}/resources/images/bookmarks.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/resources/images/bookmarks-screenshot-1.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/resources/images/bookmarks-icon.svg"/>
 </node>
 <node TEXT="scripts" POSITION="right" ID="ID_1460492722" MIN_WIDTH="220 px" TEXT_SHORTENED="true">
 <edge COLOR="#353535"/>
@@ -993,7 +1030,7 @@
 <node TEXT="scripts" ID="ID_87188883"/>
 <node TEXT="doc" ID="ID_964875318"/>
 </node>
-<node TEXT="images" POSITION="right" ID="ID_63266556" MIN_WIDTH="220 px" TEXT_SHORTENED="true">
+<node TEXT="images" POSITION="right" ID="ID_63266556" MIN_WIDTH="220 px">
 <edge COLOR="#353535"/>
 <richcontent TYPE="NOTE" CONTENT-TYPE="xml/">
 <html>
@@ -1027,6 +1064,15 @@
   </body>
 </html></richcontent>
 <attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
+<node TEXT="bookmarks.png" ID="ID_531499288">
+<attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
+</node>
+<node TEXT="bookmarks-screenshot-1.png" ID="ID_1598584628">
+<attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
+</node>
+<node TEXT="bookmarks-icon.svg" ID="ID_207976452">
+<attribute_layout NAME_WIDTH="80 pt" VALUE_WIDTH="120 pt"/>
+</node>
 </node>
 </node>
 </map>
