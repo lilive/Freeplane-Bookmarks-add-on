@@ -64,30 +64,38 @@ Again, I've never notice any problem, but feedback about these points will be ap
 
 ---
 
-`[1]` Update the documentation about "remove all bookmarks in subtree"
-`[1]` Improve help text about show/hide clones in help tooltip.
+`[1]` Update this readme  
+`[1]` Update the documentation about "remove all bookmarks in subtree"  
+`[1]` Improve help text about show/hide clones in help tooltip.  
 `[1]` [Add to context menu](https://sourceforge.net/p/freeplane/discussion/758437/thread/ec280c4e/?page=1&limit=25#5f30)
-`[2]` May it be possible to display only the bookmarks, and restore the previous state afterward ? 
-`[?]` Make it compatible with aliases (define bookmarks as aliases, allow multi-characters names)
-`[?]` Handle bookmarks appearance with conditional styles
-`[?]` Implement temporary bookmarks (vanish when map is closed)
-`[?]` A "jump to link anchor" feature
-`[?]` Move/Copy nodes to bookmark (or link anchor)
-`[?]` Global bookmarks (can be used to reach closed maps)
-`[?]` Move menu into Navigation menu
-`[?]` Search bookmark by name
+
+---
+
+`[2]` Allow to sort the named bookmarks list by name  
+`[2]` Allow to display anonymous bookmarks first when dialogs open, or remember the last state, or select the state according to the currently selected node  
+`[2]` Add an icon to the menu and the package
+`[2]` May it be possible to display only the bookmarks, and restore the previous state afterward ?
+
+---
+
+`[3]` Continue to reduce duplicated code  
+`[3]` Remove JMap return from functions that modify namedBookmarks  
+`[3]` Allow to add and remove named bookmarks directly with icon manipulation  
+`[3]` Add option to warn when deleting a named bookmark  
+`[3]` Add a warning on creation of a named bookmark with an already used name
+
+---
+
+`[?]` Make it compatible with aliases (define bookmarks as aliases, allow multi-characters names)  
+`[?]` Handle bookmarks appearance with conditional styles  
+`[?]` Implement temporary bookmarks (vanish when map is closed)  
+`[?]` A "jump to link anchor" feature  
+`[?]` Move/Copy nodes to bookmark (or link anchor)  
+`[?]` Global bookmarks (can be used to reach closed maps)  
+`[?]` Move menu into Navigation menu  
+`[?]` Search bookmark by name  
 `[?]` Bookmark name edition
 
-`[2]` Allow to sort the named bookmarks list by name
-`[2]` Allow to display anonymous bookmarks first when dialogs open, or remember the last state, or select the state according to the currently selected node
-`[2]` Add an icon to the menu and the package
-
-`[3]` Continue to reduce duplicated code
-`[3]` Remove JMap return from functions that modify namedBookmarks
-
-`[ ]` Allow to add and remove named bookmarks directly with icon manipulation
-`[ ]` Add option to warn when deleting a named bookmark
-`[ ]` Add a warning on creation of a named bookmark with an already used name
 
 ## Build
 
