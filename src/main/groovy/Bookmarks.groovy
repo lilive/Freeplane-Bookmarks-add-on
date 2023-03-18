@@ -315,5 +315,23 @@ class Bookmarks
         ImageIcon icon = new ImageIcon( bufferedImage.getScaledInstance( w, h, Image.SCALE_SMOOTH ) )
         return icon
     }
+
+    static ImageIcon getWarningIcon()
+    {
+        // Get a small warning icon from the theme.
+        // We can't simply call icon.getImage().getScaledInstance() because some themes (ie Nimbus)
+        // do not return a suitable icon.getImage(). That's why we paint the icon.
+        Icon srcIcon = UIManager.getIcon("OptionPane.warningIcon")
+        int w = srcIcon.getIconWidth()
+        int h = srcIcon.getIconHeight()
+        BufferedImage bufferedImage = new BufferedImage( w, h, BufferedImage.TYPE_INT_ARGB )
+        Graphics2D g = bufferedImage.createGraphics()
+        srcIcon.paintIcon( null, g, 0, 0 );
+        g.dispose()
+        h = h / w * 16
+        w = 16
+        ImageIcon icon = new ImageIcon( bufferedImage.getScaledInstance( w, h, Image.SCALE_SMOOTH ) )
+        return icon
+    }
     
 }

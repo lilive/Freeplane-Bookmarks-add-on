@@ -3,7 +3,6 @@ package lilive.bookmarks
 import lilive.bookmarks.Bookmarks as BM
 import groovy.swing.SwingBuilder
 import java.awt.BorderLayout
-import java.awt.Color
 import java.awt.event.*
 import java.util.Map as JMap
 import javax.swing.BoxLayout
@@ -54,8 +53,7 @@ public class CreateOrDeleteGUI
                 pack: true
             ){
                 borderLayout()
-                Color blue = new Color( 0, 0, 255 )
-                
+
                 // Fist panel : instructions
                 panel(
                     border: emptyBorder( 10 ),
@@ -65,8 +63,8 @@ public class CreateOrDeleteGUI
                     if( isAnonymousBookmark )
                     {
                         label(
+                            icon: BM.getWarningIcon(),
                             text: BM.gtt( 'T_node_already_BM' ),
-                            foreground: blue,
                             border: emptyBorder( 0, 0, 5, 0 )
                         )
                         label( "<html><b>${ BM.gtt( 'T_kbd_backspace' ) }</b> : ${ BM.gtt( 'T_delete_BM' ) }</html>" )
@@ -76,7 +74,7 @@ public class CreateOrDeleteGUI
                     {
                         label(
                             text: BM.gtt( 'T_node_already_NBM' ),
-                            foreground: blue,
+                            icon: BM.getWarningIcon(),
                             border: emptyBorder( 0, 0, 5, 0 )
                         )
                         label( "<html><b>${ BM.gtt( 'T_kbd_backspace' ) }</b> : ${ BM.gtt( 'T_delete_BM' ) }</html>" )
@@ -111,7 +109,7 @@ public class CreateOrDeleteGUI
                                 "</b></font> : " +
                                 BM.getNodeShortPlainText( target ) +
                                 "</html>"
-                            if( id == node.id ) label( text: text, foreground: blue )
+                            if( id == node.id ) label( text: text, icon: BM.getWarningIcon() )
                             else label( text )
                         }
                     }
